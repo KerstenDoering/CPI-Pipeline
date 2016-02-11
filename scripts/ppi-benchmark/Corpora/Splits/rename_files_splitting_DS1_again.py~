@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+#Elham 21.02.2015
+import os
+import re
+from glob import glob
+
+list_of_files = os.listdir("DS1")
+os.chdir("DS1")
+
+for index,name in enumerate(list_of_files):
+    old_name = name
+    file_number_obj=re.match('test-(\d+)',list_of_files[index])
+    file_number = file_number_obj.group(1)
+    new_name = "DS1"+str(file_number)+".txt"
+    for filename in glob(old_name):
+        os.rename(filename,new_name)
+
+os.chdir("..")

@@ -1,0 +1,3 @@
+
+cat /pro/mt/mlease/wsj/sgml/test.txt | parseIt -K ../DATA/EN/
+#cat examp | parseIt -K -d0 ../DATA/EN/

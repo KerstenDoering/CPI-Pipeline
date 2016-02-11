@@ -1,0 +1,1 @@
+(S1 (S (NP (NNP Bestrophin-1)) (VP (VBZ enables) (NP (JJ Ca2+-activated) (NNP Cl-conductance)) (PP (IN in) (NP (NN epithelia)))) (. .)))

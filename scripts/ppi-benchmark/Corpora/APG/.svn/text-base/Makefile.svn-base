@@ -1,0 +1,36 @@
+include ../../Makefile.config
+	
+all: generate-CV-data generate-CL-data generate-CC-data
+
+generate-CV-data: cleanCV ${APGdata}/CV
+
+generate-CL-data: cleanCL ${APGdata}/CL
+
+generate-CC-data: cleanCC ${APGdata}/CC
+
+${APGdata}/CV: ${LF_JAR} ${EnrichedXML} ${APGsplit}
+	bash -c "origDir=${stlfDir} APGsplit='${APGsplit}' CORPORA='${CORPORA}' CLASSPATH='${LF_JAR}${SEP}${LF_CLASSPATH}' ./prepare-CV.sh"
+
+${APGdata}/CC: ${EnrichedXML}
+	bash -c "origDir=${stlfDir} CORPORA='${CORPORA}' ./prepare-CC.sh"
+
+${APGdata}/CL: ${EnrichedXML} ${APGdata}/CC
+	bash -c "origDir=${stlfDir} CORPORA='${CORPORA}' ./prepare-CL.sh"
+
+
+cleanAImed:
+	rm -rf CV/corpus/AImed
+
+clean: cleanCV cleanCL cleanCC
+
+cleanCV:
+	rm -rf ${APGdata}/CV/
+
+cleanCL:
+	rm -rf ${APGdata}/CL/
+
+cleanCC:
+	rm -rf ${APGdata}/CC/
+
+${EnrichedXML}: 
+	cd .. && $(MAKE) $@ 

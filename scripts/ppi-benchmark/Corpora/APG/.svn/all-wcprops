@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ppi-benchmark/!svn/ver/1007/Corpora/APG
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ppi-benchmark/!svn/ver/1007/Corpora/APG/Makefile
+END
+prepare-CV.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ppi-benchmark/!svn/ver/967/Corpora/APG/prepare-CV.sh
+END
+prepare-CL.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ppi-benchmark/!svn/ver/967/Corpora/APG/prepare-CL.sh
+END
+prepare-CC.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ppi-benchmark/!svn/ver/966/Corpora/APG/prepare-CC.sh
+END

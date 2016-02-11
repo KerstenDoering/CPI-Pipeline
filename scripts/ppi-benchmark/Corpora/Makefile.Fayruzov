@@ -1,0 +1,75 @@
+# Creates learning format and other files for Kim's kernels, implementation of Fayruzov
+
+
+FayruzovParse=client.Runners -n parsing
+
+CVprops=$(foreach c,${CORPORA},$(foreach t,$(KimKernelType),$(c)$(t)))
+
+STANFORDJAR=${FayruzovLib}/stanford-parser-2008-10-26.jar
+
+PCFGfile=${FayruzovDir}/resource/englishPCFG.ser.gz
+
+parse-Fayruzov: ${STANFORDJAR} $(PCFGfile) ${FayruzovJar}
+	echo "$(CORPORA)" | tr ' ' '\n' | $(XARGS) -I'{}' make parse-Fayruzov-single CORPUS='{}'
+
+parse-Fayruzov-single: ${FayruzovJar}
+	${JAVA} ${MEM3} -cp "${FayruzovCP}" ${FayruzovParse} -l $(CORPUS)-parse ${FayruzovAllDirs} -p ${propsDir}/CV$(CORPUS)syn.props
+
+stanford-test: $(PCFGfile) $(STANFORDJAR)  ${FayruzovJar}
+	java ${MEM3} -cp "${FayruzovCP}" parser.stanfordparser.StanfordParserWrapper
+
+Stanford-jar: ${STANFORDJAR}
+
+${STANFORDJAR}: 
+	$(error Missing $@, download it from http://nlp.stanford.edu/software/stanford-parser-2008-10-26.tgz )
+
+$(PCFGfile):
+	$(error Missing $@, download it from http://nlp.stanford.edu/software/stanford-parser-2008-10-26.tgz )
+
+listCVProps:
+	echo ${CVprops}
+
+create-libSVM-LF: create-libSVM-LF-CV create-libSVM-LF-CC create-libSVM-LF-CL
+
+create-libSVM-LF-CV:
+	make create-libSVM-LF-core expType=CV MODE=1
+
+create-libSVM-LF-CV-rest:
+	make create-libSVM-LF-core expType=CV MODE=1 CORPORA='BioInfer HPRD50'
+
+create-libSVM-LF-CC:
+	make create-libSVM-LF-core expType=CC MODE=3
+
+create-libSVM-LF-CL:
+	make create-libSVM-LF-core expType=CL MODE=3
+
+create-libSVM-LF-CL-rest:
+	make create-libSVM-LF-core expType=CL MODE=3 CORPORA='AIMed'
+
+
+create-libSVM-LF-core:
+	echo -n $(foreach c,${CORPORA},$(foreach k,$(KimKernelType),\
+	$(shell echo -n make create-libSVM-LF-single PROPS=$c$k CORPUS=$c KERNELTYPE=$k expType=$(expType) MODE=$(MODE) '@')))  \
+	| $(XARGSquiet) -d '@' --max-args 1 bash -c
+
+create-libSVM-LF-single: ${FayruzovJar}
+	if test ! -d "${libSVMLF}/${expType}/${KERNELTYPE}/${CORPUS}" ; then \
+		find "${libSVMLF}/${expType}/${KERNELTYPE}/${CORPUS}" \( -name 'testLabe*' -or -name 'ids*' -or -name 't*kernel*' \) \
+			| $(XARGSquiet) rm -f \
+	; fi
+	java ${MEM3} -cp "${FayruzovCP}" client.Runners \
+		-n ${expType}${PROPS} n -l ${expType}${PROPS}Build ${FayruzovAllDirs} -m $(MODE) -b -p ${propsDir}/${expType}${PROPS}.props
+	find ${libSVMLF}/${expType}/${KERNELTYPE}/${CORPUS} \( -name 'testLabe*' -or -name 'ids*' -or -name 't*kernel*' \) \
+	| $(XARGSquiet) chmod 444
+
+#jar: ${FayruzovJar}
+
+${FayruzovJar}:
+	if test -f "$@" ; \
+	then \
+		echo "Assuming '$@' is up-to-date, to force re-build: delete it OR run 'ant' manually." ; \
+	else \
+		cd "${FayruzovDir}" && ant jar ; \
+	fi
+
+

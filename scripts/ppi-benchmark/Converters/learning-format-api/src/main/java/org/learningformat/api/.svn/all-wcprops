@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ppi-benchmark/!svn/ver/1194/Converters/learning-format-api/src/main/java/org/learningformat/api
+END
+Pair.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/Pair.java
+END
+Lemma.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/ppi-benchmark/!svn/ver/950/Converters/learning-format-api/src/main/java/org/learningformat/api/Lemma.java
+END
+CharOffsetProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/CharOffsetProvider.java
+END
+TextProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/TextProvider.java
+END
+JSRE_Tranformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ppi-benchmark/!svn/ver/1170/Converters/learning-format-api/src/main/java/org/learningformat/api/JSRE_Tranformer.java
+END
+CharOffsetMapEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/CharOffsetMapEntry.java
+END
+Sentence.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ppi-benchmark/!svn/ver/1029/Converters/learning-format-api/src/main/java/org/learningformat/api/Sentence.java
+END
+LearningFormatConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/LearningFormatConstants.java
+END
+Bracketing.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/Bracketing.java
+END
+Parse.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/Parse.java
+END
+Corpus.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/ppi-benchmark/!svn/ver/1029/Converters/learning-format-api/src/main/java/org/learningformat/api/Corpus.java
+END
+TSVM_Transformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ppi-benchmark/!svn/ver/952/Converters/learning-format-api/src/main/java/org/learningformat/api/TSVM_Transformer.java
+END
+Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/ppi-benchmark/!svn/ver/1142/Converters/learning-format-api/src/main/java/org/learningformat/api/Entity.java
+END
+Document.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ppi-benchmark/!svn/ver/1175/Converters/learning-format-api/src/main/java/org/learningformat/api/Document.java
+END
+Dependency.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/Dependency.java
+END
+Tokenization.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/Tokenization.java
+END
+DependencyToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/DependencyToken.java
+END
+Token.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/ppi-benchmark/!svn/ver/1053/Converters/learning-format-api/src/main/java/org/learningformat/api/Token.java
+END
+ElementFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/api/ElementFactory.java
+END
+CharOffset.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/ppi-benchmark/!svn/ver/1194/Converters/learning-format-api/src/main/java/org/learningformat/api/CharOffset.java
+END
+Element.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ppi-benchmark/!svn/ver/1142/Converters/learning-format-api/src/main/java/org/learningformat/api/Element.java
+END

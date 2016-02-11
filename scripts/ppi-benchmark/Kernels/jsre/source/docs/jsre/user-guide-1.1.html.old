@@ -1,0 +1,555 @@
+<html>
+	<head>
+	<title>jSRE - User's Guide</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="style4.css" rel="stylesheet">
+</head>
+<body>
+	<table align="center" border="0" cellspacing="5" cellpadding="5"><tr><td rowspan="3"></td><td>&nbsp;</td></tr>
+					<tr><td><h1>jSRE - java Simple Relation Extraction</h1></td></tr>
+					<tr><td><h2>User's Guide</h2></td></tr>
+	</table>
+	
+	
+	
+		<h3>Table of Contents</h3>
+		<ul>
+			<li><a href="#Introduction">Introduction</a></li>
+			<li><a href="#License">License</a></li>
+			<li><a href="#System_Requirements">System Requirements</a></li>
+			
+			<li><a href="#Installation">Installation</a></li>
+			
+			<li><a href="#Dependencies">Dependencies</a></li>
+			<li><a href="#Input_Format">Input Format</a>
+			</li>
+			<li><a href="#Running_jSRE">Running jSRE</a>
+				
+			</li>
+			<li><a href="#Case_of_Study">Case of Study: The relation located_in</a></li>
+			<!--
+			<li><a href="#Extending_jSRE">Extending jSRE</a>
+				<li><a href="#Configuration_File">Configuration File</a>			
+	  <ul>
+	    <li><a href="#Comments_in_Configuration_File">Comments in Configuration File</a></li>
+	    <li><a href="#Metrics">Metrics</a></li>
+	    <li><a href="#Data_Set_Readers">Data Set Readers</a></li>
+	  </ul>
+				</li>-->
+			
+			
+			<!--<li><a href="#Release_Notes">Release Notes</a></li>-->
+			<li><a href="#History">History</a></li>
+			<li><a href="#Bibliography">Bibliography</a></li>
+	
+		</ul>
+	
+	<a id="Introduction" name="Introduction"></a><h3>Introduction</h3>
+<p align="justify">jSRE is an open source Java tool for <em>Relation Extraction</em>.
+It is based on a supervised machine learning approach which is applicable even when (deep) linguistic processing is not available or reliable.
+In particular, jSRE uses a combination of kernel functions to integrate two different information sources: (i) the whole sentence where the relation appears, and (ii) the local contexts around the interacting entities.
+jSRE requires only a shallow linguistic processing, such as tokenization, sentence splitting, Part-of-Speech (PoS) tagging and lemmatization.
+A detailed description of <em>Simple Relation Extraction</em> is given in [<a href="#bib1">1</a>].</p>
+
+
+<a id="License" name="License"></a><h3>License</h3>
+<p align="justify">jSRE is released as free software with full source code,
+provided under the terms of the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.</p>
+
+
+	<a id="System_Requirements" name="System_Requirements"></a><h3>System Requirements</h3>
+
+	<p align="justify">The jSRE software is available on all platforms supporting Java 2.</p>
+
+
+
+	<a id="Installation" name="Installation"></a><h3>Installation</h3>
+	
+	<ol>
+	 	<li><p align="left">Make sure you have installed Sun's Java 2 Environment. The full version is available at <a href="http://java.sun.com/j2se">http://java.sun.com/j2se</a>.  If you are limited by disk space or bandwidth, install the smaller, run-time only version at <a href="http://java.sun.com/j2se">http://java.sun.com/j2se</a>.</p></li>
+	 	<li><p align="left">Download the jar file of the installer <a href="jsre-1.1.jar">here</a>. Copy the file into the directory where
+		you want to install the program and then run:</p>
+				<p align="left"><code>jar -xvf jsre-1.1.jar</code></p></li>
+	</ol>
+
+
+
+	<a name="Dependencies"></a>
+	<h3>Dependencies</h3>
+	<p align="justify">jSRE uses elements of the Java 2 API such as collections, and therefore building 
+  requires the Java 2 Standard Edition SDK (Software Development Kit). To run 
+  jSRE, the Java 2 Standard Edition RTE (Run Time Environment) is required (or 
+  you can use the SDK, of course).</p>
+	<p align="justify">jSRE is also dependent upon a few packages for general functionality. They 
+  are included in the <code>lib</code> directory for convenience, but the default build 
+  target does not include them. If you use the default build target, 
+  you must add the dependencies to your classpath. </p>
+<ul>
+<li><a href="http://jakarta.apache.org/commons/">Jakarta Commons</a> - required.</li>
+<!--<li><a href="http://xml.apache.org/xalan-j/">Apache Xalan</a> - required.</li>
+<li><a href="http://xml.apache.org/xerces2-j/">Apache Xerces</a> - required.</li>-->
+<li><a href="http://logging.apache.org/log4j/">Apache Log4j</a> - required.</li>
+<li><a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm">LIBSVM</a> - required.</li>
+</ul>
+
+<p>Using a C Shell run:</p>
+<p><pre>
+setenv CLASSPATH jsre.jar
+setenv CLASSPATH ${CLASSPATH}:lib/libsvm-2.8.jar
+setenv CLASSPATH ${CLASSPATH}:lib/log4j-1.2.8.jar
+setenv CLASSPATH ${CLASSPATH}:lib/commons-digester.jar
+setenv CLASSPATH ${CLASSPATH}:lib/commons-beanutils.jar
+setenv CLASSPATH ${CLASSPATH}:lib/commons-logging.jar
+setenv CLASSPATH ${CLASSPATH}:lib/commons-collections.jar
+<!--
+setenv CLASSPATH ${CLASSPATH}:lib/xalan.jar
+setenv CLASSPATH ${CLASSPATH}:lib/xerces.jar-->
+</pre>
+</p>
+<!--
+	<h3>Download</h3>
+	<ul>
+		<li><a href="jsre-1.0.zip">Current version</a> (version 1.0, 22/04/05, J2SE 1.4.2).</li>
+	</ul>
+
+	<h3>Installation</h3>
+	<ol>
+	  <li>Make sure you have installed Sun's <em>Java</em> 2 Environment. The full version is available at <a href="http://java.sun.com/j2se">http://java.sun.com/j2se</a>.  If you are limited by disk space or bandwidth, install the smaller, run-time only version at <a href="http://java.sun.com/j2se">http://java.sun.com/j2se</a>.</li>
+		<li>Download the jar file of the installer <a href="jsre-1.0.jar">here</a>. Copy the file into the directory where you want to install the program and then run:</li>
+		<li>Add to your <code>CLASSPATH jsre.jar</code> .</li>
+		<li>Add to your <code>CLASSPATH commons-beanutils.jar, commons-dbcp-1.1.jar,commons-logging.jar, xalan.jar, commons-collections.jar, commons-digester.jar, log4j-1.2.8.jar</code> and <code>xerces.jar</code> contained in the <code>lib</code> folder.</li>
+	</ol>
+-->
+
+
+
+
+
+
+	<a id="Input_Format" name="Input_Format"></a><h3>Input Format</h3>
+
+<!-- jSRE example files -->
+
+
+<p align="justify">Example files are ASCII text files and represent the set of positive
+and negative examples for a specific binary relation.
+Consider the <em>work_for</em> relation between a person and the  organization
+for which he/she works.</p>
+
+
+<pre>"Also being considered are Judge <em class="tag">&lt;PER&gt;</em>Ralph K. Winter<em class="tag">&lt;/PER&gt;</em> of the
+<em class="tag">&lt;ORG&gt;</em>2nd U.S. Circuit Court of Appeals<em class="tag">&lt;/ORG&gt;</em> in <em class="tag">&lt;Loc&gt;</em>New YorkCity<em class="tag">&lt;/Loc&gt;</em> 
+and Judge <em class="tag">&lt;PER&gt;</em>Kenneth Starr<em class="tag">&lt;/PER&gt;</em> of the
+<em class="tag">&lt;ORG&gt;</em>U.S. Circuit Court of Appeals<em class="tag">&lt;/ORG&gt;</em> for the 
+<em class="tag">&lt;LOC&gt;</em>District of Columbia<em class="tag">&lt;/LOC&gt;</em>."</pre>
+
+<p align="justify">In the above sentence we have 2 <em>PER</em> entities and 2 <em>ORG</em> entities, 4
+potential <em>work_for</em> relations.</p>
+
+<p align="justify">2 are positive examples for the <em>work_for</em> relation:</p>
+
+<p><pre>
+... <em class="tag">&lt;PER&gt;</em>Ralph K. Winter<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;ORG&gt;</em>2nd U.S. Circuit Court of Appeals<em class="tag">&lt;/ORG&gt;</em> ...
+... <em class="tag">&lt;PER&gt;</em>Kenneth Starr<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;ORG&gt;</em>U.S. Circuit Court of Appeals<em class="tag">&lt;/ORG&gt;</em> ...
+</pre></p>
+
+<p align="justify">while 2 are negative examples:</p>
+
+<p><pre>
+... <em class="tag">&lt;PER&gt;</em>Ralph K. Winter<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;ORG&gt;</em>U.S. Circuit Court of Appeals<em class="tag">&lt;/ORG&gt;</em> ... 
+... <em class="tag">&lt;PER&gt;</em>Kenneth Starr<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;ORG&gt;</em>2nd U.S. Circuit Court of Appeals<em class="tag">&lt;/ORG&gt;</em> ...
+</pre></p>
+
+<p align="justify">Each example is essentially a pair of candidate entities possibly
+relating according to the relation of interest.  In the jSRE example
+file each example is basically represented as an instance of the
+original sentence with the two candidates properly annotated.
+Each example has to be placed on a single line and the example format
+line is:</p>
+
+<p><code>example &#8594; label\tid\tbody\n</code></p>
+ 
+<p>
+<table class="descr">
+<tr><td><code>label</code></td><td>example label (e.g. 0 negative 1 positive)</td></tr> 
+<tr><td><code>id</code></td><td>unique example identifier, (e.g. a sentence identifier followed by an incremental identifier for the example)</td></tr>
+<tr><td><code>body</code></td><td>it is the instance of the original sentence</td></tr>
+</table>
+</p>
+
+<p>Where body is encoded according to the following format:</p>
+
+<p><code>body &#8594; [tokenid&amp;&amp;token&amp;&amp;lemma&amp;&amp;POS&amp;&amp;entity_type&amp;&amp;entity_label\s]+</code>
+</p>
+
+<p align="justify">The body is a sequence of whitespace separated tokens.  Each token is
+represented with 6 attributes separated by the special  character
+sequence "&amp;&amp;".  A token is any sequence of adjacent characters in the
+sentence or an entity. An entity must be represented as a single token
+where all  whitespaces are substituted by the "_" character
+(e.g. "Ralph_K._Winter")</p>
+  
+
+<p>
+<table class="descr">
+<tr><td><code>tokenid</code></td><td>incremental position of the token in the sentence</td></tr>
+<tr><td><code>token</code></td><td>the actual token	"Also" "being"  "Ralph_K._Winter"</td></tr>
+<tr><td><code>lemma</code></td><td>lemma	   "also" be" "Ralph_K._Winter"</td></tr>
+<tr><td><code>POS</code></td><td>part of speech tag    "RB" "VBG" "NNP" </td></tr>
+<tr><td><code>entity_type</code></td><td>possible type of the token (LOC, PER, ORG) "O" for token that are not entities</td></tr>
+<tr><td><code>entity_label</code></td><td>A|T|O this attribute is to label the candidate pair.
+		Each example in the jSRE file has two entities labelled
+		respectively A (agent, first argument) and
+		T (target, second argument) of the relation,
+		they are the candidate entities possibly relating,
+		any other entity is labelled "O".</td></tr>
+</table>
+</p>
+
+<p align="justify">The example for the "Ralph K. Winter" "2nd U.S. Circuit Court of Appeals" pair is:</p>
+
+<p>
+<small><pre>
+1	 52-6    0&amp;&amp;Also&amp;&amp;Also&amp;&amp;RB&amp;&amp;O&amp;&amp;O 1&amp;&amp;being&amp;&amp;being&amp;&amp;VBG&amp;&amp;O&amp;&amp;O 2&amp;&amp;considered&amp;&amp;considered&amp;&amp;VBN&amp;&amp;O&amp;&amp;O 3&amp;&amp;are&amp;&amp;are&amp;&amp;VBP&amp;&amp;O&amp;&amp;O 4&amp;&amp;Judge&amp;&amp;Judge&amp;&amp;NNP&amp;&amp;O&amp;&amp;O 5&amp;&amp;Ralph_K._Winter&amp;&amp;Ralph_K._Winter&amp;&amp;NNP&amp;&amp;PER&amp;&amp;A 6&amp;&amp;of&amp;&amp;of&amp;&amp;IN&amp;&amp;O&amp;&amp;O 7&amp;&amp;the&amp;&amp;the&amp;&amp;DT&amp;&amp;O&amp;&amp;O 8&amp;&amp;2nd_U.S._Circuit_Court_of_Appeals&amp;&amp;2nd_U.S._Circuit_Court_of_Appeals&amp;&amp;NN&amp;&amp;ORG&amp;&amp;T 9&amp;&amp;in&amp;&amp;in&amp;&amp;IN&amp;&amp;O&amp;&amp;O 10&amp;&amp;New_York_City&amp;&amp;New_York_City&amp;&amp;NNP&amp;&amp;LOC&amp;&amp;O 11&amp;&amp;and&amp;&amp;and&amp;&amp;CC&amp;&amp;O&amp;&amp;O 12&amp;&amp;Judge&amp;&amp;Judge&amp;&amp;NNP&amp;&amp;O&amp;&amp;O 13&amp;&amp;Kenneth_Starr&amp;&amp;Kenneth_Starr&amp;&amp;NNP&amp;&amp;PER&amp;&amp;O 14&amp;&amp;of&amp;&amp;of&amp;&amp;IN&amp;&amp;O&amp;&amp;O 15&amp;&amp;the&amp;&amp;the&amp;&amp;DT&amp;&amp;O&amp;&amp;O 16&amp;&amp;U.S._Circuit_Court_of_Appeals&amp;&amp;U.S._Circuit_Court_of_Appeals&amp;&amp;NNP&amp;&amp;ORG&amp;&amp;O 17&amp;&amp;for&amp;&amp;for&amp;&amp;IN&amp;&amp;O&amp;&amp;O 18&amp;&amp;the&amp;&amp;the&amp;&amp;DT&amp;&amp;O&amp;&amp;O 19&amp;&amp;District_of_Columbia&amp;&amp;District_of_Columbia&amp;&amp;NNP&amp;&amp;LOC&amp;&amp;O 20&amp;&amp;,&amp;&amp;,&amp;&amp;,&amp;&amp;O&amp;&amp;O 21&amp;&amp;said&amp;&amp;said&amp;&amp;VBD&amp;&amp;O&amp;&amp;O 22&amp;&amp;the&amp;&amp;the&amp;&amp;DT&amp;&amp;O&amp;&amp;O 23&amp;&amp;source&amp;&amp;source&amp;&amp;NN&amp;&amp;O&amp;&amp;O 24&amp;&amp;,&amp;&amp;,&amp;&amp;,&amp;&amp;O&amp;&amp;O 25&amp;&amp;who&amp;&amp;who&amp;&amp;WP&amp;&amp;O&amp;&amp;O 26&amp;&amp;spoke&amp;&amp;spoke&amp;&amp;VBD&amp;&amp;O&amp;&amp;O 27&amp;&amp;on&amp;&amp;on&amp;&amp;IN&amp;&amp;O&amp;&amp;O 28&amp;&amp;condition&amp;&amp;condition&amp;&amp;NN&amp;&amp;O&amp;&amp;O 29&amp;&amp;of&amp;&amp;of&amp;&amp;IN&amp;&amp;O&amp;&amp;O 30&amp;&amp;anonymity&amp;&amp;anonymity&amp;&amp;NN&amp;&amp;O&amp;&amp;O 31&amp;&amp;.&amp;&amp;.&amp;&amp;.&amp;&amp;O&amp;&amp;O
+</code></pre>
+</p>
+
+<p align="justify">jSRE will consider the examples as examples for a binary classification
+problem.</p>
+
+<p align="justify">In order to reduce the number of negative examples in the case of
+relation  between entities of the same type (e.g. kill between 2
+people)  jSRE examples should be generated not for each pair of
+possibly  relating entities but for each combination of possibly
+relating entities.</p>
+
+<p align="justify">For example in the following sentence there are 3 people entities and
+the possible relating pairs are 6:</p>
+
+<p><pre>
+"Ides of March, 44 B.C., <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> was 
+assassinated by a group of nobles that included <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em> 
+and <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em>." </pre>
+</p>
+
+<p>
+<pre>
+0 ... <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em> ...
+1 ... <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> ...
+0 ... <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em> ...
+1 ... <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> ...
+0 ... <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em>	
+0 ... <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em>
+</pre>
+</p>
+
+<p align="justify">Examples for jSRE can be generated just for each combination of
+entities representing   the direction of the relation through
+different positive labels.   In this case the entity_label has to be
+"T" for both the candidates: if the relation is between the
+first and the second candidate  (according to the token id order that
+is the sentence order) the example will be labelled 1, otherwise it
+will be labelled 2.  If there is no relation between the 2 candidates
+the example will be labelled 0.  In the example above we obtain only 3
+examples (1 is negative).</p>
+
+<p>
+<pre>
+2 ... <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em> ...
+2 ... <em class="tag">&lt;PER&gt;</em>Roman Emperor Julius Caesar<em class="tag">&lt;PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em> ...
+0 ... <em class="tag">&lt;PER&gt;</em>Brutus<em class="tag">&lt;/PER&gt;</em> ... <em class="tag">&lt;PER&gt;</em>Cassius<em class="tag">&lt;/PER&gt;</em> ...
+</pre>
+</p>
+
+<p align="justify">jSRE will consider this as the example set for a multiclassification problem.</p>
+
+	<!-- end input format -->
+
+
+
+	
+	<a id="Running_jSRE" name="Running_jSRE"></a><h3>Running jSRE</h3>
+	
+	<p align="justify">This section explains how to use the jSRE software. jSRE implements the class of shallow linguistic kernels described in [<a href="#bib1">1</a>].</p>
+	
+	<p align="justify">jSRE consists of a training module (Train) and a classification module (Predict). The classification module can be used to apply the learned model to new examples. See also the examples below for how to use Train and Predict.</p>
+	
+	
+	<p align="justify">Train is called with the following parameters:</p>
+	
+	<p align="justify"><pre>java -mx128M org.itc.irst.tcc.sre.Train [options] example-file model-file</pre></p>
+
+<p align="justify">Arguments:</p>
+<p align="justify"><code>
+<table border="0">
+<tr><td>example-file</td><td>&#8594;</td><td>file with training data</td></tr>
+<tr><td>model-file</td><td>&#8594;</td><td>file in which to store resulting model</td></tr>
+
+</table></code>
+</p>
+<p align="justify">Options:</p>
+<p align="justify"><code>
+<table border="0">
+<tr><td>	  -h 		  </td><td>&#8594;</td><td>this help</td></tr>
+<tr><td>	  -k string	 </td><td>&#8594;</td><td>set type of kernel function (default SL):</td></tr>
+					  <tr><td></td><td></td><td>LC: Local Context Kernel</td></tr>
+					  <tr><td></td><td></td><td>GC: Global Context Kernel</td></tr>
+					  <tr><td></td><td></td><td>SL: Shallow Linguistic Context Kernel</td></tr>
+					 
+	  <tr><td>-m int	 		</td><td>&#8594;</td><td> set cache memory size in MB (default 128)</td></tr>
+	  
+		<tr><td>-n [1..]	  </td><td>&#8594;</td><td>set the parameter n-gram of kernels SL and GC  (default 3)</td></tr>
+	  <tr><td>-w	[1..]				</td><td>&#8594;</td><td>set the window size of kernel LC (default 2)</td></tr>
+		<!--<tr><td>-s string </td><td>&#8594;</td><td>if option is given, uses the specified stemmer</td></tr>
+		<tr><td>-t boolean			    </td><td>&#8594;</td><td>if option is given, kernel SL and GC use term frequency</td></tr>-->
+		<tr><td>-c [0..]			    </td><td>&#8594;</td><td>set the trade-off between training error and margin (default 1/[avg. x*x'])</td></tr>
+	
+</table></code>
+</p>
+
+
+<p align="justify">The input file <code>example-file</code> contains the training examples in the format described in .
+The result of Train is the model which is learned from the training data in <code>example-file</code>.
+The model is written to <code>model-file</code>.
+To make predictions on test examples, Predict reads this file.</p>
+
+<p align="justify">Predict is called with the following parameters:</p>		
+
+	<p align="justify"><pre>java org.itc.irst.tcc.sre.Predict [options] test-file model-file output-file</pre></p>
+
+<p align="justify">Arguments:</p>
+<p align="justify"><code>
+<table border="0">
+<tr><td>example-file</td><td>&#8594;</td><td>file with test data</td></tr>
+<tr><td>model-file</td><td>&#8594;</td><td>file from which to load the learned model</td></tr>
+<tr><td>output-file</td><td>&#8594;</td><td>file in which to store resulting predictions</td></tr>
+</table></code>
+</p>
+<p align="justify">Options:</p>
+<p align="justify"><code>
+<table border="0">
+<tr><td>	  -h		  </td><td>&#8594;</td><td>this help</td></tr>
+</table></code>
+</p>
+		
+<p align="justify">The test examples in <code>example-file</code> are given in the same format as the training examples
+(possibly with -1 as class label, indicating unknown). For all test examples in <code>example-file</code> the predicted values
+are written to <code>output-file</code>. There is one line per test example in <code>output-file</code> containing the
+value of the classification on that example.
+</p>
+
+
+<!--
+<p align="justify">If you want to find out more, try this <a href="faq.html">FAQ</a>.</p>
+-->
+
+
+
+
+
+	<a id="Case_of_Study" name="Case_of_Study"></a><h3>Case of Study: The relation located_in</h3>
+		<!--<p align="justify">The relation <em>located_in</em></p>-->
+		
+		<p align="justify">Suppose to have in <code>located_in.train</code> and <code>located_in.test</code> the training and test
+		set, respectively, tagged in SRE format for the relation <em>located_in</em>. To train a model for <em>located_in</em>, run:
+		</p>
+		
+		<p align="justify"><pre>java -mx256M org.itc.irst.tcc.sre.Train -m 256 -k SL -c 1 examples/located_in.train examples/located_in.model</pre></p>
+		<p align="justify">The standard output is:</p>
+
+		<p>
+<pre>
+train a relation extraction model 
+read the example set 
+find argument types 
+arg1 type: LOC 
+arg2 type: LOC 
+create feature index 
+embed the training set 
+save the embedded training set 
+save feature index 
+save parameters 
+run svm train 
+.*
+optimization finished, #iter = 1628
+obj = -58.42881586324897, rho = 0.8194511083494147
+nSV = 439, nBSV = 10
+.*
+optimization finished, #iter = 354
+obj = -13.875607571278666, rho = 0.0232461933948966
+nSV = 146, nBSV = 0
+*
+optimization finished, #iter = 857
+obj = -32.435195153048916, rho = -1.2010373459490367
+nSV = 306, nBSV = 2
+Total nSV = 658
+</pre>
+</p>
+
+<p align="justify">To predict <em>located_in</em>, run:
+		</p>
+		
+		<p align="justify"><pre>java org.itc.irst.tcc.sre.Predict examples/located_in.test examples/located_in.model examples/located_in.output</pre></p>
+		<p align="justify">The standard output is:</p>
+
+<p><pre>
+predict relations 
+read parameters 
+read the example set 
+read data set 
+find argument types 
+arg1 type: LOC 
+arg2 type: LOC 
+read feature index 
+embed the test set 
+save the embedded test set 
+run svm predict 
+Accuracy = 90.98039215686275% (232/255) (classification)
+Mean squared error = 0.14901960784313725 (regression)
+Squared correlation coefficient = 0.5535585550902604 (regression)
+tp      fp      fn      total   prec    recall  F1 
+65      10      13      255     0.867   0.833   0.850 
+</pre></p>
+
+
+<p align="justify">The output files <code>located_in.output</code> contains the predictions.</p>
+<p align="justify">To see the list of extracted <code>located_in</code>, run:
+
+<p align="justify"><pre>java org.itc.irst.tcc.sre.RelationExtractor examples/located_in.test examples/located_in.output</pre></p>
+<p align="justify">A fragment of the output is:</p>
+
+		
+<p align="justify">		
+<pre>1 relations found in sentence 2456 
+0 Whitefish ===&gt; Montana  (1) 
+
+1 relations found in sentence 28 
+1 Naples ===&gt; Campania  (1) 
+
+1 relations found in sentence 1359 
+2 Riga ===&gt; Latvia  (1) 
+
+1 relations found in sentence 130 
+3 Hot_Springs_National_Park ===&gt; Ark.  (1) 
+
+1 relations found in sentence 2412 
+4 Addis_Ababa ===&gt; Ethiopia.  (1)
+
+...
+
+2 relations found in sentence 1486 
+46 Port_Arther ===&gt; Texas.  (1) 
+47 Galveston ===&gt; Texas.  (1) 
+
+1 relations found in sentence 5921 
+48 Zambia &lt;=== Kafue_River (2) 
+
+1 relations found in sentence 5169 
+49 New_York &lt;=== Dakota (2) 
+
+...
+</pre>
+
+</p>		
+		
+
+
+<!--
+		<a id="Extending_jSRE" name="Extending_jSRE"></a><h3>Extending jSRE</h3>
+		<p align="justify">jSRE is implemented using a set of modules. Each module has a number of settable properties and implements
+		one or more interfaces, providing a piece of functionality. This modular implementation allows the following extensions:</p>
+		
+		<ol>
+			<li>Defining new instance filters by implementing the <code>InstanceFilter</code> interface.</li>
+			<li>Reading different input formats by implementing the <code>DataSetReader</code> interface.</li>
+			<li>Defining new metrics for selecting stop words by implementing the <code>Metric</code> interface.</li>
+		</ol>
+		
+		<a id="Configuration_File" name="Configuration_File"></a><h4>Configuration File</h4>
+		
+		<p align="justify">This file allows to configure jSRE.
+		<code>jiinfil-config</code> is the main element in the configuration file. It has two children specifying the
+		metrics and data set readers available: <code>metric-list</code> and <code>dataset-reader-list</code>, respectively.
+		Here is an example of the configuration file:</p>
+
+		<p align="left">
+<pre>
+&lt;!-- Configuration file --&gt;
+
+&lt;jsre-config&gt;
+  &lt;metric-list&gt;
+    &lt;metric&gt;
+	&lt;metric-name&gt;MM&lt;/metric-name&gt;
+	&lt;metric-class&gt;org.itc.irst.tcc.jsre.metric.MyMetric&lt;/metric-class&gt;
+    &lt;/metric&gt;
+    &lt;metric&gt;
+	&lt;metric-name&gt;CC&lt;/metric-name&gt;
+	&lt;metric-class&gt;org.itc.irst.tcc.jsre.metric.CorrelationCoefficient&lt;/metric-class&gt;
+    &lt;/metric&gt;
+    &lt;metric&gt;
+	&lt;metric-name&gt;OR&lt;/metric-name&gt;
+	&lt;metric-class&gt;org.itc.irst.tcc.jsre.metric.OddsRatio&lt;/metric-class&gt;
+    &lt;/metric&gt;
+    &lt;metric&gt;
+	&lt;metric-name&gt;IC&lt;/metric-name&gt;
+	&lt;metric-class&gt;org.itc.irst.tcc.jsre.metric.InformationContent&lt;/metric-class&gt;
+    &lt;/metric&gt;
+  &lt;/metric-list&gt;
+  &lt;dataset-reader-list&gt;
+    &lt;reader&gt;
+	&lt;reader-name&gt;IOB2&lt;/reader-name&gt;
+	&lt;reader-class&gt;org.itc.irst.tcc.jsre.data.IOB2Reader&lt;/reader-class&gt;
+    &lt;/reader&gt;
+    &lt;reader&gt;
+	&lt;reader-name&gt;IO&lt;/reader-name&gt;
+	&lt;reader-class&gt;org.itc.irst.tcc.jsre.data.IOReader&lt;/reader-class&gt;
+    &lt;/reader&gt;
+    &lt;reader&gt;
+	&lt;reader-name&gt;IOB&lt;/reader-name&gt;
+	&lt;reader-class&gt;org.itc.irst.tcc.jsre.data.IOBReader&lt;/reader-class&gt;
+    &lt;/reader&gt;
+  &lt;/dataset-reader-list&gt;
+&lt;/jsre-config&gt;
+</pre>
+</p>
+
+		<p align="justify">The following subsections describe each part of the configuration file.</p>
+		
+		<a id="Comments_in_Configuration_File" name="Comments_in_Configuration_File"></a><h5>Comments in Configuration File</h5>
+		<p align="justify">Lines included within <code>&lt;!--</code> and <code>--&gt;</code> are ignored, as empty lines.</p>
+
+	<a id="Metrics" name="Metrics"></a>
+	<h5>Metrics</h5>
+	<p align="justify">The <code>metric-list</code> group allows to specified the list of instance filtering metrics implemented.
+	Each metric (<code>metric</code>) is specified by its name (<code>metric-name</code>) and the name of the java class
+	(<code>metric-class</code>) that implements the <code>Metric</code> interface. The correct metric is loaded at run time
+	specifying the metric name through the command line (option <code>-m</code>) or the API, in both cases the mechanism is case insesitive.
+	</p>
+
+	<a id="Data_Set_Readers" name="Data_Set_Readers"></a>
+	<h5>Data Set Readers</h5>
+	<p align="justify">The <code>dataset-reader-list</code> group allows to specified the list of data set readers implemented.
+	Each reader (<code>reader</code>) is specified by its name (<code>reader-name</code>) and the name of the java class
+	(<code>reader-class</code>) that implements the <code>DataSetReader</code> interface. The correct reader is loaded at run time specifying
+	as extension of the training and test files the reader name (the mechanism is case insesitive), For example, <code>train.iob2</code> and
+	<code>test.IOB2</code> are loaded with the <code>IOB2Reader</code>.
+	</p>
+-->
+
+
+	<a id="History" name="History"></a><h3>History</h3>
+	<p>
+		<ul>
+			<li><a href="jsre-1.0.jar">v 1.0</a></li>
+		</ul>
+	</p>
+
+
+	<a id="Bibliography" name="Bibliography"></a><h3>Bibliography</h3>
+<p align="justify"><a id="bib1" name="bib1" ></a>[1] Claudio Giuliano, Alberto Lavelli, Lorenza Romano. <em>Exploiting Shallow Linguistic Information for Relation Extraction from Biomedical Literature</em>. In <i>Proceedings of the <a href="http://eacl06.itc.it/">11<sup>th</sup> Conference of the European Chapter of the Association for Computational Linguistics (EACL 2006)</a></i>, Trento, Italy, 3-7 April 2006.
+<a href="../lavelli/papers/giuliano-eacl2006.pdf">[PDF]</a></p>
+
+<p align="justify"><a id="bib1" name="bib1" ></a>[2] Claudio Giuliano, Alberto Lavelli, Daniele Pighin and Lorenza Romano. <em>FBK-IRST: Kernel Methods for Semantic Relation Extraction</em>. In <i>Proceedings of the <a href="nlp.cs.swarthmore.edu/semeval/">4<sup>th</sup> Interational Workshop on Semantic Evaluations (SemEval-2007)</a></i>, Prague, 23-24 June 2007.</p>
+						
+</body>
+</html>

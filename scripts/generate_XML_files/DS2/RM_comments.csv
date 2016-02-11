@@ -1,0 +1,366 @@
+17	18776133		IL-2;IL-4;DEX		
+19	18726998	25-hydroxyvitamin D			
+21	18789733		PNNs		
+42	18776170				apoA-I
+43	18776171			Conjugated linoleic acid	
+44	18776171		cis		
+53	18814316				
+55	18814316		Trp		
+56	18814316		ANS		
+70	18727113	tartrate			
+109	18791145		n-3		
+162	18792915	superoxide			
+188	18809347				aromatase
+189	18809347		Lys;GHRP		aromatase
+213	18760301		CVF		
+220	18809481		PEGs		
+224	18784908	alanine;aspartate			
+263	18817797	Cholesterol			
+300	18752301			5'-iodoresiniferatoxin	
+301	18760497	NADH;CCO			cytochrome c
+302	18760497	NADPH;glucose-6-phosphate;6-phosphogluconate			
+309	18801483			sulfonylurea	
+337	18752414	dopamine			
+338	18801573	guaiacol;ascorbate	ATH		
+368	18801652	ngmL			
+373	18777087	ARB	angiotensin II;LV		
+374	18777087		LV		
+375	18777088		Hcy		
+382	18801682		CFA		
+383	18801682				ASIC3;TRPV1
+386	18768916		NOS		
+391	18817841	4-androstene-3,17-dione;dione			
+397	18777136	Sia			
+406	18777180	guanylate			
+408	18777180	guanylate			
+420	18752633		Lys		
+437	18719894		PFC		
+463	18801894	alanine;urea;nitrogen			
+473	18801905	shotgun			
+476	18801908				PPARgamma
+478	18801909				insulin;Jun
+507	18789953	MHb			
+518	18785685			nitric oxide	
+519	18728345				serine protease 
+520	18728347				transmembrane protein
+575	18785878		DAG		
+591	18810510	dopamine			
+593	18802325		AGEs		
+603	18720446	alpha-cyano;4-hydroxy cinnamic acid			
+658	18786182		psi;mit		
+659	18789597		ERbeta		
+660	18761630		ghrelin receptor		
+688	18753604				tau;IFNT
+694	18792801		cis		
+705	18778244		Cys		
+711	18729103		Ser		
+786	18721153	NKT			
+809	18721245		IDO		
+822	18803227	tora			
+833	18754092	GSH			
+836	18754101	GSH			
+865	18778748	OSE			
+870	18723336				CFP;YFP
+882	18713277	GSH			
+887	18787024	triphosphate	Ca2		
+890	18787032	phosphatidylinositol		wortmannin	
+893	18795231	O6-methylguanine			
+914	18778892	A375			
+954	18787236		THP		
+964	18772483		Th1		
+966	18721829		parva		
+1000	18754757		Mut		
+1023	18754816		PPARalpha		
+1059	18817816		AVP;PCR		
+1099	18787837		SGK1;Thr		
+1100	18787837	Na;phosphatidylinositol;phosphate	PI3K		
+1136	18771570				glucagon
+1149	18787973			nitric oxide	
+1175	18788036		P24		
+1187	18767147		MINT		TP53;KRAS2;APC;BRAF
+1221	18796403	phytosterols			
+1246	18755506		HEMA		
+1247	18771904		ovalbumin		
+1249	18722763		Dex		
+1271	18755616				BMP-2
+1273	18803582		PCR		
+1276	18796623	Leu-Leu;Nle	GSI		
+1293	18780328		PEG		
+1310	18755820		CD4;CSF		
+1311	18804984		EPA		
+1315	18772236			mannitol;glucose	
+1316	18772236				PKC-delta
+1370	18805505				glutathione peroxidase
+1371	18805505		thioredoxin;Grx		
+1373	18772488	T2D			
+1378	18715145		THP		cyclooxygenase-2
+1423	18723579		AngII		
+1424	18723579		PKC		
+1438	18752305	phosphoinositide			
+1448	18755047	ED			
+1457	18805632				MAPK
+1461	18805639		MLR;MLP		
+1463	18756496		p38;mitogen-activated protein kinase		
+1473	18772894		n-3		
+1510	18764780	Cu			
+1511	18764780	Cu			
+1516	18764784			Acridine Orange;clioquinol	
+1517	18715643	glutamate;oxaloacetate;pyruvate			
+1564	18764923				FAD7
+1582	18715823			bioflavonoid	
+1585	18715823	quercetin			
+1610	18814181				Shc;Ras;ERK1
+1641	18789669	streptozotocin		 selenite	
+1646	18789440		THP		ABCA1
+1660	18814279	tyrosine			
+1681	18789802	16h			
+1692	18757054	SBI			
+1693	18757054	SBI			
+1708	18781650		Sar		
+1733	18806296	NADPH			
+1736	18722394		CORT		
+1741	18724397			glucose	
+1747	18757185		PFC		
+1764	18790021	dopamine			
+1771	18716315		C18		
+1772	18716315		C18		
+1773	18716315		DRM		
+1779	18757307				epidermal growth factor receptor;EGFR;mitogen-activated protein kinase;MAPK
+1809	18757495	Franklin			
+1819	18773910		adenosine 5		
+1827	18773925		CPP		
+1828	18773927				insulin;glucagon
+1835	18716607	chlorpyrifos			
+1836	18716607		RBC; AChE;CPF		
+1853	18798567	SNA	Gal		ribosome-inactivating protein;RIPs
+1867	18765850	urea;nitrogen			
+1868	18815024			alpha,d-glucose	
+1877	18716756		Thr		muramidase
+1939	18716881				vacuolar aminopeptidase I
+1941	18716881	cadmium			
+1942	18716881			cadmium	
+1986	18798873				CBL
+2014	18725236		opioid peptide		
+2028	18807177	phospho-tyrosine;tyrosine	HER2		
+2076	18766385		Glu;Asp		
+2085	18790996				ATG5
+2087	18799201	YY			
+2116	18774689	selectin			
+2139	18804525	lactate			
+2140	18804525	lactate			
+2151	18815831		MICs		
+2164	18815882	N-acetylmannosamine			
+2175	18774957		NPC		
+2177	18717617		type A		
+2181	18717625	ascorbate;pyrogallol			
+2182	18717627	NADPH;phox			
+2185	18775028			tryptophan;nitric oxide	
+2193	18799634		bradykinin		
+2207	18775088	serotonin			
+2215	18775100				IL-6;RBP4
+2223	18791496	guanylate			
+2238	18758751		TPA		
+2239	18758751		protein kinase C;TPA	hemin	
+2244	18758751		TPA		
+2252	18814142				Nrf2
+2253	18814142	cAMP			
+2260	18799753		Gpr30		
+2266	18783384	phosphonoacetate			
+2275	18758819				epidermal growth factor receptor
+2289	18767059			oxygen;O2	
+2315	18758938				insulin
+2316	18758940		ECM		
+2317	18758940		ECM		
+2318	18758940		ECM		
+2319	18758940	laminin	ECM		
+2331	18767149		Cys		
+2332	18767150				urease
+2333	18767150	nickel			
+2352	18791821		MBC		
+2362	18775471		11beta-HSD1;HEK		
+2380	18791914		BAL		
+2422	18783827		a protein; phosphatase		
+2455	18775745		Imd		
+2504	18775894	hs			
+2515	18800985				IFN-gamma
+2525	18718660			Ca(2	
+18	18825302	glargine			
+28	18931836			diphenol	
+29	18931836		SDS		
+30	18931836				tyrosinase
+41	18825368		AVP		
+61	18850007		histone deacetylase;TSA		
+114	18825527		Cl2		
+124	18940228	glucose-6-phosphate			
+130	18923851	heme			
+147	18940247		NAC		
+152	18829372		RBCs		
+175	18850267				protein kinase A;calmodulin
+206	18850325	mannitol 1-phosphate			
+207	18942727				NCS
+250	18940794	Copper			
+260	18824011		adenosine 5		
+269	18842620				CYP1A1;CYP1B1
+278	18940938		AMP		
+283	18818063	alanine			
+314	18826425	tryptophan			
+373	18842954		Ca2;Ba2		
+392	18834868	NADPH			
+398	18834871			glucose	
+409	18834946				HSP
+426	18941467		androgen receptor		
+479	18832330	N-methyl-D-aspartic acid		MK-801	
+499	18923823		ICP;SDS		
+508	18925359		PI3K		
+549	18941818	tartrate			
+552	18851710		PAI-1;plasminogen activator;vWF		
+555	18843519		SDS		
+570	18835350	cholesterol			
+595	18819019		cis		PPIase
+599	18932046	nitrate			
+667	18930714	guanine			Rac1
+668	18930714				small G-protein
+670	18930714		INS		
+691	18940183		IL-10		
+692	18940183		IL-10		
+698	18835662	TSST			
+740	18852217		DEX;sst		
+761	18854307				TnI
+766	18827741		CLP		
+791	18930779	GSH			
+801	18832480	flutamide			
+810	18844240		SFN		
+812	18844240		ACCs;SFN		
+813	18844240		ACCs;SFN		
+823	18930650	N-(3-dimethylaminopropyl)-N-ethylcarbodiimide;hydrochloride			
+827	18819713		LPO		
+842	18844326	rosiglitazone			
+874	18945930		Tyr;Arg		
+875	18930813	manganese			
+927	18836482	phosphatidylinositol		PI3K	
+944	18820127				Hsp90
+945	18820127		negative regulator of mitosis		
+956	18926641		dex;CRH		
+1012	18926806	RAR			
+1021	18836710	vitamin D			
+1046	18836740		SUR1		
+1083	18853207	glucose-6-phosphate			
+1098	18853234	GOx;		phosphorylcholine	
+1100	18836851				OLIG2;APC;NG2;CNPase;GFAP
+1121	18845148	phosphotyrosine			
+1126	18836996		TSA		
+1144	18845237	sulfoxide;methionine			
+1160	18926807	aka;succinic semialdehyde;NAD	SSA		
+1221	18845389		PKC;LTA		
+1248	18845486		Gal-3		
+1305	18845633	somatostatin	BIM		
+1312	18845639		EGP		
+1316	18845640	cholesterol			
+1325	18845645		CBX		
+1335	18931023		NOS		
+1375	18837522	dUTP			
+1413	18837652		NAC		
+1434	18845907		insulin		
+1435	18845907	LCM			
+1448	18936109		ABT		
+1462	18854222		RPE		
+1464	18854222		RPE		
+1511	18821579		histone deacetylase		
+1536	18838074		Ca2		
+1553	18832826		angiotensin		
+1561	18846318		PRP		
+1603	18936517		TPA		
+1623	18838266		RIF		
+1626	18846462	GSH			
+1647	18846552	penicillin			
+1665	18936772		THP		
+1668	18822097		Cob		
+1671	18822099	diacylglycerol			
+1716	18854987		PFC		DA transporters
+1732	18936931			diltiazem	
+1733	18936931			diltiazem	
+1737	18936191	5B	NS3 serine protease		
+1738	18936191		NS5B;Hsp90		
+1754	18936994		SDS		
+1773	18945217	HFS	LTP		
+1780	18838739	sn-2 	Ca2		
+1791	18937061	methylene;Zn(II			
+1799	18937079		HCC;PI3K		
+1821	18830680		myc		
+1835	18830722	IET			
+1843	18830730	glucose-6-phosphate			
+1865	18937289	AGP			
+1871	18923087		ARA		
+1886	18839053	alanine			
+1934	18855522		PLP		
+1941	18839150		CFA		
+1942	18839150		p38		
+1946	18839155		ACTH		
+1953	18839173		CYP3A4 	rifampicin;hyperforin	
+1971	18831007				neutral protease
+1985	18831035		Asn		
+2002	18831052	AU;Coenzyme A;3-methylglutaconyl-CoA 			
+2007	18945756	Adenosine	ADP		
+2012	18838483			hydroperoxide	
+2013	18838483			arachidonic acid 	
+2031	18929429	ascorbate			
+2042	18839328		PTH		
+2063	18855762		 Ca2		
+2126	18855935	Na			Ca2
+2128	18855936	kainate			
+2132	18855942	choline			
+2134	18855943		MRP1		
+2180	18938111		MDP		
+2183	18823436		COX-2		
+2184	18938126	MS3			
+2186	18938128		AMP		
+2196	18938163		IGF		
+2204	18938187			GABA	NR2A
+2214	18930039	creatine			
+2225	18930084		CPPs		
+2243	18823687		angiotensin		
+2255	18823722		Cys;Asp;Tyr		
+2262	18823727		GCG		
+2301	18823890	Cu;hs	TRP;SOX		
+2304	18823890	Cu;hs			
+2311	18832097		STS	1,25-dihydroxy vitamin D	
+2365	18840413	GSH			
+2367	18930149		protein kinase C;PKC		
+2371	18824036	Dopamine			
+2377	18840446		aromatase		
+2380	18848644	resorufin			
+2381	18930565	glucose;phosphate			
+2382	18848646		LRR		
+2383	18848646		LRR;embryonic		
+2442	18848748		TPA		
+2447	18922514			glycine	
+2448	18930712	flavin			
+2450	18848797	alanine			
+2455	18840610				TEM-1
+2484	18832476		cytochrome P450;UGT		
+2496	18930802		Vit		
+2542	18840759				GLUT4;Akt
+2545	18840765		Neu		
+2557	18840785				GLP-1 
+2571	18849028			arginine	
+2605	18824524			valsartan;losartan	
+2615	18849120		HPA		
+2620	18931047		Ca2		
+2637	18849171	apamine	m 1		
+2653	18826484	NADP	Cvi		
+2674	18849325	lactose			
+2678	18923065	sGC	protein kinase	ODQ	
+2679	18849352	tyrosine	EGF;EGFR		
+2685	18848359	Serotonin			
+2705	18923147				DDAH
+2719	18923162		CD44		
+2724	18931380			glycidamide	
+2744	18849565	Chondroitin			
+2754	18837470		Pol		
+2761	18841409	Mn			
+2766	18851994		acetyl-CoA		
+2771	18829287			nitric oxide;dopamine	
+2778	18841470		NaN		
+2780	18841471		CAG		
+2790	18923402		monoamine oxidase 		
+2791	18923405	glutamic acid			

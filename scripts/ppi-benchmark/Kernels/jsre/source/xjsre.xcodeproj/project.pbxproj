@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		61049ECA0B6A380E009F19BC /* CompareExampleSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = CompareExampleSet.java; sourceTree = "<group>"; };
+		61049ECB0B6A380E009F19BC /* CreateTestSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = CreateTestSet.java; sourceTree = "<group>"; };
+		61049ECC0B6A380E009F19BC /* CreateTrainingSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = CreateTrainingSet.java; sourceTree = "<group>"; };
+		61049ECE0B6A380E009F19BC /* ArgumentSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ArgumentSet.java; sourceTree = "<group>"; };
+		61049ED00B6A380E009F19BC /* AgentContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = AgentContext.java; sourceTree = "<group>"; };
+		61049ED10B6A380E009F19BC /* BetweenAfterContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = BetweenAfterContext.java; sourceTree = "<group>"; };
+		61049ED20B6A380E009F19BC /* BetweenContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = BetweenContext.java; sourceTree = "<group>"; };
+		61049ED30B6A380E009F19BC /* ForeBetweenContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ForeBetweenContext.java; sourceTree = "<group>"; };
+		61049ED40B6A380E009F19BC /* GlobalContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = GlobalContext.java; sourceTree = "<group>"; };
+		61049ED50B6A380E009F19BC /* LocalContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = LocalContext.java; sourceTree = "<group>"; };
+		61049ED60B6A380E009F19BC /* SecondTargetContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SecondTargetContext.java; sourceTree = "<group>"; };
+		61049ED70B6A380E009F19BC /* TargetContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = TargetContext.java; sourceTree = "<group>"; };
+		61049ED80B6A380E009F19BC /* CreateTeaseTrainingSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = CreateTeaseTrainingSet.java; sourceTree = "<group>"; };
+		61049ED90B6A380E009F19BC /* ExampleSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ExampleSet.java; sourceTree = "<group>"; };
+		61049EDA0B6A380E009F19BC /* ExampleSetReader.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ExampleSetReader.java; sourceTree = "<group>"; };
+		61049EDB0B6A380E009F19BC /* ExampleSetWriter.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ExampleSetWriter.java; sourceTree = "<group>"; };
+		61049EDC0B6A380E009F19BC /* InputFormatConverter.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = InputFormatConverter.java; sourceTree = "<group>"; };
+		61049EDD0B6A380F009F19BC /* MergeVectorSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MergeVectorSet.java; sourceTree = "<group>"; };
+		61049EDE0B6A380F009F19BC /* SenteceShuffler.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SenteceShuffler.java; sourceTree = "<group>"; };
+		61049EDF0B6A380F009F19BC /* Sentence.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Sentence.java; sourceTree = "<group>"; };
+		61049EE00B6A380F009F19BC /* SentenceFilter.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SentenceFilter.java; sourceTree = "<group>"; };
+		61049EE20B6A380F009F19BC /* SentenceSet2VectorSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SentenceSet2VectorSet.java; sourceTree = "<group>"; };
+		61049EE30B6A380F009F19BC /* SentenceSetCopy.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SentenceSetCopy.java; sourceTree = "<group>"; };
+		61049EE40B6A380F009F19BC /* SentenceSetToHTML.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SentenceSetToHTML.java; sourceTree = "<group>"; };
+		61049EE60B6A380F009F19BC /* Shuffler.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Shuffler.java; sourceTree = "<group>"; };
+		61049EE70B6A380F009F19BC /* VectorSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = VectorSet.java; sourceTree = "<group>"; };
+		61049EE80B6A380F009F19BC /* Word.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Word.java; sourceTree = "<group>"; };
+		61049EEB0B6A380F009F19BC /* BagOfWordsMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = BagOfWordsMapping.java; sourceTree = "<group>"; };
+		61049EEC0B6A380F009F19BC /* ContextMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ContextMapping.java; sourceTree = "<group>"; };
+		61049EF00B6A380F009F19BC /* GlobalContextMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = GlobalContextMapping.java; sourceTree = "<group>"; };
+		61049EF10B6A380F009F19BC /* LocalContextMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = LocalContextMapping.java; sourceTree = "<group>"; };
+		61049EF20B6A380F009F19BC /* Mapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Mapping.java; sourceTree = "<group>"; };
+		61049EF30B6A380F009F19BC /* MappingNotFoundException.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MappingNotFoundException.java; sourceTree = "<group>"; };
+		61049EF40B6A380F009F19BC /* MappingParameters.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MappingParameters.java; sourceTree = "<group>"; };
+		61049EF70B6A380F009F19BC /* KernelNotFoundException.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = KernelNotFoundException.java; sourceTree = "<group>"; };
+		61049EF80B6A380F009F19BC /* Parameter.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Parameter.java; sourceTree = "<group>"; };
+		61049EF90B6A380F009F19BC /* Predict.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Predict.java; sourceTree = "<group>"; };
+		61049EFA0B6A380F009F19BC /* Prova.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Prova.java; sourceTree = "<group>"; };
+		61049EFC0B6A380F009F19BC /* Train.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Train.java; sourceTree = "<group>"; };
+		61049EFE0B6A3810009F19BC /* UnsupportedRelationTypeException.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = UnsupportedRelationTypeException.java; sourceTree = "<group>"; };
+		61049F000B6A3810009F19BC /* ApproximateRandomizationProcedure.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ApproximateRandomizationProcedure.java; sourceTree = "<group>"; };
+		61049F020B6A3810009F19BC /* ConfidenceInterval.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ConfidenceInterval.java; sourceTree = "<group>"; };
+		61049F040B6A3810009F19BC /* Evaluator.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Evaluator.java; sourceTree = "<group>"; };
+		61049F050B6A3810009F19BC /* FeatureIndex.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = FeatureIndex.java; sourceTree = "<group>"; };
+		61049F060B6A3810009F19BC /* FreqSet.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = FreqSet.java; sourceTree = "<group>"; };
+		61049F070B6A3810009F19BC /* MicroAvarage.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MicroAvarage.java; sourceTree = "<group>"; };
+		61049F080B6A3810009F19BC /* Node.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Node.java; sourceTree = "<group>"; };
+		61049F090B6A3810009F19BC /* Orthographic.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Orthographic.java; sourceTree = "<group>"; };
+		61049F0A0B6A3810009F19BC /* PercentileBootstrapProcedure.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = PercentileBootstrapProcedure.java; sourceTree = "<group>"; };
+		61049F0B0B6A3810009F19BC /* PorterStemmer.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = PorterStemmer.java; sourceTree = "<group>"; };
+		61049F0C0B6A3810009F19BC /* SparseVector.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SparseVector.java; sourceTree = "<group>"; };
+		61049F0D0B6A3810009F19BC /* StatisticalSignificance.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = StatisticalSignificance.java; sourceTree = "<group>"; };
+		61049F0E0B6A3810009F19BC /* Stemmer.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Stemmer.java; sourceTree = "<group>"; };
+		61049F0F0B6A3810009F19BC /* StemmerFactory.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = StemmerFactory.java; sourceTree = "<group>"; };
+		61049F100B6A3810009F19BC /* StemmerNotFoundException.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = StemmerNotFoundException.java; sourceTree = "<group>"; };
+		61049F110B6A3810009F19BC /* svm_predict.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = svm_predict.java; sourceTree = "<group>"; };
+		61049F120B6A3810009F19BC /* svm_train.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = svm_train.java; sourceTree = "<group>"; };
+		61049F130B6A3810009F19BC /* UnZipModel.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = UnZipModel.java; sourceTree = "<group>"; };
+		61049F140B6A3810009F19BC /* Vector.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Vector.java; sourceTree = "<group>"; };
+		61049F150B6A3810009F19BC /* ZipModel.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ZipModel.java; sourceTree = "<group>"; };
+		6138B0370C2185A50045CD86 /* SentenceSetToHTML2.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SentenceSetToHTML2.java; sourceTree = "<group>"; };
+		616109E60BB285CC005DEF5F /* MiddleContext.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MiddleContext.java; sourceTree = "<group>"; };
+		886FEE5605D9BD280091015F /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
+		886FEE5705D9BD280091015F /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		8892C864061E18790047113C /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dist; sourceTree = "<group>"; };
+		CA0D36260C5891AF00A1E8B3 /* KernelMatrix.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = KernelMatrix.java; sourceTree = "<group>"; };
+		CA46DB530C685EDD00B2BE8B /* RelationExtractor.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = RelationExtractor.java; sourceTree = "<group>"; };
+		CA9B499D0BAFD1080034FEFE /* ComboMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ComboMapping.java; sourceTree = "<group>"; };
+		CA9B4A710BB073E50034FEFE /* AbstractMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = AbstractMapping.java; sourceTree = "<group>"; };
+		CA9B4A7B0BB074AA0034FEFE /* MappingFactory.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = MappingFactory.java; sourceTree = "<group>"; };
+		CAB498910C673CC700CDFD21 /* Map.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Map.java; sourceTree = "<group>"; };
+		CAC8A5B30C5FB6F600D0C635 /* EntityMapping.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = EntityMapping.java; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		61049EC30B6A380E009F19BC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				61049EC40B6A380E009F19BC /* org */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		61049EC40B6A380E009F19BC /* org */ = {
+			isa = PBXGroup;
+			children = (
+				61049EC50B6A380E009F19BC /* itc */,
+			);
+			path = org;
+			sourceTree = "<group>";
+		};
+		61049EC50B6A380E009F19BC /* itc */ = {
+			isa = PBXGroup;
+			children = (
+				61049EC60B6A380E009F19BC /* irst */,
+			);
+			path = itc;
+			sourceTree = "<group>";
+		};
+		61049EC60B6A380E009F19BC /* irst */ = {
+			isa = PBXGroup;
+			children = (
+				61049EC70B6A380E009F19BC /* tcc */,
+			);
+			path = irst;
+			sourceTree = "<group>";
+		};
+		61049EC70B6A380E009F19BC /* tcc */ = {
+			isa = PBXGroup;
+			children = (
+				61049EC80B6A380E009F19BC /* sre */,
+			);
+			path = tcc;
+			sourceTree = "<group>";
+		};
+		61049EC80B6A380E009F19BC /* sre */ = {
+			isa = PBXGroup;
+			children = (
+				CA46DB530C685EDD00B2BE8B /* RelationExtractor.java */,
+				CAB498910C673CC700CDFD21 /* Map.java */,
+				CA0D36260C5891AF00A1E8B3 /* KernelMatrix.java */,
+				61049ECA0B6A380E009F19BC /* CompareExampleSet.java */,
+				61049ECB0B6A380E009F19BC /* CreateTestSet.java */,
+				61049ECC0B6A380E009F19BC /* CreateTrainingSet.java */,
+				61049ECD0B6A380E009F19BC /* data */,
+				61049EE90B6A380F009F19BC /* kernel */,
+				61049EF80B6A380F009F19BC /* Parameter.java */,
+				61049EF90B6A380F009F19BC /* Predict.java */,
+				61049EFA0B6A380F009F19BC /* Prova.java */,
+				61049EFC0B6A380F009F19BC /* Train.java */,
+				61049EFE0B6A3810009F19BC /* UnsupportedRelationTypeException.java */,
+				61049EFF0B6A3810009F19BC /* util */,
+			);
+			path = sre;
+			sourceTree = "<group>";
+		};
+		61049ECD0B6A380E009F19BC /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6138B0370C2185A50045CD86 /* SentenceSetToHTML2.java */,
+				61049ECE0B6A380E009F19BC /* ArgumentSet.java */,
+				61049ECF0B6A380E009F19BC /* context */,
+				61049ED80B6A380E009F19BC /* CreateTeaseTrainingSet.java */,
+				61049ED90B6A380E009F19BC /* ExampleSet.java */,
+				61049EDA0B6A380E009F19BC /* ExampleSetReader.java */,
+				61049EDB0B6A380E009F19BC /* ExampleSetWriter.java */,
+				61049EDC0B6A380E009F19BC /* InputFormatConverter.java */,
+				61049EDD0B6A380F009F19BC /* MergeVectorSet.java */,
+				61049EDE0B6A380F009F19BC /* SenteceShuffler.java */,
+				61049EDF0B6A380F009F19BC /* Sentence.java */,
+				61049EE00B6A380F009F19BC /* SentenceFilter.java */,
+				61049EE20B6A380F009F19BC /* SentenceSet2VectorSet.java */,
+				61049EE30B6A380F009F19BC /* SentenceSetCopy.java */,
+				61049EE40B6A380F009F19BC /* SentenceSetToHTML.java */,
+				61049EE60B6A380F009F19BC /* Shuffler.java */,
+				61049EE70B6A380F009F19BC /* VectorSet.java */,
+				61049EE80B6A380F009F19BC /* Word.java */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		61049ECF0B6A380E009F19BC /* context */ = {
+			isa = PBXGroup;
+			children = (
+				616109E60BB285CC005DEF5F /* MiddleContext.java */,
+				61049ED00B6A380E009F19BC /* AgentContext.java */,
+				61049ED10B6A380E009F19BC /* BetweenAfterContext.java */,
+				61049ED20B6A380E009F19BC /* BetweenContext.java */,
+				61049ED30B6A380E009F19BC /* ForeBetweenContext.java */,
+				61049ED40B6A380E009F19BC /* GlobalContext.java */,
+				61049ED50B6A380E009F19BC /* LocalContext.java */,
+				61049ED60B6A380E009F19BC /* SecondTargetContext.java */,
+				61049ED70B6A380E009F19BC /* TargetContext.java */,
+			);
+			path = context;
+			sourceTree = "<group>";
+		};
+		61049EE90B6A380F009F19BC /* kernel */ = {
+			isa = PBXGroup;
+			children = (
+				61049EEA0B6A380F009F19BC /* expl */,
+				61049EF60B6A380F009F19BC /* impl */,
+				61049EF70B6A380F009F19BC /* KernelNotFoundException.java */,
+			);
+			path = kernel;
+			sourceTree = "<group>";
+		};
+		61049EEA0B6A380F009F19BC /* expl */ = {
+			isa = PBXGroup;
+			children = (
+				CAC8A5B30C5FB6F600D0C635 /* EntityMapping.java */,
+				CA9B4A7B0BB074AA0034FEFE /* MappingFactory.java */,
+				CA9B4A710BB073E50034FEFE /* AbstractMapping.java */,
+				CA9B499D0BAFD1080034FEFE /* ComboMapping.java */,
+				61049EEB0B6A380F009F19BC /* BagOfWordsMapping.java */,
+				61049EEC0B6A380F009F19BC /* ContextMapping.java */,
+				61049EF00B6A380F009F19BC /* GlobalContextMapping.java */,
+				61049EF10B6A380F009F19BC /* LocalContextMapping.java */,
+				61049EF20B6A380F009F19BC /* Mapping.java */,
+				61049EF30B6A380F009F19BC /* MappingNotFoundException.java */,
+				61049EF40B6A380F009F19BC /* MappingParameters.java */,
+			);
+			path = expl;
+			sourceTree = "<group>";
+		};
+		61049EF60B6A380F009F19BC /* impl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		61049EFF0B6A3810009F19BC /* util */ = {
+			isa = PBXGroup;
+			children = (
+				61049F000B6A3810009F19BC /* ApproximateRandomizationProcedure.java */,
+				61049F020B6A3810009F19BC /* ConfidenceInterval.java */,
+				61049F040B6A3810009F19BC /* Evaluator.java */,
+				61049F050B6A3810009F19BC /* FeatureIndex.java */,
+				61049F060B6A3810009F19BC /* FreqSet.java */,
+				61049F070B6A3810009F19BC /* MicroAvarage.java */,
+				61049F080B6A3810009F19BC /* Node.java */,
+				61049F090B6A3810009F19BC /* Orthographic.java */,
+				61049F0A0B6A3810009F19BC /* PercentileBootstrapProcedure.java */,
+				61049F0B0B6A3810009F19BC /* PorterStemmer.java */,
+				61049F0C0B6A3810009F19BC /* SparseVector.java */,
+				61049F0D0B6A3810009F19BC /* StatisticalSignificance.java */,
+				61049F0E0B6A3810009F19BC /* Stemmer.java */,
+				61049F0F0B6A3810009F19BC /* StemmerFactory.java */,
+				61049F100B6A3810009F19BC /* StemmerNotFoundException.java */,
+				61049F110B6A3810009F19BC /* svm_predict.java */,
+				61049F120B6A3810009F19BC /* svm_train.java */,
+				61049F130B6A3810009F19BC /* UnZipModel.java */,
+				61049F140B6A3810009F19BC /* Vector.java */,
+				61049F150B6A3810009F19BC /* ZipModel.java */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		88230FFA05D9926E00FE8D22 = {
+			isa = PBXGroup;
+			children = (
+				61049EC30B6A380E009F19BC /* src */,
+				886FEE5605D9BD280091015F /* build.xml */,
+				886FEE5705D9BD280091015F /* lib */,
+				8892C864061E18790047113C /* dist */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		8823100505D9929B00FE8D22 /* xjsre */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-emacs $(ACTION)";
+			buildConfigurationList = 0AA805D408BBAA4C008E12F1 /* Build configuration list for PBXLegacyTarget "xjsre" */;
+			buildPhases = (
+			);
+			buildToolPath = /Developer/Java/Ant/bin/ant;
+			dependencies = (
+			);
+			name = xjsre;
+			passBuildSettingsInEnvironment = 1;
+			productName = xjsre;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		88230FFE05D9926E00FE8D22 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0AA805D808BBAA4C008E12F1 /* Build configuration list for PBXProject "xjsre" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 88230FFA05D9926E00FE8D22;
+			projectDirPath = "";
+			targets = (
+				8823100505D9929B00FE8D22 /* xjsre */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		0AA805D508BBAA4C008E12F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				PRODUCT_NAME = xjsre;
+			};
+			name = Debug;
+		};
+		0AA805D608BBAA4C008E12F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				PRODUCT_NAME = xjsre;
+			};
+			name = Release;
+		};
+		0AA805D908BBAA4C008E12F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0AA805DA08BBAA4C008E12F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AA805D408BBAA4C008E12F1 /* Build configuration list for PBXLegacyTarget "xjsre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA805D508BBAA4C008E12F1 /* Debug */,
+				0AA805D608BBAA4C008E12F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA805D808BBAA4C008E12F1 /* Build configuration list for PBXProject "xjsre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA805D908BBAA4C008E12F1 /* Debug */,
+				0AA805DA08BBAA4C008E12F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88230FFE05D9926E00FE8D22 /* Project object */;
+}

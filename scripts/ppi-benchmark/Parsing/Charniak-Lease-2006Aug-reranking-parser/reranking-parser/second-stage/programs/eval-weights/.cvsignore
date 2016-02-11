@@ -1,0 +1,13 @@
+best-indices
+best-indices.d
+best-parses
+best-parses.d
+data.d
+eval-weights
+eval-weights.d
+lmdata.d
+pretty-print
+pretty-print.d
+read-tree.d
+read-tree.cc
+sym.d

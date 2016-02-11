@@ -1,0 +1,180 @@
+3	18515973				tumor necrosis factor
+5	18515973		p38 MAPK;JNK		
+7	18515973				tumor necrosis factor;TNF
+8	18515973		p38 MAPK		
+11	18515973				TNF-alpha
+12	18515973				TNF-alpha
+35	18496518	5-HT			
+46	18509591			glutathione	
+47	18509591			hydroxyproline;hyaluronic acid;laminin	
+71	18407527			Rosiglitazone;TGs	
+81	18537150		CYP		
+82	18327670		FES		
+84	18436224	NADPH			eNOS;PKC
+86	18436224	phenylephrine	protein kinase C;PKC		
+87	18436224	NADPH;phox;lucigenin			
+88	18436224		nitric oxide synthase 		
+89	18436224			isorhamnetin	
+90	18436224	NADPH			
+91	18436227		PAD		
+96	18479249		BDL		
+97	18479249		BDL		
+99	18489490		CPE		
+107	18481313				PGE
+108	18481313				PGE
+109	18260130	polyethylene glycol  acrylate			
+121	18389169		ITC		
+128	18467006		luciferase		
+134	18410530		histone H3		
+143	18473182		AMP		
+145	18452177		TSC		
+151	18405417	serotonin			
+172	18395421				
+181	18436399		EPA;C18		
+189	18486994		DDC		
+190	18458677	serotonin			
+221	18472342		CA1;STD		
+222	18472342	guanylate		LFS;STD	
+223	18534791		CTL		
+231	18243311		ROI		
+246	18198986				hemoglobin;insulin
+264	18508255	HX			
+282	18459128	H1299			
+286	18528683		Hpr		
+287	18528683			GSH	
+293	18528783	1-amino-4-bromoanthraquinone;sulfonamides	alk;bis		
+302	17003041		Ca2		
+304	17003041			ATP	
+307	18498083				CD4
+309	18420260	SNA			
+317	18489909			tumor necrosis factor;TNFalpha	
+319	18489909	quercetin;glucuronide;3'-methylquercetin;glucuronide			
+323	18479686		ApoE		
+324	18479686		apolipoprotein E;apoE		
+328	18393672		INS	glucose	
+329	18393672	glucose		Benfotiamine	
+330	18393672	pentose;phosphate			
+346	18317936	Fluo-3;MEK			
+349	18227836		PCP		
+371	18479897		n-3		
+373	18479897		n-3		
+379	18555557	Methylthioadenosine	MTA		
+382	18498673				leptin;LEPR;LPL
+392	18172601	Ca(2	Tyr		
+399	18543297			dextromethorphan	
+400	18543297		DEX		
+402	18543297		DEX		
+416	18262738	tyrosine;PTK			
+430	18514659			TXA(2	
+442	18227970				arginine decarboxylase 
+455	18479896	MEK	p38		
+460	18387753		PCR		
+469	18400050	EAN			
+476	18381637	ammonium;persulfate	MSCs	poly(ethylene glycol)-diacrylate	
+478	18359113	D;25(OH)D3			
+482	18490188		TPP		
+485	18479950			EMF;vitamin E	
+486	18479950			EMF	
+498	18346857				FSHR;luteinizing hormone receptor;LHR;estrogen receptor-beta;ER-beta
+501	18479251			glycerol	
+509	18539387			chloride	
+513	18330498			PD98059;SP600125 	
+517	18484100		ARF		
+527	18492301		chia		
+528	18492301		chia		
+529	18492302			trimethyllysine;gamma-butyrobetaine	
+532	18404246	serine;cysteine			
+537	18367388			hydrogen peroxide	
+547	18228136		PCR		
+548	18228136				P53
+564	18500430			Ca(2;EGTA	
+584	18471929	salicylic acid			
+593	18379782	doxorubicin			
+594	18515457	arginine vasopressin			
+597	18506760			PGE2	
+612	18410522		CTF		
+619	18410527	curcumin			
+624	18256928		ERalpha		
+625	18256928		ERalpha		
+629	18410529	GLUT			
+637	18547754			cycloheximide	
+641	18551377				rps12
+670	18191451	salina			
+691	18496650		DMH	reduced glutathione;GSH	
+715	18396353	pyridinium;oximes;methoxymethyl;but-2-ene;but-2-yne 	bis;cis;PAM		
+716	18396355	pyridinium;oximes	bis	xylene	
+717	18396355	pyridinium;oximes	bis	xylene	
+718	18396355	xylene;pyridinium	bis		
+727	18506630				peroxidase
+734	17968352		CA1		
+738	18511076		MDD		
+773	18357521		Bcl-2;calpain		
+774	18357521		Bcl-2		
+783	18384163		PCR		BMP-2
+787	18459941		LV		
+791	18522674				PGE
+801	18548275				KCNJ11
+837	18230627		MTX		
+853	18414974	glucose-6-phosphate		 reduced glutathione;GSH	
+854	18414974			oxidized glutathione;GSSG;superoxide	
+860	18068871		cholinesterase;LTP		
+873	18497703		ovalbumin		
+878	18415015		Cer		
+889	18544047		XCT;acetyl-CoA;TCA		
+891	18544047		TCA		
+902	18363836	glutamate			
+918	18222543			glutathione;GSH	
+926	18503570				NMDAR1
+927	18503570			cholesterol	
+929	18410982	Ala-Phe;hexyl;dioxo			
+944	18533896		Glu		
+948	18509327	erythromycin			
+953	18449944		THP		
+955	17890844	E1p			
+958	17968676		NPC		
+959	18497709		GLN		
+961	18497709				
+964	18497709	HS			
+968	18390571			leucine	
+969	18466349				insulin
+978	18437699				Trx1
+997	18409071		EGFR		
+1001	18304632	WZ2	K12		
+1010	18413191	selectin	ASA		
+1012	18409068		Calu		
+1013	18521740		aromatase		
+1028	18495128		vasa		
+1030	18495129	cyanidin;glucoside			
+1034	18502597	CR			
+1040	17925795		HDAC1		
+1041	17925795				BDNF
+1044	18378405		NR2B;NR2A		
+1067	17403602	bo			
+1073	18554598			medroxyprogesterone	
+1077	18304748		NASP	Joro spider toxin	
+1091	18521846	MeO			
+1104	18380545	Adenosine;CFC	adenosine-5		
+1105	18380545	CFC	GM-CSF		
+1106	18380545	CFC			
+1107	18380545	CFC			
+1108	18521859			dopamine	
+1110	18226951		CSF;OMD		
+1127	18298659		Cpn;apolipoprotein E		
+1150	18550596			Synapsin	
+1157	18443843	GHb			
+1158	18443843			GSH;endosulfan	
+1163	18442070	alanin;lactate	DIC		
+1165	18495461	VAD			
+1184	18521748	DeltaN	ADP		
+1213	18513857		kbp		
+1218	18544592			dexamethasone	
+1219	18544592		CSF	nitric oxide	
+1223	18547363	LLC	PK1		
+1225	18547363	LLC	PK1		
+1230	18470874		embryonic;MEF		
+1234	17590240				
+1236	18495458	phosphatidylinositol			
+1238	18495460	7-ketocholesterol			
+1240	18368485		cis;CRA		
+1248	18450412		Cdk;p21		
+1258	18272254		LTP		

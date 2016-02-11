@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/ppi-benchmark/!svn/ver/1312/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer
+END
+DependencyGraphTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/ppi-benchmark/!svn/ver/1209/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/DependencyGraphTransformer.java
+END
+RinaldiTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/ppi-benchmark/!svn/ver/1312/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/RinaldiTransformer.java
+END
+EdgeRemoverTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/ppi-benchmark/!svn/ver/1210/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/EdgeRemoverTransformer.java
+END
+MicrosoftTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/ppi-benchmark/!svn/ver/1312/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/MicrosoftTransformer.java
+END
+CDTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/ppi-benchmark/!svn/ver/1310/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/CDTransformer.java
+END
+UDTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/ppi-benchmark/!svn/ver/1309/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/UDTransformer.java
+END
+ConjTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/ppi-benchmark/!svn/ver/1240/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/ConjTransformer.java
+END
+IdentityTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/ppi-benchmark/!svn/ver/1239/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/IdentityTransformer.java
+END
+ChainedTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/ppi-benchmark/!svn/ver/1239/Converters/learning-format-api/src/main/java/org/learningformat/transform/dependency/transformer/ChainedTransformer.java
+END

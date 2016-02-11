@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	61049ECB0B6A380E009F19BC /* CreateTestSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1328.21, 6456}}";
+			sepNavSelRange = "{6771, 0}";
+			sepNavVisRect = "{{0, 5712}, {1249, 720}}";
+			sepNavWindowFrame = "{{40, -10}, {1294, 849}}";
+		};
+	};
+	61049ECC0B6A380E009F19BC /* CreateTrainingSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1856.3, 12048}}";
+			sepNavSelRange = "{10202, 52}";
+			sepNavVisRect = "{{0, 8424}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	61049ECE0B6A380E009F19BC /* ArgumentSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 2760}}";
+			sepNavSelRange = "{1622, 16}";
+			sepNavVisRect = "{{0, 1726}, {1020, 745}}";
+			sepNavWindowFrame = "{{119, -96}, {1065, 874}}";
+		};
+	};
+	61049ED00B6A380E009F19BC /* AgentContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 3216}}";
+			sepNavSelRange = "{2879, 0}";
+			sepNavVisRect = "{{0, 2471}, {1020, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {1065, 874}}";
+		};
+	};
+	61049ED10B6A380E009F19BC /* BetweenAfterContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 2232}}";
+			sepNavSelRange = "{1980, 0}";
+			sepNavVisRect = "{{0, 1487}, {1020, 745}}";
+			sepNavWindowFrame = "{{28, -287}, {1065, 874}}";
+		};
+	};
+	61049ED20B6A380E009F19BC /* BetweenContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 2256}}";
+			sepNavSelRange = "{1633, 0}";
+			sepNavVisRect = "{{0, 1111}, {764, 745}}";
+			sepNavWindowFrame = "{{335, 3}, {809, 874}}";
+		};
+	};
+	61049ED40B6A380E009F19BC /* GlobalContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 1296}}";
+			sepNavSelRange = "{970, 0}";
+			sepNavVisRect = "{{0, 551}, {764, 745}}";
+			sepNavWindowFrame = "{{14, 3}, {809, 874}}";
+		};
+	};
+	61049ED50B6A380E009F19BC /* LocalContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 1272}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 527}, {1020, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {1065, 874}}";
+		};
+	};
+	61049ED60B6A380E009F19BC /* SecondTargetContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {980.156, 3720}}";
+			sepNavSelRange = "{1119, 0}";
+			sepNavVisRect = "{{0, 816}, {764, 745}}";
+			sepNavWindowFrame = "{{476, 4}, {809, 874}}";
+		};
+	};
+	61049ED70B6A380E009F19BC /* TargetContext.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 3096}}";
+			sepNavSelRange = "{2720, 0}";
+			sepNavVisRect = "{{0, 901}, {1020, 745}}";
+			sepNavWindowFrame = "{{167, 1}, {1065, 874}}";
+		};
+	};
+	61049ED90B6A380E009F19BC /* ExampleSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1604.26, 4464}}";
+			sepNavSelRange = "{1465, 0}";
+			sepNavVisRect = "{{0, 1083}, {708, 740}}";
+			sepNavWindowFrame = "{{450, 9}, {753, 869}}";
+		};
+	};
+	61049EDC0B6A380E009F19BC /* InputFormatConverter.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1052.17, 1992}}";
+			sepNavSelRange = "{142, 0}";
+			sepNavVisRect = "{{0, 0}, {764, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {809, 874}}";
+		};
+	};
+	61049EDF0B6A380F009F19BC /* Sentence.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 4416}}";
+			sepNavSelRange = "{2056, 6}";
+			sepNavVisRect = "{{0, 3456}, {764, 745}}";
+			sepNavWindowFrame = "{{234, 4}, {809, 874}}";
+		};
+	};
+	61049EE00B6A380F009F19BC /* SentenceFilter.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {966, 720}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 15}, {966, 705}}";
+			sepNavWindowFrame = "{{15, 39}, {1011, 834}}";
+		};
+	};
+	61049EE20B6A380F009F19BC /* SentenceSet2VectorSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1484.24, 7224}}";
+			sepNavSelRange = "{7155, 2}";
+			sepNavVisRect = "{{0, 6012}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	61049EE30B6A380F009F19BC /* SentenceSetCopy.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1052.17, 5688}}";
+			sepNavSelRange = "{1403, 0}";
+			sepNavVisRect = "{{0, 847}, {764, 745}}";
+			sepNavWindowFrame = "{{147, -22}, {809, 874}}";
+		};
+	};
+	61049EE40B6A380F009F19BC /* SentenceSetToHTML.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {3788.61, 7512}}";
+			sepNavSelRange = "{6828, 193}";
+			sepNavVisRect = "{{0, 6205}, {764, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {809, 874}}";
+		};
+	};
+	61049EE50B6A380F009F19BC /* SentenceSetToLuceneQuery.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1280.21, 2976}}";
+			sepNavSelRange = "{980, 0}";
+			sepNavVisRect = "{{0, 23}, {752, 745}}";
+			sepNavWindowFrame = "{{55, 154}, {797, 874}}";
+		};
+	};
+	61049EE60B6A380F009F19BC /* Shuffler.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1208.19, 840}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {700, 755}}";
+			sepNavWindowFrame = "{{1, 144}, {745, 884}}";
+		};
+	};
+	61049EE70B6A380F009F19BC /* VectorSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 2712}}";
+			sepNavSelRange = "{875, 42}";
+			sepNavVisRect = "{{0, 336}, {764, 745}}";
+			sepNavWindowFrame = "{{15, 4}, {809, 874}}";
+		};
+	};
+	61049EE80B6A380F009F19BC /* Word.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1028.16, 6432}}";
+			sepNavSelRange = "{3855, 0}";
+			sepNavVisRect = "{{0, 4389}, {764, 745}}";
+			sepNavWindowFrame = "{{443, 4}, {809, 874}}";
+		};
+	};
+	61049EEB0B6A380F009F19BC /* BagOfWordsMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 4752}}";
+			sepNavSelRange = "{855, 0}";
+			sepNavVisRect = "{{0, 2112}, {764, 745}}";
+			sepNavWindowFrame = "{{1516, -15}, {809, 874}}";
+		};
+	};
+	61049EEC0B6A380F009F19BC /* ContextMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 745}}";
+			sepNavSelRange = "{462, 0}";
+			sepNavVisRect = "{{0, 0}, {764, 745}}";
+			sepNavWindowFrame = "{{356, 4}, {809, 874}}";
+		};
+	};
+	61049EEE0B6A380F009F19BC /* CooccurrenceMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 4152}}";
+			sepNavSelRange = "{2918, 0}";
+			sepNavVisRect = "{{0, 2377}, {764, 745}}";
+			sepNavWindowFrame = "{{15, 3}, {809, 874}}";
+		};
+	};
+	61049EF00B6A380F009F19BC /* GlobalContextMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 5880}}";
+			sepNavSelRange = "{3564, 0}";
+			sepNavVisRect = "{{0, 2735}, {764, 745}}";
+			sepNavWindowFrame = "{{480, 4}, {809, 874}}";
+		};
+	};
+	61049EF10B6A380F009F19BC /* LocalContextMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 10056}}";
+			sepNavSelRange = "{1788, 0}";
+			sepNavVisRect = "{{0, 4488}, {764, 745}}";
+			sepNavWindowFrame = "{{104, 4}, {809, 874}}";
+		};
+	};
+	61049EF20B6A380F009F19BC /* Mapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1256.2, 1416}}";
+			sepNavSelRange = "{1474, 9}";
+			sepNavVisRect = "{{0, 650}, {764, 745}}";
+			sepNavWindowFrame = "{{271, 4}, {809, 874}}";
+		};
+	};
+	61049EF30B6A380F009F19BC /* MappingNotFoundException.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {977, 1152}}";
+			sepNavSelRange = "{53, 0}";
+			sepNavVisRect = "{{0, 0}, {977, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {1022, 874}}";
+		};
+	};
+	61049EF40B6A380F009F19BC /* MappingParameters.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {956.152, 2256}}";
+			sepNavSelRange = "{1261, 0}";
+			sepNavVisRect = "{{0, 373}, {764, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {809, 874}}";
+		};
+	};
+	61049EF90B6A380F009F19BC /* Predict.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1376.22, 6384}}";
+			sepNavSelRange = "{3353, 14}";
+			sepNavVisRect = "{{0, 2713}, {764, 745}}";
+			sepNavWindowFrame = "{{129, 4}, {809, 874}}";
+		};
+	};
+	61049EFA0B6A380F009F19BC /* Prova.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1249, 720}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	61049EFC0B6A380F009F19BC /* Train.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1604.26, 12312}}";
+			sepNavSelRange = "{3198, 9}";
+			sepNavVisRect = "{{0, 2184}, {764, 745}}";
+			sepNavWindowFrame = "{{418, 4}, {809, 874}}";
+		};
+	};
+	61049EFE0B6A3810009F19BC /* UnsupportedRelationTypeException.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1249, 1152}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	61049F040B6A3810009F19BC /* Evaluator.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2900.47, 12072}}";
+			sepNavSelRange = "{9175, 57}";
+			sepNavVisRect = "{{0, 10819}, {764, 745}}";
+			sepNavWindowFrame = "{{522, -13}, {809, 874}}";
+		};
+	};
+	61049F050B6A3810009F19BC /* FeatureIndex.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 6384}}";
+			sepNavSelRange = "{6037, 0}";
+			sepNavVisRect = "{{0, 5585}, {764, 745}}";
+			sepNavWindowFrame = "{{514, 4}, {809, 874}}";
+		};
+	};
+	61049F060B6A3810009F19BC /* FreqSet.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 3144}}";
+			sepNavSelRange = "{1126, 0}";
+			sepNavVisRect = "{{0, 839}, {764, 745}}";
+			sepNavWindowFrame = "{{490, 4}, {809, 874}}";
+		};
+	};
+	61049F070B6A3810009F19BC /* MicroAvarage.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2684.43, 2496}}";
+			sepNavSelRange = "{1979, 0}";
+			sepNavVisRect = "{{0, 1709}, {764, 745}}";
+			sepNavWindowFrame = "{{15, -1}, {809, 874}}";
+		};
+	};
+	61049F0B0B6A3810009F19BC /* PorterStemmer.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1249, 13776}}";
+			sepNavSelRange = "{289, 2}";
+			sepNavVisRect = "{{0, 0}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	61049F0C0B6A3810009F19BC /* SparseVector.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1436.23, 12960}}";
+			sepNavSelRange = "{7586, 0}";
+			sepNavVisRect = "{{0, 9028}, {708, 740}}";
+			sepNavWindowFrame = "{{414, 9}, {753, 869}}";
+		};
+	};
+	61049F110B6A3810009F19BC /* svm_predict.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2264.36, 3288}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	61049F120B6A3810009F19BC /* svm_train.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1292.21, 4992}}";
+			sepNavSelRange = "{3942, 99}";
+			sepNavVisRect = "{{0, 3421}, {1249, 720}}";
+			sepNavWindowFrame = "{{130, 29}, {1294, 849}}";
+		};
+	};
+	61ABFF400BA94C2500821CAE /* WordNetMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 6168}}";
+			sepNavSelRange = "{3515, 5}";
+			sepNavVisRect = "{{0, 725}, {764, 745}}";
+			sepNavWindowFrame = "{{15, 3}, {809, 874}}";
+		};
+	};
+	88230FFE05D9926E00FE8D22 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8823100505D9929B00FE8D22 /* xjsre */;
+		addToTargets = (
+			8823100505D9929B00FE8D22 /* xjsre */,
+		);
+		breakpoints = (
+			CA0D35F80C588CA900A1E8B3 /* Train.java:501 */,
+		);
+		breakpointsGroup = CA9B49C40BAFD8A10034FEFE /* XCBreakpointsBucket */;
+		codeSenseManager = CA82E3920B6DED3B00553327 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					45.2085,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					57.5835,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					10,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					297,
+					232,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 210502469;
+			PBXWorkspaceStateSaveDate = 210502469;
+		};
+		perUserProjectItems = {
+			CA3F62380C8C036C00FC93A2 /* PBXBookmark */ = CA3F62380C8C036C00FC93A2 /* PBXBookmark */;
+			CA3F623D0C8C040400FC93A2 /* PBXTextBookmark */ = CA3F623D0C8C040400FC93A2 /* PBXTextBookmark */;
+			CA3F623E0C8C040400FC93A2 /* PBXTextBookmark */ = CA3F623E0C8C040400FC93A2 /* PBXTextBookmark */;
+			CAE4D0860C873967007FFCBB /* PBXTextBookmark */ = CAE4D0860C873967007FFCBB /* PBXTextBookmark */;
+		};
+		sourceControlManager = CA82E3910B6DED3B00553327 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8823100505D9929B00FE8D22 /* xjsre */ = {
+		activeExec = 0;
+	};
+	886FEE5605D9BD280091015F /* build.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {896.142, 1032}}";
+			sepNavSelRange = "{1013, 65}";
+			sepNavVisRect = "{{0, 487}, {740, 233}}";
+			sepNavWindowFrame = "{{15, -1}, {809, 874}}";
+		};
+	};
+	CA0D35F80C588CA900A1E8B3 /* Train.java:501 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 61049EFC0B6A380F009F19BC /* Train.java */;
+		hitCount = 0;
+		lineNumber = 501;
+		modificationTime = 207129769.959907;
+		state = 1;
+	};
+	CA0D36260C5891AF00A1E8B3 /* KernelMatrix.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1604.26, 10728}}";
+			sepNavSelRange = "{10633, 2}";
+			sepNavVisRect = "{{0, 8906}, {708, 740}}";
+			sepNavWindowFrame = "{{66, 9}, {753, 869}}";
+		};
+	};
+	CA0D3BB80C5CDADE00A1E8B3 /* DistanceContextMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 3576}}";
+			sepNavSelRange = "{3445, 0}";
+			sepNavVisRect = "{{0, 1298}, {1020, 745}}";
+			sepNavWindowFrame = "{{85, 4}, {1065, 874}}";
+		};
+	};
+	CA3F62380C8C036C00FC93A2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 61049EFC0B6A380F009F19BC /* Train.java */;
+	};
+	CA3F623D0C8C040400FC93A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 61049EFC0B6A380F009F19BC /* Train.java */;
+		name = parameter;
+		rLen = 9;
+		rLoc = 3198;
+		rType = 0;
+		vrLen = 1125;
+		vrLoc = 2524;
+	};
+	CA3F623E0C8C040400FC93A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CAC8A5B30C5FB6F600D0C635 /* EntityMapping.java */;
+		name = "EntityMapping.java: 233";
+		rLen = 0;
+		rLoc = 5708;
+		rType = 0;
+		vrLen = 572;
+		vrLoc = 5434;
+	};
+	CA46DB530C685EDD00B2BE8B /* RelationExtractor.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1244.2, 7512}}";
+			sepNavSelRange = "{5997, 446}";
+			sepNavVisRect = "{{0, 6767}, {797, 745}}";
+			sepNavWindowFrame = "{{17, 3}, {842, 874}}";
+		};
+	};
+	CA82E3910B6DED3B00553327 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	CA82E3920B6DED3B00553327 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	CA9B48400BAE7B2B0034FEFE /* GoogleFilter.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1256.2, 4056}}";
+			sepNavSelRange = "{1675, 0}";
+			sepNavVisRect = "{{228, 1503}, {453, 186}}";
+			sepNavWindowFrame = "{{301, 4}, {809, 874}}";
+		};
+	};
+	CA9B48C00BAED46C0034FEFE /* SentenceToJoiningTerms.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1616.26, 5520}}";
+			sepNavSelRange = "{3860, 0}";
+			sepNavVisRect = "{{0, 2951}, {764, 745}}";
+			sepNavWindowFrame = "{{317, 4}, {809, 874}}";
+		};
+	};
+	CA9B49870BAFC41C0034FEFE /* SuperSenseMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 4632}}";
+			sepNavSelRange = "{3430, 0}";
+			sepNavVisRect = "{{0, 2817}, {764, 745}}";
+			sepNavWindowFrame = "{{174, -1}, {809, 874}}";
+		};
+	};
+	CA9B499D0BAFD1080034FEFE /* ComboMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 4320}}";
+			sepNavSelRange = "{1116, 0}";
+			sepNavVisRect = "{{0, 3384}, {764, 745}}";
+			sepNavWindowFrame = "{{279, 4}, {809, 874}}";
+		};
+	};
+	CA9B49C40BAFD8A10034FEFE /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+			CA0D35F80C588CA900A1E8B3 /* Train.java:501 */,
+		);
+	};
+	CA9B4A710BB073E50034FEFE /* AbstractMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1292.21, 3192}}";
+			sepNavSelRange = "{2448, 3}";
+			sepNavVisRect = "{{0, 2400}, {764, 745}}";
+			sepNavWindowFrame = "{{207, 4}, {809, 874}}";
+		};
+	};
+	CA9B4A7B0BB074AA0034FEFE /* MappingFactory.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1376.22, 4968}}";
+			sepNavSelRange = "{0, 5743}";
+			sepNavVisRect = "{{0, 3889}, {764, 745}}";
+			sepNavWindowFrame = "{{359, 4}, {809, 874}}";
+		};
+	};
+	CA9B4B3A0BB085D50034FEFE /* JoiningTermMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 4224}}";
+			sepNavSelRange = "{3115, 2}";
+			sepNavVisRect = "{{0, 527}, {764, 745}}";
+			sepNavWindowFrame = "{{343, 4}, {809, 874}}";
+		};
+	};
+	CA9B4B3E0BB086170034FEFE /* BackgroundKnowledgeMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {920.146, 745}}";
+			sepNavSelRange = "{673, 26}";
+			sepNavVisRect = "{{0, 0}, {764, 745}}";
+			sepNavWindowFrame = "{{15, 4}, {809, 874}}";
+		};
+	};
+	CAB498910C673CC700CDFD21 /* Map.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1604.26, 11616}}";
+			sepNavSelRange = "{8196, 0}";
+			sepNavVisRect = "{{0, 6517}, {1249, 720}}";
+			sepNavWindowFrame = "{{15, 24}, {1294, 849}}";
+		};
+	};
+	CAC8A5B30C5FB6F600D0C635 /* EntityMapping.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1172.19, 6768}}";
+			sepNavSelRange = "{5708, 0}";
+			sepNavVisRect = "{{0, 5232}, {1020, 745}}";
+			sepNavWindowFrame = "{{1741, 172}, {1065, 874}}";
+		};
+	};
+	CAE4D0860C873967007FFCBB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CAC8A5B30C5FB6F600D0C635 /* EntityMapping.java */;
+		name = "EntityMapping.java: 233";
+		rLen = 0;
+		rLoc = 5708;
+		rType = 0;
+		vrLen = 572;
+		vrLoc = 5434;
+	};
+	CAEF93570BAAE4E900CD1E74 /* Sentence2GoogleQuery.java */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1520.24, 5232}}";
+			sepNavSelRange = "{1680, 41}";
+			sepNavVisRect = "{{0, 23}, {764, 745}}";
+			sepNavWindowFrame = "{{127, 4}, {809, 874}}";
+		};
+	};
+}

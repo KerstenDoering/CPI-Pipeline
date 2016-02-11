@@ -1,0 +1,27 @@
+/.cvsignore/1.3/Sat Jul 22 21:51:44 2006//
+/Makefile/1.5/Thu Nov 17 18:27:23 2005//
+/README/1.1.1.1/Wed May 11 16:00:38 2005//
+/best-feature-weights.py/1.1/Wed Jan 11 00:42:50 2006//
+/best-indices.cc/1.1.1.1/Wed May 11 16:00:38 2005//
+/best-parse.cc/1.1/Fri May 13 02:56:38 2005//
+/best-parses.cc/1.2/Fri May 13 02:56:12 2005//
+/cephes.c/1.1.1.1/Wed May 11 16:00:38 2005//
+/cephes.h/1.1.1.1/Wed May 11 16:00:38 2005//
+/compare-models.cc/1.1.1.1/Wed May 11 16:00:38 2005//
+/custom_allocator.h/1.2/Mon Nov  7 00:25:33 2005//
+/data.c/1.1/Mon Nov 14 14:11:56 2005//
+/data.h/1.1/Fri May 13 02:56:38 2005//
+/dp-data.h/1.1.1.1/Wed May 11 16:00:38 2005//
+/eval-weights.cc/1.5/Tue Nov 22 19:25:17 2005//
+/lmdata.c/1.2/Tue Nov 22 18:11:09 2005//
+/lmdata.h/1.2/Tue Nov 22 18:11:09 2005//
+/popen.h/1.1.1.1/Wed May 11 16:00:38 2005//
+/pretty-print.cc/1.1.1.1/Wed May 11 16:00:38 2005//
+/read-tree.l/1.1.1.1/Wed May 11 16:00:38 2005//
+/sym.cc/1.1.1.1/Wed May 11 16:00:38 2005//
+/sym.h/1.1.1.1/Wed May 11 16:00:38 2005//
+/symset.h/1.1.1.1/Wed May 11 16:00:38 2005//
+/tree.h/1.3/Wed Nov 23 02:50:11 2005//
+/utility.h/1.1.1.1/Wed May 11 16:00:38 2005//
+/read-tree.cc/1.1.1.1/Sun Aug 20 02:58:12 2006//
+D

@@ -1,0 +1,566 @@
+\documentclass[a4paper]{article}
+\setlength{\textwidth}{16.21cm}
+\setlength{\textheight}{24cm}
+\addtolength{\topmargin}{-1.75cm}
+\addtolength{\oddsidemargin}{-2cm}
+\addtolength{\evensidemargin}{-2cm}
+\usepackage{url}
+\usepackage{verbatim}
+
+% TODO: remove all wbi specific issue
+% create a package that contains our additional stuff, including
+% - splits
+% - learning format API
+% - Kernel methods (including new ones!)
+% - parsers and model files for reference
+% the best would be a svn access after registration
+
+\begin{document}
+\title{The description of the kernel method pipeline and training}
+\author{Domonkos Tikk, Philippe Thomas}
+\maketitle
+
+\abstract{This text gives a detailed technical ``how-to'' description on the kernel based PPI classification experiments. The main aim is to provide a reconstructible description for possible further work. Most of the work presented here has been first done by Peter Palaga as a part of his master thesis. Here we document each step of Palaga's work and introduce some modifications and extensions. These experiments are the basis of our to-be-written kernel method comparison paper.}
+
+\section{Download \& installation}
+
+\subsection{Corpora}\label{ssec:corpora}
+
+Five corpora are used in the experiments. These are LLL, AImed, IEPA, HPRD50, and BioInfer. For more details see Palaga's work \cite [p. 10]{PalagaMSc}. We used the derived version of coprora created by Pyysalo's group, which contains parses created with the Charniak--Lease parser \cite{Lease05} and transformed to collapsed Stanford format \cite{Stanford}. The derived versions of corpora were downloaded from \url{http://mars.cs.utu.fi/PPICorpora/GraphKernel.html}.
+
+Additionally, the train--test splits of the corpora were specified by and received from Antti Airola \cite{Airola08}. These splits currently resides on \texttt{racer} under \texttt{/local/for\_palaga/learning/corpora/splits} and under \texttt{/vol/home-vol3/wbi/tikk/Kernels/corpora/splits}. For cross dataset experiments we provide the splits in our package as well.
+
+\subsection{Preprocessing}\label{ssec:LFAPI}
+
+The preprocessing pipeline created by Peter Palaga is available with wbi account from the SVN repository:
+\url{svn+ssh://<user>@gruenau.informatik.hu-berlin.de/vol/drakan-vol4/wbi/wbi/shared/x_consensus_patterns/learning-format-api/trunk}
+
+The suggested developing environment is \textsf{Eclipse}, with \textsf{Subclipse} sub-versioning plug-in. For Windows machines the latter works only if in \textsf{Eclipse} menu: window $\to$ preferences $\to$ team $\to$ svn,
+the default SVN interface is changed from JAVAHL(JNI) to JavaSVN(Pure JAVA) (source: \url{http://www.svnforum.org/2017/viewtopic.php?p=3220&sid=1ad744ec80dab84d2dc3a9930471724f}).
+
+\subsection{Parsers}\label{ssec:parser}
+
+We experienced with 2 versions of the Charniak--Lease--Johnson--McColsky parser and with 3 model files.
+
+Parsers:
+\begin{itemize}
+\item As a courtesy of Charniak's group, we could perform experiments with the pre-release:\\
+\url{http://cs.brown.edu/~dmcc/post/reranking-parser-feb09-pre.tar.gz}
+\item The standard version:\\
+\url{ftp://ftp.cs.brown.edu/pub/nlparser/reranking-parserAug06.tar.gz}. We used this as default.
+\end{itemize}
+
+Model files:
+\begin{itemize}
+\item News model file can be downloaded from \\
+\url{http://cs.brown.edu/~dmcc/selftraining/selftrained.tar.gz} (retrieved on 18 May 2009). This version was trained on WSJ and NANC data.
+\item Bio model file can be downloaded from \\ \url{http://bllip.cs.brown.edu/download/orig-selftrained-bio-model.tar.gz} (retrieved on 25 September 2009). This version was trained on PubMed abstracts.
+\item Enhanced bio model file can be downloaded from \\ \url{http://bllip.cs.brown.edu/download/orig-selftrained-bio-model.tar.gz} (retrieved on 25 September 2009). This version was trained on PubMed abstracts and with GENIA reranker and improves the performance of the above bio model significantly. We used this as default.
+\end{itemize}
+
+Theoretically, the parsers can be easily installed by decompressing the above files in a directory and running the simply the \texttt{make}. However, with the current gcc compiler versions (we tried with 4.3.1 and 4.4.0), the official release (2006 Aug version) cannot be compiled, some minor errors occur that were rectified by Peter Palaga, that version is available on \texttt{racer} under \texttt{/local/for\_palaga/bin/reranking-parser} and on \texttt{/vol/home-vol3/wbi/tikk/Kernels/parsers/Aug2006reranking-parser} (for gcc 4.3.1).
+
+Additionally, we tried to run the parsers under Windows with \textsf{cygwin}. Here we had also compilation errors for both releases, which were also rectified (see Appendix~\ref{app:1} for details). However, the parsers behaved abnormally with even medium size inputs, and stop to work abruptly after having parsed a few sentences. Probably a memory leakage is present, which we could not identify. Therefore the entire pipeline is currently not executable on Windows machines.
+
+For optimized parsing speed the environment variable \texttt{GCCFLAGS} has to be set appropriately.
+The following site helps in specifying the proper value of the variable: \url{http://en.gentoo-wiki.com/wiki/Safe_Cflags/Intel}.
+
+%For example for \texttt{gruenau} that is
+%\begin{verbatim}
+%setenv GCCFLAGS "-march=pentium4 -O2 -pipe -fomit-frame-pointer -mfpmath=sse -msse2 -mmmx"
+%\end{verbatim}
+
+\subsection{Classifiers}
+
+Peter Palaga's work \cite{PalagaMSc} contains experiments executed with 5 kernel based classifiers.
+All available with WBI account from the SVN repositories listed below.
+
+\begin{itemize}
+\item $k$-band shortest path spectrum (kBSPS) kernels, developed by Palaga.
+\url{svn+ssh://<user>@gruenau.informatik.hu-berlin.de/vol/drakan-vol4/wbi/wbi/shared/x_consensus_patterns/svm_light/trunk}
+
+\item Spectrum tree (SpT) kernel, developed by Tetsui Kuboyama \cite{Kuboyama}, reimplemented by Palaga.
+\url{svn+ssh://<user>@gruenau.informatik.hu-berlin.de/vol/drakan-vol4/wbi/wbi/shared/x_consensus_patterns/svm_light/branches/svm_light_spectrum_tree_kernel}
+
+\item Subtree (ST), subset tree (SST), and partial tree (PT) kernels, developed by Moschitti (Moschitti-1.5-prerelease, not available yet online).
+\url{svn+ssh://<user>@gruenau.informatik.hu-berlin.de/vol/drakan-vol4/wbi/wbi/shared/x_consensus_patterns/SVM-Light-1.5-to-be-released/trunk}
+\end{itemize}
+
+The classifiers can be installed simply by calling \texttt{make}, and they work both on Linux and with \textsf{cygwin} on Windows.
+
+\section{Preprocessing}
+
+Preprocessing consists of several steps.
+
+\begin{description}
+\item[Step 1] Creates the appropriate input format from the original xml files for the parse tree parser.
+\item[Step 2] Performs parsing.
+\item[Step 3] Injects the parsing results into the original xml files.
+\item[Step 4] Aligns the original sentence with the parsing results (specifies the character offsets in the raw text and the parse trees).
+\item[Step 5] Injects the results of the above alignment into the working xml files.
+\item[Step 6a] Creates 10 fold-training datasets in the learning format of the two SVM variants.
+\item[Step 6b] Prepares cross dataset experiments in the learning format of the two SVM variants.
+\end{description}
+
+We wrote a script that execute the above steps, see in Appendix~\ref{app:3}. Please note, that some variables should be set according your own settings for correct operation. For that see also the following detailed description.
+
+\subsection{Step 1: preparing parsing input}
+
+The software is a part of Palaga's \textsf{Learning format API} Java library (see Section~\ref{ssec:LFAPI}). The program extracts each sentence from the xml file and embeds them within \texttt{<s>...</s>} tags.
+
+\begin{itemize}
+\item Program: \texttt{PtbRawSentenceTransformer.java}
+\item Input: derived XML files from Pyysalo's group (see Section~\ref{ssec:corpora}).
+\item Parameter: original xml file.
+\item Run from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin
+  org.learningformat.transform.PtbRawSentenceTransformer example.xml
+\end{verbatim}
+where \texttt{\$ECLIPSEWORKSPACE} is the the workspace directory of \textsf{Eclipse}. For Windows, this is environmental variable is called by \texttt{\%ECLIPSEWORKSPACE\%}, and can be set by
+\begin{verbatim}
+set ECLIPSEWORKSPACE=C:\myworkingspace
+\end{verbatim}
+\item Output: \texttt{example.xml-ptb-s.txt}
+\end{itemize}
+
+\subsection{Step 2: parsing}
+
+The second step is the parsing the corpora with Charniak-Lease-Johnson-McClosky parser (see Section~\ref{ssec:parser}). The input format is done in Step~1 (\texttt{example.xml-ptb-s.txt} file) the output is the parsed trees of the each sentence, e.g., the result of ``\textsl{ykuD was transcribed by SigK RNA polymerase from T4 of sporulation.}'' is
+\begin{verbatim}
+(S1 (S (NP (NNP ykuD)) (VP (AUX was) (VP (VBN transcribed)
+(PP (IN by) (NP (NP (NNP SigK) (NNP RNA) (NN polymerase))
+(PP (IN from) (NP (NNP T4))) (PP (IN of) (NP (NN sporulation))))))) (. .)))
+\end{verbatim}
+
+\begin{itemize}
+\item Software: Charniak--Lease--Johnson--McClosky parser executables: \texttt{parseIt} and \texttt{bestparses}, both called from the script file \texttt{parse.sh}.
+\item Input: \texttt{example.xml-ptb-s.txt} files in format \texttt{<s>sentence</s>}.
+\item Parameter: to-be-parsed file (\texttt{ptb-s.txt}), output and error file should be redirected
+\item Run from command line:
+\begin{verbatim}
+./parse.sh example.xml-ptb-s.txt > example.xml-ptb-s.txt-parsed.txt 2>example.err
+\end{verbatim}
+where \texttt{parse.sh} is the starting script of the parser. The command is then started in the root directory of the parser.
+\item Output: \texttt{example.xml-ptb-s.txt-parsed.txt}
+\end{itemize}
+
+We experimented with all the four combinations of the 2 parser versions and the 2 model files. Results are summarized in Table~\ref{tab:1}. Based on these experiments, we decided to use the version of 2009 February. TODO: model files: should be decided based on classification results. Most probably bio-optimized version is better.
+
+\begin{table}
+\centering
+\caption{Experiments with different parser versions and models}\label{tab:1}
+\medskip
+
+\begin{tabular}{|p{2.2cm}|p{4cm}|p{4cm}|}
+\hline
+Parser version/\hfil\break\strut\qquad model file& 2006 Aug& 2009 Feb (pre-release)\\
+\hline
+bio-optimized& Parsing error on 4 sentences, parsing process hangs up after error and is not finished& Parsing error on 4 sentences, but parsing process is continued\\
+\hline
+normal (news)& Parsing error on 1 sentence, parser hang up after error, parsing is not finished& Parsing errors on 1 sentence, but parsing process is continued\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Step 3: Injection of parsing results into xml files}
+
+The software is a part of Palaga's \textsf{Learning format API} Java library (see Section~\ref{ssec:LFAPI}). This program injects into the original xml files the parsing results in \texttt{<bracketings> ... </bracketings>} tags.
+
+\begin{itemize}
+\item Program: \texttt{PtbTreeInjector.java}
+\item Input: \texttt{example.xml} and the corresponding \texttt{example.xml-ptb-s.txt-parsed.txt}, the latter should be placed in a subdirectory \texttt{charniak-johnson} of the directory of \texttt{example.xml}.
+\item Parameters:
+\begin{description}
+\item [\texttt{-f|--file}] input file name
+\item [\texttt{-i|--inject}] this is a switch which should be given for this step
+\item [\texttt{-o|--out}] output file name
+\end{description}
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin;
+$ECLIPSEWORKSPACE/learning-format-api/src/main/resources/jargs.jar
+org.learningformat.transform.PtbTreeInjector
+-f example.xml -i -o trees/example.xml
+\end{verbatim}
+By convention, the output xml file is placed into the directory \texttt{trees} under the root directory of \texttt{example.xml}.
+\item Output: specified by the \verb"-o" option, an xml file that contains now the parsing results in \texttt{<bracketings>...</bracketings>} tags.
+\end{itemize}
+
+\subsection{Step 4: alignments of the original sentence with the parsing results}
+
+The software is a part of Palaga's \textsf{Learning format API} Java library (see Section~\ref{ssec:LFAPI}). This program aligns the original sentence with the parsing results, that is it specifies the character offsets of the (from-to) of the tokens of the original text in the parsed texts. For the example sentence ``\textsl{ykuD was transcribed by SigK RNA polymerase from T4 of sporulation.}'' it is:
+\begin{verbatim}
+LLL.d2.s1,0-3:16-19,5-7:32-34,9-19:46-56,21-22:67-68,24-27:84-87,29-31:95-97,
+33-42:104-113,44-47:125-128,49-50:140-141,52-53:154-155,55-65:166-176,66-66:188-188
+\end{verbatim}
+
+\begin{itemize}
+\item Program: \texttt{BracketingTokenMapper.java}
+\item Input: output file of step 4, that is the xml files located in the folder \texttt{trees} (by convention).
+\item Parameter: \texttt{trees/example.xml}
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin
+org.learningformat.transform.BracketingTokenMapper trees/example.xml
+\end{verbatim}
+\item Output: a text file containing the alignments. The output text files gets the \texttt{-bracketing-tokens.txt} suffix, i.e. for \texttt{example.xml} it is \texttt{example.xml-bracketing-tokens.txt} and placed in the directory \texttt{trees}.
+\end{itemize}
+
+\subsection{Step 5: Injection of sentence--parsing alignments into xml files}
+
+The software is a part of Palaga's \textsf{Learning format API} Java library (see Section~\ref{ssec:LFAPI}). This program injects into the original xml files the alignments created in step 4, the alignments are injected into the xml file within \texttt{<charOffsetMapEntry>} tags.
+
+\begin{itemize}
+\item Program: \texttt{PtbTreeInjector.java}
+\item Input: \texttt{example.xml} and the corresponding \texttt{example.xml-bracketing-tokens.txt}
+\item Parameters:
+\begin{description}
+\item [\texttt{-f|--file}] input file name
+\item [\texttt{-i|--inject}] this is a switch must not given for this step
+\item [\texttt{-o|--out}] output file name
+\end{description}
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin;
+$ECLIPSEWORKSPACE/learning-format-api/src/main/resources/jargs.jar
+org.learningformat.transform.PtbTreeInjector
+-f trees/example.xml -o mapped-trees/example.xml
+\end{verbatim}
+By convention, the output xml file is placed into the directory \texttt{mapped-trees} under the root directory of \texttt{example.xml}.
+\item Output: specified by the \verb"-o" option, an xml file that contains now the parsing results in \texttt{<charOffsetMapEntry>} tags.
+\end{itemize}
+
+
+\subsection{Step 6a: Creating folds for the training data set}
+
+This step is performed by two programs. They are part of Palaga's \textsf{Learning format API} Java library (see Section~\ref{ssec:LFAPI}). These programs create the training format for SVM based classifier, therefore are the last step in the preprocessing pipeline. The programs assume the availability of test-train splits (see Section~\ref{ssec:corpora}).
+
+The first program creates the training data for the most of the SVM learners. The second program creates the training data for the $k$-band shortest path spectrum kernel based SVM learner.
+
+\begin{itemize}
+\item Program: SvmLightTreeKernelTransformer.java
+\item Input: the xml augmented with bracketing and alignment information, by convention located in the \texttt{mapped-trees} directory.
+\item Parameters:
+\begin{description}
+\item[\texttt{-f|--file}] input file name
+\item[\texttt{-o|--out}] output directory name
+\item[\texttt{-s|--split}] location of the split files (folder)
+\item[\texttt{-m|--moschitti}] flag for Moschitti style learning format (for subtree (ST), subset tree (SST), and partial tree (PT) kernels)
+\item[\texttt{-c|--custom}] flag for custom learning format (for spectrum tree (SpT) kernel)
+\end{description}
+Exactly one of the \texttt{-m} and \texttt{-c} flags has to be given.
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin;
+$ECLIPSEWORKSPACE/learning-format-api/src/main/resources/jargs.jar
+org.learningformat.transform.SvmLightTreeKernelTransformer
+-f example.xml -m -s splits -o trainingdir;
+\end{verbatim}
+where under the subdirectory \texttt{splits} resides the \texttt{example} directory, which includes the corresponding splits for the \texttt{example.xml}
+\item Output: under the directory specified by \texttt{-o} another directory named \texttt{MOSCHITTI} (for \texttt{-m} flag) and \verb"CUSTOM_KERNEL" (for \texttt{-c} flag), under which a third directory \texttt{example.xml-folds} created, which contains 10 text files (named: 0.txt \ldots\ 9.txt).
+    There is only a slight difference between the two format (Moschitti and custom), namely that the Moschitti based SVM learners require an embedding \texttt{|BT|..|ET|} tags around the training parsed tree instances, while the custom format follows the requirement of T. Joachims' \textsf{svn-light}.
+\end{itemize}
+
+\begin{itemize}
+\item Program: SvmLightDependencyTreeKernelTransformer.java
+\item Input: the xml augmented with bracketing and alignment information, by convention located in the \texttt{mapped-trees} directory.
+\item Parameters:
+\begin{description}
+\item[\texttt{-f|--file}] input file name
+\item[\texttt{-o|--out}] output directory name
+\item[\texttt{-s|--split}] location of the split files (folder)
+\end{description}
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin;
+$ECLIPSEWORKSPACE/learning-format-api/src/main/resources/jargs.jar
+org.learningformat.transform.SvmLightDependencyTreeKernelTransformer
+-f example.xml -s splits -o trainingdir;
+\end{verbatim}
+where under the subdirectory \texttt{splits} resides the \texttt{example} directory, which includes the corresponding splits for the \texttt{example.xml}
+\item Output: under the directory specified by \texttt{-o} several other directories are created, under each of which another directory \texttt{example.xml-folds} created, which contains 10 text files (named: 0.txt \ldots\ 9.txt). The name of second level directories follow the following pattern:\\
+\texttt{CUSTOM\_KERNEL-b-$x$to$y$-k$z$-UP\_TO-OUTSIDE-NO\_SELF\_REF-STEM-none}
+where $x\le y$ and $x\in\{1,2\}$, $y\in\{1,2,3\}$ and $z\in\{0,1\}$ and all possible combination is created. These numbers corresponds to the various parameters of the kBSPS kernels.
+\end{itemize}
+Remark: unlike in the case of the above program, here strings are converted into numbers in order to speed up the learning process of the SVM learner.
+
+\subsection{Step 6b: Creating folds for the training data set with cross dataset validation}
+
+This step is performed by also two programs and they are very similar to the above Step 6a. They are part of Palaga's \textsf{Learning format API} Java library (see Section~\ref{ssec:LFAPI}). These programs create the training format for SVM based classifier, therefore are the last step in the preprocessing pipeline in case cross-corpus validation is to be performed. The programs again assume the availability of test-train splits, which is in this case different from the above one (see Section~\ref{ssec:corpora}).
+
+The first program creates the training data for the most of the SVM learners. The second program creates the training data for the $k$-band shortest path spectrum kernel based SVM learner.
+
+\begin{itemize}
+\item Program: SvmLightTreeKernelTransformerCXval.java
+\item Input: the xml augmented with bracketing and alignment information, by convention located in the \texttt{tree/cross-corpus} directory. This xml file is the concatenation of all corpus files. We provide it in our package for the ease of use.
+\item Parameters:
+\begin{description}
+\item[\texttt{-f|--file}] input file name
+\item[\texttt{-o|--out}] output directory name
+\item[\texttt{-s|--split}] location of the split files (folder)
+\item[\texttt{-t|--test}] name of the corpus that is used for test, the other corpora are used for training.
+\item[\texttt{-m|--moschitti}] flag for Moschitti style learning format (for subtree (ST), subset tree (SST), and partial tree (PT) kernels)
+\item[\texttt{-c|--custom}] flag for custom learning format (for spectrum tree (SpT) kernel)
+\end{description}
+Exactly one of the \texttt{-m} and \texttt{-c} flags has to be given.
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin;
+$ECLIPSEWORKSPACE/learning-format-api/src/main/resources/jargs.jar
+org.learningformat.transform.SvmLightTreeKernelTransformerCXval
+-f All.xml -t example -m -s splits -o trainingdir;
+\end{verbatim}
+where under the subdirectory \texttt{splits} resides the \texttt{Test\_on\_example} directory, which includes the corresponding splits: \texttt{example.xml} and \texttt{All\_but\_example.xml}
+\item Output: under the directory specified by \texttt{-o} another directory named \texttt{MOSCHITTI} (for \texttt{-m} flag) and \verb"CUSTOM_KERNEL" (for \texttt{-c} flag), under which a third directory \texttt{example-folds} created, which contains 2 text files: \texttt{0.txt} is test set and \texttt{1.txt} is the training set.
+    There is only a slight difference between the two format (Moschitti and custom), namely that the Moschitti based SVM learners require an embedding \texttt{|BT|..|ET|} tags around the training parsed tree instances, while the custom format follows the requirement of T. Joachims' \textsf{svn-light}.
+\end{itemize}
+
+\begin{itemize}
+\item Program: SvmLightDependencyTreeKernelTransformerCXval.java
+\item Input: the xml augmented with bracketing and alignment information, by convention located in the \texttt{tree/cross-corpus} directory. This xml file is the concatenation of all corpus files. We provide it in our package for the ease of use.
+\item Parameters:
+\begin{description}
+\item[\texttt{-f|--file}] input file name
+\item[\texttt{-o|--out}] output directory name
+\item[\texttt{-s|--split}] location of the split files (folder)
+\item[\texttt{-t|--test}] name of the corpus that is used for test, the other corpora are used for training.
+\end{description}
+\item Running from command line:
+\begin{verbatim}
+java -classpath $ECLIPSEWORKSPACE/learning-format-api/bin;
+$ECLIPSEWORKSPACE/learning-format-api/src/main/resources/jargs.jar
+org.learningformat.transform.SvmLightDependencyTreeKernelTransformerCXval
+-f All.xml -t example -s splits -o trainingdir;
+\end{verbatim}
+where under the subdirectory \texttt{splits} resides the \texttt{Test\_on\_example} directory, which includes the corresponding splits: \texttt{example.xml} and \texttt{All\_but\_example.xml}
+\item Output: under the directory specified by \texttt{-o} several other directories are created, under each of which another directory \texttt{example-folds} created,  2 text files: \texttt{0.txt} is test set and \texttt{1.txt} is the training set. The name of second level directories follow the following pattern:\\
+\texttt{CUSTOM\_KERNEL-b-$x$to$y$-k$z$-UP\_TO-OUTSIDE-NO\_SELF\_REF-STEM-none}
+where $x\le y$ and $x\in\{1,2\}$, $y\in\{1,2,3\}$ and $z\in\{0,1\}$ and all possible combination is created. These numbers corresponds to the various parameters of the kBSPS kernels.
+\end{itemize}
+Remark: unlike in the case of the above program, here strings are converted into numbers in order to speed up the learning process of the SVM learner.
+
+\section{Running the SVM classifiers}
+
+The SVM learners are trained via scripts files:
+
+\begin{description}
+\item[kBSPS kernel] the running script can be found on \texttt{gruenau2} at\\ \texttt{/home/wbi/palaga/learning/experiments/090318-signed-LED-led/run}. When running in your on directory (at least) the followings should be set:
+    \begin{itemize}
+    \item \texttt{runHome} is the directory where the executable files of the learner reside.
+    \item \texttt{corpusHome} is the the directory where the final output of the pipeline is located.
+    \end{itemize}
+    Caution: the script starts a lengthy learning session with an exhaustive parameter optimization, therefore it can take several hours or days to complete, depending on the machine you are running the experiments on.
+\item[SpT kernel] the running script can be found on \texttt{gruenau2} at\\
+\texttt{/home/wbi/palaga/learning/spectrum/090328-spectrum-lll/run}. When running in your on directory (at least) the followings should be set:
+    \begin{itemize}
+    \item \texttt{runHome} is the directory where the executable files of the learner reside.
+    \item \texttt{foldsDir} is the directory where the output of \texttt{SvmLightTreeKernelTransformer} resides (\texttt{CUSTOM\_KERNEL} subdirectory).
+    \end{itemize}
+\item [ST, SST, PT] the running script can be found on \texttt{gruenau2} at\\
+\texttt{/home/wbi/palaga/learning/moschitti/090327-ecml06-lll/run}. When running in your on directory (at least) the followings should be set:
+    \begin{itemize}
+    \item \texttt{runHome} is the directory where the executable files of the learner reside.
+    \item \texttt{foldsDir} is the directory where the output of \texttt{SvmLightTreeKernelTransformer} resides (\texttt{MOSCHITTI} subdirectory).
+    \item the set \texttt{kernels} specifies which kernel to apply: 0 for ST, 1 for SST, 3 for PT. For all let \verb"kernels='0 1 3'"
+    \end{itemize}
+\end{description}
+
+The scripts produce the results in the \texttt{out/eval.txt} as database insert and update commands. Therefore in order to browse the results, one should upload them into a database. Before doing that a minor change should be done:
+\begin{verbatim}
+sed -ie 's/0::boolean/false/g' eval.txt
+\end{verbatim}
+TODO: change this in the scripts already!
+
+\section{Browsing the results in the Database}
+
+The results of the scripts are \textsf{PostgreSQL} database command. The corresponding database can be found on \texttt{siegfried}. The following steps should be done to upload
+
+\begin{itemize}
+\item login into \texttt{siegfried} (from \texttt{paprika} or \texttt{racer})
+\item login into the corresponding database, \texttt{ppi}, \texttt{ppi\_test} or \texttt{ppi\_production} by typing
+\begin{verbatim}
+psql -U <username> <databasename>
+\end{verbatim}
+\item create the necessary table and views. See an example for the creation in Appendix~\ref{app:2}
+\item execute
+\begin{verbatim}
+\i eval.txt
+\end{verbatim}
+here the pathname of \texttt{eval.txt} also should be given.
+\end{itemize}
+
+After that the results can be browsed in the database. For the attributes of the database see also Appendix~\ref{app:2}.
+
+\bibliographystyle{abbrv}
+\bibliography{PPI}
+
+\appendix
+
+\section{Appendix}
+
+\subsection{The preprocessing script}\label{app:3}
+
+{
+\footnotesize\verbatiminput{whatIdid.sh}
+}
+
+\subsection{Parser fixes with gcc 4.4.0}\label{app:1}
+
+The following steps need to be performed (tested on Windows under \textsf{cygwin})
+
+For the 2009 February pre-release version:
+\begin{enumerate}
+\item add into \texttt{first-stage/PARSE/utils.C}
+\begin{verbatim}
+    #include <cstdio>
+\end{verbatim}
+
+\item add into \texttt{second-stage/programs/features/lexical\_cast.h} and\\
+            \texttt{second-stage/programs/prepare-data/lexical\_cast.h}
+\begin{verbatim}
+namespace std {
+typedef std::basic_string <wchar_t> wstring;
+};
+\end{verbatim}
+
+\item add into \texttt{second-stage/programs/features/best-parses.cc}
+\begin{verbatim}
+#include <unistd.h>
+\end{verbatim}
+
+\item Additionally, the program \textsf{flex} is also needed for compilation (can be simply downloaded from \textsf{cygwin}).
+\end{enumerate}
+
+For the 2006 August version:
+
+\begin{enumerate}
+\item add into \texttt{first-stage/PARSE/BchartSm.C}
+\begin{verbatim}
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+\end{verbatim}
+
+\item add into \texttt{popen.h} (2 files)
+\begin{verbatim}
+#include <string.h> //actually this is a change from <string>
+#include <stdio.h>
+\end{verbatim}
+
+\item add into \texttt{second-stage/programs/features/lexical\_cast.h} and\\
+            \texttt{second-stage/programs/prepare-data/lexical\_cast.h}
+\begin{verbatim}
+    namespace std {
+typedef std::basic_string <wchar_t> wstring;
+};
+\end{verbatim}
+
+\item add into \texttt{second-stage/programs/features/best-parses.cc}
+\begin{verbatim}
+#include <unistd.h>
+\end{verbatim}
+
+\item add into \texttt{second-stage/programs/features/utility.h} and\\
+            \texttt{second-stage/programs/prepare-data/utility.h}
+\begin{verbatim}
+#include <memory>
+\end{verbatim}
+change lines 497, 509 from
+\begin{verbatim}
+return is >> cp+1;
+\end{verbatim}
+to
+\begin{verbatim}
+return is >> (cp+1);
+\end{verbatim}
+
+\item add into \texttt{first-stage/PARSE/ECArgs.C}
+\begin{verbatim}
+#include <algorithm>
+\end{verbatim}
+
+\item add into \texttt{first-stage/PARSE/Feature.C},
+            \texttt{first-stage/PARSE/FeatureTree.C},
+            \texttt{first-stage/PARSE/InputTree.C},
+            \texttt{first-stage/PARSE/Params.C}, and
+            \texttt{first-stage/PARSE/ParseIt.C}
+\begin{verbatim}
+#include <stdlib.h>
+\end{verbatim}
+
+\item add into \texttt{first-stage/PARSE/Params.C}
+\begin{verbatim}
+#include <stdio.h>
+#include <string.h>
+\end{verbatim}
+
+\item add into \texttt{first-stage/PARSE/utils.C}
+\begin{verbatim}
+#include <cstdio>
+\end{verbatim}
+
+\item change in \texttt{second-stage/programs/features/sstring.h}
+in lines 158, 160, 162
+\begin{verbatim}
+basic_sstring
+\end{verbatim}
+to
+\begin{verbatim}
+basic_sstring_
+\end{verbatim}
+
+\item add into \texttt{second-stage/programs/prepare-data/lexical\_cast.h}
+\begin{verbatim}
+#include <limits>
+\end{verbatim}
+\end{enumerate}
+
+\subsection{Creating the table and views}\label{app:2}
+
+This file can be found on \texttt{/vol/home-vol3/wbi/tikk/Kernels/experiments/init-db-exb}.
+
+{\footnotesize
+\begin{verbatim}
+CREATE TABLE exb ( exbid serial NOT NULL, corpus text, kernel
+integer, c double precision, j double precision, lmax integer,
+lmin integer, k integer, match_ text, fold integer, normalized
+boolean, input_format text, tp integer, fn integer, tn integer,
+fp integer, total integer, auc double precision, precision_
+double precision, recall double precision, f_measure double
+precision, learn_sec double precision, classify_sec double
+precision, kernel_script text, sv_num integer, led text,
+CONSTRAINT exb_pkey PRIMARY KEY (exbid) );
+
+CREATE OR REPLACE VIEW fold AS SELECT exb.corpus, exb.kernel,
+exb.c, exb.j, exb.lmax, exb.lmin, exb.k, exb.match_, exb.normalized,
+exb.input_format, exb.kernel_script, avg(exb.auc) AS auc,
+avg(exb.precision_) AS precision_, avg(exb.recall) AS recall,
+avg(exb.f_measure) AS f_measure, avg(exb.learn_sec) AS learn_sec,
+avg(exb.classify_sec) AS classify_sec, avg(exb.sv_num) AS sv_num,
+count(exb.exbid) AS cnt, exb.led FROM exb GROUP BY exb.corpus,
+exb.kernel, exb.c, exb.j, exb.lmax, exb.lmin, exb.k, exb.match_,
+exb.normalized, exb.input_format, exb.kernel_script, exb.led
+ORDER BY exb.corpus, avg(exb.auc) DESC, exb.c, exb.j, exb.kernel_script;
+
+CREATE OR REPLACE VIEW fold_top_6 AS ((( SELECT fold.corpus, fold.c,
+fold.j, fold.kernel_script, fold.auc, fold.precision_, fold.recall,
+fold.f_measure, fold.learn_sec, fold.classify_sec, fold.sv_num, fold.cnt,
+fold.led FROM fold WHERE fold.corpus = 'AImed'::text LIMIT 6) UNION ALL
+( SELECT fold.corpus, fold.c, fold.j, fold.kernel_script, fold.auc,
+fold.precision_, fold.recall, fold.f_measure, fold.learn_sec,
+fold.classify_sec, fold.sv_num, fold.cnt, fold.led FROM fold WHERE
+fold.corpus = 'HPRD50'::text LIMIT 6)) UNION ALL ( SELECT fold.corpus,
+fold.c, fold.j, fold.kernel_script, fold.auc, fold.precision_, fold.recall,
+fold.f_measure, fold.learn_sec, fold.classify_sec, fold.sv_num, fold.cnt,
+fold.led FROM fold WHERE fold.corpus = 'IEPA'::text LIMIT 6)) UNION ALL
+( SELECT fold.corpus, fold.c, fold.j, fold.kernel_script, fold.auc,
+fold.precision_, fold.recall, fold.f_measure, fold.learn_sec,
+fold.classify_sec, fold.sv_num, fold.cnt, fold.led FROM fold WHERE
+fold.corpus = 'LLL'::text LIMIT 6);
+\end{verbatim}
+}
+
+\end{document}
+
+

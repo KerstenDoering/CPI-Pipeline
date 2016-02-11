@@ -1,0 +1,45 @@
+Description
+
+    Using my division of the GENIA 1.0 trees available from
+
+        http://bllip.cs.brown.edu/download/genia1.0-division-rel1.tar.gz
+
+    I repeated my self-training experiments in our ACL 2008 paper using
+    GENIA 1.0 trees as the labeled data. This also allowed me to create
+    a GENIA reranker. The results (on the dev set from my division)
+    are quite dramatic:
+
+    Model                                               f-score
+    -----------------------------------------------------------
+    WSJ:                                                74.9
+    WSJ + WSJ reranker:                                 76.8
+    WSJ + PubMed (parsed by WSJ) + WSJ reranker:        80.7 [1]
+    GENIA:                                              83.6
+    GENIA + WSJ reranker:                               84.5
+    GENIA + GENIA reranker:                             85.7
+    GENIA + PubMed (parsed by GENIA) + GENIA reranker:  87.6 [2]
+
+    [1] Original self-trained biomedical parsing model (ACL 2008)
+    [2] This model (please cite my thesis, forthcoming) 
+
+Contents
+
+    The first-stage/ directory is a parsing model for the Charniak parser.
+    The second-stage/ directory includes a list of features and their weights.
+
+Example usage sketch
+    
+    FILETOPARSE=<fill this in>
+    RERANKINGPARSER=<fill this in, should have first-stage/ and second-stage
+        as subdirs>
+    BIOPARSINGMODEL=<this directory>
+
+    ${RERANKINGPARSER}/first-stage/PARSE/parseIt -l399 -N50 ${BIOPARSINGMODEL}/parser/ ${FILETOPARSE} | ${RERANKINGPARSER}/second-stage/programs/features/best-parses -l ${BIOPARSINGMODEL}/reranker/features.gz ${BIOPARSINGMODEL}/reranker/weights.gz
+
+Questions?
+    
+    Please email me if you have any (dmcc@cs.brown.edu)
+
+Release history
+
+    6.16.2009   Initial release

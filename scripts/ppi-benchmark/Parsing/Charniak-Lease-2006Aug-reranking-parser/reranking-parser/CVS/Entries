@@ -1,0 +1,14 @@
+/.cvsignore/1.10/Tue Nov 15 18:19:27 2005//
+/Makefile/1.50/Sat Jul 22 21:51:44 2006//
+/Makefile.gavper/1.1/Sat Dec 10 23:07:16 2005//
+/parse-50best.sh/1.5/Sat Oct  8 00:50:52 2005//
+/parse-eval.sh/1.1/Fri May 13 21:30:43 2005//
+/sample-data.txt/1.3/Thu May 12 13:08:48 2005//
+/steedman.txt/1.1/Tue Aug 16 18:49:57 2005//
+/train-eval-reranker.sh/1.1/Sat Jul 22 21:51:44 2006//
+D/evalb////
+D/first-stage////
+D/second-stage////
+/README/1.11/Fri Aug 18 21:00:24 2006//
+/oparse.sh/1.1/Sat Aug 19 01:08:13 2006//
+/parse.sh/1.10/Sat Aug 19 01:08:01 2006//

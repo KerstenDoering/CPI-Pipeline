@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ppi-benchmark/!svn/ver/1315/Converters/learning-format-api/src/main/java/org/learningformat/standoff
+END
+AirolaXmlWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/ppi-benchmark/!svn/ver/1315/Converters/learning-format-api/src/main/java/org/learningformat/standoff/AirolaXmlWriter.java
+END
+Driver.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ppi-benchmark/!svn/ver/1303/Converters/learning-format-api/src/main/java/org/learningformat/standoff/Driver.java
+END
+KnowledgeBasePairClassifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/ppi-benchmark/!svn/ver/1111/Converters/learning-format-api/src/main/java/org/learningformat/standoff/KnowledgeBasePairClassifier.java
+END
+StandoffParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/ppi-benchmark/!svn/ver/1162/Converters/learning-format-api/src/main/java/org/learningformat/standoff/StandoffParser.java
+END
+PairGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/ppi-benchmark/!svn/ver/1156/Converters/learning-format-api/src/main/java/org/learningformat/standoff/PairGenerator.java
+END

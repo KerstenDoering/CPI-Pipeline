@@ -1,0 +1,15 @@
+import os
+
+mypath = os.getcwd()
+os.chdir("DS1")
+files = os.listdir(os.getcwd())
+for infile in files:
+    f = open(infile,"r")
+    identifier = []
+    for line in f:
+        identifier.append(line.strip().split(" ")[1])
+    f.close()
+    f = open(infile,"w")
+    for elem in identifier:
+        f.write(elem + "\n")
+    f.close()

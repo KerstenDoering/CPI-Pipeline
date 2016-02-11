@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus source="DS1">
+    <document id="DS1.d0" origId="17003041">
+        <sentence id="DS1.d0.s0" origId="17003041-308" text="Bestrophin-1  enables Ca2+-activated Cl-conductance in epithelia.">
+            <entity id="DS1.d0.s0.e0" origId="O76090,O88870,Q21973,Q6UY87,Q8WMR7" charOffset="0-12" type="protein" text="Bestrophin-1"/>
+            <entity id="DS1.d0.s0.e1" origId="312" charOffset="37-39" type="compound" text="Cl"/>
+            <pair e1="DS1.d0.s0.e1" e2="DS1.d0.s0.e0" id="DS1.d0.s0.i0" interaction="True" />
+        </sentence>
+    </document>
+</corpus>

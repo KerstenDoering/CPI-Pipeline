@@ -1,0 +1,48 @@
+<project name="libsvm" default="help" basedir=".">
+
+<property name="build.sysclasspath" value="last"/>
+
+<target name="help">
+    <echo message="Common build targets:" />
+    <echo message="jar         - Builds libsvm.jar" />
+    <echo message="clean       - Remove all *.class and libsvm.jar" />
+</target>
+
+<property file="build.properties"/>
+<property name="buildDir" value="build" />
+
+<path id="classpath">
+    <pathelement path="." />
+    <pathelement location="." />
+</path>
+
+
+<target name="jar" depends="compile">
+    <jar 
+        jarfile="libsvm-2.8modified.jar">
+        <fileset dir="classes"/>
+    </jar>
+</target>
+
+<target name="compile">
+    <mkdir dir="classes"/>
+    <javac
+        srcdir="src"
+        destdir="classes"
+    	debug="on"
+        classpathref="classpath"/>
+    <copy todir="classes">
+        <fileset dir="src">
+            <include name="**/*.xsl" />
+            <include name="**/*.gif" />
+            <include name="**/*.jpg" />
+            <include name="**/*.properties" />
+        </fileset>
+    </copy>    
+</target>
+
+<target name="clean">
+    <delete dir="classes"/>
+</target>
+
+</project>

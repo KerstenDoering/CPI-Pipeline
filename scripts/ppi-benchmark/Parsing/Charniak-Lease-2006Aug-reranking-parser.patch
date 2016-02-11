@@ -1,0 +1,708 @@
+diff -rupN ori/Makefile new/Makefile
+--- ori/Makefile	2006-07-22 23:51:44.000000000 +0200
++++ new/Makefile	2011-04-10 18:22:43.783723001 +0200
+@@ -227,7 +227,7 @@ evalb:
+ #
+ .PHONY: clean
+ clean:
+-	(cd first-stage; rm -f PARSE/*.o; rm -f TRAIN/*.o)
++	(cd first-stage; rm -f PARSE/*.o; rm -f TRAIN/*.o; rm -f PARSE/*.d; rm -f TRAIN/*.d)
+ 	make -C first-stage/TRAIN clean
+ 	make -C first-stage/PARSE clean
+ 	make -C second-stage clean
+diff -rupN ori/first-stage/PARSE/Bchart.C new/first-stage/PARSE/Bchart.C
+--- ori/first-stage/PARSE/Bchart.C	2006-08-19 19:36:08.000000000 +0200
++++ new/first-stage/PARSE/Bchart.C	2011-04-10 18:10:16.450752870 +0200
+@@ -74,10 +74,10 @@ Bchart(SentRep & sentence, int id)
+   lastWord[id]=lastKnownWord;
+   int i,j;
+   assert(len <= MAXSENTLEN);
+-  char temp[512];
++  char temp[MAXWORDLENGTH];
+   for(i = 0 ; i < len ; i++)
+     {
+-      ECString wl = toLower(sentence[i].lexeme().c_str(), temp);
++      ECString wl = toLower(sentence[i].lexeme().c_str(), temp, MAXWORDLENGTH);
+       int val = wtoInt(wl);
+       sentence_[i].toInt() = val;
+     }
+diff -rupN ori/first-stage/PARSE/BchartSm.C new/first-stage/PARSE/BchartSm.C
+--- ori/first-stage/PARSE/BchartSm.C	2006-08-20 00:51:24.000000000 +0200
++++ new/first-stage/PARSE/BchartSm.C	2011-04-10 18:10:16.452752873 +0200
+@@ -376,9 +376,9 @@ wordPlist(Wrd* word, int word_num)
+   if(!ans.empty()) return ans;
+   if(printDebug(500))
+     cerr << "wordPlist " << *word << endl;
+-  char temp[512];
++  char temp[MAXWORDLENGTH];
+   ECString head(word->lexeme());
+-  ECString headL(toLower(head.c_str(),temp));
++  ECString headL(toLower(head.c_str(),temp,MAXWORDLENGTH));
+   int wint = wtoInt(headL); 
+   //cerr << "WTI " << headL << " " << wint << endl;
+   word->toInt() = wint;
+@@ -461,8 +461,8 @@ pCapgt(const Wrd* shU, int t)
+     return 1;
+   //cerr << "pCapgt = " << pcap << endl;
+   if(shU->lexeme().length() < 2) return 1;  //ignore words of length 1;
+-  char temp[512];
+-  ECString sh(toLower(shU->lexeme().c_str(),temp));
++  char temp[MAXWORDLENGTH];
++  ECString sh(toLower(shU->lexeme().c_str(),temp,MAXWORDLENGTH));
+   bool cap = false;
+   /* if all caps, ignore capitalization evidence */
+   if(shU->lexeme()[0] != sh[0] && shU->lexeme()[1] != sh[1]) return 1;
+@@ -506,8 +506,8 @@ psutt(const Wrd* shU, int t)
+   assert(ans >= 0);
+   if(Term::fromInt(t)->openClass())
+     {
+-      char temp[512];
+-      ECString sh(toLower(shU->lexeme().c_str(),temp));
++      char temp[MAXWORDLENGTH];
++      ECString sh(toLower(shU->lexeme().c_str(),temp,MAXWORDLENGTH));
+       float phegt = pegt(sh,t);
+       if(phegt == 0) phegt = .00001;
+       ans *= phegt;
+@@ -550,7 +550,7 @@ pHypgt(const ECString& shU, int t)
+ {
+   //return 1.0  //ADD to IGNORE hypenization for unknown words
+   bool hyp = false;
+-  char* hyppos =  strpbrk(shU.c_str(), "-");
++  const char* hyppos =  strpbrk(shU.c_str(), "-");
+   if(hyppos) hyp = true;
+   double phyp = pHhypgt(t);  
+   return hyp ? phyp : (1 - phyp);
+diff -rupN ori/first-stage/PARSE/ECArgs.C new/first-stage/PARSE/ECArgs.C
+--- ori/first-stage/PARSE/ECArgs.C	2006-08-01 06:26:12.000000000 +0200
++++ new/first-stage/PARSE/ECArgs.C	2011-04-10 18:10:16.455752792 +0200
+@@ -25,6 +25,7 @@
+ #include <assert.h>
+ #include <stdio.h>
+ #include <iostream>
++#include <algorithm>
+ #include "utils.h"
+ 
+ ECArgs::
+diff -rupN ori/first-stage/PARSE/ECString.h new/first-stage/PARSE/ECString.h
+--- ori/first-stage/PARSE/ECString.h	2005-08-16 20:49:47.000000000 +0200
++++ new/first-stage/PARSE/ECString.h	2011-04-10 18:10:16.457752920 +0200
+@@ -2,6 +2,11 @@
+ #ifndef MECSTRING_H
+ #define MECSTRING_H
+ 
++#include <stdlib.h>
++#include <stdio.h>
++#include <string.h>
++
++
+ #define ECS gnu
+ 
+ #if ECS == gnu
+diff -rupN ori/first-stage/PARSE/Feature.h new/first-stage/PARSE/Feature.h
+--- ori/first-stage/PARSE/Feature.h	2006-08-19 03:13:26.000000000 +0200
++++ new/first-stage/PARSE/Feature.h	2011-04-10 18:10:16.459752838 +0200
+@@ -52,6 +52,8 @@
+ #define MAXSENTLEN 400
+ #define MAXNUMWORDS 330000
+ 
++#define MAXWORDLENGTH 128
++
+ class FTypeTree;
+ 
+ class FTypeTree
+diff -rupN ori/first-stage/PARSE/parseIt.C new/first-stage/PARSE/parseIt.C
+--- ori/first-stage/PARSE/parseIt.C	2006-08-20 04:28:41.000000000 +0200
++++ new/first-stage/PARSE/parseIt.C	2011-04-10 18:10:16.462752803 +0200
+@@ -80,14 +80,15 @@ workOnPrintStack(PrintStack* printStack)
+ {
+   int i;
+   int numPrinted;
+-  PrintStack::iterator psi = printStack->begin();
+   /* now look at each item from the front of the print stack
+      to see if it should be printed now */
+   pthread_mutex_lock(&writelock);
+-  for( numPrinted =0; psi != printStack->end(); numPrinted++ )
++  PrintStack::iterator psi = printStack->begin();
++  //PrintStack::iterator psi = printStack->begin();
++  for( numPrinted =0; psi != printStack->end(); numPrinted++, psi++ )
+     {
+       printStruct& pstr=(*psi);
+-      if(pstr.sentenceCount != printCount) break;
++      //if(pstr.sentenceCount != printCount) break;
+       if(Bchart::Nth > 1) {
+ 	ECString index = pstr.name.empty() ? intToString(sentenceCount)
+ 	  : pstr.name;
+@@ -115,7 +116,6 @@ workOnPrintStack(PrintStack* printStack)
+ 	  delete mapparse;
+ 
+ 	}
+-      psi++;
+       cout << endl;
+     }
+   pthread_mutex_unlock(&writelock);
+@@ -125,7 +125,7 @@ workOnPrintStack(PrintStack* printStack)
+ void*
+ mainLoop(void* arg)
+ {
+-  int id = (int)arg;
++  long id = (long)arg;
+   PrintStack printStack;
+   for( ; ; )
+     {
+@@ -246,12 +246,18 @@ mainLoop(void* arg)
+ 	{
+ 	  WARN( "Parse failed from 0, inf or nan probabililty" );
+ 	  printSkipped(srp,chart);
++          
++            printStruct printS;
++            printS.name = srp->getName();
++            printS.sentenceCount = locCount;
++            printS.numDiff = 0;
++            printStack.push_back(printS);
++            workOnPrintStack(&printStack);
+ 	  delete chart;
++          delete srp;
+ 	  continue;
+ 	}
+ 
+-      int numPrinted;
+-
+       /* put the sentence with which we just finished at the end of the printStack*/
+       printStack.push_back(printS);
+       workOnPrintStack(&printStack);
+diff -rupN ori/first-stage/PARSE/utils.C new/first-stage/PARSE/utils.C
+--- ori/first-stage/PARSE/utils.C	2006-08-01 06:26:13.000000000 +0200
++++ new/first-stage/PARSE/utils.C	2011-04-10 18:10:16.466597264 +0200
+@@ -45,20 +45,21 @@ error( const char *filename, int filelin
+ }
+ 
+ char*
+-toLower(const char* str, char* temp)
++toLower(const char* str, char* temp, int maxlength)
+ {
+-  int l = strlen(str);
+-  assert(l < 512);
+-  for(int i = 0 ; i <= l ; i++)
++  const int l = strlen(str);
++  //if(l >= maxlength) cerr << "toLower(): Truncating string of length " << l << " to length " << maxlength << " ('" << str << "')" << endl;
++  for(int i = 0 ; i <= l && l<maxlength-1  ; i++)  
+     {
+-      char n = str[i];
+-      int ni = (int)n;
++      const char n = str[i];
++      const int ni = (int)n;
+       if(ni >= 65 && ni <= 90)
+ 	{
+ 	  temp[i] = (char)(ni+32);
+ 	}
+       else temp[i] = n;
+     }
++  temp[maxlength-1] = (char)0;
+   return temp;
+ }
+ 
+diff -rupN ori/first-stage/PARSE/utils.h new/first-stage/PARSE/utils.h
+--- ori/first-stage/PARSE/utils.h	2006-08-01 06:26:13.000000000 +0200
++++ new/first-stage/PARSE/utils.h	2011-04-10 18:10:16.468597369 +0200
+@@ -34,7 +34,7 @@ void warn( const char *filename, int fil
+ void error( const char *filename, int filelinenum, const char *msg );
+ static void error(const char *s) { ERROR( s ); } // backwards compatibility
+ 
+-char* toLower(const char* str, char* temp);
++char* toLower(const char* str, char* temp, int maxlength);
+ ECString intToString(int i);
+ 
+ typedef vector<ECString> ECStrings;
+diff -rupN ori/first-stage/TRAIN/Feature.h new/first-stage/TRAIN/Feature.h
+--- ori/first-stage/TRAIN/Feature.h	2005-08-16 20:52:26.000000000 +0200
++++ new/first-stage/TRAIN/Feature.h	2011-04-10 18:10:16.481599137 +0200
+@@ -37,6 +37,7 @@
+ #define MAXNUMNTS 100
+ #define MAXNUMNTTS 200
+ #define MAXNUMTS 100
++#define MAXWORDLENGTH 128
+ 
+ #define RCALC 0
+ #define HCALC 1
+diff -rupN ori/first-stage/TRAIN/Pst.C new/first-stage/TRAIN/Pst.C
+--- ori/first-stage/TRAIN/Pst.C	2005-08-16 20:52:26.000000000 +0200
++++ new/first-stage/TRAIN/Pst.C	2011-04-10 18:10:16.487597521 +0200
+@@ -79,8 +79,8 @@ Pst::
+ wordPlistConstruct(const ECString& head, int word_num)
+ {
+   list<double> ans;
+-  char temp[512];
+-  ECString headL(toLower(head.c_str(), temp));
++  char temp[MAXWORDLENGTH];
++  ECString headL(toLower(head.c_str(), temp, sizeof(temp)));
+   const WordInfo* wi = useHeadC( headL );
+   if( wi )
+     {
+@@ -121,8 +121,8 @@ double
+ Pst::
+ pstt(ECString& shU, int t, int word_num)
+ {
+-  char temp[512];
+-  ECString sh(toLower(shU.c_str(), temp));
++  char temp[MAXWORDLENGTH];
++  ECString sh(toLower(shU.c_str(), temp, MAXWORDLENGTH));
+   const Term* tTerm = Term::fromInt(t);
+   double phst = pHst(sh, t);
+   double ans;
+@@ -136,8 +136,8 @@ double
+ Pst::
+ psktt(const ECString& shU, int t, int word_num)
+ {
+-  char temp[512];
+-  ECString sh(toLower(shU.c_str(), temp));
++  char temp[MAXWORDLENGTH];
++  ECString sh(toLower(shU.c_str(), temp, MAXWORDLENGTH));
+   double ans = pHst(sh, t);
+   double phcp = pCapgt(shU,t, word_num);
+   ans *= phcp;
+@@ -163,8 +163,8 @@ psutt(const ECString& shU, int t, int wo
+   ans *= .000001;
+   if(Term::fromInt(t)->openClass())
+     {
+-      char temp[512];
+-      ECString sh(toLower(shU.c_str(),temp));
++      char temp[MAXWORDLENGTH];
++      ECString sh(toLower(shU.c_str(),temp,MAXWORDLENGTH));
+       float phegt = pegt(sh,t);
+       if(phegt == 0) phegt = .00001;
+       //if(phegt == 0) phegt = .00005;
+@@ -185,8 +185,8 @@ pCapgt(const ECString& shU, int t, int w
+   if(word_num == 0) return 1;
+   //cerr << "pCapgt = " << pcap << endl;
+   if(shU.length() < 2) return 1;  //ignore words of length 1;
+-  char temp[512];
+-  ECString sh(toLower(shU.c_str(),temp));
++  char temp[MAXWORDLENGTH];
++  ECString sh(toLower(shU.c_str(),temp,MAXWORDLENGTH));
+   bool cap = false;
+   if(shU[0] != sh[0] && shU[1] == sh[1]) cap = true;
+   double pcap = pHcapgt(t);  
+diff -rupN ori/first-stage/TRAIN/pSfgT.C new/first-stage/TRAIN/pSfgT.C
+--- ori/first-stage/TRAIN/pSfgT.C	2005-08-16 20:49:46.000000000 +0200
++++ new/first-stage/TRAIN/pSfgT.C	2011-04-10 18:10:16.500597462 +0200
+@@ -56,8 +56,8 @@ addWwData(InputTree* tree)
+       if(trm->openClass())
+ 	{
+ 	  ECString hdLexU(tree->word());
+-	  char temp[512];
+-	  ECString hdLex(toLower(hdLexU.c_str(),temp));
++	  char temp[MAXWORDLENGTH];
++	  ECString hdLex(toLower(hdLexU.c_str(),temp,MAXWORDLENGTH));
+ 	  int len = hdLex.length();
+ 	  if(len >= 4)
+ 	    {
+diff -rupN ori/first-stage/TRAIN/pSgT.C new/first-stage/TRAIN/pSgT.C
+--- ori/first-stage/TRAIN/pSgT.C	2005-10-25 20:06:02.000000000 +0200
++++ new/first-stage/TRAIN/pSgT.C	2011-04-10 18:10:16.504597776 +0200
+@@ -50,8 +50,8 @@ int                 numTerm[MAXNUMNTS];
+ void
+ incrWordData(int lhsInt, ECString wupper)
+ {
+-  char temp[128];
+-  ECString w(toLower(wupper.c_str(), temp));
++  char temp[MAXWORDLENGTH];
++  ECString w(toLower(wupper.c_str(), temp, MAXWORDLENGTH));
+   numTerm[lhsInt]++;
+   WordMap::iterator wmi = wordMap.find(w);
+   if(wmi == wordMap.end())
+diff -rupN ori/first-stage/TRAIN/pTgNt.C new/first-stage/TRAIN/pTgNt.C
+--- ori/first-stage/TRAIN/pTgNt.C	2005-08-16 20:52:26.000000000 +0200
++++ new/first-stage/TRAIN/pTgNt.C	2011-04-10 18:10:16.507597545 +0200
+@@ -78,8 +78,8 @@ addWwData(InputTree* tree)
+       if(trm->openClass()) 
+ 	{
+ 	  ECString hdLexU(tree->word());
+-	  char temp[512];
+-	  ECString hdLex(toLower(hdLexU.c_str(),temp));
++	  char temp[MAXWORDLENGTH];
++	  ECString hdLex(toLower(hdLexU.c_str(),temp,MAXWORDLENGTH));
+ 	  int len = hdLex.length();
+ 	  if(len >= 3)
+ 	    {
+diff -rupN ori/first-stage/TRAIN/pUgT.C new/first-stage/TRAIN/pUgT.C
+--- ori/first-stage/TRAIN/pUgT.C	2005-08-16 20:52:26.000000000 +0200
++++ new/first-stage/TRAIN/pUgT.C	2011-04-10 18:10:16.512596796 +0200
+@@ -82,8 +82,8 @@ addWwData(InputTree* tree)
+   if( tree->word() != ""  )
+     {
+       ECString hdLexU(tree->word());
+-      char temp[512];
+-      ECString hdLex(toLower(hdLexU.c_str(),temp));
++      char temp[MAXWORDLENGTH];
++      ECString hdLex(toLower(hdLexU.c_str(),temp,MAXWORDLENGTH));
+       int len = hdLex.length();
+       const WordInfo* wi = Pst::get(hdLex); //???;
+       assert(wi);
+diff -rupN ori/first-stage/TRAIN/treeHistSf.C new/first-stage/TRAIN/treeHistSf.C
+--- ori/first-stage/TRAIN/treeHistSf.C	2005-10-18 22:34:16.000000000 +0200
++++ new/first-stage/TRAIN/treeHistSf.C	2011-04-10 18:10:16.522603680 +0200
+@@ -302,8 +302,8 @@ int
+ headFromTree(InputTree* tree)
+ {
+ 
+-  char temp[512];
+-  string wrdStr(toLower(tree->head().c_str(), temp));
++  char temp[MAXWORDLENGTH];
++  string wrdStr(toLower(tree->head().c_str(), temp, MAXWORDLENGTH));
+   const WordInfo* wi = Pst::get(wrdStr);
+   if(!wi)
+     {
+@@ -408,8 +408,8 @@ tree_grandparent_head(TreeHist* treeh)
+   pt = pt->parent();
+   if(!pt) return topInt;
+ 
+-  char temp[512];
+-  ECString wrdStr(toLower(pt->head().c_str(),temp));
++  char temp[MAXWORDLENGTH];
++  ECString wrdStr(toLower(pt->head().c_str(),temp,MAXWORDLENGTH));
+   const WordInfo* wi = Pst::get(wrdStr);
+   if(!wi)
+     {
+@@ -756,8 +756,8 @@ tree_watpos(int pos)
+       return nullWordInt;
+     }
+   ECString wrd = sentence[pos]->head();
+-  char tmp[512];
+-  ECString wrdl=toLower(wrd.c_str(), tmp);
++  char tmp[MAXWORDLENGTH];
++  ECString wrdl=toLower(wrd.c_str(), tmp, MAXWORDLENGTH);
+   const WordInfo* wi = Pst::get(wrdl);
+   assert(wi);
+   int ans = wi->toInt();
+diff -rupN ori/first-stage/TRAIN/utils.C new/first-stage/TRAIN/utils.C
+--- ori/first-stage/TRAIN/utils.C	2005-08-16 20:52:27.000000000 +0200
++++ new/first-stage/TRAIN/utils.C	2011-04-10 18:10:16.527603178 +0200
+@@ -75,20 +75,21 @@ ran()
+ 
+ 
+ char*
+-toLower(const char* str, char* temp)
++toLower(const char* str, char* temp, int maxlength)
+ {
+-  int l = strlen(str);
+-  assert(l < 512);
+-  for(int i = 0 ; i <= l ; i++)
++  const int l = strlen(str);
++  //if(l >= maxlength) fprintf(stderr, "toLower(): Truncating string of length %d to length %d ('%s')\n", l, maxlength, str);
++  for(int i = 0 ; i <= l && l<maxlength-1  ; i++)
+     {
+-      char n = str[i];
+-      int ni = (int)n;
++      const char n = str[i];
++      const int ni = (int)n;
+       if(ni >= 65 && ni <= 90)
+ 	{
+ 	  temp[i] = (char)(ni+32);
+ 	}
+       else temp[i] = n;
+     }
++  temp[maxlength-1] = (char)0;
+   return temp;
+ }
+ 
+diff -rupN ori/first-stage/TRAIN/utils.h new/first-stage/TRAIN/utils.h
+--- ori/first-stage/TRAIN/utils.h	2005-08-16 20:52:27.000000000 +0200
++++ new/first-stage/TRAIN/utils.h	2011-04-10 18:10:16.534597363 +0200
+@@ -33,7 +33,7 @@
+ void error(const char *s);
+ void warn(const char *s);
+ double ran();
+-char* toLower(const char* str, char* temp);
++char* toLower(const char* str, char* temp, int maxlength);
+ ECString intToString(int i);
+ typedef vector<ECString> ECStrings;
+ typedef ECStrings::iterator ECStringsIter;
+diff -rupN ori/second-stage/programs/eval-weights/popen.h new/second-stage/programs/eval-weights/popen.h
+--- ori/second-stage/programs/eval-weights/popen.h	2005-05-11 18:00:38.000000000 +0200
++++ new/second-stage/programs/eval-weights/popen.h	2011-04-10 18:10:16.536597697 +0200
+@@ -11,7 +11,8 @@
+ #include <cstdio>
+ #include <ext/stdio_filebuf.h>
+ #include <iostream>
+-#include <string>
++#include <string.h>
++#include <stdio.h>
+ 
+ //! ipstream_helper{} exists so that the various file buffers get created before the istream
+ //! gets created.
+Files ori/second-stage/programs/features/best-parses and new/second-stage/programs/features/best-parses differ
+diff -rupN ori/second-stage/programs/features/best-parses.cc new/second-stage/programs/features/best-parses.cc
+--- ori/second-stage/programs/features/best-parses.cc	2005-11-23 21:18:45.000000000 +0100
++++ new/second-stage/programs/features/best-parses.cc	2011-04-10 18:10:16.538597356 +0200
+@@ -7,13 +7,14 @@ const char usage[] =
+   "\n"
+   "Usage:\n"
+   "\n"
+-  "best-parses [-a] [-l] [-m mode] feat-defs.bz2 feat-weights.bz2 < nbest-parses > best-parses\n"
++  "best-parses [-a] [-l] [-s] [-m mode] feat-defs.bz2 feat-weights.bz2 < nbest-parses > best-parses\n"
+   "\n"
+   "where:\n"
+   "\n"
+   " -a don't use absolute counts (slower),\n"
+   " -d <debuglevel> sets the amount of debugging output,\n"
+   " -l maps all words to lower case as trees are read,\n"
++  " -s print sentence name/label,\n"
+   " -m <mode>, where the output depends on <mode>:\n"
+   "    0 print 1-best tree,\n"
+   "    1 print ranked parses,\n"
+@@ -22,7 +23,7 @@ const char usage[] =
+   " feat-defs.bz2 is a feature definition file produced by extract-spfeatures, and\n"
+   " feat-weights.bz2 is a feature weight file\n"
+   "\n"
+-  "The program reads n-best parses from stdin, and writes the best parse to stdout.\n";
++  "The program reads n-best parses from stdin, and writes output (depending on mode) to stdout.\n";
+ 
+ #include "custom_allocator.h"       // must be first
+ 
+@@ -43,12 +44,13 @@ bool collect_incorrect = false;
+ int main(int argc, char **argv) {
+ 
+   bool lowercase_flag = false;
++  bool sentence_name_flag = false;
+   int mode = 0;
+ 
+   std::ios::sync_with_stdio(false);
+ 
+   int c;
+-  while ((c = getopt(argc, argv, "ad:lm:")) != -1 )
++  while ((c = getopt(argc, argv, "ad:lm:s")) != -1 )
+     switch (c) {
+     case 'a':
+       absolute_counts = false;
+@@ -59,6 +61,9 @@ int main(int argc, char **argv) {
+     case 'l':
+       lowercase_flag = true;
+       break;
++    case 's':
++      sentence_name_flag = true;
++      break;
+     case 'm':
+       mode = atoi(optarg);
+       break;
+@@ -75,8 +80,8 @@ int main(int argc, char **argv) {
+ 
+   if (debug_level > 0)
+     std::cerr 
+-      << "# lowercase_flag (-l) = " << lowercase_flag
+-      << std::endl;
++      << "# lowercase_flag (-l) = " << lowercase_flag << std::endl
++      << "# sentence_name_flag (-s) = " << sentence_name_flag << std::endl;
+ 
+   // initialize feature classes
+   //
+@@ -111,13 +116,24 @@ int main(int argc, char **argv) {
+   while (s.read_ec_nbest_15aug05(std::cin, lowercase_flag)) {
+     switch (mode) {
+     case 0:
++      if (sentence_name_flag)
++        std::cout << s.label;
++      if (s.nparses() > 0)
++      {
++        if (sentence_name_flag)
++          std::cout << "\t";
+       write_tree_noquote_root(std::cout, fcps.best_parse(s, weights));
++      }
+       std::cout << std::endl;
+       break;
+     case 1:
++      if (sentence_name_flag)
++        std::cout << s.label << std::endl;
+       fcps.write_ranked_trees(s, weights, std::cout);
+       break;
+     case 2:
++      if (sentence_name_flag)
++        std::cout << s.label << std::endl;
+       fcps.write_features_debug(s, weights, std::cout);
+       break;
+     default:
+diff -rupN ori/second-stage/programs/features/dp-data.h new/second-stage/programs/features/dp-data.h
+--- ori/second-stage/programs/features/dp-data.h	2005-11-18 14:41:33.000000000 +0100
++++ new/second-stage/programs/features/dp-data.h	2011-04-10 18:14:40.084597003 +0200
+@@ -12,6 +12,7 @@
+ #include <iostream>
+ #include <string>
+ #include <vector>
++#include <string.h>
+ 
+ #include "tree.h"
+ 
+Files ori/second-stage/programs/features/extract-spfeatures and new/second-stage/programs/features/extract-spfeatures differ
+diff -rupN ori/second-stage/programs/features/lexical_cast.h new/second-stage/programs/features/lexical_cast.h
+--- ori/second-stage/programs/features/lexical_cast.h	2005-05-11 23:13:13.000000000 +0200
++++ new/second-stage/programs/features/lexical_cast.h	2011-04-10 18:10:16.543597642 +0200
+@@ -25,6 +25,10 @@
+ // #include <boost/throw_exception.hpp>
+ // #include <boost/type_traits/is_pointer.hpp>
+ 
++namespace std {
++	typedef std::basic_string <wchar_t> wstring;
++};
++
+ #ifdef BOOST_NO_STRINGSTREAM
+ #include <strstream>
+ #else
+Files ori/second-stage/programs/features/oracle-score and new/second-stage/programs/features/oracle-score differ
+diff -rupN ori/second-stage/programs/features/popen.h new/second-stage/programs/features/popen.h
+--- ori/second-stage/programs/features/popen.h	2005-05-11 18:00:38.000000000 +0200
++++ new/second-stage/programs/features/popen.h	2011-04-10 18:10:16.545597117 +0200
+@@ -11,7 +11,8 @@
+ #include <cstdio>
+ #include <ext/stdio_filebuf.h>
+ #include <iostream>
+-#include <string>
++#include <string.h> //actually this is a change from <string>
++#include <stdio.h>
+ 
+ //! ipstream_helper{} exists so that the various file buffers get created before the istream
+ //! gets created.
+diff -rupN ori/second-stage/programs/features/sp-data.h new/second-stage/programs/features/sp-data.h
+--- ori/second-stage/programs/features/sp-data.h	2005-11-22 22:08:53.000000000 +0100
++++ new/second-stage/programs/features/sp-data.h	2011-04-10 18:13:57.930597288 +0200
+@@ -16,6 +16,7 @@
+ #include <iostream>
+ #include <string>
+ #include <vector>
++#include <string.h>
+ 
+ #include "sptree.h"
+ #include "tree.h"
+@@ -397,7 +398,11 @@ struct sp_sentence_type {
+ 
+     size_t nparses;
+     if (is >> nparses) {
+-      assert(nparses > 0);
++      if (nparses <= 0)
++      {
++        std::cerr << "## WARNING: nparses <= 0" << std::endl;
++      }
++      //assert(nparses > 0);
+ 
+       is >> label;  // read sentence identifier
+ 
+diff -rupN ori/second-stage/programs/features/sstring.h new/second-stage/programs/features/sstring.h
+--- ori/second-stage/programs/features/sstring.h	2005-05-11 18:00:38.000000000 +0200
++++ new/second-stage/programs/features/sstring.h	2011-04-10 18:10:16.551597916 +0200
+@@ -155,11 +155,11 @@ namespace EXT_NAMESPACE {
+   template <typename CharT, typename Traits, typename Alloc>
+   struct hash<basic_sstring<CharT, Traits, Alloc> > 
+   {
+-    typedef basic_sstring<CharT, Traits, Alloc> basic_sstring;
++    typedef basic_sstring<CharT, Traits, Alloc> basic_sstring_;
+ 
+-    size_t operator()(const basic_sstring& s) const 
++    size_t operator()(const basic_sstring_& s) const 
+     {
+-      typedef typename basic_sstring::const_iterator CI;
++      typedef typename basic_sstring_::const_iterator CI;
+       
+       unsigned long h = 0; 
+       unsigned long g;
+diff -rupN ori/second-stage/programs/features/tree.h new/second-stage/programs/features/tree.h
+--- ori/second-stage/programs/features/tree.h	2005-11-23 03:50:11.000000000 +0100
++++ new/second-stage/programs/features/tree.h	2011-04-10 18:12:30.201601412 +0200
+@@ -316,7 +316,7 @@ public:
+ 
+   tree_node(const typename tree_label::cat_type& cat,
+ 	    tree_node* child = NULL, tree_node* next = NULL) 
+-    : label(tree_label::tree_label(cat)), child(child), next(next) { }
++    : label(tree_label(cat)), child(child), next(next) { }
+ 
+   //! The tree_node() copy constructor makes "deep" copies.
+   //
+diff -rupN ori/second-stage/programs/features/utility.h new/second-stage/programs/features/utility.h
+--- ori/second-stage/programs/features/utility.h	2005-11-07 15:19:00.000000000 +0100
++++ new/second-stage/programs/features/utility.h	2011-04-10 18:10:16.555597756 +0200
+@@ -48,6 +48,7 @@
+ #include <string>
+ #include <utility>
+ #include <vector>
++#include <memory>
+ 
+ #if (__GNUC__ > 3) || (__GNUC__ >= 3 && __GNUC_MINOR__ >= 1)
+ #define EXT_NAMESPACE __gnu_cxx
+@@ -493,7 +494,7 @@ inline std::istream& operator>> (std::is
+ 	return is >> cp;
+       else {
+ 	is.unget();
+-	return is >> cp+1;
++	return is >> (cp+1);
+       }
+     }
+     else {
+@@ -505,7 +506,7 @@ inline std::istream& operator>> (std::is
+     char c;
+     if (is.get(c)) {
+       if (c == *cp)
+-	return is >> cp+1;
++	return is >> (cp+1);
+       else {
+ 	is.unget();
+ 	is.setstate(std::ios::failbit);
+diff -rupN ori/second-stage/programs/prepare-data/lexical_cast.h new/second-stage/programs/prepare-data/lexical_cast.h
+--- ori/second-stage/programs/prepare-data/lexical_cast.h	2005-11-02 17:22:56.000000000 +0100
++++ new/second-stage/programs/prepare-data/lexical_cast.h	2011-04-10 18:10:16.557597609 +0200
+@@ -20,11 +20,16 @@
+ 
+ #include <string>
+ #include <typeinfo>
++#include <limits>
+ // #include <boost/config.hpp>
+ // #include <boost/limits.hpp>
+ // #include <boost/throw_exception.hpp>
+ // #include <boost/type_traits/is_pointer.hpp>
+ 
++namespace std {
++	typedef std::basic_string <wchar_t> wstring;
++};
++
+ #ifdef BOOST_NO_STRINGSTREAM
+ #include <strstream>
+ #else
+Files ori/second-stage/programs/prepare-data/ptb and new/second-stage/programs/prepare-data/ptb differ
+diff -rupN ori/second-stage/programs/prepare-data/tree.h new/second-stage/programs/prepare-data/tree.h
+--- ori/second-stage/programs/prepare-data/tree.h	2005-11-23 03:50:11.000000000 +0100
++++ new/second-stage/programs/prepare-data/tree.h	2011-04-10 18:16:49.171597187 +0200
+@@ -316,7 +316,7 @@ public:
+ 
+   tree_node(const typename tree_label::cat_type& cat,
+ 	    tree_node* child = NULL, tree_node* next = NULL) 
+-    : label(tree_label::tree_label(cat)), child(child), next(next) { }
++    : label(tree_label(cat)), child(child), next(next) { }
+ 
+   //! The tree_node() copy constructor makes "deep" copies.
+   //
+diff -rupN ori/second-stage/programs/prepare-data/utility.h new/second-stage/programs/prepare-data/utility.h
+--- ori/second-stage/programs/prepare-data/utility.h	2005-05-11 18:00:38.000000000 +0200
++++ new/second-stage/programs/prepare-data/utility.h	2011-04-10 18:10:16.560597483 +0200
+@@ -48,6 +48,7 @@
+ #include <string>
+ #include <utility>
+ #include <vector>
++#include <memory>
+ 
+ #if (__GNUC__ > 3) || (__GNUC__ >= 3 && __GNUC_MINOR__ >= 1)
+ #define EXT_NAMESPACE __gnu_cxx
+@@ -493,7 +494,7 @@ inline std::istream& operator>> (std::is
+ 	return is >> cp;
+       else {
+ 	is.unget();
+-	return is >> cp+1;
++	return is >> (cp+1);
+       }
+     }
+     else {
+@@ -505,7 +506,7 @@ inline std::istream& operator>> (std::is
+     char c;
+     if (is.get(c)) {
+       if (c == *cp)
+-	return is >> cp+1;
++	return is >> (cp+1);
+       else {
+ 	is.unget();
+ 	is.setstate(std::ios::failbit);
+Files /tmp/ori//reranking-parserAug06.tar.gz and ./reranking-parserAug06.tar.gz differ

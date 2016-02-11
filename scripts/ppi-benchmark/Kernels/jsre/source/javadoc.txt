@@ -1,0 +1,1 @@
+javadoc -d ./docs/api/ -author -version -private -breakiterator  ./src/org/itc/irst/tcc/sre/*.java ./src/org/itc/irst/tcc/sre/data/*.java ./src/org/itc/irst/tcc/sre/util/*.java ./src/org/itc/irst/tcc/sre/kernel/expl/*.java ./src/org/itc/irst/tcc/sre/kernel/*.java ./src/org/itc/irst/tcc/sre/data/context/*.java

@@ -1,0 +1,24 @@
+diff -rupN geniatagger-3.0.1/main.cpp geniatagger-3.0.1.new/main.cpp
+--- geniatagger-3.0.1/main.cpp	2006-10-06 01:24:10.000000000 +0200
++++ geniatagger-3.0.1.new/main.cpp	2010-07-08 13:51:09.000000000 +0200
+@@ -90,7 +90,7 @@ int main(int argc, char** argv)
+       cerr << " (please note that the input should be one-sentence-per-line)." << endl;
+     }
+     string postagged = bidir_postag(line, vme, vme_chunking, dont_tokenize);
+-    cout << postagged << endl;
++    cout << postagged << endl << flush;
+     n++;
+   }
+   
+diff -rupN geniatagger-3.0.1/morph.cpp geniatagger-3.0.1.new/morph.cpp
+--- geniatagger-3.0.1/morph.cpp	2006-02-20 12:07:25.000000000 +0100
++++ geniatagger-3.0.1.new/morph.cpp	2010-07-08 09:54:31.000000000 +0200
+@@ -5,6 +5,8 @@
+ #include <map>
+ #include <set>
+ 
++#include <stdlib.h>
++
+ using namespace std;
+ 
+ struct MorphDic

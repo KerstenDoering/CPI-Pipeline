@@ -1,0 +1,788 @@
+0	1
+-203.024
+(S1 (S (NP (NP (DT The) (NN economy) (POS 's)) (NN temperature)) (VP (MD will) (VP (AUX be) (VP (VBN taken) (PP (IN from) (NP (JJ several) (NN vantage) (NNS points))) (NP (DT this) (NN week)) (, ,) (PP (IN with) (NP (NP (NNS readings)) (PP (IN on) (NP (NN trade) (, ,) (NN output) (, ,) (NN housing) (CC and) (NN inflation)))))))) (. .)))
+
+1	1
+-306.306
+(S1 (S (NP (DT The) (ADJP (RBS most) (JJ troublesome)) (NN report)) (VP (MD may) (VP (AUX be) (NP (NP (DT the) (NNP August) (NN merchandise) (NN trade) (NN deficit)) (ADJP (JJ due) (ADVP (RB out)) (NP (NN tomorrow)))))) (. .)))
+
+2	1
+-192.187
+(S1 (S (NP (DT The) (NN trade) (NN gap)) (VP (AUX is) (VP (VBN expected) (S (VP (TO to) (VP (VB widen) (PP (TO to) (NP (QP (RB about) ($ $) (CD 9) (CD billion)))) (PP (IN from) (NP (NP (NNP July) (POS 's)) (QP ($ $) (CD 7.6) (CD billion))))))) (, ,) (PP (VBG according) (PP (TO to) (NP (NP (DT a) (NN survey)) (PP (IN by) (NP (NP (NNP MMS) (NNP International)) (, ,) (NP (NP (DT a) (NN unit)) (PP (IN of) (NP (NP (NNP McGraw-Hill) (NNP Inc.)) (, ,) (NP (NNP New) (NNP York)))))))))))) (. .)))
+
+3	1
+-217.694
+(S1 (S (NP (NP (NP (NNP Thursday) (POS 's)) (NN report)) (PP (IN on) (NP (DT the) (NNP September) (NN consumer) (NN price) (NN index)))) (VP (AUX is) (VP (VBN expected) (S (VP (TO to) (VP (VB rise)))) (, ,) (SBAR (IN although) (FRAG (RB not) (ADJP (RB as) (RB sharply) (PP (IN as) (NP (NP (DT the) (ADJP (CD 0.9) (NN %)) (NN gain)) (VP (VBN reported) (NP (NNP Friday)) (PP (IN in) (NP (DT the) (NN producer) (NN price) (NN index))))))))))) (. .)))
+
+4	1
+-213.009
+(S1 (S (NP (DT That) (NN gain)) (VP (AUX was) (VP (AUXG being) (VP (VBN cited) (PP (IN as) (NP (NP (DT a) (NN reason)) (SBAR (S (NP (DT the) (NN stock) (NN market)) (VP (AUX was) (ADVP (RB down)) (PP (ADVP (RB early)) (IN in) (NP (NP (NNP Friday) (POS 's)) (NN session))) (, ,) (SBAR (IN before) (S (NP (PRP it)) (VP (VBD got) (S (VP (VBN started) (PP (IN on) (NP (PRP$ its) (JJ reckless) (JJ 190-point) (NN plunge)))))))))))))))) (. .)))
+
+5	1
+-281.162
+(S1 (S (NP (NNS Economists)) (VP (AUX are) (VP (VBN divided) (PP (IN as) (PP (TO to) (SBAR (WHNP (WRB how) (JJ much) (NN manufacturing) (NN strength)) (S (NP (PRP they)) (VP (VBP expect) (S (VP (TO to) (VP (VB see) (PP (IN in) (NP (NNP September))) (NP (NP (NNS reports)) (PP (IN on) (NP (NP (JJ industrial) (NN production)) (CC and) (NP (NP (NN capacity) (NN utilization)) (PRN (, ,) (ADVP (RB also)) (NP (JJ due) (NN tomorrow))))))))))))))))) (. .)))
+
+6	1
+-255.452
+(S1 (S (ADVP (RB Meanwhile)) (, ,) (NP (NP (NNP September) (NN housing) (NNS starts)) (, ,) (ADJP (JJ due) (NP (NNP Wednesday))) (, ,)) (VP (AUX are) (VP (VBN thought) (S (VP (TO to) (VP (AUX have) (VP (VBD inched) (ADVP (RB upward)))))))) (. .)))
+
+7	1
+-200.007
+(S1 (SINV (`` ``) (S (NP (EX There)) (VP (AUX 's) (NP (NP (DT a) (NN possibility)) (PP (IN of) (NP (NP (DT a) (NN surprise)) ('' '') (PP (IN in) (NP (DT the) (NN trade) (NN report)))))))) (, ,) (VP (VBD said)) (NP (NP (NNP Michael) (NNP Englund)) (, ,) (NP (NP (NN director)) (PP (IN of) (NP (NN research))) (PP (IN at) (NP (NNP MMS))))) (. .)))
+
+8	1
+-248.656
+(S1 (S (S (NP (NP (DT A) (NN widening)) (PP (IN of) (NP (DT the) (NN deficit)))) (, ,) (SBAR (IN if) (S (NP (PRP it)) (VP (AUX were) (VP (VBN combined) (PP (IN with) (NP (DT a) (ADJP (RB stubbornly) (JJ strong)) (NN dollar))))))) (, ,) (VP (MD would) (VP (VB exacerbate) (NP (NN trade) (NNS problems))))) (: --) (CC but) (S (NP (DT the) (NN dollar)) (VP (VBD weakened) (NP (NNP Friday)) (SBAR (IN as) (S (NP (NNS stocks)) (VP (VBD plummeted)))))) (. .)))
+
+9	1
+-176.3
+(S1 (S (PP (IN In) (NP (DT any) (NN event))) (, ,) (NP (NP (NNP Mr.) (NNP Englund)) (CC and) (NP (JJ many) (NNS others))) (VP (VBP say) (SBAR (IN that) (S (NP (NP (DT the) (JJ easy) (NNS gains)) (PP (IN in) (S (VP (VBG narrowing) (NP (DT the) (NN trade) (NN gap)))))) (VP (AUX have) (ADVP (RB already)) (VP (AUX been) (VP (VBN made))))))) (. .)))
+
+10	1
+-181.293
+(S1 (S (`` ``) (S (NP (NN Trade)) (VP (AUX is) (ADVP (RB definitely)) (VP (VBG going) (S (VP (TO to) (VP (AUX be) (ADJP (ADJP (RBR more) (RB politically) (JJ sensitive) (PP (IN over) (NP (DT the) (JJ next) (CD six) (CC or) (CD seven) (NNS months)))) (SBAR (IN as) (S (NP (NN improvement)) (VP (VBZ begins) (S (VP (TO to) (VP (VB slow)))))))))))))) (, ,) ('' '') (NP (PRP he)) (VP (VBD said)) (. .)))
+
+11	1
+-320.781
+(S1 (S (S (NP (NNS Exports)) (VP (AUX are) (VP (VBN thought) (S (VP (TO to) (VP (AUX have) (VP (VBN risen) (ADVP (ADVP (RB strongly) (PP (IN in) (NP (NNP August)))) (, ,) (CC but) (ADVP (RB probably) (RB not) (JJ enough))) (S (VP (TO to) (VP (VB offset) (NP (NP (DT the) (NN jump)) (PP (IN in) (NP (NNS imports)))))))))))))) (, ,) (NP (NNS economists)) (VP (VBD said)) (. .)))
+
+12	1
+-341.639
+(S1 (S (NP (NP (NNS Views)) (PP (IN on) (NP (NN manufacturing) (NN strength)))) (VP (AUX are) (VP (VBN split) (PP (IN between) (NP (NP (NNS economists)) (SBAR (WHNP (WP who)) (S (VP (VBP read) (NP (NP (NP (NNP September) (POS 's)) (JJ low) (NN level)) (PP (IN of) (NP (NN factory) (NN job) (NN growth)))) (PP (IN as) (NP (NP (NP (DT a) (NN sign)) (PP (IN of) (NP (DT a) (NN slowdown)))) (CC and) (NP (NP (DT those)) (SBAR (WHNP (WP who)) (S (VP (VBP use) (NP (DT the) (ADJP (RB somewhat) (RBR more) (JJ comforting)) (JJ total) (NN employment) (NNS figures)) (PP (IN in) (NP (PRP$ their) (NNS calculations)))))))))))))))) (. .)))
+
+13	1
+-276.028
+(S1 (S (S (NP (NP (DT The) (JJ wide) (NN range)) (PP (IN of) (NP (NP (NNS estimates)) (PP (IN for) (NP (DT the) (JJ industrial) (NN output) (NN number)))))) (VP (VBZ underscores) (NP (DT the) (NNS differences)))) (: :) (S (NP (DT The) (NNS forecasts)) (VP (VBP run) (PP (PP (IN from) (NP (NP (DT a) (NN drop)) (PP (IN of) (NP (CD 0.5) (NN %))))) (PP (TO to) (NP (NP (DT an) (NN increase)) (PP (IN of) (NP (CD 0.4) (NN %)))))) (, ,) (PP (VBG according) (PP (TO to) (NP (NNP MMS)))))) (. .)))
+
+14	1
+-97.1724
+(S1 (S (NP (NP (DT A) (NN rebound)) (PP (IN in) (NP (NN energy) (NNS prices))) (, ,) (SBAR (WHNP (WDT which)) (S (VP (VBD helped) (S (VP (VB push) (PRT (RP up)) (NP (DT the) (NN producer) (NN price) (NN index))))))) (, ,)) (VP (AUX is) (VP (VBN expected) (S (VP (TO to) (VP (AUX do) (NP (DT the) (JJ same)) (PP (IN in) (NP (DT the) (NN consumer) (NN price) (NN report)))))))) (. .)))
+
+15	1
+-144.53
+(S1 (S (NP (DT The) (NN consensus) (NN view)) (VP (VBZ expects) (NP (NP (DT a) (ADJP (CD 0.4) (NN %)) (NN increase)) (PP (IN in) (NP (DT the) (NNP September) (NNP CPI)))) (PP (IN after) (NP (NP (DT a) (JJ flat) (NN reading)) (PP (IN in) (NP (NNP August)))))) (. .)))
+
+16	1
+-228.339
+(S1 (S (NP (NP (NNP Robert) (NNP H.) (NNP Chandross)) (, ,) (NP (NP (DT an) (NN economist)) (PP (IN for) (NP (NP (NP (NNP Lloyd) (POS 's)) (NNP Bank)) (PP (IN in) (NP (NNP New) (NNP York)))))) (, ,)) (VP (AUX is) (PP (IN among) (NP (NP (DT those)) (VP (VBG expecting) (NP (NP (DT a) (ADJP (RBR more) (JJ moderate)) (NN gain)) (PP (IN in) (NP (DT the) (NNP CPI))) (PP (IN than) (PP (IN in) (NP (NP (NNS prices)) (PP (IN at) (NP (DT the) (NN producer) (NN level))))))))))) (. .)))
+
+17	1
+-193.442
+(S1 (S (`` ``) (S (S (NP (NN Auto) (NNS prices)) (VP (AUX had) (NP (NP (DT a) (JJ big) (NN effect)) (PP (IN in) (NP (DT the) (NNP PPI)))))) (, ,) (CC and) (S (PP (IN at) (NP (DT the) (NNP CPI) (NN level))) (NP (PRP they)) (VP (MD wo) (RB n't)))) (, ,) ('' '') (NP (PRP he)) (VP (VBD said)) (. .)))
+
+18	1
+-172.267
+(S1 (SINV (S (S (NP (NN Food) (NNS prices)) (VP (AUX are) (VP (VBN expected) (S (VP (TO to) (VP (AUX be) (ADJP (JJ unchanged)))))))) (, ,) (CC but) (S (NP (NN energy) (NNS costs)) (VP (VBD jumped) (NP (QP (RB as) (JJ much) (IN as) (CD 4)) (NN %))))) (, ,) (VP (VBD said)) (NP (NP (NNP Gary) (NNP Ciminero)) (, ,) (NP (NP (NN economist)) (PP (IN at) (NP (NNP Fleet\/Norstar) (NNP Financial) (NNP Group))))) (. .)))
+
+19	1
+-166.204
+(S1 (S (NP (PRP He)) (ADVP (RB also)) (VP (VBZ says) (SBAR (S (NP (PRP he)) (VP (VBZ thinks) (SBAR (S (NP (`` ``) (NP (JJ core) (NN inflation)) (, ,) ('' '') (SBAR (WHNP (WDT which)) (S (VP (VBZ excludes) (NP (DT the) (JJ volatile) (NN food) (CC and) (NN energy) (NNS prices))))) (, ,)) (VP (AUX was) (NP (JJ strong) (JJ last) (NN month))))))))) (. .)))
+
+20	1
+-150.799
+(S1 (S (NP (PRP He)) (VP (VBZ expects) (NP (NP (DT a) (NN gain)) (PP (IN of) (NP (QP (RB as) (JJ much) (IN as) (CD 0.5)) (NN %))) (PP (IN in) (NP (NN core) (NN inflation)))) (PP (IN after) (NP (NP (DT a) (NN summer)) (PP (IN of) (NP (ADJP (RB far) (JJR smaller)) (NNS increases)))))) (. .)))
+
+21	1
+-227.715
+(S1 (S (NP (NN Housing) (NNS starts)) (VP (AUX are) (VP (VBN expected) (S (VP (TO to) (VP (VB quicken) (NP (DT a) (NN bit)) (PP (IN from) (NP (NP (NP (NNP August) (POS 's)) (JJ annual) (NN pace)) (PP (IN of) (NP (CD 1,350,000) (NNS units)))))))))) (. .)))
+
+22	1
+-258.092
+(S1 (S (NP (NNS Economists)) (VP (VBP say) (SBAR (S (NP (NP (DT an) (NNP August) (NN rebound)) (PP (IN in) (NP (NP (NNS permits)) (PP (IN for) (NP (JJ multifamily) (NNS units)))))) (VP (VBD signaled) (SBAR (S (NP (NP (DT an) (NN increase)) (PP (IN in) (NP (NNP September)))) (VP (VBZ starts) (, ,) (SBAR (IN though) (S (NP (NN activity)) (VP (VBZ remains) (ADJP (RB fairly) (JJ modest) (PP (IN by) (NP (JJ historical) (NNS standards)))))))))))))) (. .)))
+
+23	1
+-221.827
+(S1 (NP (NNP Two-Way) (NNP Street)))
+
+24	1
+-253.45
+(S1 (SBARQ (SBAR (IN If) (S (NP (DT the) (JJ sixty-day) (JJ plant-closing) (NN law)) (VP (AUX 's) (ADJP (JJ fair))))) (, ,) (WHADVP (WRB Why)) (SQ (MD should) (NP (PRP we)) (ADVP (RB not) (RB then)) (VP (VB amend) (NP (DT the) (NN writ)) (S (VP (TO To) (VP (VB require) (SBAR (IN that) (S (NP (DT all) (NNS employees)) (VP (VBP give) (NP (JJ Similar) (NN notice)))))))) (SBAR (IN before) (S (NP (PRP they)) (VP (VB quit)))))) (. ?)))
+
+25	1
+-218.13
+(S1 (NP (: --) (NNP Rollin) (NNP S.) (NNP Trexler) (. .)))
+
+26	1
+-204.491
+(S1 (NP (JJ Candid) (NN Comment)))
+
+27	1
+-213.65
+(S1 (SQ (SBAR (WHADVP (WRB When)) (S (NP (NN research) (NNS projects)) (VP (AUX are) (VP (VBN curtailed) (PP (JJ due) (TO to) (NP (NN government) (NN funding) (NNS cuts))))))) (, ,) (AUX are) (S (NP (PRP we)) (`` ``) (VP (VBD caught) (PP (IN with) (NP (PRP$ our) (NNS grants))) (ADVP (RB down))) ('' '')) (. ?)))
+
+28	1
+-315.917
+(S1 (NP (: --) (NNP C.E.) (NNP Friedman) (. .)))
+
+29	1
+-280.756
+(S1 (S (S (VP (VBG Assuming) (SBAR (S (NP (DT the) (NN stock) (NN market)) (VP (AUX does) (RB n't) (VP (VP (VB crash) (ADVP (RB again))) (CC and) (VP (ADVP (RB completely)) (VB discredit) (NP (NNS yuppies) (CC and) (NN trading) (NNS rooms))))))))) (, ,) (NP (NP (NNP American) (NN television) (NNS audiences)) (PP (IN in) (NP (DT a) (JJ few) (NNS months)))) (VP (MD may) (VP (AUX be) (VP (VBG seeing) (NP (NP (NP (NNP Britain) (POS 's)) (NN concept)) (PP (IN of) (NP (DT both))))))) (. .)))
+
+30	1
+-113.982
+(S1 (S (`` ``) (NP (NNP Capital) (NNP City)) ('' '') (VP (AUX is) (NP (NP (DT a) (JJ weekly) (NN series)) (SBAR (WHNP (WDT that)) (S (VP (VBD premiered) (ADVP (RB here)) (ADVP (NP (CD three) (NNS weeks)) (RB ago)) (PP (IN amid) (NP (NP (JJ unprecedented) (NN hype)) (PP (IN by) (NP (NP (PRP$ its) (NN producer)) (, ,) (NP (NNP Thames) (NNP Television))))))))))) (. .)))
+
+31	1
+-101.669
+(S1 (S (NP (DT The) (JJ early) (NNS episodes)) (VP (VBP make) (NP (PRP you)) (PP (ADVP (RB long)) (IN for) (NP (NP (DT a) (NN rerun)) (PP (IN of) (NP (NP (DT the) (NN crash)) (PP (IN of) (NP (CD 1987)))))))) (. .)))
+
+32	1
+-93.6069
+(S1 (S (VP (VB Let) (S (NP (PRP 's)) (VP (VB make) (S (PP (IN that) (NP (NP (CD 1929)) (, ,) (SBAR (S (ADVP (RB just)) (VP (TO to) (VP (AUX be) (ADJP (JJ sure)))))))))))) (. .)))
+
+33	1
+-533.955
+(S1 (S (PP (VBG According) (PP (TO to) (NP (NP (DT the) (NN program) (POS 's)) (NN publicity) (NN prospectus)))) (, ,) (NP (`` ``) (NP (NNP Capital) (NNP City)) (, ,) ('' '') (VP (VBN set) (PP (IN at) (NP (NP (NNP Shane) (NNP Longman)) (, ,) (NP (NP (DT a) (JJ fictional) (JJ mid-sized) (NNS securities) (NN firm)) (PP (IN with) (NP (QP (# #) (CD 500) (CD million)) (NN capital)))) (, ,)))) (`` ``)) (VP (VBZ follows) (NP (NP (DT the) (NNS fortunes)) (PP (IN of) (NP (NP (DT a) (JJ close-knit) (NN team)) (PP (IN of) (NP (NP (JJ young) (, ,) (JJ high-flying) (NNS dealers)) (, ,) (VP (VBN hired) (PP (IN for) (NP (PRP$ their) (JJ particular) (VP (VB blend) (PP (IN of) (NP (NP (NN style)) (, ,) (NP (NN genius)) (CC and) (NP (NN energy)))))))))))))) (. .)))
+
+34	1
+-175.048
+(S1 (S (CC But) (S (NP (NP (IN with) (PDT all) (DT the) (NN money) (CC and) (NN glamour)) (PP (IN of) (NP (JJ high) (NN finance)))) (VP (VBP come) (S (S (NP (DT the) (JJ relentless) (NNS pressures)) (VP (TO to) (VP (AUX do) (ADVP (RB well))))) (: ;) (S (NP (NN pressure)) (VP (TO to) (VP (VB pull) (PRT (RP off)) (NP (DT another) (CD million)) (PP (IN before) (NP (NN lunch)))))) (: ;) (S (NP (NN pressure)) (VP (TO to) (VP (VB anticipate) (NP (DT the) (NN market)) (PP (IN by) (NP (NP (DT a) (NN fraction)) (PP (IN of) (NP (DT a) (NN second))))))))))) (: ...) ('' '')))
+
+35	1
+-158.784
+(S1 (S (NP (PRP You)) (VP (MD need) (RB n't) (VP (AUX be) (NP (NP (DT a) (JJ high-powered) (NNS securities) (NN lawyer)) (SBAR (S (VP (TO to) (VP (VB realize) (SBAR (S (NP (DT the) (NN prospectus)) (VP (AUX is) (ADJP (JJ guilty) (PP (IN of) (NP (NP (JJR less)) (PP (IN than) (NP (JJ full) (NN disclosure)))))))))))))))) (. .)))
+
+36	1
+-311.159
+(S1 (S (S (NP (DT The) (ADJP (RB slickly) (VBN produced)) (NN series)) (VP (AUX has) (VP (AUX been) (VP (VBN criticized) (PP (IN by) (NP (NP (NNP London) (POS 's)) (JJ financial) (NNS cognoscenti))) (PP (IN as) (ADJP (JJ inaccurate))) (PP (IN in) (NP (NN detail))))))) (, ,) (CC but) (S (NP (PRP$ its) (JJ major) (NN weakness)) (VP (AUX is) (NP (NP (PRP$ its) (JJ unrealistic) (NN depiction)) (PP (IN of) (NP (NP (DT the) (NNS characters) (POS ')) (JJ professional) (CC and) (JJ private) (NNS lives)))))) (. .)))
+
+37	1
+-130.391
+(S1 (S (S (VP (VBN Turned) (ADVP (RB loose)) (PP (IN in) (NP (NP (NNP Shane) (NNP Longman) (POS 's)) (NN trading) (NN room))))) (, ,) (NP (DT the) (NN yuppie) (NNS dealers)) (VP (AUX do) (ADJP (RB little) (JJ right))) (. .)))
+
+38	1
+-121.936
+(S1 (S (S (VP (VBG Judging) (PP (IN by) (NP (NP (NP (DT the) (NN money)) (VP (VBN lost))) (CC and) (NP (NP (NNS mistakes)) (VP (VBN made) (PP (IN in) (NP (DT the) (JJ early) (NNS episodes))))))))) (, ,) (NP (NP (NNP Shane) (NNP Longman) (POS 's)) (NN capital)) (VP (MD should) (VP (AUX be) (VP (ADVP (RB just) (IN about)) (VBN exhausted) (PP (IN by) (NP (DT the) (JJ final) (JJ 13th) (NN week)))))) (. .)))
+
+39	1
+-89.004
+(S1 (S (PP (IN In) (NP (DT the) (NN opening) (NN episode))) (NP (PRP we)) (VP (VBP learn) (SBAR (IN that) (S (NP (NP (NNP Michelle)) (, ,) (NP (DT a) (NN junior) (NN bond) (NN trader)) (, ,)) (VP (AUX has) (ADVP (RB indeed)) (VP (VBN pulled) (PRT (RP off)) (NP (DT another) (CD million)) (PP (IN before) (NP (NN lunch)))))))) (. .)))
+
+40	1
+-88.8658
+(S1 (S (NP (NN Trouble)) (VP (AUX is) (, ,) (SBAR (S (NP (PRP she)) (VP (AUX has) (VP (VBN lost) (NP (PRP it)) (ADVP (RB just) (RB as) (RB quickly))))))) (. .)))
+
+41	1
+-261.924
+(S1 (S (SBAR (RB Rather) (IN than) (S (VP (VB keep) (S (NP (DT the) (NN loss)) (NP (NP (DT a) (NN secret)) (PP (IN from) (NP (DT the) (JJ outside) (NN world)))))))) (, ,) (NP (NNP Michelle)) (VP (VBZ blabs) (PP (PP (IN about) (NP (PRP it))) (PP (TO to) (NP (DT a) (NN sandwich) (NN man)))) (SBAR (IN while) (S (VP (VBG ordering) (NP (NN lunch)) (PP (IN over) (NP (DT the) (NN phone))))))) (. .)))
+
+42	1
+-207.85
+(S1 (S (NP (JJ Little)) (VP (VBP chance) (SBAR (IN that) (S (NP (NNP Shane) (NNP Longman)) (VP (AUX is) (VP (VBG going) (S (VP (TO to) (VP (VB recoup) (NP (NN today)))))))))) (. .)))
+
+43	1
+-175.49
+(S1 (S (NP (NNS Traders)) (VP (VBP spend) (NP (DT the) (NN morning)) (VP (ADVP (RB frantically)) (VBG selling) (NP (NNS bonds)) (, ,) (PP (IN in) (NP (DT the) (NN belief) (SBAR (IN that) (S (NP (DT the) (NNP U.S.) (JJ monthly) (NN trade) (NNS figures)) (VP (MD will) (VP (VB look) (ADJP (JJ lousy)))))))))) (. .)))
+
+44	1
+-180.557
+(S1 (FRAG (INTJ (UH Ah)) (, ,) (NP (JJ perfidious) (NNP Columbia)) (. !)))
+
+45	1
+-158.058
+(S1 (S (S (NP (DT The) (NN trade) (NNS figures)) (VP (VBP turn) (PRT (RP out)) (ADVP (RB well)))) (, ,) (CC and) (S (NP (PDT all) (DT those) (ADJP (RB recently) (VBN unloaded)) (NNS bonds)) (VP (NN spurt) (PP (IN in) (NP (NN price))))) (. .)))
+
+46	1
+-290.254
+(S1 (FRAG (ADJP (RB So) (JJ much) (PP (IN for) (S (VP (VBG anticipating) (NP (DT the) (NN market)) (PP (IN by) (NP (NP (DT a) (NN fraction)) (PP (IN of) (NP (DT a) (NN second))))))))) (. .)))
+
+47	1
+-315.07
+(S1 (S (CC And) (NP (NP (DT a) (JJ large) (NN slice)) (PP (IN of) (NP (DT the) (JJ first) (NN episode)))) (VP (AUX is) (ADJP (JJ devoted) (PP (TO to) (NP (NNS efforts) (S (VP (TO to) (VP (VB get) (ADJP (JJ rid) (PP (IN of) (NP (NP (DT some) (ADJP (RB nearly) (JJ worthless)) (JJ Japanese) (NNS bonds)) (PRN (-LRB- -LRB-) (SBAR (IN since) (FRAG (SBAR (WHADVP (WRB when)) (S (VP (AUX is) (NP (NN anything))))) (NP (NNPS Japanese)) (ADJP (RB nearly) (JJ worthless)) (ADVP (RB nowadays)) (. ?))) (-RRB- -RRB-)))))))))))) (. .)))
+
+48	1
+-279.128
+(S1 (S (ADVP (RB Surprisingly)) (, ,) (NP (NNP Shane) (NNP Longman)) (VP (VBZ survives) (NP (DT the) (NN week)) (, ,) (S (ADVP (RB only)) (VP (TO to) (VP (AUX have) (S (NP (DT a) (JJ senior) (NN executive)) (VP (ADVP (RB innocently)) (VB bumble) (NP (PRP$ his) (NN way)) (PP (IN into) (S (VP (VBG becoming) (NP (NP (DT the) (NN target)) (PP (IN of) (NP (DT a) (JJ criminal) (NN insider) (NN trading) (NN investigation))))))))))))) (. .)))
+
+49	1
+-218.901
+(S1 (S (PP (RB Instead) (IN of) (S (VP (VBG closing) (NP (NNS ranks)) (S (VP (TO to) (VP (VB protect) (NP (NP (DT the) (NN firm) (POS 's)) (NN reputation)))))))) (, ,) (NP (NP (NP (DT the) (NN executive) (POS 's)) (JJ internal) (NNS rivals)) (, ,) (VP (VBN led) (PP (IN by) (NP (DT a) (NN loutish) (JJ American)))) (, ,)) (VP (VBP demand) (NP (PRP$ his) (NN resignation))) (. .)))
+
+50	1
+-254.983
+(S1 (S (NP (DT The) (NN plot)) (VP (AUX is) (VP (VBN thwarted) (SBAR (WHADVP (WRB when)) (S (NP (NP (NP (DT the) (NN firm) (POS 's)) (JJ major) (NN stockholder)) (, ,) (NP (NP (NN kelp) (NN farming)) (PP (IN on) (NP (NP (DT the) (JJ other) (NN side)) (PP (IN of) (NP (DT the) (NN globe)))))) (, ,)) (VP (VBZ hurries) (ADVP (NN home)) (S (VP (TO to) (VP (VB support) (NP (DT the) (NN executive)))))))))) (. .)))
+
+51	1
+-274.86
+(S1 (S (CC But) (NP (DT the) (NN investigation)) (VP (VBZ continues)) (. .)))
+
+52	1
+-303.892
+(S1 (S (SBAR (IN If) (S (NP (PRP you)) (VP (MD can) (VP (VB swallow) (NP (DT the) (NN premise) (SBAR (IN that) (S (NP (NP (DT the) (NNS rewards)) (PP (IN for) (NP (JJ such) (NN ineptitude)))) (VP (AUX are) (NP (JJ six-figure) (NNS salaries)))))))))) (, ,) (NP (PRP you)) (ADVP (RB still)) (VP (AUX are) (VP (VBN left) (S (VP (VBN puzzled))) (, ,) (SBAR (IN because) (S (NP (NP (JJ few)) (PP (IN of) (NP (DT the) (NNS yuppies)))) (VP (VBP consume) (ADVP (RB very) (RB conspicuously))))))) (. .)))
+
+53	1
+-435.866
+(S1 (S (PP (IN In) (NP (NN fact))) (, ,) (NP (JJ few)) (VP (VBP consume) (NP (NP (JJ much)) (PP (IN of) (NP (NN anything))))) (. .)))
+
+54	1
+-478.561
+(S1 (FRAG (NP (CD Two) (NN share)) (NP (NP (DT a) (NN house)) (ADJP (RB almost) (JJ devoid))) (PP (IN of) (NP (NN furniture))) (. .)))
+
+55	1
+-479.801
+(S1 (S (S (NP (NNP Michelle)) (VP (VBZ lives) (PP (IN in) (NP (DT a) (NN hotel) (NN room))))) (, ,) (CC and) (S (SBAR (IN although) (S (NP (PRP she)) (VP (VBZ drives) (NP (DT a) (JJ canary-colored) (NNP Porsche))))) (, ,) (NP (PRP she)) (VP (AUX has) (RB n't) (NP (NP (NN time)) (SBAR (S (VP (TO to) (VP (VB clean) (CC or) (VB repair) (NP (PRP it))))))))) (: ;) (S (NP (DT the) (JJ beat-up) (NN vehicle)) (VP (MD can) (VP (AUX be) (VP (VBN started) (ADVP (RB only)) (PP (IN with) (NP (NP (DT a) (JJ huge) (NN pair)) (PP (IN of) (NP (NNS pliers))))) (SBAR (IN because) (S (NP (DT the) (NN ignition) (NN key)) (VP (AUX has) (VP (VBN broken) (PRT (RP off)) (PP (IN in) (NP (DT the) (NN lock))))))))))) (. .)))
+
+56	1
+-251.216
+(S1 (S (CC And) (NP (PRP it)) (VP (VBZ takes) (NP (NP (NNP Declan)) (, ,) (NP (NP (NP (DT the) (JJ obligatory) (NNS ladies) (POS ')) (NN man)) (PP (IN of) (NP (DT the) (NN cast)))) (, ,)) (PP (IN until) (NP (DT the) (JJ third) (NN episode) (S (VP (TO to) (VP (VB get) (NP (JJ past) (JJ first) (NN base)) (PP (IN with) (NP (NP (DT any)) (PP (IN of) (NP (PRP$ his) (NN prey))))))))))) (. .)))
+
+57	1
+-262.825
+(S1 (S (ADVP (RB Perhaps)) (NP (NP (DT the) (NN explanation)) (PP (IN for) (NP (DT these) (NNS anomalies)))) (VP (AUX is) (SBAR (IN that) (S (NP (JJ class-conscious) (NNP Britain)) (VP (AUX is) (RB n't) (ADJP (JJ ready) (S (VP (TO to) (VP (VB come) (PP (TO to) (NP (NP (NNS terms)) (PP (IN with) (NP (NP (DT the) (NN wealth)) (VP (VBN created) (PP (IN by) (NP (DT the) (NNP Thatcherian) (JJ free-enterprise) (NN regime)))))))))))))))) (. .)))
+
+58	1
+-152.042
+(S1 (S (PP (IN After) (NP (DT all))) (, ,) (S (NP (DT this)) (VP (AUX is) (RB n't) (NP (NP (JJ old) (NN money)) (, ,) (CC but) (NP (JJ new) (NN money))))) (, ,) (CC and) (S (PP (IN in) (NP (JJ many) (NNS cases))) (, ,) (NP (JJ young) (NN money))) (. .)))
+
+59	1
+-178.461
+(S1 (S (NP (DT This) (NN attitude)) (VP (AUX is) (ADVP (RB clearly)) (VP (VBN illustrated) (PP (IN in) (NP (NP (DT the) (NN treatment)) (PP (IN of) (NP (NP (NNP Max)) (, ,) (NP (NP (DT the) (VBG trading) (NN room) (POS 's)) (ADJP (RBS most) (JJ flamboyant)) (NN character)))))))) (. .)))
+
+60	1
+-228.547
+(S1 (S (ADVP (RB Yuppily) (RB enough)) (, ,) (NP (PRP he)) (VP (VBZ lives) (PP (IN in) (NP (DT a) (ADJP (RB lavishly) (JJ furnished)) (JJ converted) (NN church))) (, ,) (VP (VBZ wears) (NP (NN designer) (NNS clothes))) (CC and) (VP (VBZ drives) (NP (DT an) (NN antique) (NN car)))) (. .)))
+
+61	1
+-340.616
+(S1 (S (CC But) (S (ADVP (RB apparently)) (VP (TO to) (VP (VB make) (S (NP (PRP him)) (ADJP (JJ palatable) (, ,) (RB even) (JJ lovable) (, ,) (PP (TO to) (NP (DT the) (NNS masses)))))))) (, ,) (NP (DT the) (NN script)) (VP (VBZ inflates) (NP (JJ pony-tailed) (NNP Max)) (PP (IN into) (NP (NP (DT an) (JJ eccentric) (NN genius)) (, ,) (NP (NP (NN master)) (PP (IN of) (NP (CD 11) (JJ Chinese) (NNS dialects))))))) (. .)))
+
+62	1
+-503.861
+(S1 (S (NP (PRP He)) (VP (VBZ takes) (NP (PRP$ his) (NN wash)) (PP (TO to) (NP (NP (DT the) (NN laundromat)) (, ,) (SBAR (WHADVP (WRB where)) (S (NP (PRP he)) (VP (VBZ meets) (NP (NP (DT a) (JJ punky) (JJ French) (NN girl)) (SBAR (WHNP (WP who)) (S (VP (VP (VBZ dupes) (NP (PRP him)) (PP (IN into) (S (VP (VBG providing) (NP (DT a) (NN home)) (PP (IN for) (NP (PRP$ her) (JJ pet) (NN piranha))))))) (CC and) (RB then) (VP (VP (ADVP (RB promptly)) (VBZ steals) (NP (PRP$ his) (NN car))) (CC and) (VP (NNS dumps) (NP (PRP it)) (PP (IN in) (NP (NNP Dieppe))))))))))))))) (. .)))
+
+63	1
+-434.773
+(S1 (S (PP (IN In) (S (VP (VBG producing) (CC and) (VBG promoting) (NP (`` ``) (NNP Capital) (NNP City))))) (, ,) ('' '') (NP (NNP Thames)) (VP (AUX has) (VP (VBN spent) (PRT (RP about)) (ADVP (ADVP (RB as) (RB much)) (SBAR (IN as) (S (NP (NNP Shane) (NNP Longman)) (VP (VBZ loses) (PP (IN on) (NP (DT a) (JJ good) (NN day))))))))) (. .)))
+
+64	1
+-365.583
+(S1 (S (NP (DT The) (NN production) (NNS costs)) (VP (VP (AUX are) (NP (NP (DT a) (RB not) (JJ inconsiderable) (QP (# #) (CD 8) (CD million))) (PRN (-LRB- -LRB-) (NP (QP ($ $) (CD 12.4) (CD million))) (-RRB- -RRB-)))) (, ,) (CC and) (VP (MD would) (VP (AUX have) (VP (AUX been) (ADJP (RB much) (JJR higher)) (SBAR (S (VP (AUX had) (RB not) (NP (NP (DT the) (NN cost)) (PP (IN of) (NP (DT the) (NN trading) (NN floor) (NN set))))) (VP (AUX been) (VP (VBN absorbed) (PP (IN in) (NP (NP (DT the) (NN budget)) (PP (IN of) (NP (`` ``) (NP (NNP Dealers)) (, ,) ('' '') (NP (DT an) (RBR earlier) (JJ made-for-TV) (NN movie)))))))))))))) (. .)))
+
+65	1
+-373.292
+(S1 (S (NP (QP (DT Another) (PDT half) (CD million)) (NN quid)) (VP (VBD went) (PP (PP (IN for) (NP (NP (DT a) (NN volley)) (PP (IN of) (NP (NP (JJ full-page) (NNS advertisements)) (PP (IN in) (NP (CD six) (JJ major) (NNP British) (NNS newspapers))))))) (CC and) (PP (IN for) (NP (NP (JJ huge) (NNS posters)) (PP (IN in) (NP (DT the) (NNP London) (NN subway))))))) (. .)))
+
+66	1
+-314.027
+(S1 (S (NP (DT These) (NNS expenses)) (VP (VBP create) (NP (NP (DT a) (JJ special) (NN incentive)) (PP (IN for) (NP (`` ``) (NP (NNP Capital) (NNP City) (POS 's)) ('' '') (NNS producers))) (SBAR (S (VP (TO to) (VP (VB flog) (NP (NP (PRP it)) (, ,) (CC or) (NP (NP (DT a) (JJ Yank-oriented) (NN version)) (PP (IN of) (NP (PRP it)))) (, ,)) (PP (IN in) (NP (NNP America))))))))) (. .)))
+
+67	1
+-308.435
+(S1 (S (NP (NP (NP (NNP Thames) (POS 's)) (NNP U.S.) (NN marketing) (NN agent)) (, ,) (NP (NNP Donald) (NNP Taffner)) (, ,)) (VP (AUX is) (VP (VBG preparing) (S (VP (TO to) (VP (AUX do) (NP (RB just) (DT that))))))) (. .)))
+
+68	1
+-383.482
+(S1 (S (NP (PRP He)) (VP (AUX is) (RB discreetly) (ADJP (JJ hopeful)) (, ,) (S (VP (VBG citing) (NP (NP (CD three) (NNP U.S.) (NN comedy) (NNS series)) (: --) (`` ``) (NP (NP (NNP Three) (POS 's)) (NN Company)) (, ,) ('' '') (`` ``) (NP (NP (RB Too) (JJ Close)) (PP (IN for) (NP (NNP Comfort)))) ('' '') (CC and) (`` ``) (S (VP (VB Check) (NP (PRP It)) (PRT (RP Out)))) ('' '')))) (: --) (SBAR (WHNP (WDT that)) (S (VP (AUX had) (NP (JJ British) (NNS antecedents)))))) (. .)))
+
+69	1
+-454.889
+(S1 (S (PP (RB Perhaps) (IN without) (S (VP (VBG realizing) (NP (PRP it))))) (, ,) (NP (NNP Mr.) (NNP Taffner)) (ADVP (RB simultaneously)) (VP (AUX has) (VP (VBN put) (NP (PRP$ his) (NN finger)) (PP (IN on) (NP (NP (DT the) (NN problem)) (CC and) (S (NP (NP (DT an) (JJ ideal) (NN solution)) (: :) (`` ``) (NP (NNP Capital) (NNP City)) ('' '')) (VP (MD should) (VP (AUX have) (VP (AUX been) (NP (NP (DT a) (NN comedy)) (, ,) (NP (NP (DT a) (JJ worthy) (NN sequel)) (PP (TO to) (NP (DT the) (NN screwball) (S (NP (NNP British)) (`` ``) (VP (VB Carry) (PRT (RP On)) ('' '') (NP (NP (NNS movies)) (PP (IN of) (NP (DT the) (NNS 1960s)))))))))))))))))) (. .)))
+
+70	1
+-164.367
+(S1 (S (NP (DT The) (NNS seeds)) (ADVP (RB already)) (VP (AUX are) (PP (IN in) (NP (DT the) (NN script)))) (. .)))
+
+71	1
+-210.286
+(S1 (S (NP (DT The) (JJ first) (NN episode)) (VP (VBD concluded) (PP (IN with) (NP (NP (DT a) (ADJP (RB marvelously) (JJ cute)) (NN scene)) (SBAR (WHPP (IN in) (WHNP (WDT which))) (S (NP (DT the) (JJ trading-room) (NN crew)) (VP (VP (VBD minded) (NP (DT a) (NN baby))) (, ,) (NP (NP (DT the) (NN casualty)) (PP (IN of) (NP (NP (DT a) (JJ broken) (NN marriage)) (PP (IN at) (NP (DT the) (NN firm)))))))))))) (. .)))
+
+72	1
+-218.466
+(S1 (S (CC And) (NP (NP (JJ many)) (PP (IN in) (NP (DT the) (JJ young) (NN cast)))) (VP (VBP bear) (NP (NP (NP (JJ striking) (NNS resemblances)) (PP (TO to) (NP (NNP American) (NNP TV)))) (CC and) (NP (NP (NN movie) (NNS personalities)) (VP (VBN known) (PP (IN for) (NP (JJ light) (NNS roles))))))) (. .)))
+
+73	1
+-770.787
+(S1 (S (S (NP (NNP Joanna) (NNP Kanska)) (VP (VBZ looks) (PP (IN like) (NP (DT a) (JJ young) (NNP Zsa) (NNP Zsa) (NNP Gabor))))) (: ;) (S (NP (NP (NNP William) (NNP Armstrong)) (, ,) (SBAR (WHNP (WP who)) (S (VP (VBZ plays) (NP (NNP Max))))) (, ,)) (VP (MD could) (VP (VB pass) (PP (IN for) (NP (NP (NNP Hans) (NNP Conreid)) (, ,) (CC and) (NP (NP (NNP Douglas) (NNP Hodge)) (PRN (-LRB- -LRB-) (NP (NNP Declan)) (-RRB- -RRB-))))) (PP (IN for) (NP (NNP James) (NNP Farentino)))))) (: ;) (S (NP (NNP Rolf) (NNP Saxon)) (VP (AUX is) (NP (DT a) (JJ passable) (NNP Tommy) (NNP Noonan)))) (CC and) (S (NP (NNP Dorian) (NNP Healy)) (VP (MD could) (ADVP (RB easily)) (VP (VB double) (PP (IN for) (NP (NP (NNP Huntz) (NNP Hall)) (, ,) (NP (NP (DT the) (JJ blank-faced) (NN foil)) (PP (IN of) (NP (DT the) (NNP Bowery) (NNPS Boys) (NNS comedies))))))))) (. .)))
+
+74	1
+-395.098
+(S1 (FRAG (ADVP (RB So)) (, ,) (NP (JJ OK) (NNS kids)) (, ,) (NP (NN everybody)) (PP (IN on) (NP (NN stage))) (PP (IN for) (`` ``) (S (VP (VB Carry) (PP (IN On) (NP (NN Trading))))) ('' '')) (: :) (S (NP (DT The) (NN cast)) (VP (AUX is) (ADVP (RB frantically)) (VP (VBG searching) (NP (DT the) (NN office)) (PP (IN for) (NP (NP (VBN misplaced) (JJ Japanese) (NNS bonds)) (SBAR (WHNP (WDT that)) (S (ADVP (RB suddenly)) (VP (AUX have) (VP (VBN soared) (PP (IN in) (NP (NN value))) (SBAR (IN because) (S (NP (NNP Dai-Ichi) (NNP Kangyo) (NNP Bank)) (VP (AUX has) (ADVP (RB just)) (VP (VBN bought) (NP (DT the) (NNP White) (NNP House))))))))))))))) (. .)))
+
+75	1
+-340.068
+(S1 (S (NP (DT The) (NN pressure)) (VP (AUX is) (NP (NP (RB too) (JJ much)) (PP (IN for) (NP (NP (NNP Zsa) (NNP Zsa)) (, ,) (SBAR (WHNP (WP who)) (S (VP (VBZ slaps) (NP (DT a) (NN security) (NN guard))))))))) (. .)))
+
+76	1
+-397.057
+(S1 (S (NP (PRP He)) (VP (VBZ backflips) (PP (IN into) (NP (NP (DT a) (JJ desktop) (NN computer) (NN terminal)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (VBZ explodes) (, ,) (S (VP (VBG covering) (NP (NP (NNP Huntz) (NNP Hall) (POS 's)) (NN face)) (PP (IN with) (NP (NNS microchips))))))))))) (. .)))
+
+77	1
+-311.013
+(S1 (S (CC And) (NP (PDT all) (DT the) (NN while)) (, ,) (NP (DT the) (NNS bonds)) (VP (AUX are) (PP (IN in) (NP (NP (DT the) (NN baby) (POS 's)) (NN diaper)))) (. .)))
+
+78	1
+-333.772
+(S1 (S (NP (PRP It)) (VP (MD should) (VP (VB run) (ADVP (RB forever)))) (. .)))
+
+79	1
+-333.906
+(S1 (S (NP (NNP Mr.) (NNP Rustin)) (VP (AUX is) (NP (NP (JJ senior) (NN correspondent)) (PP (IN in) (NP (NP (DT the) (NNP Journal) (POS 's)) (NNP London) (NN bureau))))) (. .)))
+
+80	1
+-288.023
+(S1 (S (NP (NP (NNP Axa-Midi) (NNP Assurances)) (PP (IN of) (NP (NNP France)))) (VP (VBD gave) (NP (NP (NNS details)) (PP (IN of) (NP (NP (PRP$ its) (NN financing) (NNS plans)) (PP (IN for) (NP (NP (PRP$ its) (VBN proposed) (ADJP (QP ($ $) (CD 4.5) (CD billion))) (NN acquisition)) (PP (IN of) (NP (NP (NNP Farmers) (NNP Group) (NNP Inc.)) (, ,) (PP (IN in) (NP (NP (VBN amended) (NNS filings)) (PP (IN with) (NP (NP (NN insurance) (NNS regulators)) (PP (IN in) (NP (DT the) (CD nine) (NNP U.S.) (NNS states))) (SBAR (WHADVP (WRB where)) (S (NP (NNP Farmers)) (VP (VBZ operates)))))))))))))))) (. .)))
+
+81	1
+-271.43
+(S1 (S (NP (DT The) (JJ proposed) (NN acquisition)) (VP (AUX is) (NP (NP (NN part)) (PP (IN of) (NP (NP (NP (NNP Sir) (NNP James) (NNP Goldsmith) (POS 's)) (JJ unfriendly) (NN takeover) (NN attempt)) (PP (IN for) (NP (NP (NNP B.A.T) (NNPS Industries) (NNP PLC)) (, ,) (NP (NP (DT the) (JJ British) (NN tobacco) (, ,) (NN retailing) (, ,) (NN paper) (CC and) (JJ financial) (NNS services) (NN concern)) (SBAR (WHNP (WDT that)) (S (VP (AUX is) (NP (NP (NN parent)) (PP (IN of) (NP (ADJP (NNP Los) (JJ Angeles-based)) (NNPS Farmers)))))))))))))) (. .)))
+
+82	1
+-278.48
+(S1 (S (PP (IN In) (NP (DT an) (NN attempt) (S (VP (TO to) (VP (VB appease) (NP (NP (NP (NNP U.S.) (NNS regulators) (POS ')) (NN concern)) (PP (IN over) (NP (NP (DT a) (NNP Goldsmith) (NN acquisition)) (PP (IN of) (NP (NNP Farmers))))))))))) (, ,) (NP (NP (NNP Sir) (NNP James)) (PP (IN in) (NP (NNP August)))) (VP (VBD agreed) (S (VP (TO to) (VP (VB sell) (NP (NNP Farmers)) (PP (TO to) (NP (NNP Axa))) (SBAR (IN if) (S (NP (PRP he)) (VP (AUX is) (ADJP (JJ successful) (PP (IN in) (S (VP (VBG acquiring) (NP (NNP B.A.T))))))))))))) (. .)))
+
+83	1
+-163.881
+(S1 (S (PP (IN As) (NP (NP (NN part)) (PP (IN of) (NP (DT the) (NN agreement))))) (, ,) (NP (NNP Axa)) (VP (VBD agreed) (S (VP (TO to) (VP (VB invest) (NP (QP ($ $) (CD 1) (CD billion))) (PP (IN in) (NP (NP (NNP Hoylake) (NNP Investments) (NNP Ltd.)) (, ,) (NP (NP (NNP Sir) (NNP James) (POS 's)) (NN acquisition) (NN vehicle)))))))) (. .)))
+
+84	1
+-429.12
+(S1 (S (PP (IN Of) (NP (NP (DT the) (JJ total) (QP ($ $) (CD 5.5) (CD billion))) (VP (TO to) (VP (AUX be) (VP (VBN paid) (PP (TO to) (NP (NNP Hoylake))) (PP (IN by) (NP (NNP Axa)))))))) (, ,) (S (NP (QP (RB about) ($ $) (CD 1) (CD billion))) (VP (MD will) (VP (VB come) (PP (IN from) (NP (NP (JJ available) (NNS resources)) (PP (IN of) (NP (NP (NNP Axa) (POS 's)) (NN parent)))))))) (, ,) (S (NP (NP (NNP Axa-Midi) (NNP Group)) (, ,) (ADJP (QP ($ $) (CD 2.25) (CD billion)))) (VP (MD will) (VP (AUX be) (PP (IN in) (NP (NP (DT the) (NN form)) (PP (IN of) (NP (NP (NNS notes)) (VP (VBN issued) (PP (IN by) (NP (NNP Axa))))))))))) (, ,) (CC and) (S (NP (DT the) (VBG remaining) (QP ($ $) (CD 2.25) (CD billion))) (VP (MD will) (VP (AUX be) (PP (IN in) (NP (JJ long-term) (NN bank) (NNS loans)))))) (. .)))
+
+85	1
+-163.723
+(S1 (S (PP (IN In) (NP (DT an) (NN interview))) (NP (NNP Thursday)) (, ,) (NP (NP (NNP Claude) (NNP Bebear)) (, ,) (NP (NP (NP (NN chairman)) (CC and) (NP (JJ chief) (NN executive) (NN officer))) (PP (IN of) (NP (NNP Axa)))) (, ,)) (VP (VBD said) (SBAR (S (NP (PRP$ his) (NN group)) (VP (AUX has) (ADVP (RB already)) (VP (VBN obtained) (NP (NP (NNS assurances)) (PP (IN from) (NP (NP (DT a) (NN group)) (PP (IN of) (NP (NNS banks))) (VP (VBN led) (PP (IN by) (NP (NNP Cie) (. .) (NNP Financiere) (FW de) (NNP Paribas)))))) (SBAR (IN that) (S (NP (PRP they)) (VP (MD can) (VP (VB provide) (NP (NP (DT the) (NN loan) (NN portion)) (PP (IN of) (NP (DT the) (NN financing)))))))))))))) (. .)))
+
+86	1
+-246.33
+(S1 (S (S (NP (NP (DT The) (JJ other) (NN banking) (NNS companies)) (PP (IN in) (NP (DT the) (NN group)))) (VP (AUX are) (NP (NP (NNP Credit) (NNP Lyonnais)) (, ,) (NP (NNP Societe) (NNP Generale)) (, ,) (NP (NNP BankAmerica) (NNP Corp.)) (CC and) (NP (NNP Citicorp))))) (, ,) (NP (PRP he)) (VP (VBD said)) (. .)))
+
+87	1
+-227.144
+(S1 (S (NP (NNP Mr.) (NNP Bebear)) (VP (VBD said) (SBAR (S (NP (NNP Axa-Midi) (NNP Group)) (VP (AUX has) (`` ``) (NP (NP (QP (JJR more) (IN than) ($ $) (CD 2.5) (CD billion))) (PP (IN of) (NP (JJ non-strategic) (NNS assets))) (SBAR (IN that) (S (NP (PRP we)) (VP (MD can) (CC and) (MD will) (VP (VB sell)))))) ('' '') (S (VP (TO to) (VP (VB help) (VP (VB pay) (PRT (RP off)) (NP (NP (NN debt)) (PP (IN from) (NP (DT the) (NN acquisition)))))))))))) (. .)))
+
+88	1
+-234.299
+(S1 (S (NP (PRP He)) (VP (VBD said) (SBAR (S (NP (DT the) (NNS assets) (S (VP (TO to) (VP (AUX be) (VP (VBN sold)))))) (VP (VP (MD would) (VP (AUX be) (NP (NP (`` ``) (JJ non-insurance) ('' '') (NNS assets)) (, ,) (PP (VBG including) (NP (NP (DT a) (NN beer) (NN company)) (CC and) (NP (DT a) (JJ real) (NN estate) (NN firm))))))) (, ,) (CC and) (VP (MD would) (RB n't) (VP (VB include) (NP (NP (DT any) (NNS pieces)) (PP (IN of) (NP (NNP Farmers)))))))))) (. .)))
+
+89	1
+-366.645
+(S1 (S (`` ``) (S (NP (PRP We)) (VP (MD wo) (RB n't) (VP (VB put) (NP (DT any) (NN burden)) (PP (IN on) (NP (NNPS Farmers)))))) (, ,) ('' '') (NP (PRP he)) (VP (VBD said)) (. .)))
+
+90	1
+-397.842
+(S1 (S (NP (DT The) (VBN amended) (NNS filings)) (ADVP (RB also)) (VP (VBP point) (PRT (RP out)) (SBAR (IN that) (S (PP (IN under) (NP (DT a) (JJ new) (NN agreement))) (, ,) (NP (NNP Hoylake)) (VP (AUX has) (NP (DT an) (JJ absolute) (NN obligation) (S (VP (TO to) (VP (VB sell) (NP (NNP Farmers)) (PP (TO to) (NP (NNP Axa))) (PP (IN upon) (NP (NP (DT an) (NN acquisition)) (PP (IN of) (NP (NNP B.A.T))))))))))))) (. .)))
+
+91	1
+-340.379
+(S1 (S (`` ``) (S (NP (PRP We)) (VP (VBP hope) (SBAR (IN that) (S (PP (IN with) (SBAR (WHNP (WP what)) (S (NP (PRP we)) (VP (AUX did))))) (, ,) (NP (DT the) (NNS regulators)) (VP (MD will) (RB not) (VP (AUX need) (S (VP (TO to) (VP (VB evaluate) (NP (NNP Hoylake)) (PRN (, ,) (S (CC and) (NP (PRP they)) (VP (MD can) (ADVP (RB directly)) (VP (VB look) (PP (IN at) (NP (NP (DT the) (NN agreement)) (PP (IN with) (NP (PRP us)))))))) (, ,)) (SBAR (IN because) (S (NP (NNP Hoylake)) (VP (MD wo) (RB n't) (VP (AUX be) (NP (NP (DT an) (NN owner)) (PP (IN of) (NP (NNP Farmers)))) (PP (IN at) (NP (RB anytime)))))))))))))))) (, ,) ('' '') (NP (NNP Mr.) (NNP Bebear)) (VP (VBD said)) (. .)))
+
+92	1
+-369.446
+(S1 (S (NP (NP (DT Any) (NN change)) (PP (IN of) (NP (NP (NN control)) (PP (IN in) (NP (NNP Farmers)))))) (VP (VBZ needs) (NP (NP (NN approval)) (PP (IN of) (NP (NP (DT the) (NN insurance) (NNS commissioners)) (PP (IN in) (NP (NP (DT the) (CD nine) (NNS states)) (SBAR (WHADVP (WRB where)) (S (NP (NP (NNS Farmers)) (CC and) (NP (PRP$ its) (VBN related) (NNS companies))) (VP (AUX are) (ADJP (JJ incorporated))))))))))) (. .)))
+
+93	1
+-344.504
+(S1 (S (NP (DT The) (VBN amended) (NNS filings)) (VP (VP (AUX were) (VP (VBN required) (PP (IN because) (IN of) (NP (NP (DT the) (JJ new) (NN agreement)) (PP (IN between) (NP (NNP Axa) (CC and) (NNP Hoylake))))))) (, ,) (CC and) (VP (TO to) (VP (VB reflect) (NP (DT the) (NN extension) (SBAR (IN that) (S (NP (NNP Sir) (NNP James)) (VP (VBD received) (NP (JJ last) (NN month)) (PP (IN under) (NP (JJ British) (NN takeover) (NNS rules))) (S (VP (TO to) (VP (VB complete) (NP (PRP$ his) (JJ proposed) (NN acquisition)))))))))))) (. .)))
+
+94	1
+-322.602
+(S1 (S (NP (NNP Hoylake)) (VP (VP (VBD dropped) (NP (PRP$ its) (JJ initial) (ADJP (ADJP (QP (# #) (CD 13.35) (CD billion))) (PRN (-LRB- -LRB-) (ADJP (QP ($ $) (CD 20.71) (CD billion))) (-RRB- -RRB-))) (NN takeover) (NN bid)) (SBAR (IN after) (S (NP (PRP it)) (VP (VBD received) (NP (DT the) (NN extension)))))) (, ,) (CC but) (VP (VBD said) (SBAR (S (NP (PRP it)) (VP (MD would) (VP (VB launch) (NP (NP (DT a) (JJ new) (NN bid)) (SBAR (UCP (IN if) (CC and) (WHADVP (WRB when))) (S (NP (NP (DT the) (JJ propsed) (NN sale)) (PP (IN of) (NP (NNP Farmers))) (PP (TO to) (NP (NNP Axa)))) (VP (VBZ receives) (NP (JJ regulatory) (NN approval)))))))))))) (. .)))
+
+95	1
+-161.546
+(S1 (S (NP (NP (DT A) (NN spokesman)) (PP (IN for) (NP (NNP B.A.T)))) (VP (VBD said) (PP (IN of) (NP (DT the) (VBN amended) (NNS filings))) (SBAR (IN that) (, ,) (`` ``) (S (NP (PRP It)) (VP (MD would) (VP (VB appear) (SBAR (IN that) (S (NP (NN nothing) (JJ substantive)) (VP (AUX has) (VP (VBN changed)))))))))) (. .)))
+
+96	1
+-243.425
+(S1 (S (S (NP (DT The) (JJ new) (NN financing) (NN structure)) (VP (AUX is) (ADVP (RB still)) (NP (DT a) (JJ very-highly) (JJ leveraged) (CD one)))) (, ,) (CC and) (S (NP (NNP Axa)) (ADVP (RB still)) (VP (VBZ plans) (S (VP (TO to) (VP (VB take) (PRT (RP out)) (NP (NP (CD 75) (NN %)) (PP (IN of) (NP (NP (NNP Farmers) (POS ')) (NNS earnings)))) (PP (IN as) (NP (NNS dividends) (S (VP (TO to) (VP (VB service) (NP (PRP$ their) (NN debt)))))))))))) (. .) ('' '')))
+
+97	1
+-177.354
+(S1 (S (S (NP (DT That) (NN dividend)) (VP (AUX is) (ADVP (RB almost) (RB double)) (NP (NP (DT the) (CD 35) (NN %)) (VP (ADVP (RB currently)) (VBN taken) (PP (IN out) (PP (IN of) (NP (NNP Farmers)))) (PP (IN by) (NP (NNP B.A.T))))))) (, ,) (NP (DT the) (NN spokesman)) (VP (VBD added)) (. .)))
+
+98	1
+-88.5503
+(S1 (S (`` ``) (NP (PRP It)) (VP (MD would) (VP (AUX have) (NP (NP (JJ severe) (NNS implications)) (PP (IN for) (NP (NP (NNP Farmers) (POS ')) (NN policy) (NNS holders)))))) (. .) ('' '')))
+
+99	1
+-186.266
+(S1 (S (S (VP (TO To) (VP (VB fend) (PRT (RP off)) (NP (NP (NNP Sir) (NNP James) (POS 's)) (NNS advances))))) (, ,) (NP (NNP B.A.T)) (VP (AUX has) (VP (VBN proposed) (NP (NP (DT a) (JJ sweeping) (NN restructuring)) (SBAR (WHNP (WDT that)) (S (VP (MD would) (VP (VB pare) (NP (PRP it)) (PP (TO to) (NP (DT a) (NN tobacco) (CC and) (JJ financial) (NNS services) (NN concern)))))))))) (. .)))
+
+100	1
+-247.336
+(S1 (S (NP (NP (JJ Dismal) (NNS sales)) (PP (IN at) (NP (NNP General) (NNPS Motors) (NNP Corp.)))) (VP (VBD dragged) (NP (DT the) (NNP U.S.) (NN car) (CC and) (NN truck) (NN market)) (ADVP (RB down) (PP (IN below) (NP (JJ year-ago) (NNS levels)) (PP (IN in) (NP (JJ early) (NNP October))))) (, ,) (NP (NP (DT the) (JJ first) (NNS sales) (NN period)) (PP (IN of) (NP (DT the) (CD 1990) (NN model) (NN year))))) (. .)))
+
+101	1
+-220.33
+(S1 (S (NP (DT The) (CD eight) (JJ major) (JJ domestic) (NN auto) (NNS makers)) (VP (VBD sold) (NP (CD 160,510) (NNP North) (JJ American-made) (NNS cars)) (PP (IN in) (NP (NP (DT the) (JJ first) (CD 10) (NNS days)) (PP (IN of) (NP (NNP October))))) (, ,) (NP (NP (DT a) (ADJP (CD 12.6) (NN %)) (NN drop)) (PP (IN from) (ADVP (NP (DT a) (NN year)) (RBR earlier))))) (. .)))
+
+102	1
+-319.579
+(S1 (S (NP (ADJP (RB Domestically) (VBN built)) (NN truck) (NNS sales)) (VP (AUX were) (ADVP (RB down) (NP (CD 10.4) (NN %)) (PP (TO to) (NP (NP (CD 86,555) (NNS pickups)) (, ,) (NP (NNS vans)) (CC and) (NP (NN sport) (NN utility) (NNS vehicles)))))) (. .)))
+
+103	1
+-261.716
+(S1 (S (NP (NP (DT The) (JJ heavy) (NN use)) (PP (IN of) (NP (NNS incentives) (S (VP (TO to) (VP (VB clear) (PRT (RP out)) (NP (CD 1989) (NNS models)))))))) (VP (VBZ appears) (S (VP (TO to) (VP (AUX have) (VP (VBN taken) (NP (DT the) (NN steam)) (, ,) (ADVP (ADVP (IN at) (JJS least)) (RB initially)) (, ,) (PP (IN out) (PP (IN of) (NP (NP (CD 1990) (NN model) (NNS sales)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (VBD began) (ADVP (RB officially)) (NP (NNP Oct.) (CD 1))))))))))))) (. .)))
+
+104	1
+-272.796
+(S1 (S (NP (DT This)) (VP (VBZ appears) (ADJP (RB particularly) (JJ true) (PP (IN at) (NP (NP (NNP GM)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (VP (AUX had) (NP (NP (JJ strong) (NNS sales)) (PP (IN in) (NP (NNP August) (CC and) (NNP September))))) (CC but) (VP (VBD saw) (NP (PRP$ its) (JJ early) (NNP October)) (S (NP (NN car) (CC and) (NN truck) (NNS results)) (VP (VB fall) (NP (CD 26.3) (NN %)) (PP (IN from) (NP (NP (JJ last) (NN year) (POS 's)) (ADJP (RB unusually) (JJ high)) (NN level))))))))))))) (. .)))
+
+105	1
+-94.6917
+(S1 (S (ADVP (RB Overall)) (, ,) (NP (NP (NNS sales)) (PP (IN of) (NP (DT all) (JJ domestic-made) (NNS vehicles)))) (VP (VBD fell) (NP (CD 11.9) (NN %)) (PP (IN from) (ADVP (NP (DT a) (NN year)) (RB ago)))) (. .)))
+
+106	1
+-137.798
+(S1 (S (PP (IN Without) (NP (NNP GM))) (, ,) (NP (NP (JJ overall) (NNS sales)) (PP (IN for) (NP (DT the) (JJ other) (NNP U.S.) (NNS automakers)))) (VP (AUX were) (ADJP (RB roughly) (JJ flat) (PP (IN with) (NP (CD 1989) (NNS results))))) (. .)))
+
+107	1
+-186.977
+(S1 (S (S (NP (NP (DT Some)) (PP (IN of) (NP (DT the) (NNP U.S.) (NN auto) (NNS makers)))) (VP (AUX have) (ADVP (RB already)) (VP (VBN adopted) (NP (NP (NNS incentives)) (PP (IN on) (NP (JJ many) (CD 1990) (NNS models))))))) (, ,) (CC but) (S (NP (PRP they)) (VP (MD may) (VP (AUX have) (S (VP (TO to) (VP (VB broaden) (NP (PRP$ their) (NNS programs) (S (VP (TO to) (VP (VB keep) (NP (NNS sales)) (PRT (RP up)))))))))))) (. .)))
+
+108	1
+-234.055
+(S1 (SINV (`` ``) (S (NP (PRP We)) (VP (AUX 've) (VP (VBN created) (NP (NP (DT a) (NN condition)) (SBAR (WHADVP (WRB where)) (S (, ,) (PP (IN without) (NP (NNS incentives))) (, ,) (NP (PRP it)) (VP (AUX 's) (NP (DT a) (JJ tough) (NN market))))))))) (, ,) ('' '') (VP (VBD said)) (NP (NP (NNP Tom) (NNP Kelly)) (, ,) (NP (NP (NNS sales) (NN manager)) (PP (IN for) (NP (NP (NNP Bill) (NNP Wink) (NNP Chevrolet)) (PP (IN in) (NP (NNP Dearborn) (, ,) (NNP Mich))))))) (. .)))
+
+109	1
+-135.867
+(S1 (S (NP (NN Car) (NNS sales)) (VP (VBD fell) (PP (TO to) (NP (NP (DT a) (ADJP (RB seasonally) (VBN adjusted)) (JJ annual) (NN selling) (NN rate)) (PP (IN of) (NP (NP (QP (CD 5.8) (CD million)) (NNS vehicles)) (, ,) (NP (NP (DT the) (JJS lowest)) (PP (IN since) (NP (NNP October) (CD 1987))))))))) (. .)))
+
+110	1
+-114.521
+(S1 (S (NP (DT The) (JJ poor) (NN performance)) (VP (VBZ contrasts) (PP (IN with) (NP (NP (DT a) (JJ robust) (NN selling) (NN rate)) (PP (IN of) (NP (NP (QP (RB almost) (CD eight) (CD million))) (NP (JJ last) (NN month))))))) (. .)))
+
+111	1
+-164.719
+(S1 (S (ADVP (RB Furthermore)) (, ,) (NP (NP (NNS dealers)) (VP (VBN contacted) (NP (RB late) (JJ last) (NN week)))) (VP (VBD said) (SBAR (S (NP (PRP they)) (VP (MD could) (RB n't) (VP (VB see) (NP (NP (DT any) (JJ immediate) (NN impact)) (PP (IN on) (NP (NP (NNS sales)) (PP (IN of) (NP (NP (NNP Friday) (POS 's)) (JJ steep) (NN market) (NN decline))))))))))) (. .)))
+
+112	1
+-183.075
+(S1 (S (S (NP (NP (NNP GM) (POS 's)) (JJ domestic) (NN car) (NNS sales)) (VP (VBD dropped) (NP (CD 24.3) (NN %)))) (CC and) (S (NP (PRP$ its) (JJ domestic) (NNS trucks)) (VP (AUX were) (ADVP (RB down) (NP (DT an) (ADJP (RB even) (JJR steeper)) (CD 28.7) (NN %)) (PP (IN from) (NP (DT the) (JJ same) (NN period)) (ADVP (NP (DT a) (NN year)) (RB ago)))))) (. .)))
+
+113	1
+-372.044
+(S1 (S (NP (NP (DT All)) (PP (IN of) (NP (DT the) (NNP GM) (NNS divisions))) (PP (IN except) (NP (NNP Cadillac)))) (VP (VBD showed) (NP (JJ big) (NNS declines))) (. .)))
+
+114	1
+-355.98
+(S1 (S (NP (NNP Cadillac)) (VP (VBD posted) (NP (DT a) (ADJP (CD 3.2) (NN %)) (NN increase)) (PP (IN despite) (NP (NP (JJ new) (NN competition)) (PP (IN from) (NP (NP (NNP Lexus)) (, ,) (NP (NP (DT the) (JJ fledging) (NN luxury-car) (NN division)) (PP (IN of) (NP (NNP Toyota) (NNP Motor) (NNP Corp))))))))) (. .)))
+
+115	1
+-382.698
+(S1 (S (S (NP (NNP Lexus) (NNS sales)) (VP (AUX were) (RB n't) (ADJP (JJ available)))) (: ;) (S (S (NP (DT the) (NNS cars)) (VP (AUX are) (VP (VBN imported)))) (CC and) (S (NP (NNP Toyota)) (VP (VBZ reports) (NP (PRP$ their) (NNS sales)) (PP (ADVP (RB only)) (IN at) (ADJP (JJ month-end)))))) (. .)))
+
+116	1
+-300.228
+(S1 (S (S (NP (NP (DT The) (NNS sales) (NN drop)) (PP (IN for) (NP (DT the) (NN No.) (CD 1) (NN car) (NN maker)))) (VP (MD may) (VP (AUX have) (VP (AUX been) (VP (VBN caused) (PP (IN in) (NP (NN part))) (PP (IN by) (NP (NP (DT the) (NN end)) (PP (IN in) (NP (NNP September))) (PP (IN of) (NP (NP (NN dealer) (NNS incentives)) (SBAR (WHNP (IN that)) (S (NP (NNP GM)) (VP (VBD offered) (PP (IN in) (NP (NP (NN addition)) (PP (TO to) (NP (NP (NN consumer) (NNS rebates)) (CC and) (NP (JJ low-interest) (NN financing)))))))))))))))))) (, ,) (NP (DT a) (NN company) (NN spokesman)) (VP (VBD said)) (. .)))
+
+117	1
+-152.298
+(S1 (S (NP (JJ Last) (NN year)) (, ,) (NP (NNP GM)) (VP (AUX had) (NP (NP (DT a) (JJ different) (NN program)) (PP (IN in) (NP (NN place))) (SBAR (WHNP (WDT that)) (S (VP (VBD continued) (S (VP (VBG rewarding) (NP (NNS dealers)) (SBAR (IN until) (S (NP (PDT all) (DT the) (CD 1989) (NNS models)) (VP (AUX had) (VP (AUX been) (VP (VBN sold))))))))))))) (. .)))
+
+118	1
+-159.888
+(S1 (S (ADVP (RB Aside) (PP (IN from) (NP (NNP GM)))) (, ,) (NP (JJ other) (NN car) (NNS makers)) (VP (VBD posted) (NP (RB generally) (JJ mixed) (NNS results))) (. .)))
+
+119	1
+-111.566
+(S1 (S (NP (NNP Ford) (NNP Motor) (NNP Co.)) (VP (AUX had) (NP (NP (NP (DT a) (ADJP (CD 1.8) (NN %)) (NN drop)) (PP (IN in) (NP (JJ domestic) (NN car) (NNS sales)))) (CC but) (NP (NP (DT a) (ADJP (CD 2.4) (NN %)) (NN increase)) (PP (IN in) (NP (JJ domestic) (NN truck) (NNS sales)))))) (. .)))
+
+120	1
+-144.287
+(S1 (S (NP (NNP Chrysler) (NNP Corp.)) (VP (AUX had) (NP (NP (DT a) (ADJP (CD 7.5) (NN %)) (NN drop)) (PP (IN in) (NP (NN car) (NNS sales)))) (, ,) (PP (VBG echoing) (NP (NP (PRP$ its) (ADJP (RB generally) (JJ slow)) (NN performance)) (NP (DT all) (NN year))))) (. .)))
+
+121	1
+-105.956
+(S1 (S (ADVP (RB However)) (, ,) (NP (NP (NNS sales)) (PP (IN of) (NP (NP (NNS trucks)) (, ,) (PP (VBG including) (NP (NP (DT the) (NN company) (POS 's)) (JJ popular) (NNS minivans))) (, ,)))) (VP (VBD rose) (NP (CD 4.3) (NN %))) (. .)))
+
+122	1
+-123.065
+(S1 (S (NP (NP (NP (NNP Honda) (NNP Motor) (NNP Co.) (POS 's)) (NNS sales)) (PP (IN of) (NP (ADJP (RB domestically) (VBN built)) (NNS vehicles)))) (VP (VBD plunged) (NP (CD 21.7) (NN %)) (PP (IN from) (ADVP (NP (DT a) (NN year)) (RBR earlier)))) (. .)))
+
+123	1
+-187.032
+(S1 (S (S (NP (NP (NP (NNP Honda) (POS 's)) (NN plant)) (PP (IN in) (NP (NNP Marysville) (, ,) (NNP Ohio) (, ,)))) (VP (AUX was) (VP (VBG gearing) (PRT (RP up)) (S (VP (TO to) (VP (VB build) (NP (CD 1990) (NN model) (NNS Accords)))))))) (, ,) (NP (DT a) (NNP Honda) (NN spokesman)) (VP (VBD said)) (. .)))
+
+124	1
+-177.651
+(S1 (S (`` ``) (S (NP (PRP We)) (VP (AUX 're) (ADVP (RB really)) (ADJP (JJ confident) (SBAR (S (NP (NN everything)) (VP (MD will) (VP (VB bounce) (ADVP (RB back) (PP (TO to) (ADJP (JJ normal))))))))))) (, ,) ('' '') (NP (PRP he)) (VP (VBD added)) (. .)))
+
+125	1
+-233.461
+(S1 (S (ADVP (RB Separately)) (, ,) (NP (NNP Chrysler)) (VP (VBD said) (SBAR (S (NP (NP (NN firm) (NNS prices)) (PP (IN on) (NP (PRP$ its) (JJ 1990-model) (NX (NX (JJ domestic) (NNS cars)) (CC and) (NX (NNS minivans)))))) (VP (MD will) (VP (VB rise) (NP (NP (DT an) (NN average)) (PP (IN of) (NP (CD 5) (NN %)))) (PP (IN over) (ADJP (RB comparably) (VBN equipped))) (NP (CD 1989) (NNS models))))))) (. .)))
+
+126	1
+-121.83
+(S1 (S (NP (NN Firm) (NNS prices)) (VP (AUX were) (ADVP (RB generally)) (PP (IN in) (NP (NP (NN line)) (PP (IN with) (NP (NP (DT the) (JJ tentative) (NNS prices)) (VP (VBN announced) (NP (RBR earlier) (DT this) (NN fall)))))))) (. .)))
+
+127	1
+-192.082
+(S1 (S (PP (IN At) (NP (DT that) (NN time))) (, ,) (NP (NNP Chrysler)) (VP (VBD said) (SBAR (S (NP (NP (NN base) (NNS prices)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (AUX are) (RB n't) (VP (VBN adjusted) (PP (IN for) (NP (NN equipment) (NNS changes))))))) (, ,)) (VP (MD would) (VP (VB rise) (NP (QP (IN between) (CD 4) (NN %) (CC and) (CD 9) (NN %))) (PP (IN on) (NP (JJS most) (NN vehicle)))))))) (. .)))
+
+128	1
+-88.2494
+(S1 (S (NP (NP (SYM a)) (: -) (NP (NNS Totals))) (VP (VBP include) (ADVP (RB only)) (NP (NP (NN vehicle) (NNS sales)) (VP (VBN reported) (PP (IN in) (NP (NN period)))))) (. .)))
+
+129	1
+-95.1831
+(S1 (NP (NP (SYM c)) (: -) (NP (JJ Domestic) (NN car))))
+
+130	1
+-84.2555
+(S1 (S (NP (NP (SYM d)) (: -) (NP (NN Percentage) (NN change))) (VP (AUX is) (ADJP (ADJP (JJR greater)) (PP (IN than) (NP (CD 999) (NN %))))) (. .)))
+
+131	1
+-136.84
+(S1 (S (LST (LS x)) (: -) (NP (EX There)) (VP (VP (AUX were) (NP (CD 8) (NN selling) (NNS days)) (PP (IN in) (NP (DT the) (ADJP (RBS most) (JJ recent)) (NN period)))) (CC and) (VP (NP (CD 8)) (ADVP (NP (DT a) (NN year)) (RBR earlier)))) (. .)))
+
+132	1
+-114.249
+(S1 (S (NP (NN Percentage) (NNS differences)) (VP (VBN based) (PP (IN on) (NP (NP (JJ daily) (NNS sales) (NN rate)) (CONJP (RB rather) (IN than)) (NP (NNS sales) (NN volume))))) (. .)))
+
+133	1
+-59.2175
+(S1 (S (NP (NP (NNP Antonio) (NNP L.) (NNP Savoca)) (, ,) (ADJP (NP (CD 66) (NNS years)) (JJ old)) (, ,)) (VP (AUX was) (VP (VBN named) (S (NP (NP (NN president)) (CC and) (NP (JJ chief) (NN executive) (NN officer)) (PP (IN of) (NP (DT the) (NNP Atlantic) (NNP Research) (NNP Corp.) (NN subsidiary))))))) (. .)))
+
+134	1
+-114.033
+(S1 (S (NP (NNP Mr.) (NNP Savoca)) (VP (AUX had) (VP (AUX been) (NP (NP (DT a) (NN consultant)) (PP (TO to) (NP (NP (DT the) (NN subsidiary) (POS 's)) (NN rocket-propulsion) (NNS operations)))))) (. .)))
+
+135	1
+-120.371
+(S1 (S (NP (NNP Mr.) (NNP Savoca)) (VP (VBZ succeeds) (NP (NP (NNP William) (NNP H.) (NNP Borten)) (, ,) (SBAR (WHNP (WP who)) (S (VP (VBD resigned) (S (VP (TO to) (VP (VB pursue) (NP (JJ personal) (NNS interests)))))))))) (. .)))
+
+136	1
+-89.2597
+(S1 (S (NP (NNP Sequa)) (VP (VP (VBZ makes)) (CC and) (VP (NNS repairs) (NP (NN jet) (NNS engines)))) (. .)))
+
+137	1
+-199.863
+(S1 (S (NP (PRP It)) (ADVP (RB also)) (VP (AUX has) (NP (NP (NNS interests)) (PP (IN in) (NP (NP (JJ military) (NNS electronics) (CC and) (NNS electro-optics)) (, ,) (NP (JJ marine) (NN transportation)) (CC and) (NP (NP (NN machinery)) (VP (VBN used) (S (VP (TO to) (VP (VB make) (NP (NN food) (CC and) (NN beverage) (NNS cans))))))))))) (. .)))
+
+138	1
+-307.988
+(S1 (S (NP (PRP It)) (VP (AUX was) (RB n't) (ADVP (RB so) (RB long) (RB ago)) (SBAR (IN that) (S (NP (NP (DT a) (NN radio) (NN network)) (VP (VBN funded) (PP (IN by) (NP (DT the) (NNP U.S.) (NNP Congress)))) (PRN (: --) (CC and) (ADVP (RB originally)) (PP (IN by) (NP (DT the) (NNP Central) (NNP Intelligence) (NNP Agency))) (: --))) (VP (AUX was) (VP (VBN accused) (PP (IN by) (NP (NP (NNS officials)) (ADVP (RB here)) (PP (IN of) (S (VP (VBG employing) (NP (NNS propagandists) (, ,) (NNS imperialists) (CC and) (NNS spies)))))))))))) (. .)))
+
+139	1
+-341.702
+(S1 (S (ADVP (RB Now)) (, ,) (NP (DT the) (NN network)) (VP (AUX has) (VP (VBN opened) (NP (NP (DT a) (NN news) (NN bureau)) (PP (IN in) (NP (DT the) (JJ Hungarian) (NN capital)))))) (. .)))
+
+140	1
+-406.753
+(S1 (S (NP (NNS Employees)) (VP (VP (VBD held) (NP (DT an) (JJ open) (NN house)) (S (VP (TO to) (VP (VB celebrate))))) (CC and) (RB even) (VP (VBD hung) (PRT (RP out)) (NP (DT a) (NN sign))) (: :) (NP (`` ``) (NP (NNP Szabad) (NNP Europa) (NNP Radio)) ('' '') (: --) (NP (NNP Radio) (NNP Free) (NNP Europe)))) (. .)))
+
+141	1
+-308.85
+(S1 (SINV (`` ``) (S (NP (PRP I)) (VP (VBP think) (SBAR (S (NP (DT this)) (VP (AUX is) (NP (NP (DT a) (NN victory)) (PP (IN for) (NP (DT the) (NN radio))))))))) (, ,) ('' '') (VP (VBZ says)) (NP (NP (NNP Barnabas) (FW de) (NNP Bueky)) (, ,) (NP (NP (DT a) (JJ 55-year-old) (JJ former) (JJ Hungarian) (NN refugee)) (SBAR (WHNP (WP who)) (S (VP (VBZ works) (PP (IN in) (NP (NP (DT the) (NP (NP (NNP Munich)) (, ,) (NP (NNP West) (NNP Germany)) (, ,)) (NN headquarters)) (PP (IN as) (NP (NP (NN deputy) (NN director)) (PP (IN of) (NP (DT the) (JJ Hungarian) (NN service)))))))))))) (. .)))
+
+142	1
+-154.365
+(S1 (S (PP (IN In) (NP (NN fact))) (, ,) (NP (DT the) (NN network)) (VP (VBZ hopes) (S (VP (TO to) (VP (VB set) (PRT (RP up)) (NP (NP (NNS offices)) (PP (IN in) (NP (NP (NNP Warsaw)) (CC and) (NP (NP (RB anywhere) (RB else)) (PP (IN in) (NP (DT the) (NNP East) (NNP Bloc)))))) (SBAR (WHNP (WDT that)) (S (VP (MD will) (VP (AUX have) (NP (PRP it))))))))))) (. .)))
+
+143	1
+-170.993
+(S1 (S (CC But) (NP (NP (NP (DT the) (JJ rapid) (NNS changes)) (VP (VBN brought) (PRT (RP on)) (PP (IN by) (NP (FW glasnost))))) (CC and) (NP (JJ open) (NNS borders))) (VP (AUX are) (VP (VBG altering) (NP (NP (DT the) (NN network) (POS 's)) (NN life)) (PP (IN in) (NP (NP (JJR more) (NNS ways)) (PP (IN than) (NP (CD one))))))) (. .)))
+
+144	1
+-159.391
+(S1 (S (PP (IN In) (NP (NN fact))) (, ,) (NP (NNP Radio) (NNP Free) (NNP Europe)) (VP (AUX is) (PP (IN in) (NP (NP (NN danger)) (PP (IN of) (S (VP (VBG suffering) (PP (IN from) (NP (PRP$ its) (NN success))))))))) (. .)))
+
+145	1
+-182.389
+(S1 (SINV (SBAR (IN While) (S (NP (DT the) (NN network)) (ADVP (RB currently)) (VP (MD can) (VP (VB operate) (ADVP (RB freely)) (PP (IN in) (NP (NNP Budapest))))))) (, ,) (ADVP (RB so)) (MD can) (NP (NNS others)) (. .)))
+
+146	1
+-186.083
+(S1 (S (PP (IN In) (NP (NN addition))) (, ,) (NP (NP (NN competition)) (PP (IN for) (NP (NNS listeners)))) (VP (AUX is) (VP (VBG getting) (ADJP (ADJP (JJR tougher) (PP (IN in) (NP (JJ many) (NNS ways)))) (PP (IN than) (SBAR (WHADVP (WRB when)) (S (NP (NP (NN broadcasting)) (ADVP (RB here))) (VP (AUX was) (VP (ADVP (RB strictly)) (VBN controlled))))))))) (. .)))
+
+147	1
+-261.605
+(S1 (S (PP (RB Instead) (IN of) (S (VP (AUXG being) (VP (VBD denounced) (PP (IN as) (NP (NP (DT an) (JJ evil) (NN agent)) (PP (IN of) (NP (NN imperialism))))))))) (, ,) (NP (NNP Radio) (NNP Free) (NNP Europe)) (VP (AUX is) (ADJP (RBR more) (JJ likely) (S (VP (TO to) (VP (VB draw) (NP (DT the) (NN criticism) (SBAR (IN that) (S (NP (PRP$ its) (NNS programs)) (VP (AUX are) (ADJP (ADJP (RB too) (JJ tame)) (, ,) (ADJP (RB even) (JJ boring)))))))))))) (. .)))
+
+148	1
+-67.9841
+(S1 (SINV (`` ``) (S (NP (PRP They)) (VP (AUX have) (NP (NP (DT a) (NN lot)) (SBAR (S (VP (TO to) (VP (AUX do) (NP (DT these) (NNS days)) (S (VP (TO to) (VP (VB compete) (PP (IN with) (NP (JJ Hungarian) (NN radio))))))))))))) (, ,) ('' '') (VP (VBZ says)) (NP (NP (NNP Andrew) (NNP Deak)) (, ,) (NP (NP (DT a) (JJ computer-science) (NN student)) (PP (IN at) (NP (NP (DT the) (NNP Technical) (NNP University)) (PP (IN in) (NP (NNP Budapest))))))) (. .)))
+
+149	1
+-81.905
+(S1 (S (`` ``) (NP (DT The) (JJ Hungarian) (-LRB- -LCB-) (NN radio) (-RRB- -RCB-) (NNS reporters)) (VP (VBP seem) (ADJP (ADJP (RBR better) (JJ informed)) (CC and) (ADJP (RBR more) (JJ critical)) (PP (IN about) (PP (IN about) (SBAR (WHNP (WP what)) (S (VP (AUX 's) (VP (VBG going) (PRT (RP on)) (ADVP (RB here)))))))))) (. .) ('' '')))
+
+150	1
+-80.5183
+(S1 (S (ADVP (RB Indeed)) (, ,) (NP (NNP Hungary)) (VP (AUX is) (PP (IN in) (NP (NP (DT the) (NN midst)) (PP (IN of) (NP (DT a) (NNS media) (NN explosion)))))) (. .)))
+
+151	1
+-153.67
+(S1 (S (NP (NP (NNS Boys)) (PP (IN on) (NP (JJ busy) (NN street) (NNS corners)))) (VP (VB peddle) (NP (NP (NNS newspapers)) (PP (IN of) (NP (DT every) (JJ political) (NN stripe))))) (. .)))
+
+152	1
+-91.9696
+(S1 (S (NP (NNS Newsstands)) (VP (AUX are) (ADJP (VBN packed) (PP (IN with) (NP (NP (DT a) (JJ colorful) (NN array)) (PP (IN of) (NP (NNS magazines))))))) (. .)))
+
+153	1
+-92.0533
+(S1 (S (NP (NN Radio) (CC and) (NN television)) (VP (AUX are) (VP (VBG getting) (ADJP (JJR livelier) (CC and) (JJR bolder)))) (. .)))
+
+154	1
+-276.985
+(S1 (S (NP (DT The) (NP (NNP British) (NNP Broadcasting) (NNP Corp.)) (CC and) (NP (NP (NP (DT the) (NNP U.S.) (NNP State) (NNP Department) (POS 's)) (NNP Voice)) (PP (IN of) (NP (NNP America))))) (VP (VBD broadcast) (PP (IN over) (NP (NP (JJ Hungarian) (NNS airwaves)) (, ,) (ADVP (IN though) (NP (NP (QP (RB only) (DT a) (JJ few)) (NNS hours)) (NP (DT a) (NN day)))) (NP (DT each)))) (PP (IN in) (ADJP (JJ Hungarian)))) (. .)))
+
+155	1
+-165.922
+(S1 (S (NP (JJ Australian) (NN press) (NN magnate) (NNP Rupert) (NNP Murdoch)) (VP (AUX has) (VP (VBN bought) (NP (NP (ADJP (CD 50) (NN %)) (NNS stakes)) (PP (IN in) (NP (CD two) (ADJP (JJ popular) (CC and) (JJ gossipy)) (JJ Hungarian) (NNS newspapers)))) (, ,) (SBAR (IN while) (S (NP (NP (NNP Britain) (POS 's)) (NNP Robert) (NNP Maxwell)) (VP (AUX has) (S (VP (VB let) (S (NP (PRP it)) (VP (AUX be) (VP (VBN known) (ADVP (RB here)) (SBAR (IN that) (S (NP (PRP he)) (VP (AUX is) (VP (VBG thinking) (PP (IN about) (NP (JJ similar) (NNS moves))))))))))))))))) (. .)))
+
+156	1
+-144.272
+(S1 (S (CC But) (NP (NNP Radio) (NNP Free) (NNP Europe)) (VP (AUX does) (RB n't) (VP (VB plan) (S (VP (TO to) (VP (VB fade) (ADVP (RB away))))))) (. .)))
+
+157	1
+-124.856
+(S1 (S (PP (IN With) (NP (NP (PRP$ its) (NN mission)) (PP (IN for) (NP (NP (JJ free) (NN speech)) (CC and) (NP (DT the) (JJ capitalist) (NN way)))))) (, ,) (NP (NP (DT the) (NN network) (POS 's)) (NN staff)) (VP (VBZ says) (SBAR (S (NP (PRP it)) (ADVP (RB still)) (VP (AUX has) (NP (NP (NN plenty)) (SBAR (S (VP (TO to) (VP (AUX do) (: --) (PP (PP (IN in) (NP (NNP Hungary))) (CC and) (PP (IN in) (NP (DT the) (`` ``) (NNP Great) (NNP Eastern) (NNP Beyond))))))))))))) (. .) ('' '')))
+
+158	1
+-132.905
+(S1 (S (NP (NP (NNP Radio) (NNP Free) (NNP Europe)) (CC and) (NP (NP (NP (PRP$ its) (NN sister) (NN station)) (PP (IN for) (NP (DT the) (NNP Soviet) (NNP Union)))) (, ,) (NP (NNP Radio) (NNP Liberty)) (, ,))) (VP (VBP say) (SBAR (S (NP (PRP they)) (VP (MD wo) (RB n't) (VP (VB cut) (ADVP (RB back)) (NP (NP (PRP$ their) (QP (JJR more) (IN than) (CD 19)) (NNS hours)) (PP (IN of) (NP (JJ daily) (NNS broadcasts))))))))) (. .)))
+
+159	1
+-228.153
+(S1 (S (NP (PRP They)) (VP (AUX are) (ADVP (RB still)) (NP (NP (DT an) (JJ important) (NN source)) (PP (IN of) (NP (NP (NN news)) (PP (IN for) (NP (NP (QP (CD 60) (CD million)) (NNS listeners)) (PP (IN in) (NP (CD 23) (JJ exotic) (NNS tongues))))))) (: :) (PP (PP (IN from) (NP (JJ Bulgarian) (CC and) (NNP Belorussian))) (PP (TO to) (NP (NNP Kazakh) (CC and) (NNP Kirghiz)))))) (. .)))
+
+160	1
+-134.799
+(S1 (S (NP (NP (DT The) (NN establishment)) (PP (IN of) (NP (NP (PRP$ its) (JJ first) (NN bureau)) (PP (IN in) (NP (NP (NNP Warsaw) (NNP Pact)) (NN territory)))))) (VP (VBZ shows) (NP (NP (DT the) (NN depth)) (PP (IN of) (NP (NP (DT some)) (PP (IN of) (NP (NP (DT the) (NNS changes)) (PP (IN in) (NP (NNP Eastern) (NNP Europe))))))))) (. .)))
+
+161	1
+-161.338
+(S1 (S (SBAR (NP (NNS Months)) (IN before) (S (NP (NP (DT the) (NN decision)) (PP (IN by) (NP (DT the) (JJ Hungarian) (NNP Communist) (NNP Party)))) (VP (TO to) (VP (VP (VB rename) (S (NP (PRP itself)) (ADJP (JJ Socialist)))) (CC and) (VP (VB try) (S (VP (TO to) (VP (VB look) (ADJP (RBR more) (JJ appealing) (PP (TO to) (NP (NNS voters)))))))))))) (, ,) (NP (NP (DT the) (NN country) (POS 's)) (NNS rulers)) (VP (AUX were) (VP (VBG trying) (S (VP (TO to) (VP (VB look) (ADJP (RBR more) (JJ hospitable))))))) (. .)))
+
+162	1
+-141.514
+(S1 (S (NP (PRP It)) (VP (VBD proved) (NP (NP (DT a) (JJ perfect) (NN time)) (PP (IN for) (NP (NNP Radio) (NNP Free) (NNP Europe))) (SBAR (S (VP (TO to) (VP (VB ask) (PP (IN for) (NP (NN permission) (S (VP (TO to) (VP (VB set) (PRT (RP up)) (NP (NN office))))))))))))) (. .)))
+
+163	1
+-582.718
+(S1 (SINV (CONJP (RB Not) (RB only)) (AUX did) (S (S (NP (NP (DT the) (JJ Hungarian) (NNP Ministry)) (PP (IN of) (NP (NNP Foreign) (NNPS Affairs)))) (VP (VB approve) (NP (NP (NNP Radio) (NNP Free) (NNP Europe) (POS 's)) (JJ new) (NN location)))) (, ,) (CC but) (S (NP (NP (DT the) (NNP Ministry)) (PP (IN of) (NP (NNP Telecommunications)))) (VP (AUX did) (NP (NP (NN something)) (ADJP (ADVP (RB even) (RBR more)) (JJ amazing))) (: :) (S (`` ``) (NP (PRP They)) (VP (VBD found) (NP (PRP us)) (NP (NP (CD four) (NN phone) (NNS lines)) (PP (IN in) (NP (JJ central) (NNP Budapest))))))))) (, ,) ('' '') (VP (VBZ says)) (NP (NP (NNP Geza) (NNP Szocs)) (, ,) (NP (NP (NP (DT a) (NNP Radio) (NNP Free) (NNP Europe)) (NN correspondent)) (SBAR (WHNP (WP who)) (S (VP (VBD helped) (VP (VB organize) (NP (DT the) (NNP Budapest) (NN location)))))))) (. .)))
+
+164	1
+-382.228
+(S1 (S (`` ``) (NP (DT That)) (VP (AUX is) (NP (DT a) (NN miracle))) (. .) ('' '')))
+
+165	1
+-387.85
+(S1 (S (NP (PRP It)) (VP (AUX 's) (NP (NP (DT a) (JJ far) (NN cry)) (PP (IN from) (NP (NP (DT the) (JJ previous) (NN treatment)) (PP (IN of) (NP (NP (DT the) (NN network)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (AUX had) (S (VP (TO to) (VP (VB overcome) (NP (NP (NN jamming)) (PP (IN of) (NP (PRP$ its) (NNS frequencies) (CC and) (NN intimidation))) (PP (IN of) (NP (NP (JJ local) (NNS correspondents)) (PRN (-LRB- -LRB-) (SBAR (WHNP (WP who)) (S (VP (VBD filed) (NP (NNS reports)) (PP (TO to) (NP (DT the) (NN network))) (PP (IN by) (NP (NN phone) (, ,) (NN secret) (NNS messengers) (CC or) (NNS letters)))))) (-RRB- -RRB-))))))))))))))))) (. .)))
+
+166	1
+-399.047
+(S1 (S (PP (IN In) (NP (NN fact))) (, ,) (NP (NP (DT some)) (PP (IN of) (NP (NP (DT the) (NN network) (POS 's)) (JJ Hungarian) (NNS listeners)))) (VP (VBP say) (SBAR (S (NP (PRP they)) (VP (VBP owe) (NP (NNP Radio) (NNP Free) (NNP Europe)) (NP (NN loyalty)) (SBAR (IN because) (S (NP (PRP it)) (VP (AUX was) (ADJP (JJ responsible) (PP (IN in) (NP (JJ many) (NNS ways)))) (PP (IN for) (S (VP (VBG keeping) (NP (NN hope)) (ADVP (RB alive)) (PP (IN through) (SBAR (WHNP (WP what)) (S (NP (CD one) (NN writer)) (VP (ADVP (RB here)) (VBZ calls) (NP (NP (DT the) (`` ``) (JJ Dark) (NNPS Ages)) (PP (IN of) (NP (DT the) (JJ 20th) (NN Century)))))))))))))))))) (. .) ('' '')))
+
+167	1
+-265.052
+(S1 (SINV (`` ``) (S (PP (IN During) (NP (DT the) (JJ past) (CD four) (NNS years))) (, ,) (NP (NP (JJ many)) (PP (IN of) (NP (PRP us)))) (VP (AUX have) (VP (VBN sat) (PRT (RP up)) (PP (IN until) (ADJP (JJ late) (PP (IN at) (NP (NN night))))) (S (VP (VBG listening) (PP (TO to) (NP (PRP$ our) (NNS radios)))))))) (, ,) ('' '') (VP (VBZ says)) (NP (DT the) (NN writer)) (. .)))
+
+168	1
+-316.666
+(S1 (S (`` ``) (NP (EX There)) (VP (AUX were) (NP (DT some) (ADJP (RB very) (JJ brave)) (NNS broadcasts))) (. .) ('' '')))
+
+169	1
+-311.018
+(S1 (S (NP (DT The) (NNS listeners)) (, ,) (ADVP (RB too)) (, ,) (VP (AUX had) (S (VP (TO to) (VP (AUX be) (ADJP (JJ brave)))))) (. .)))
+
+170	1
+-335.839
+(S1 (S (PP (IN Through) (NP (NP (JJ much)) (PP (IN of) (NP (DT the) (ADJP (JJ post-World) (NP (NNP War) (NNP II))) (NN period))))) (, ,) (S (VP (VBG listening) (PP (TO to) (NP (NNP Western) (NNS broadcasts))))) (VP (AUX was) (NP (NP (DT a) (NN crime)) (PP (IN in) (NP (NNP Hungary))))) (. .)))
+
+171	1
+-293.104
+(S1 (SINV (`` ``) (S (SBAR (WHADVP (WRB When)) (S (NP (PRP we)) (VP (VBP listen) (PP (TO to) (NP (DT the) (NNP Europe) (NN station)))))) (, ,) (NP (PRP$ my) (NN mother)) (ADVP (RB still)) (VP (VBZ gets) (ADJP (JJ nervous)))) (, ,) ('' '') (VP (VBZ says)) (NP (DT a) (NNP Budapest) (NN translator)) (. .)))
+
+172	1
+-294.385
+(S1 (S (`` ``) (NP (PRP She)) (VP (VBZ wants) (S (VP (TO to) (VP (VP (VB turn) (PRT (RP down)) (NP (DT the) (NN volume))) (CC and) (VP (VB close) (NP (DT the) (NNS curtains))))))) (. .) ('' '')))
+
+173	1
+-325.446
+(S1 (S (ADVP (RB Now)) (, ,) (NP (NP (DT the) (JJS toughest) (NN competition)) (PP (IN for) (NP (NNP Radio) (NNP Free) (NNP Europe)))) (VP (VBZ comes) (PP (IN during) (NP (DT the) (JJ late-night) (NN slot)))) (. .)))
+
+174	1
+-368.66
+(S1 (S (NP (JJ Hungarian) (NN radio)) (ADVP (RB often)) (VP (VBZ saves) (NP (PRP$ its) (ADJP (RBS most) (RB politically) (JJ outspoken)) (NNS broadcasts)) (PP (IN for) (IN around) (NP (NN midnight)))) (. .)))
+
+175	1
+-274.385
+(S1 (S (NP (NP (NN Television)) (, ,) (SBAR (WHNP (WDT which)) (S (NP (NP (JJS most)) (PP (IN of) (NP (DT the) (NN time)))) (VP (AUX is) (VP (VBN considered) (S (ADJP (RB rather) (JJ tame))))))) (, ,)) (VP (AUX has) (VP (VBN entered) (S (NP (NP (DT the) (NN running)) (PP (IN with) (NP (NP (DT a) (JJ new) (NN program)) (, ,) (`` ``) (NP (NP (DT The) (NNP End)) (PP (IN of) (NP (DT the) (NN Day)))) (, ,) ('' '') (SBAR (WHNP (WDT which)) (S (VP (VBZ comes) (PRT (RP on)) (PP (IN after) (NP (CD 11) (RB p.m)))))))))))) (. .)))
+
+176	1
+-236.081
+(S1 (S (NP (PRP It)) (VP (AUX is) (NP (NP (NP (DT a) (NN talk) (NN show)) (PP (IN with) (NP (NP (NN opposition) (NNS leaders)) (CC and) (NP (NP (JJ political) (NNS experts)) (SBAR (WHNP (WP who)) (S (VP (VB discuss) (NP (NP (NNP Hungary) (POS 's)) (JJ domestic) (NNS problems))))))))) (CONJP (RB as) (RB well) (IN as)) (NP (JJ foreign) (NNS affairs)))) (. .)))
+
+177	1
+-245.328
+(S1 (S (NP (NP (DT Those)) (SBAR (WHNP (WP who)) (S (VP (VBP want) (S (VP (TO to) (VP (VB hear) (NP (ADJP (RB even) (RBR more) (JJ radical)) (NNS views))))))))) (VP (AUX have) (S (VP (TO to) (VP (VB get) (PRT (RP up)) (PP (IN at) (NP (CD five))) (PP (IN on) (NP (NP (NNP Sunday) (NN morning)) (PP (IN for) (NP (`` ``) (NP (NNP Sunday) (NNP Journal)) (, ,) ('' '') (PP (IN on) (NP (JJ Hungarian) (NN Radio))))))))))) (. .)))
+
+178	1
+-256.987
+(S1 (S (NP (DT The) (JJ competitive) (NN spirit)) (VP (AUX is) (ADVP (RB clearly)) (VP (VBG influencing) (NP (NP (NNP Radio) (NNP Free) (NNP Europe)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (AUX is) (VP (VBG trying) (S (VP (TO to) (VP (VB beef) (PRT (RP up)) (NP (NNS programs)))))))))))) (. .)))
+
+179	1
+-314.173
+(S1 (S (NP (DT The) (NNP Budapest) (NN office)) (VP (VBZ plans) (S (VP (TO to) (VP (VB hire) (NP (JJ free-lance) (NNS reporters) (S (VP (TO to) (VP (VB cover) (NP (NP (DT the) (JJS latest) (NNS happenings)) (PP (IN in) (NP (NP (JJ Hungarian) (NN country) (NNS towns)) (PP (PP (IN from) (NP (NNP Nagykanizsa)) (PP (IN in) (NP (DT the) (NN west)))) (PP (TO to) (NP (NP (NNP Nyiregyhaza)) (PP (IN in) (NP (DT the) (JJ east))))))))))))))))) (. .)))
+
+180	1
+-302.993
+(S1 (S (NP (DT The) (JJ Hungarian) (NN service)) (VP (AUX has) (NP (NP (DT a) (JJ daily) (JJ 40-minute) (NN news) (NN show)) (VP (VBD called) (NP (NNP Newsreel)))) (, ,) (PP (IN with) (NP (NP (JJ international) (CC and) (JJ domestic) (NN news)) (, ,) (CC plus) (NP (NP (DT a) (JJ daily) (NN news) (NN review)) (PP (IN of) (NP (NP (NNS opinions)) (PP (IN from) (PP (IN around) (NP (DT the) (NN world)))))))))) (. .)))
+
+181	1
+-137.157
+(S1 (S (NP (EX There)) (VP (AUX 's) (ADVP (RB also)) (NP (NP (DT a) (NN host)) (PP (IN of) (NP (NP (JJ new) (NNS programs)) (, ,) (VP (VBG trying) (S (VP (TO to) (VP (VB lighten) (PRT (RP up)) (PP (IN on) (NP (NP (DT the) (JJ traditional) (NN diet)) (PP (IN of) (NP (NNS politics))))))))))))) (. .)))
+
+182	1
+-257.99
+(S1 (S (NP (NP (DT A) (JJ daily) (JJ 35-minute) (NN program)) (VP (VBN called) (S (`` ``) (NP (NP (DT The) (NNP March)) (PP (IN of) (NP (NNP Time)))) ('' '')))) (VP (VBZ tries) (S (VP (TO to) (VP (VB find) (NP (NP (JJ interesting) (NNS tidbits)) (PP (IN of) (NP (NP (JJ lighthearted) (NN news)) (CC and) (NP (NN gossip))))) (PP (IN from) (PP (IN around) (NP (DT the) (NN world)))))))) (. .)))
+
+183	1
+-75.327
+(S1 (S (NP (EX There)) (VP (AUX 's) (NP (NP (DT a) (NN program)) (PP (IN for) (NP (NP (NNS women)) (CC and) (NP (DT a) (NN science) (NN show)))))) (. .)))
+
+184	1
+-111.91
+(S1 (S (CC And) (S (VP (TO to) (VP (VB attract) (NP (JJR younger) (NNS listeners))))) (, ,) (NP (NNP Radio) (NNP Free) (NNP Europe)) (VP (VBZ intersperses) (NP (NP (DT the) (JJS latest)) (PP (IN in) (NP (NNP Western) (NN rock) (NNS groups))))) (. .)))
+
+185	1
+-105.995
+(S1 (S (NP (DT The) (NNP Pet) (NNP Shop) (NNPS Boys)) (VP (AUX are) (ADVP (JJ big) (NP (DT this) (NN year))) (PP (IN in) (NP (NNP Budapest)))) (. .)))
+
+186	1
+-114.254
+(S1 (SINV (`` ``) (S (NP (PRP We)) (VP (AUX are) (VP (VBG starving) (PP (IN for) (NP (PDT all) (DT the) (NN news)))))) (, ,) ('' '') (VP (VBZ says)) (NP (NP (NNP Mr.) (NNP Deak)) (, ,) (NP (DT the) (NN student))) (. .)))
+
+187	1
+-97.7409
+(S1 (FRAG (`` ``) (NP (NP (DT Every) (NN moment)) (SBAR (S (NP (PRP we)) (VP (VBP want) (S (VP (TO to) (VP (VB know) (NP (NN everything)) (PP (IN about) (NP (DT the) (NN world)))))))))) (. .)))
+
+188	1
+-476.357
+(S1 (S (NP (NP (NNS Proposals)) (PP (IN for) (NP (NP (JJ government-operated) (`` ``) (JJ national) (NN service) (, ,) ('' '')) (PP (IN like) (NP (NP (NN influenza)) (, ,) (VP (VBD flare) (PRT (RP up)) (PP (PP (IN from) (NP (NN time))) (PP (TO to) (NP (NN time))))) (, ,)))))) (VP (VP (VBP depress) (NP (NP (DT the) (NN resistance)) (PP (IN of) (NP (NP (DT the) (NN body)) (ADJP (JJ politic)) (, ,) (VP (VBN run) (NP (PRP$ their) (NN course))))))) (, ,) (CC and) (VP (VBP seem) (S (VP (TO to) (VP (VB disappear) (, ,) (S (ADVP (RB only)) (VP (TO to) (VP (VB mutate) (CC and) (VB afflict) (NP (JJ public) (NN life)) (ADVP (RB anew)))))))))) (. .)))
+
+189	1
+-338.393
+(S1 (S (NP (DT The) (NN disease) (NN metaphor)) (VP (VBZ comes) (PP (PP (TO to) (NP (NN mind))) (, ,) (PP (IN of) (NP (NN course))) (, ,) (RB not) (PP (IN as) (NP (NP (DT an) (NN aspersion)) (PP (IN on) (NP (NP (DT the) (NNS advocates)) (PP (IN of) (NP (JJ national) (NN service))))))))) (. .)))
+
+190	1
+-331.225
+(S1 (S (ADVP (RB Rather)) (, ,) (NP (PRP it)) (VP (AUX is) (VP (VBN born) (PP (IN of) (NP (NN frustration))) (PP (IN with) (S (VP (AUXG having) (S (VP (TO to) (VP (VB combat) (ADVP (RB constantly)) (S (VP (VBG changing) (NP (NP (NNS strains)) (PP (IN of) (NP (NP (DT a) (JJ statist) (NN idea)) (SBAR (WHNP (IN that)) (S (NP (PRP one)) (VP (VBD thought) (SBAR (S (VP (AUX had) (VP (AUX been) (VP (VBN eliminated) (PP (IN in) (NP (DT the) (JJ early) (CD 1970s))) (, ,) (ADVP (IN along) (PP (IN with) (NP (NN smallpox))))))))))))))))))))))))) (. .)))
+
+191	1
+-304.783
+(S1 (S (NP (PRP It)) (VP (AUX is) (ADVP (RB back) (PP (IN with) (NP (PRP us)))) (ADVP (RB again)) (, ,) (PP (IN in) (NP (NP (DT the) (NN form)) (PP (IN of) (NP (NP (NN legislation)) (SBAR (S (VP (TO to) (VP (VB pay) (NP (NP (NNS volunteers)) (PP (IN under) (NP (DT a) (`` ``) (S (NP (NNP National) (CC and) (NNP Community) (NNP Service) (NNP Act))) (, ,) ('' '') (NP (DT a) (NN proposal)))) (PP (IN with) (NP (NP (DT a) (JJ serious) (NN shot)) (PP (IN at) (NP (JJ congressional) (NN passage)))))) (NP (DT this) (NN fall))))))))))) (. .)))
+
+192	1
+-283.376
+(S1 (SBARQ (WHADVP (WRB Why)) (SQ (AUX does) (NP (DT the) (JJ national-service) (NN virus)) (VP (VB keep) (S (VP (VBG coming) (ADVP (RB back)))))) (. ?)))
+
+193	1
+-313.121
+(S1 (S (ADVP (RB Perhaps)) (NP (PRP it)) (VP (AUX is) (SBAR (IN because) (S (NP (JJ utopian) (NN nostalgia)) (VP (VBZ evokes) (NP (DT both) (NP (JJ military) (NN experience)) (CC and) (NP (DT the) (JJ social) (NN gospel))))))) (. .)))
+
+194	1
+-301.051
+(S1 (S (SBAR (IN If) (RB only) (S (NP (PRP we)) (VP (MD could) (VP (VB get) (NP (NP (NNP America) (POS 's)) (JJ wastrel) (NN youth)) (PP (IN into) (NP (ADVP (IN at) (JJS least)) (DT a) (JJ psychic) (NN uniform))))))) (NP (PRP we)) (VP (MD might) (VP (AUX be) (ADJP (JJ able) (S (VP (TO to) (VP (VP (VB teach) (ADJP (JJ self-discipline)) (ADVP (RB again))) (CC and) (VP (VB revive) (NP (NP (DT the) (NN spirit)) (PP (IN of) (NP (VBG giving))))))))))) (. .)))
+
+195	1
+-289.613
+(S1 (S (NP (NP (DT A) (NN quarter)) (PP (IN of) (NP (NP (DT a) (NN century)) (ADVP (RB ago))))) (NP (JJ national) (NN service)) (VP (AUX was) (VP (VBN promoted) (PP (IN as) (NP (NP (DT a) (NN way)) (PP (IN of) (S (VP (VBG curing) (NP (NP (DT the) (JJ manifest) (NNS inequities)) (PP (IN of) (NP (DT the) (NN draft))))))))) (: --) (PP (IN by) (PRN (, ,) (PP (IN of) (NP (DT all) (NNS things))) (, ,)) (S (VP (VBG expanding) (NP (DT the) (NN draft))))))) (. .)))
+
+196	1
+-397.855
+(S1 (S (NP (NP (DT Those)) (PP (IN of) (NP (PRP us))) (SBAR (WHNP (WP who)) (S (VP (VBD resisted) (NP (DT the) (NN idea)))))) (ADVP (RB then)) (VP (VBP suspect) (NP (NN today)) (SBAR (IN that) (S (NP (NP (DT an) (NN obligation)) (PP (IN of) (NP (NP (NN government) (NN service)) (PP (IN for) (NP (DT all) (JJ young) (NNS people)))))) (VP (AUX is) (ADVP (RB still)) (NP (NP (DT the) (JJ true) (JJ long-term) (NN aim)) (PP (IN of) (NP (JJ many) (JJ national-service) (NNS backers)))) (, ,) (PP (IN despite) (NP (NP (PRP$ their) (NNS protests)) (SBAR (WHNP (WDT that)) (S (NP (JJ present) (NNS plans)) (VP (VBP contain) (NP (DT no) (NN coercion))))))))))) (. .)))
+
