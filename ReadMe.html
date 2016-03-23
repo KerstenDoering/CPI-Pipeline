@@ -20,12 +20,15 @@
 <li><a href="#makefile-configuration"><span class="toc-section-number">3.2</span> Makefile Configuration</a></li>
 <li><a href="#postgresql-configuration"><span class="toc-section-number">3.3</span> PostgreSQL Configuration</a></li>
 <li><a href="#executable-files"><span class="toc-section-number">3.4</span> Executable Files</a></li>
-<li><a href="#run-the-apg-kernel-pipeline"><span class="toc-section-number">3.5</span> Run the APG Kernel Pipeline</a></li>
 </ul></li>
-<li><a href="#sl-kernel-pipeline"><span class="toc-section-number">4</span> SL Kernel pipeline</a></li>
-<li><a href="#usage-of-created-models"><span class="toc-section-number">5</span> Usage of Created Models</a></li>
-<li><a href="#contact"><span class="toc-section-number">6</span> Contact</a><ul>
-<li><a href="#license"><span class="toc-section-number">6.1</span> License</a></li>
+<li><a href="#run-the-kernel-pipelines"><span class="toc-section-number">4</span> Run the Kernel Pipelines</a><ul>
+<li><a href="#apg-kernel-pipeline-1"><span class="toc-section-number">4.1</span> APG Kernel pipeline</a></li>
+<li><a href="#sl-kernel-pipeline"><span class="toc-section-number">4.2</span> SL Kernel pipeline</a></li>
+<li><a href="#results-of-the-combined-model-representing-pubmed"><span class="toc-section-number">4.3</span> Results of the Combined Model Representing PubMed</a></li>
+<li><a href="#usage-of-created-models"><span class="toc-section-number">4.4</span> Usage of Created Models</a></li>
+</ul></li>
+<li><a href="#contact"><span class="toc-section-number">5</span> Contact</a><ul>
+<li><a href="#license"><span class="toc-section-number">5.1</span> License</a></li>
 </ul></li>
 </ul>
 </div>
@@ -225,7 +228,12 @@
 </ul>
 </blockquote></li>
 </ul>
-<h2 id="run-the-apg-kernel-pipeline"><a href="#run-the-apg-kernel-pipeline"><span class="header-section-number">3.5</span> Run the APG Kernel Pipeline</a></h2>
+<h1 id="run-the-kernel-pipelines"><a href="#run-the-kernel-pipelines"><span class="header-section-number">4</span> Run the Kernel Pipelines</a></h1>
+<ul>
+<li>This section describes how to use the APG and SL kernel with DS1, DS2, and the combined data set 3 (DS3).</li>
+<li>Furthermore, it contains a short paragraph about how to use these models.</li>
+</ul>
+<h2 id="apg-kernel-pipeline-1"><a href="#apg-kernel-pipeline-1"><span class="header-section-number">4.1</span> APG Kernel pipeline</a></h2>
 <ul>
 <li><p>It is recommended that the folders CPI-corpora-preparing, generate_XML_files, and ppi-benchmark are copied with the shell scripts APG_pipeline_DS1.sh and APG_pipeline_DS2.sh to another directory to store these empty versions as a backup.</p>
 <blockquote>
@@ -271,7 +279,7 @@
 </blockquote></li>
 <li>Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.</li>
 </ul>
-<h1 id="sl-kernel-pipeline"><a href="#sl-kernel-pipeline"><span class="header-section-number">4</span> SL Kernel pipeline</a></h1>
+<h2 id="sl-kernel-pipeline"><a href="#sl-kernel-pipeline"><span class="header-section-number">4.2</span> SL Kernel pipeline</a></h2>
 <ul>
 <li>The SL kernel pipeline can be started as described previously for the APG kernel pipeline.</li>
 <li><p>The Makefile line defining to use the APG kernel needs to be changed to make use of the SL kernel (“scripts/ppi-benchmark/Makefile.config”):</p>
@@ -320,7 +328,69 @@
 </ul>
 </blockquote></li>
 </ul>
-<h1 id="usage-of-created-models"><a href="#usage-of-created-models"><span class="header-section-number">5</span> Usage of Created Models</a></h1>
+<h2 id="results-of-the-combined-model-representing-pubmed"><a href="#results-of-the-combined-model-representing-pubmed"><span class="header-section-number">4.3</span> Results of the Combined Model Representing PubMed</a></h2>
+<ul>
+<li>The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % DS1 and 60 % DS2, based on an analysis with PubMedPortable.</li>
+<li>In the case of DS1 and DS2, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).</li>
+<li>Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.</li>
+<li>Therefore, DS1 and DS2 can be summarised to a combined data set 3 (DS3).</li>
+<li><p>A concatenation of all DS1 and DS2 cross-validation files is needed to compare the single APG and SL results on DS1 and DS2. This was achieved with the following steps.</p>
+<blockquote>
+<ul>
+<li>Change into directory CPI-Pipeline/scripts and use the splitted files to generate the cross-validation files for DS3.</li>
+<li>Merge the files training_dataset_sorted.csv in the directories DS1 and DS2, too.</li>
+<li>The script annotatedsen_to_xml.py was slightly modified to work with the identifier DS3.</li>
+<li>cd CPI-Pipeline/scripts</li>
+<li>chmod +x merge.sh</li>
+<li>./merge.sh</li>
+<li>cd generate_XML_files/DS3/</li>
+<li>python annotatedsen_to_xml.py</li>
+<li>Create the folders CPI-Pipeline/scripts/CPI-corpora-preparing/export_step6/CV/DS3, CPI-corpora-preparing/export_step6/splits-test-train/DS3, CPI-Pipeline/scripts/CPI-corpora-preparing/splitting/DS3, CPI-Pipeline/scripts/ppi-benchmark/Corpora/APG/CV/corpus/DS3, CPI-Pipeline/scripts/ppi-benchmark/Corpora/Splits/DS3, and CPI-Pipeline/scripts/ppi-benchmark/Corpora/splits-test-train/DS3.</li>
+<li>Within the updated pipeline for DS3, all cross-validation splits are automatically merged with the order from DS1 and DS2 and all new DS3 document identifiers.</li>
+<li><p>After copying your scripts folder to the desired starting directory on your system, run the APG pipeline (do not forget to set your baseDir path in ppi-benchmark/Makefile.config in line 7):</p>
+<blockquote>
+<ul>
+<li>./APG_pipeline_DS3.sh</li>
+<li>The preprocessing (actually only step 2 (bllip-parser)) took around 30 min (mainly single core calculations) and the rest of the pipeline with all parameter selections took around 5 h.</li>
+<li>./SL_pipeline_DS3.sh</li>
+<li>The runtime is around 29 min on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).</li>
+</ul>
+</blockquote></li>
+</ul>
+</blockquote></li>
+<li><p>These are the results for the APG and SL kernel pipeline:</p>
+<blockquote>
+<ul>
+<li><p>APG results:</p>
+<blockquote>
+<ul>
+<li>./get_csv_results.sh</li>
+<li>change into directory output</li>
+<li>python average.py</li>
+<li>cat DS3*average.csv &gt; DS3_average.csv</li>
+<li>python header.py</li>
+</ul>
+</blockquote></li>
+</ul>
+<p><img src="figures/APG_DS3.png" alt="image" /></p>
+<ul>
+<li><p>SL results:</p>
+<blockquote>
+<ul>
+<li>change into directory /home/kersten/Desktop/CPI-Pipeline/results/summary/DS3/jSRE</li>
+<li>python generate_selects_psql.py</li>
+<li>./get_csv_results.sh</li>
+<li>change into directory output</li>
+<li>python average.py</li>
+<li>cat DS3*average.csv &gt; DS3_average.csv</li>
+<li>python header.py</li>
+</ul>
+</blockquote></li>
+</ul>
+<p><img src="figures/SL_DS3.png" alt="image" /></p>
+</blockquote></li>
+</ul>
+<h2 id="usage-of-created-models"><a href="#usage-of-created-models"><span class="header-section-number">4.4</span> Usage of Created Models</a></h2>
 <ul>
 <li>If you want to use the models created with DS1 or DS2, go to the folders scripts/ppi-benchmark/Experiments/APG/CV or scripts/ppi-benchmark/Experiments/SL/CV and comment out the training process step in run.py.</li>
 <li>You can use PubMedPortable with its named entity recognition interfaces to prepare sentences with highlighted compounds and proteins.</li>
@@ -339,7 +409,7 @@
 </blockquote></li>
 <li>Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.</li>
 </ul>
-<h1 id="contact"><a href="#contact"><span class="header-section-number">6</span> Contact</a></h1>
+<h1 id="contact"><a href="#contact"><span class="header-section-number">5</span> Contact</a></h1>
 <ul>
 <li><p>Please, write an e-mail, if you have questions, feedback, improvements, or new ideas:</p>
 <blockquote>
@@ -359,7 +429,7 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
 </ul>
 </blockquote></li>
 </ul>
-<h2 id="license"><a href="#license"><span class="header-section-number">6.1</span> License</a></h2>
+<h2 id="license"><a href="#license"><span class="header-section-number">5.1</span> License</a></h2>
 <ul>
 <li>The CPI-Pipeline project is published with an ISC license given in “license.txt”.</li>
 </ul>

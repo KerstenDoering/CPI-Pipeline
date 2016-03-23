@@ -231,8 +231,17 @@ Executable Files
 
     - results/summary/APG/get_csv_results.sh
 
-Run the APG Kernel Pipeline
-###########################
+
+Run the Kernel Pipelines
+************************
+
+- This section describes how to use the APG and SL kernel with DS1, DS2, and the combined data set 3 (DS3). 
+
+- Furthermore, it contains a short paragraph about how to use these models.
+
+
+APG Kernel pipeline
+###################
 
 - It is recommended that the folders CPI-corpora-preparing, generate_XML_files, and ppi-benchmark are copied with the shell scripts APG_pipeline_DS1.sh and APG_pipeline_DS2.sh to another directory to store these empty versions as a backup.
 
@@ -284,8 +293,9 @@ Run the APG Kernel Pipeline
 
 - Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.
 
+
 SL Kernel pipeline
-******************
+##################
 
 - The SL kernel pipeline can be started as described previously for the APG kernel pipeline.
 
@@ -328,8 +338,86 @@ SL Kernel pipeline
     - You can find these files in the folder scripts/jSRE_debug.
 
 
+Results of the Combined Model Representing PubMed
+#################################################
+
+- The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % DS1 and 60 % DS2, based on an analysis with PubMedPortable.
+
+- In the case of DS1 and DS2, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).
+
+- Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
+
+- Therefore, DS1 and DS2 can be summarised to a combined data set 3 (DS3).
+
+- A concatenation of all DS1 and DS2 cross-validation files is needed to compare the single APG and SL results on DS1 and DS2. This was achieved with the following steps.
+
+    - Change into directory CPI-Pipeline/scripts and use the splitted files to generate the cross-validation files for DS3.
+
+    - Merge the files training_dataset_sorted.csv in the directories DS1 and DS2, too.
+
+    - The script annotatedsen_to_xml.py was slightly modified to work with the identifier DS3.
+
+    - cd CPI-Pipeline/scripts
+
+    - chmod +x merge.sh
+
+    - ./merge.sh 
+
+    - cd generate_XML_files/DS3/
+
+    - python annotatedsen_to_xml.py 
+
+    - Create the folders CPI-Pipeline/scripts/CPI-corpora-preparing/export_step6/CV/DS3, CPI-corpora-preparing/export_step6/splits-test-train/DS3, CPI-Pipeline/scripts/CPI-corpora-preparing/splitting/DS3, CPI-Pipeline/scripts/ppi-benchmark/Corpora/APG/CV/corpus/DS3, CPI-Pipeline/scripts/ppi-benchmark/Corpora/Splits/DS3, and CPI-Pipeline/scripts/ppi-benchmark/Corpora/splits-test-train/DS3.
+
+    - Within the updated pipeline for DS3, all cross-validation splits are automatically merged with the order from DS1 and DS2 and all new DS3 document identifiers.
+
+    - After copying your scripts folder to the desired starting directory on your system, run the APG pipeline (do not forget to set your baseDir path in ppi-benchmark/Makefile.config in line 7):
+
+        - ./APG_pipeline_DS3.sh 
+
+        - The preprocessing (actually only step 2 (bllip-parser)) took around 30 min (mainly single core calculations) and the rest of the pipeline with all parameter selections took around 5 h.
+
+        - ./SL_pipeline_DS3.sh
+
+        - The runtime is around 29 min on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
+
+- These are the results for the APG and SL kernel pipeline:
+
+    - APG results:
+
+        - ./get_csv_results.sh
+
+        - change into directory output
+
+        - python average.py
+
+        - cat DS3*average.csv > DS3_average.csv
+
+        - python header.py
+
+    .. image:: figures/APG_DS3.png
+
+    - SL results:
+
+        - change into directory /home/kersten/Desktop/CPI-Pipeline/results/summary/DS3/jSRE
+
+        - python generate_selects_psql.py
+
+        - ./get_csv_results.sh 
+
+        - change into directory output
+
+        - python average.py 
+
+        - cat DS3*average.csv > DS3_average.csv
+
+        - python header.py 
+
+    .. image:: figures/SL_DS3.png
+
+
 Usage of Created Models
-***********************
+#######################
 
 - If you want to use the models created with DS1 or DS2, go to the folders scripts/ppi-benchmark/Experiments/APG/CV or scripts/ppi-benchmark/Experiments/SL/CV and comment out the training process step in run.py.
 

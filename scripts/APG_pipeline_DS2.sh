@@ -1,9 +1,7 @@
-"""
-    Copyright (c) 2015, Kersten Doering <kersten.doering@gmail.com>, Elham Abbasian <e_abbasian@yahoo.com>
+#    Copyright (c) 2015, Kersten Doering <kersten.doering@gmail.com>, Elham Abbasian <e_abbasian@yahoo.com>
 
-    This script executes the steps from the protein-protein-interaction pipeline of Tikk et al. (scripts/ppi-benchmark/Documentation/kernels-howto.pdf, (Tikk et al., 2010. A comprehensive benchmark of kernel methods to extract protein-protein interactions from literature. PLoS Comput. Biol).
-    The preprocessing steps were isolated as executable JAR files from the source code provided by Tikk et al. and partially modified to work with the compound-protein interaction files and the make-experiment steps. They generate the all-paths graph kernel-specific input format from the general XML format defined by Tikk et al. The general XML format can be built with the newly created script data_sets/DS2/annotatedsen_to_xml.py. The make-experiment steps contain 10-fold cross validation runs with different parameter selections and the uploading process of the results to a PostgreSQL database. Please, read the CPI-Pipeline documentation to find out how to configure the database and how to modifiy the configuration files before running this script.
-"""
+#    This script executes the steps from the protein-protein-interaction pipeline of Tikk et al. (scripts/ppi-benchmark/Documentation/kernels-howto.pdf, (Tikk et al., 2010. A comprehensive benchmark of kernel methods to extract protein-protein interactions from literature. PLoS Comput. Biol).
+#    The preprocessing steps were isolated as executable JAR files from the source code provided by Tikk et al. and partially modified to work with the compound-protein interaction files and the make-experiment steps. They generate the all-paths graph kernel-specific input format from the general XML format defined by Tikk et al. The general XML format can be built with the newly created script data_sets/DS2/annotatedsen_to_xml.py. The make-experiment steps contain 10-fold cross validation runs with different parameter selections and the uploading process of the results to a PostgreSQL database. Please, read the CPI-Pipeline documentation to find out how to configure the database and how to modifiy the configuration files before running this script.
 
 # copy input files with the general XML format to the folder export_step1
 cp generate_XML_files/DS2/DS2.xml CPI-corpora-preparing/export_step1/
