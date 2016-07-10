@@ -32,7 +32,7 @@
 </ul></li>
 </ul>
 </div>
-<h1 id="introduction"><a href="#introduction"><span class="header-section-number">1</span> Introduction</a></h1>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
 <ul>
 <li>The presented pipeline uses the protein-protein interaction benchmark package published by Tikk et al. (Tikk et al., 2010. A comprehensive benchmark of kernel methods to extract protein-protein interactions from literature. PLoS Comput. Biol).</li>
 <li>The selection of considered kernels and software components was reduced to the all-paths graph (APG) kernel and the shallow linguistic (SL) kernel, because they performed best on the protein-protein interaction (PPI) data sets.</li>
@@ -44,7 +44,7 @@
 <li>These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics).</li>
 </ul>
 </blockquote></li>
-<li><p>The data sets were created by selecting the first 40,000 PubMed abstracts from 2009 with PubMedPortable (<a href="https://github.com/KerstenDoering/PubMedPortable">https://github.com/KerstenDoering/PubMedPortable</a>).</p>
+<li><p>The data sets were created by selecting the first 40,000 PubMed abstracts from 2009 with PubMedPortable (<a href="https://github.com/KerstenDoering/PubMedPortable" class="uri">https://github.com/KerstenDoering/PubMedPortable</a>).</p>
 <blockquote>
 <ul>
 <li>The chemical compounds were identified with the backend of prolific using the Hettne rules (Hettne et al., 2009. A dictionary to identify small molecules and drugs in free text. Bioinformatics).</li>
@@ -73,7 +73,7 @@
 <li>For this reason, the precision is equal to the accuracy value in this special case.</li>
 </ul>
 </blockquote></li>
-<li><p>More information about the theoretical background of the kernels, the data sets, and other related information can be found in Kersten Döring’s Dissertation (<a href="https://www.freidok.uni-freiburg.de/data/10565">https://www.freidok.uni-freiburg.de/data/10565</a>).</p>
+<li><p>More information about the theoretical background of the kernels, the data sets, and other related information can be found in Kersten Döring’s Dissertation (<a href="https://www.freidok.uni-freiburg.de/data/10565" class="uri">https://www.freidok.uni-freiburg.de/data/10565</a>).</p>
 <blockquote>
 <ul>
 <li>The SL kernel results contained in this thesis are not the results presented here, because they were generated with a customised pipeline, independently from the ppi-benchmark package.</li>
@@ -81,7 +81,7 @@
 </ul>
 </blockquote></li>
 </ul>
-<h1 id="xml-data-set-creation"><a href="#xml-data-set-creation"><span class="header-section-number">2</span> XML Data Set Creation</a></h1>
+<h1 id="xml-data-set-creation"><span class="header-section-number">2</span> XML Data Set Creation</h1>
 <ul>
 <li><p>The script parser.py in the directories scripts/generate_XML_files/DS1/ und scripts/generate_XML_files/DS2 creates the files interactions.txt and no_interactions.txt from the HTML files in the folder data_sets.</p>
 <blockquote>
@@ -130,11 +130,11 @@
 </blockquote>
 </blockquote></li>
 </ul>
-<h1 id="apg-kernel-pipeline"><a href="#apg-kernel-pipeline"><span class="header-section-number">3</span> APG Kernel Pipeline</a></h1>
+<h1 id="apg-kernel-pipeline"><span class="header-section-number">3</span> APG Kernel Pipeline</h1>
 <ul>
 <li>Many of the following steps are described similarly in the original ppi-benchmark documentation (scripts/ppi-benchmark/documentationkernels-howto.pdf).</li>
 </ul>
-<h2 id="required-installation-packages"><a href="#required-installation-packages"><span class="header-section-number">3.1</span> Required Installation Packages</a></h2>
+<h2 id="required-installation-packages"><span class="header-section-number">3.1</span> Required Installation Packages</h2>
 <ul>
 <li>The operating system for the CPI-pipeline was Ubuntu 14.04 LTS.</li>
 <li>All packages can be installed with “apt-get install”, Synaptic Package Manager, or the new Ubuntu Software Center.</li>
@@ -148,7 +148,7 @@
 </ul>
 </blockquote></li>
 </ul>
-<h2 id="makefile-configuration"><a href="#makefile-configuration"><span class="header-section-number">3.2</span> Makefile Configuration</a></h2>
+<h2 id="makefile-configuration"><span class="header-section-number">3.2</span> Makefile Configuration</h2>
 <ul>
 <li>The pipeline needs to be configured for the usage of DS1 or DS2 and the application of the APG or SL kernel.</li>
 <li>To run the pipeline with APG and DS1 a few changes were made in comparision to the original configuration of the ppi-benchmark package (the “#” character comments out lines of code).</li>
@@ -167,14 +167,14 @@
 <p>EXPTYPES=CV# CC CL</p>
 </blockquote></li>
 </ul>
-<h2 id="postgresql-configuration"><a href="#postgresql-configuration"><span class="header-section-number">3.3</span> PostgreSQL Configuration</a></h2>
+<h2 id="postgresql-configuration"><span class="header-section-number">3.3</span> PostgreSQL Configuration</h2>
 <ul>
 <li><p>Set your own user to be a PostgreSLQ superuser after installation of the default package “postgresql”.</p>
 <blockquote>
 <ul>
 <li><p>Follow the instructions here:</p>
 <blockquote>
-<p><a href="https://github.com/KerstenDoering/PubMedPortable/blob/master/documentation/quick_install.rst#creation-of-postgresql-superuser">https://github.com/KerstenDoering/PubMedPortable/blob/master/documentation/quick_install.rst#creation-of-postgresql-superuser</a></p>
+<p><a href="https://github.com/KerstenDoering/PubMedPortable/blob/master/documentation/quick_install.rst#creation-of-postgresql-superuser" class="uri">https://github.com/KerstenDoering/PubMedPortable/blob/master/documentation/quick_install.rst#creation-of-postgresql-superuser</a></p>
 </blockquote></li>
 </ul>
 </blockquote></li>
@@ -209,8 +209,14 @@
 </blockquote></li>
 </ul>
 </blockquote></li>
+<li><p>Create the tables which are needed for uploading the results. Change into scripts/ppi-benchmark/Database and execute the following command:</p>
+<blockquote>
+<ul>
+<li>psql -h localhost -d ppi -U ppi -f init-ppiCV.sql</li>
 </ul>
-<h2 id="executable-files"><a href="#executable-files"><span class="header-section-number">3.4</span> Executable Files</a></h2>
+</blockquote></li>
+</ul>
+<h2 id="executable-files"><span class="header-section-number">3.4</span> Executable Files</h2>
 <ul>
 <li><p>If the following files are not executable after cloning this repository, make them executable with the command “sudo chmod +x &lt;file&gt;”</p>
 <blockquote>
@@ -228,12 +234,12 @@
 </ul>
 </blockquote></li>
 </ul>
-<h1 id="run-the-kernel-pipelines"><a href="#run-the-kernel-pipelines"><span class="header-section-number">4</span> Run the Kernel Pipelines</a></h1>
+<h1 id="run-the-kernel-pipelines"><span class="header-section-number">4</span> Run the Kernel Pipelines</h1>
 <ul>
 <li>This section describes how to use the APG and SL kernel with DS1, DS2, and the combined data set 3 (DS3).</li>
 <li>Furthermore, it contains a short paragraph about how to use these models.</li>
 </ul>
-<h2 id="apg-kernel-pipeline-1"><a href="#apg-kernel-pipeline-1"><span class="header-section-number">4.1</span> APG Kernel pipeline</a></h2>
+<h2 id="apg-kernel-pipeline-1"><span class="header-section-number">4.1</span> APG Kernel pipeline</h2>
 <ul>
 <li><p>It is recommended that the folders CPI-corpora-preparing, generate_XML_files, and ppi-benchmark are copied with the shell scripts APG_pipeline_DS1.sh and APG_pipeline_DS2.sh to another directory to store these empty versions as a backup.</p>
 <blockquote>
@@ -279,7 +285,7 @@
 </blockquote></li>
 <li>Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.</li>
 </ul>
-<h2 id="sl-kernel-pipeline"><a href="#sl-kernel-pipeline"><span class="header-section-number">4.2</span> SL Kernel pipeline</a></h2>
+<h2 id="sl-kernel-pipeline"><span class="header-section-number">4.2</span> SL Kernel pipeline</h2>
 <ul>
 <li>The SL kernel pipeline can be started as described previously for the APG kernel pipeline.</li>
 <li><p>The Makefile line defining to use the APG kernel needs to be changed to make use of the SL kernel (“scripts/ppi-benchmark/Makefile.config”):</p>
@@ -316,7 +322,7 @@
 <li><p>Original software link:</p>
 <blockquote>
 <ul>
-<li><a href="https://hlt-nlp.fbk.eu/technologies/jsre">https://hlt-nlp.fbk.eu/technologies/jsre</a></li>
+<li><a href="https://hlt-nlp.fbk.eu/technologies/jsre" class="uri">https://hlt-nlp.fbk.eu/technologies/jsre</a></li>
 </ul>
 </blockquote></li>
 </ul>
@@ -328,7 +334,7 @@
 </ul>
 </blockquote></li>
 </ul>
-<h2 id="results-of-the-combined-model-representing-pubmed"><a href="#results-of-the-combined-model-representing-pubmed"><span class="header-section-number">4.3</span> Results of the Combined Model Representing PubMed</a></h2>
+<h2 id="results-of-the-combined-model-representing-pubmed"><span class="header-section-number">4.3</span> Results of the Combined Model Representing PubMed</h2>
 <ul>
 <li>The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % DS1 and 60 % DS2, based on an analysis with PubMedPortable.</li>
 <li>In the case of DS1 and DS2, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).</li>
@@ -390,7 +396,7 @@
 <p><img src="figures/SL_DS3.png" alt="image" /></p>
 </blockquote></li>
 </ul>
-<h2 id="usage-of-created-models"><a href="#usage-of-created-models"><span class="header-section-number">4.4</span> Usage of Created Models</a></h2>
+<h2 id="usage-of-created-models"><span class="header-section-number">4.4</span> Usage of Created Models</h2>
 <ul>
 <li>If you want to use the models created with DS1 or DS2, go to the folders scripts/ppi-benchmark/Experiments/APG/CV or scripts/ppi-benchmark/Experiments/SL/CV and comment out the training process step in run.py.</li>
 <li>You can use PubMedPortable with its named entity recognition interfaces to prepare sentences with highlighted compounds and proteins.</li>
@@ -409,7 +415,7 @@
 </blockquote></li>
 <li>Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.</li>
 </ul>
-<h1 id="contact"><a href="#contact"><span class="header-section-number">5</span> Contact</a></h1>
+<h1 id="contact"><span class="header-section-number">5</span> Contact</h1>
 <ul>
 <li><p>Please, write an e-mail, if you have questions, feedback, improvements, or new ideas:</p>
 <blockquote>
@@ -417,7 +423,7 @@
 <li><script type="text/javascript">
 <!--
 h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x6b;&#x65;&#114;&#x73;&#116;&#x65;&#110;&#46;&#100;&#x6f;&#x65;&#114;&#x69;&#110;&#x67;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#x6b;&#x65;&#114;&#x73;&#116;&#x65;&#110;&#46;&#100;&#x6f;&#x65;&#114;&#x69;&#110;&#x67;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript></li>
 </ul>
@@ -425,11 +431,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
 <li><p>If you are interested in related projects, visit our working group’s homepage:</p>
 <blockquote>
 <ul>
-<li><a href="http://www.pharmaceutical-bioinformatics.de">http://www.pharmaceutical-bioinformatics.de</a></li>
+<li><a href="http://www.pharmaceutical-bioinformatics.de" class="uri">http://www.pharmaceutical-bioinformatics.de</a></li>
 </ul>
 </blockquote></li>
 </ul>
-<h2 id="license"><a href="#license"><span class="header-section-number">5.1</span> License</a></h2>
+<h2 id="license"><span class="header-section-number">5.1</span> License</h2>
 <ul>
 <li>The CPI-Pipeline project is published with an ISC license given in “license.txt”.</li>
 </ul>

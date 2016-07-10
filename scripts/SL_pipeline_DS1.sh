@@ -11,6 +11,7 @@ cp DS1.xml ../Original-Modified
 cd ..
 # if there are files from a previous shallow linguistic kernel run, they will be removed 
 rm Splits/DS1/*
+mkdir Splits/DS1
 cp splits-test-train/DS1/* Splits/DS1/
 cd Splits
 # rename the files in the direcotry Splits

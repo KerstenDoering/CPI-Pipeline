@@ -205,6 +205,9 @@ PostgreSQL Configuration
 
         - EOF
 
+- Create the tables which are needed for uploading the results. Change into scripts/ppi-benchmark/Database and execute the following command:
+
+    - psql -h localhost -d ppi -U ppi -f init-ppiCV.sql 
 
 Executable Files
 ################

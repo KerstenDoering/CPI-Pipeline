@@ -25,6 +25,7 @@ cd bllip-parser/
 # ToDo: include biomedical parsing model - debug (kernels-howto.pdf)
 python merge_identifiers.py 
 cd ..
+mkdir export_step3/charniak-johnson/
 cp bllip-parser/DS1.xml-ptb-s.txt-parsed_modified.txt export_step3/charniak-johnson/
 
 # Step 3: merge BLLIP parser results with the XML file from step 1 in  <bracketings>...</bracketings> tags for each sentence
@@ -62,11 +63,13 @@ cd splitting
 mv DS1.xml.inj1.inj2 DS1.xml
 ./randomSplit.pl DS1.xml 
 
-# the cross-validation files need to be renamed and the folders that need to be copied to the directory ppi-benchmark as input files for the make-experiment steps will be prepared
-# zip all cross-validation text files - test0.txt contains data to evaluate one of the ten parts and train0.txt contains the rest of the data for the training process
+## the cross-validation files need to be renamed and the folders that need to be copied to the directory ppi-benchmark as input files for the make-experiment steps will be prepared
+## zip all cross-validation text files - test0.txt contains data to evaluate one of the ten parts and train0.txt contains the rest of the data for the training process
 python ../../rename_files_splitting_DS1.py
 cd ..
-cp -r splitting/DS1/ export_step6/splits-test-train
+mkdir export_step6/splits-test-train
+mkdir export_step6/splits-test-train/DS1
+cp splitting/DS1/* export_step6/splits-test-train/DS1/
 cp splitting/DS1.xml export_step6/
 cd export_step6
 java -jar split_AllGraphTransformer_CV.jar -f DS1.xml -s splits-test-train -o CV
@@ -76,9 +79,16 @@ gzip *.txt
 
 # return to the start directory and copy all files that are needed to run the all-paths graph kernel make-experiment steps
 cd ../../../..
-cp -r CPI-corpora-preparing/export_step6/splits-test-train/DS1/ ppi-benchmark/Corpora/splits-test-train/
+mkdir ppi-benchmark/Corpora/splits-test-train/
+mkdir ppi-benchmark/Corpora/splits-test-train/DS1/
+cp CPI-corpora-preparing/export_step6/splits-test-train/DS1/* ppi-benchmark/Corpora/splits-test-train/DS1/
+mkdir ppi-benchmark/Corpora/APG/
+mkdir ppi-benchmark/Corpora/APG/CV/
+mkdir ppi-benchmark/Corpora/APG/CV/corpus/
 cp -r CPI-corpora-preparing/export_step6/CV/DS1/ ppi-benchmark/Corpora/APG/CV/corpus/
+mkdir ppi-benchmark/Corpora/Original/
 cp CPI-corpora-preparing/export_step1/DS1.xml ppi-benchmark/Corpora/Original/
+mkdir ppi-benchmark/Corpora/Original-Modified/
 cp CPI-corpora-preparing/splitting/DS1.xml ppi-benchmark/Corpora/Original-Modified/
 
 # start cross-validation experiments
@@ -86,7 +96,7 @@ echo "run APG pipeline ..."
 cd ppi-benchmark/Experiments
 make experiment Corpora="DS1" Kernel="APG" expType="CV"
 
-# the main results are given in svn/ppi-benchmark/Experiments/APG/CV/DS1.sql as well as in svn/ppi-benchmark/Experiments/APG/CV/predict/DS1
+# the main results are given in ppi-benchmark/Experiments/APG/CV/DS1.sql as well as in ppi-benchmark/Experiments/APG/CV/predict/DS1
 # upload the results from DS1.sql to PostgreSQL:
 echo "uploading results to PostgreSQL ..."
 make output2db Corpora="DS1" Kernel="APG" expType="CV"
