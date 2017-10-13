@@ -37,7 +37,8 @@ if __name__=="__main__":
         prediction = 0.
         for key in instance.keys():
             value = instance[key]
-            prediction += value*W[key]
+            if key < len(W):
+                prediction += value*W[key]
         outputs.append(prediction)
     f = open(output_file, 'w')
     for identity, prediction, correct in zip(identities, outputs, Y):
