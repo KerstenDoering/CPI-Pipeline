@@ -36,6 +36,7 @@ python bllip_parser.py -i DS1.xml-ptb-s.txt -c DS1 -p $PROCESSES
 # ToDo: include biomedical parsing model - debug (kernels-howto.pdf)
 python merge_identifiers.py -c DS1 
 cd ..
+mkdir export_step3/charniak-johnson/
 cp bllip-parser/DS1.xml-ptb-s.txt-parsed_modified.txt export_step3/charniak-johnson/
 
 
@@ -130,6 +131,7 @@ cd export_step6
 
 
 rm -rf CV/DS1
+mkdir CV
 mkdir CV/DS1/
 
 ##java -jar  split_AllGraphTransformer_CV.jar -f DS1.xml -s splits-test-train -o CV
@@ -198,6 +200,7 @@ cp CPI-corpora-preparing/splitting/DS1.xml ppi-benchmark/Corpora/Original-Modifi
 
 # start cross-validation experiments
 echo "run APG pipeline ..."
+mkdir ppi-benchmark/Experiments/APG/CV
 cp runTraining.py ppi-benchmark/Experiments/APG/CV/run.py  ##
 cd ppi-benchmark/Experiments
 make experiment Corpora="DS1" Kernel="APG" expType="CV"
