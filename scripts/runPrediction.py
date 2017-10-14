@@ -23,6 +23,9 @@ from PerformanceMeasures import computeAUC
 from Fscore import *
 from Utilities import optimalFThreshold
 
+import subprocess
+from subprocess import PIPE
+
 def readAUC(source):
     predictions = []
     correct = []
@@ -48,9 +51,9 @@ predict="predict"       #Subfolder containing the predicted values
 
 corpora= os.listdir(base+splits) #Contains all five corpora
 
+
 #First Step; generate a dictionary for each train[0-9].txt
 print "Step1: Generating Dictionary"
-cmd =[]
 for corpus in corpora:
     print corpus
     os.makedirs(base +dictionary +os.sep +corpus)
@@ -59,9 +62,15 @@ for corpus in corpora:
     print base+splits +os.sep +corpus +os.sep +"train*.gz"
     for train in glob.glob(base+splits +os.sep +corpus +os.sep +"train*.gz"):
         print os.path.basename(train)
-        cmd.append("python " +source +os.sep + "BuildDictionaryMapping.py -p " +parser +" -t " +tokenizer +" -i " +train  +" -o " +base+dictionary+os.sep +corpus+os.sep+os.path.basename(train))
 
-runDistributed(5, cmd)
+        ##cmd.append("python " +source +os.sep + "BuildDictionaryMapping.py -p " +parser +" -t " +tokenizer +" -i " +train +" -o " +base+dictionary+os.sep +corpus+os.sep+os.path.basename(train))
+        cmd = "python "  +source +os.sep + "BuildDictionaryMapping.py -p " +parser +" -t " +tokenizer +" -i " +train  +" -o " +base+dictionary+os.sep +corpus+os.sep+os.path.basename(train)
+        process = subprocess.call(cmd, shell=True)
+
+
+
+##runDistributed(5, cmd)
+
 
 #Step Two: Generate 
 #compute the graph kernels for your data, producing a linearized feature representation corresponding to the graph kernels.
@@ -72,10 +81,27 @@ for corpus in corpora:
     os.makedirs(base +linearized +os.sep +corpus)
     for data in glob.glob(base+splits +os.sep +corpus +os.sep +"*.gz"): #Iterate over all Splits
         print os.path.basename(data)
-        number_regex = re.compile('\d+')
-        cmd.append( "python " +source +os.sep + "LinearizeAnalysis.py -p " +parser +" -t " +tokenizer  +" -i " +data +" -o " +base+linearized+os.sep +corpus+os.sep+os.path.basename(data) +" -d " +base +dictionary +os.sep +corpus +os.sep +"train" + number_regex.search(os.path.basename(data)).group(0) +".txt.gz")
 
-runDistributed(5, cmd)
+        number_regex = re.compile('\d+')
+
+        ##cmd.append( "python " +source +os.sep + "LinearizeAnalysis.py -p " +parser +" -t " +tokenizer +" -i " +data +" -o " +base+linearized+os.sep +corpus+os.sep+os.path.basename(data) +" -d " +base +dictionary +os.sep +corpus +os.sep +"train" + number_regex.search(os.path.basename(data)).group(0) +".txt.gz")
+         
+        cmd= "python " +source +os.sep + "LinearizeAnalysis.py -p " +parser +" -t " +tokenizer  +" -i " +data +" -o " +base+linearized+os.sep +corpus+os.sep+os.path.basename(data) +" -d " +base +dictionary +os.sep +corpus +os.sep +"train0.txt.gz"
+        print "cmd:", cmd
+        process = subprocess.call(cmd, shell=True)        
+
+##runDistributed(5, cmd)
+
+
+cmd = "cat "+ base + linearized +os.sep +corpus +os.sep +"test* >"+ base + linearized +os.sep +corpus +os.sep +"temp.txt.gz"
+
+os.system(cmd)
+
+cmd = "rm "+ base + linearized +os.sep +corpus +os.sep +"test*"
+os.system(cmd)
+
+cmd = "mv "+ base + linearized +os.sep +corpus +os.sep +"temp.txt.gz " + base + linearized +os.sep +corpus +os.sep +"test0.txt.gz"
+os.system(cmd)
 
 
 #Step Three: you can normalize the data vectors to unit length. Sometimes this can boost the results, sometimes it makes them worse.
@@ -86,10 +112,16 @@ for corpus in corpora:
     os.makedirs(base +normalized +os.sep +corpus)
     for data in glob.glob(base +linearized +os.sep +corpus +os.sep +"*.gz"): #Iterate over all Splits
         print os.path.basename(data)
-        cmd.append("python " +source +os.sep + "NormalizeData.py -i" +data +" -o " +base + normalized +os.sep +corpus +os.sep + os.path.basename(data))
-runDistributed(5, cmd)        
+        ##cmd.append("python " +source +os.sep + "NormalizeData.py -i" +data +" -o " +base + normalized +os.sep +corpus +os.sep + os.path.basename(data))
+        cmd= "python " +source +os.sep + "NormalizeData.py -i" +data +" -o " +base + normalized +os.sep +corpus +os.sep + os.path.basename(data)
+        process = subprocess.call(cmd, shell=True)
 
 
+##runDistributed(5, cmd)        
+
+
+
+'''
 #Step4: Train a  model for each trainingset
 print "Step4: Train a model for each Trainingset"
 regex = re.compile('\D+\d+')  
@@ -105,10 +137,14 @@ for corpus in corpora: #Iterate over corpora
 
         for l in range(-2,2): #Gridsearch
             lamda= pow(2,l) 
-            cmd.append("python " +source +os.sep +"TrainLinearized.py -b 2000 -r " +str(lamda) +" -i " +train +" -o "  +dir + "train" +str(lamda) +".model")
+            ##cmd.append("python " +source +os.sep +"TrainLinearized.py -b 2000 -r " +str(lamda) +" -i " +train +" -o "  +dir + "train" +str(lamda) +".model")
+            cmd= "python " +source +os.sep +"TrainLinearized.py -b 2000 -r " +str(lamda) +" -i " +train +" -o "  +dir + "train" +str(lamda) +".model"
+            process = subprocess.call(cmd, shell=True)
 
-runDistributed(5, cmd)
+##runDistributed(5, cmd)
+'''
 
+#'''
 print "Step 5: predict!"
 cmd= []
 regex = re.compile('(train)(\d+\.?\d*)(\.model)')
@@ -120,10 +156,20 @@ for corpus in corpora:
         os.makedirs(outdir)
         for model in glob.glob(base +trained +os.sep +corpus +os.sep +split +os.sep +"*.model"):
             lamda = regex.search(os.path.basename(model)).group(2)
-            cmd.append("python " +source +os.sep +"TestLinearized.py -i " +base +normalized +os.sep +corpus +os.sep +"test" +split[5:] +".txt.gz"  +" -m " +model  +" -o "  +outdir+"predict"+lamda+".out")
-            cmd.append("python " +source +os.sep +"TestLinearized.py -i " +base +normalized +os.sep +corpus +os.sep +"train" +split[5:] +".txt.gz"  +" -m "+model  +" -o "  +outdir+"threshold"+lamda+".out")                         
-runDistributed(5, cmd)
+            ##cmd.append("python " +source +os.sep +"TestLinearized.py -i " +base +normalized +os.sep +corpus +os.sep +"test" +split[5:] +".txt.gz"  +" -m " +model  +" -o "  +outdir+"predict"+lamda+".out")
+            print model
+            cmd = "python " +source +os.sep +"TestLinearized.py -i " +base +normalized +os.sep +corpus +os.sep +"test" +split[5:] +".txt.gz"  +" -m " +model  +" -o "  +outdir+"predict"+lamda+".out"
+            print "cmd:", cmd
+            process = subprocess.call(cmd, shell=True)
+            
+            ##cmd.append("python " +source +os.sep +"TestLinearized.py -i " +base +normalized +os.sep +corpus +os.sep +"train" +split[5:] +".txt.gz"  +" -m "+model  +" -o "  +outdir+"threshold"+lamda+".out")              
 
+            cmd = "python " +source +os.sep +"TestLinearized.py -i " +base +normalized +os.sep +corpus +os.sep +"train" +split[5:] +".txt.gz"  +" -m "+model  +" -o "  +outdir+"threshold"+lamda+".out"
+            print "cmd:", cmd
+            process = subprocess.call(cmd, shell=True)                      
+
+#runDistributed(5, cmd)
+#'''
 
 def getThreshold(f):
     f= open(estimate)
@@ -196,6 +242,8 @@ end = time.asctime()
 # print start and and time
 print "programme started - " + start
 print "programme ended - " + end
+
+#'''
 
 """
 print "Step 6 estimate quality!"
