@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ppi-benchmark/!svn/ver/1319/Converters/learning-format-api/src/main/java/org/learningformat/xml
+END
+Elements.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ppi-benchmark/!svn/ver/1232/Converters/learning-format-api/src/main/java/org/learningformat/xml/Elements.java
+END
+Parser.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/ppi-benchmark/!svn/ver/1319/Converters/learning-format-api/src/main/java/org/learningformat/xml/Parser.java
+END
+XmlConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/xml/XmlConstants.java
+END
+CorpusListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/xml/CorpusListener.java
+END
+Attributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ppi-benchmark/!svn/ver/637/Converters/learning-format-api/src/main/java/org/learningformat/xml/Attributes.java
+END
