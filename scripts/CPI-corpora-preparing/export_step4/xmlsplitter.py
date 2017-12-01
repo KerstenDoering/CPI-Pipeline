@@ -44,11 +44,5 @@ if __name__ == "__main__":
                       help="specify the corpus") 
 
     (options, args) = parser.parse_args()
-    
 
-    try:
-        
-        run_xmlsplit(options.corpus)
-
-    except:
-        pass
+    run_xmlsplit(options.corpus)

@@ -34,15 +34,15 @@ def split_AllGraphTrans(corpus, filename):
     #file_number_obj=re.match('DS1(\d+).txt',filename)
 
     testFile_name = "CV/" + corpus + "/test" + str(int(file_indx)-1)+".txt"
-    ##testFile = open(testFile_name,'w')
-    ##testFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><corpus source=\"DS1\">\n")
+    testFile = open(testFile_name,'w') ##
+    testFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><corpus source=\""+corpus+"\">\n") ##
 
     trainFile_name = "CV/" + corpus + "/train" + str(int(file_indx)-1)+".txt"
-    ##trainFile = open(trainFile_name,'w')
-    ##trainFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><corpus source=\"DS1\">\n")
+    trainFile = open(trainFile_name,'w')
+    trainFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><corpus source=\""+corpus+"\">\n") ##
 
-    ##testFile.close()
-    ##trainFile.close()
+    testFile.close()
+    trainFile.close()
 
 
 
@@ -64,7 +64,7 @@ def split_AllGraphTrans(corpus, filename):
                 testFile = open(testFile_name,'a')
 
                 testFile.write(ET.tostring(elem))
-                testFile.close()
+                ##testFile.close()
                 
                 del d[DocumentID]
                 
@@ -75,16 +75,20 @@ def split_AllGraphTrans(corpus, filename):
                 
                 trainFile.write(ET.tostring(elem))
                    
-                trainFile.close()
+                ##trainFile.close()
                             
                             
             elem.clear()
 
+    trainFile.write("</corpus>")
+    testFile.write("</corpus>")
+    trainFile.close()
+    testFile.close()
     sys.stdout.write("\n")
 
 
 
-def run(corpus, PROCESSES):
+def run(corpus, folds):
 
     paths = []
 
@@ -99,11 +103,11 @@ def run(corpus, PROCESSES):
 
     print paths
 
-    pool = Pool(processes=PROCESSES)    # start with processors
-    print "Initialized with ", PROCESSES, "processes"
+    pool = Pool(processes=folds)    # start with processors
+    print "Initialized with ", folds, "processes"
 
     #result = pool.map_async(split_AllGraphTrans, paths[0:PROCESSES])
-    result = pool.map_async(partial(split_AllGraphTrans, corpus), paths[0:PROCESSES])
+    result = pool.map_async(partial(split_AllGraphTrans, corpus), paths[0:folds])
     
     res = result.get()
 
@@ -124,15 +128,7 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
     
 
-    try:
-
-        # We will run through all the 10 files
-        #path = 'splits-test-train/' + options.corpus + '/'
-        run(options.corpus, 10)
-        ##run_xmlsplit(options.corpus)
-
-    except:
-        pass       
-
-    # We will run through all the 10 files  
-    ##run('splits-test-train/DS1/', 10)
+    # We will run through all the 10 files(folds)
+    #path = 'splits-test-train/' + options.corpus + '/'
+    run(options.corpus, 10)
+    ##run_xmlsplit(options.corpus)

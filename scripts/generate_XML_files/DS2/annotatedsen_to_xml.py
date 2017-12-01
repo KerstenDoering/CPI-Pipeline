@@ -3,7 +3,6 @@
 
 """
     Copyright (c) 2015, Elham Abbasian <e_abbasian@yahoo.com>, Kersten Doering <kersten.doering@gmail.com>
-
     This parser reads annotated sentences (output from get_relations.py) in a tab-separated format to generate a unified XML format (Tikk et al., 2010. A comprehensive benchmark of kernel methods to extract protein-protein interactions from literature. PLoS Comput. Biol).
 """
 
@@ -69,14 +68,19 @@ if __name__=="__main__":
 
     # doc_num counts the number of created documents
     doc_num =0
-
+    count = 0
     # read lines in CSV file
     for line in infile :
         # tab-separated format
         temp = line.strip().split("\t")
         # get PubMed ID, sentences ID, and the sentence itself
         # (ToDo: use a split command instead of this regular expression - debug)
-        curr_pmid = re.match('(\d{8})',temp[0]).group(0)
+        #curr_pmid = re.match('(\d{8})',temp[0]).group(0)
+        curr_pmid = re.match('(\d+)',temp[0]).group(0)
+        count+=1
+        sys.stdout.write("Sentences progressed: %d\r" % count )
+        sys.stdout.flush() 
+        #print count
         pmid_sent_num = temp[0]
         sentence_text = temp[1]
         # find all annotated proteins and compounds by matching their tags
@@ -169,7 +173,7 @@ if __name__=="__main__":
 
             # build entity tags according to the list identified tags from the CSV file (entity_list)
             for i in range(0,len(entity_list)) :
-                outfile.write("            <entity id=\"DS2.d"+str(doc_num-1)+".s"+str(sent_num)+".e"+str(i)+"\" origId=\""+entity_list[i][1]+"\" charOffset=\""+entity_list[i][3]+"\" type=\""+entity_list[i][0]+"\" text=\""+entity_list[i][2]+"\"/>"+"\n")
+                outfile.write("            <entity id=\"DS2.d"+str(doc_num-1)+".s"+str(sent_num)+".e"+str(i)+"\" origId=\""+entity_list[i][1]+"\" charOffset=\""+entity_list[i][3]+"\" type=\""+entity_list[i][0]+"\" text="+quoteattr(entity_list[i][2])+"/>"+"\n")
 
             # insert types of interaction for each pair of entities
             # get the index of the synonym interactions in entity_list
@@ -199,7 +203,7 @@ if __name__=="__main__":
             outfile.write("        <sentence id=\"DS2.d"+str(doc_num)+".s"+str(sent_num)+"\" origId=\""+str(pmid_sent_num)+"\" text="+quoteattr(pur_sent_text)+">"+"\n")
             # now have to make entity tags according to entity_list data.
             for i in range(0,len(entity_list)) :
-                outfile.write("            <entity id=\"DS2.d"+str(doc_num)+".s"+str(sent_num)+".e"+str(i)+"\" origId=\""+entity_list[i][1]+"\" charOffset=\""+entity_list[i][3]+"\" type=\""+entity_list[i][0]+"\" text=\""+entity_list[i][2]+"\"/>"+"\n")
+                outfile.write("            <entity id=\"DS2.d"+str(doc_num)+".s"+str(sent_num)+".e"+str(i)+"\" origId=\""+entity_list[i][1]+"\" charOffset=\""+entity_list[i][3]+"\" type=\""+entity_list[i][0]+"\" text="+quoteattr(entity_list[i][2])+"/>"+"\n")
             # build entity tags
             origId = "DS2.d"+str(doc_num)+".s"+str(sent_num)
             for int_id in range(len(interaction_list)) :
@@ -224,4 +228,5 @@ if __name__=="__main__":
     outfile.write("</corpus>\n")
     # close files
     infile.close()
-    outfile.close()
+outfile.close()
+sys.stdout.write("\n")

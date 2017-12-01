@@ -29,6 +29,7 @@ def readInstances(a_file):
     for event, elem in [(a,b) for a,b in acontent if a=="end" and b.tag=="document"]:
         doc_id = elem.get("id")
         result[doc_id] = elem
+    a_file.close()
     return result
 
 def belongsTo(offset, charOffsets):
@@ -45,13 +46,16 @@ def buildAMFromFullSentences(documents, AM_builder, matrixSettings, parser, toke
     doc_dictionary = {}
     print >> sys.stderr, "Processing", len(documents), "documents"
     documentCount = 0
-    for doc_id in documents:
+    for doc_id in documents.keys():
         if limit != None and documentCount >= limit:
             break
         print >> sys.stderr, "\rProcessing document " + str(documentCount+1),
         document = documents[doc_id]
+        del documents[doc_id]
+        #print "Len:", len(documents)
         doc_sent_dictionary = {}
         for child in document:
+            #print child
             if child.tag == "sentence":
                 sent_dictionary = {}
                 it = child.getiterator("tokenization")
@@ -59,6 +63,10 @@ def buildAMFromFullSentences(documents, AM_builder, matrixSettings, parser, toke
                 for toks in it:
                     if toks.get("tokenizer")== tokenizer:
                         tokenlist = toks
+
+                if (len(tokenlist) ==0): ##A
+                    continue
+        
                 #tokenlist = it.next()
                 it = child.getiterator("parse")
                 deplist = None
@@ -93,6 +101,7 @@ def buildAMFromFullSentences(documents, AM_builder, matrixSettings, parser, toke
                     if prepMatrix:
                         W = prepareMatrix(W)
                     sent_dictionary[pair.get("id")] = W, labels, output
+                    #print labels
                 doc_sent_dictionary[child.get("id")] = sent_dictionary
         doc_dictionary[doc_id] = doc_sent_dictionary
         documentCount += 1
@@ -106,7 +115,7 @@ def buildDictionary(instances):
     for instance in instances:
         W = instance[0]
         labels = instance[1]
-        if W == None:
+        if W is None: ##
             return feature_map
 
         for i in range(W.shape[0]):
@@ -124,7 +133,7 @@ def LinearizeGraph(W, labels, feature_map, mode):
     #proteins = set(["PROTEIN1", "PROTEIN2", "$$PROTEIN1", "$$PROTEIN2"]) 
     """Linearizes the representation of the graph"""
     linear = {}
-    if W == None:
+    if W is None: ##
         return linear
 
     for i in range(W.shape[0]):

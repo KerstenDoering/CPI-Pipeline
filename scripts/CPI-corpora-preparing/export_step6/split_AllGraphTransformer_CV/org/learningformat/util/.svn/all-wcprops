@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ppi-benchmark/!svn/ver/1172/Converters/learning-format-api/src/main/java/org/learningformat/util
+END
+PorterStemmer.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ppi-benchmark/!svn/ver/1029/Converters/learning-format-api/src/main/java/org/learningformat/util/PorterStemmer.java
+END
+ElementsCounter.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/ppi-benchmark/!svn/ver/1171/Converters/learning-format-api/src/main/java/org/learningformat/util/ElementsCounter.java
+END
+ArrayEnumerationFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ppi-benchmark/!svn/ver/1151/Converters/learning-format-api/src/main/java/org/learningformat/util/ArrayEnumerationFactory.java
+END
+FileHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ppi-benchmark/!svn/ver/1172/Converters/learning-format-api/src/main/java/org/learningformat/util/FileHelper.java
+END
+CSVDictReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ppi-benchmark/!svn/ver/1111/Converters/learning-format-api/src/main/java/org/learningformat/util/CSVDictReader.java
+END
+UndirectedPair.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ppi-benchmark/!svn/ver/1111/Converters/learning-format-api/src/main/java/org/learningformat/util/UndirectedPair.java
+END
