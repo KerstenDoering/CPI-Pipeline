@@ -1,0 +1,283 @@
+package org.learningformat.transform;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Writer;
+import java.nio.charset.Charset;
+import java.util.Collections;
+import java.util.Set;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.learningformat.api.Bracketing;
+import org.learningformat.api.CharOffset;
+import org.learningformat.api.Corpus;
+import org.learningformat.api.Document;
+import org.learningformat.api.LearningFormatConstants;
+import org.learningformat.api.Sentence;
+import org.learningformat.api.Token;
+import org.learningformat.api.Tokenization;
+import org.learningformat.api.CharOffset.SingleCharOffset;
+import org.learningformat.impl.DefaultCharOffsetMapEntry;
+import org.learningformat.impl.DefaultElementFactory;
+import org.learningformat.impl.ErrorListener;
+import org.learningformat.util.FileHelper;
+import org.learningformat.xml.CorpusListener;
+import org.learningformat.xml.Parser;
+import org.xml.sax.SAXException;
+
+public class BracketingTokenMapper extends ErrorListener implements CorpusListener {
+	
+	protected Writer out;
+	
+	public BracketingTokenMapper(Writer out) {
+		super();
+		this.out = out;
+	}
+	
+	private static String suffix = "-bracketing-tokens.txt";
+	private static Charset encoding = Charset.forName("UTF-8");
+	
+	private String parserName =  LearningFormatConstants.CHARNIAK_JOHNSON_MCCLOSKY_PARSER;
+	private String tokenizerName = LearningFormatConstants.CHARNIAK_LEASE_TOKENIZER;
+		
+	public static void main(String[] args) {
+		
+		try {
+			if (args.length < 1) {
+				// pipe mode
+				transform(null);
+			}
+			else {
+			for (int i = 0; i < args.length; i++) {
+				if ("--suffix".equals(args[i]))
+					suffix = args[++i];
+				else
+					transform(args[i]);
+			}
+			}
+			System.exit(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.exit(1);
+	}
+	
+	private static void transform(String path) throws SAXException, IOException, ParserConfigurationException {
+		Writer out = null;
+		InputStream in = null;
+		try {
+			if (path != null) {
+				in = new FileInputStream(path);
+				out = FileHelper.getBufferedFileWriter(new File(path + suffix), encoding);
+			} else {
+				in = System.in;
+				out = FileHelper.getBufferedOutputStreamWriter(System.out, encoding);
+			}
+					
+			BracketingTokenMapper mapper = new BracketingTokenMapper(out);
+			mapper.process(in);
+			
+		} finally {
+			if (in != null) {
+				in.close();
+			}
+
+			if (out != null) {
+				out.close();
+			}
+		}
+	}
+
+	private void process(InputStream in) throws ParserConfigurationException, SAXException, IOException {
+		
+		final Set<String> readTokenizations = Collections.singleton(tokenizerName);
+		final Set<String> readBracketings = Collections.singleton(parserName);
+		final Set<String> readParses = Collections.emptySet();
+		
+		Parser parser = new Parser(
+				readTokenizations,
+				readBracketings,
+				readParses,
+				new DefaultElementFactory(),
+				this
+		);
+		parser.process(in);
+	}
+
+	@Override
+	public void endCorpus() {
+	}
+
+	@Override
+	public void endDocument() {
+	}
+	
+	@Override
+	public void processSentence(Sentence sentence) {
+		
+		try {
+			
+			//System.out.println(sentence.getId());
+			
+			out.write(sentence.getId());
+			
+			final Bracketing bracketing = sentence.getBracketing(parserName);
+			if (bracketing == null)
+			    throw new IllegalStateException("No <bracketings> tag found. (Make sure you run the XML through PtbTreeInjector first.)");
+			final String bracketingTree = bracketing.getBracketing();
+			
+			int start = 0;
+			final Tokenization tokenization = sentence.getTokenization(tokenizerName);
+			boolean inQuot = false;
+			for (Token t : tokenization.getTokens()) {
+				for (SingleCharOffset so : t.getCharOffset().getCharOffsets()) {
+					
+					String span = sentence.substring(so);
+					
+					
+					
+					if (span.length() == 2 && BracketingConstants.RIGHT_BRACKET == span.charAt(0) && BracketingConstants.RIGHT_BRACKET == span.charAt(1)) {
+						/* )) could not be matched, we make it more simple */
+						span = String.valueOf(BracketingConstants.RIGHT_BRACKET);
+					}
+					
+					if (span.length() == 1) {
+						/* we need to transform some chars */
+						if (BracketingConstants.QUOT == span.charAt(0)) {
+							
+							// choose from QUOT_START and QUOT_END the one which is closer.
+							span = closerToken(bracketingTree, start, 
+									BracketingConstants.QUOT_START, 
+									BracketingConstants.QUOT_END);
+								
+							inQuot = !inQuot;
+						}
+						else if (BracketingConstants.LEFT_BRACKET == span.charAt(0)) {
+							span = BracketingConstants.LRB;
+						}
+						else if (BracketingConstants.RIGHT_BRACKET == span.charAt(0)) {
+							span = BracketingConstants.RRB;
+						}
+						else if (BracketingConstants.LEFT_SQUARE_BRACKET == span.charAt(0)) {
+							span = BracketingConstants.LSB;
+						}
+						else if (BracketingConstants.RIGHT_SQUARE_BRACKET == span.charAt(0)) {
+							span = BracketingConstants.RSB;
+						}
+						else if (BracketingConstants.LEFT_CURLY_BRACKET == span.charAt(0)) {
+							span = BracketingConstants.LCB;
+						}
+						else if (BracketingConstants.RIGHT_CURLY_BRACKET == span.charAt(0)) {
+							span = BracketingConstants.RCB;
+						}
+					}
+					else if (span.equals("''"))
+					{
+						span = closerToken(bracketingTree, start, "''", "\"");
+					}
+					
+					
+					/* we are looking only for terminals */
+					int bracketingStart =  bracketingTree.indexOf(span + BracketingConstants.RIGHT_BRACKET, start);
+					// retry with a period at the end
+					if (bracketingStart < 0)
+					{
+						/** see PennTreeBankConverter#ptb2alignedTokens(String bracketed, String plain, int baseOffset, List<Token>) */
+						bracketingStart =  bracketingTree.indexOf(span + "." + BracketingConstants.RIGHT_BRACKET, start);
+					}
+					// retry with an 'n' in front (to work around "can't2 >  "can" + "n't" conversion by CL parser)
+					if (bracketingStart < 0 && span.startsWith("'"))
+					{
+						/** see PennTreeBankConverter#ptb2alignedTokens(String bracketed, String plain, int baseOffset, List<Token>) */
+						bracketingStart =  bracketingTree.indexOf("n" + span, start);
+					}
+					
+					if (bracketingStart < 0) {
+						error(new IllegalStateException("Could not match '"+ span +"' starting from "+ start +" in "+ bracketingTree));
+						// instead of GOTO
+						out.write(BracketingConstants.LF);
+						return;
+					}
+					
+					/* -1 because we added BracketingConstants.RIGHT_BRACKET */
+					int bracketingEnd = bracketingStart + span.length() ; //- 1;
+					DefaultCharOffsetMapEntry en = new DefaultCharOffsetMapEntry();
+					en.setSentenceTextCharOffset(so);
+					en.setBracketingCharOffset(new SingleCharOffset((short)bracketingStart, (short)bracketingEnd));
+					out.write(CharOffset.COMMA);
+					out.write(String.valueOf(en));
+					start = bracketingEnd;
+
+					// DEBUG
+					if ((!sentence.substring(so).equals(span))|| span.length() == 0 || bracketingEnd <= bracketingStart)
+						System.err.println("HACK: "+(sentence.getId())+":'" + span + "' instead of '" + sentence.substring(so) +"' " + en); 
+				}
+			}
+			out.write(BracketingConstants.LF);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		
+	}
+
+	@Override
+	public void startCorpus(Corpus corpus) {
+	}
+
+	@Override
+	public void startDocument(Document document) {
+	}
+
+	/**
+	 * Find the closest lying token. 
+	 * 
+	 * @param bracketingTree
+	 * @param start
+	 * @param token1
+	 * @param token2
+	 * @return the closest lying of token1 or token2; OR token1 if none of them is present as a token.
+	 */
+	public static String closerToken(String bracketingTree, int start, String token1, String token2)
+	{
+		return (closer(bracketingTree, start,
+			token1 + BracketingConstants.RIGHT_BRACKET,
+			token2 + BracketingConstants.RIGHT_BRACKET) > 0)
+		? token2
+		: token1;
+	}
+	
+	
+	/**
+	 * Find the closest lying substring.
+	 * 
+	 * @param haystack
+	 * @param needle1
+	 * @param needle2
+	 * @param haystackpos
+	 * @return
+	 */
+	private static int closer(String haystack, int haystackpos, String needle1, String needle2)
+	{
+		// choose from QUOT_START and QUOT_END the one which is closer.
+		int startIndex = haystack.indexOf(needle1, haystackpos);
+		int endIndex   = haystack.indexOf(needle2, haystackpos);
+
+		// no match
+		if (startIndex < 0 && endIndex < 0) return -1;
+
+		// handle partial match
+		if (startIndex < 0) startIndex = Integer.MAX_VALUE;
+		if (endIndex < 0) endIndex = Integer.MAX_VALUE;
+		
+		// return closest
+		return  
+			(startIndex < endIndex) 
+				? 0
+				: 1;
+		
+	}
+
+}

@@ -51,12 +51,8 @@ if __name__ == "__main__":
                       help="specify the corpus") 
 
     (options, args) = parser.parse_args()
-    
 
-    
-    try:
         
-        run_merg_identifier(options.corpus)
+    run_merg_identifier(options.corpus)
 
-    except:
-        pass
+

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Class-Path: . split_AllGraphTransformer_CV_lib/commons-configuration-1
+ .6.jar split_AllGraphTransformer_CV_lib/practicalxml-1.1.3.jar split_
+ AllGraphTransformer_CV_lib/lfapi.jar split_AllGraphTransformer_CV_lib
+ /jargs.jar split_AllGraphTransformer_CV_lib/commons-collections-3.2.1
+ .jar split_AllGraphTransformer_CV_lib/jgraph.jar split_AllGraphTransf
+ ormer_CV_lib/jgrapht-0.8.1.jar split_AllGraphTransformer_CV_lib/openc
+ sv-2.2.jar split_AllGraphTransformer_CV_lib/stanford-parser-2010-07-0
+ 9.jar split_AllGraphTransformer_CV_lib/commons-logging-1.1.1.jar spli
+ t_AllGraphTransformer_CV_lib/commons-lang-2.5.jar
+Main-Class: org.learningformat.transform.AllGraphTransformer
+
