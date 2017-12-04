@@ -145,7 +145,7 @@ sub endElement
     my( $parseinst, $element ) = @_;
 
     if ($element eq 'corpus') {
-        my $dir = $corpus;
+        my $dir = 'DS';
         print STDERR "Splitting corpus '$corpus' ...\n";
         mkdir $dir;
         
