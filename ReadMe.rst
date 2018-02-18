@@ -54,8 +54,8 @@ Introduction
     - The PubMedPortable project is referred to as PubMed2Go in this thesis.
 
 
-XML Data Set Creation
-*********************
+XML Evaluation Data Set
+***********************
 
 - The script parser.py in the directories scripts/generate_XML_files/DS1/ und scripts/generate_XML_files/DS2 creates the files interactions.txt and no_interactions.txt from the HTML files in the folder data_sets. 
 
@@ -112,8 +112,8 @@ XML Data Set Creation
         Sentences seen: 40
 
 
-APG Kernel Pipeline
-*******************
+Requirements for APG and SL Kernel Pipeline
+*******************************************
 
 - Many of the following steps are described similarly in the original ppi-benchmark documentation (scripts/ppi-benchmark/documentationkernels-howto.pdf).
 
@@ -151,19 +151,35 @@ Makefile Configuration
 
     PARSER=Charniak-Johnson-McClosky
 
-- To make use of DS1 and APG with cross-validation, the following lines need to be set in the file "scripts/ppi-benchmark/Makefile.config":
+- To make use of DS1 and SL with cross-validation, the following lines need to be set in the file "scripts/ppi-benchmark/Makefile.config":
 
     BENCHMARKCORPORA=DS1 #DS2 #LLL #HPRD50 AIMed BioInfer IEPA
-
 
     CORPORA=$(BENCHMARKCORPORA)
 
     TEST_CORPORA=DS1 #DS2 #LLL HPRD50
 
+    KERNELS=SL #APG
 
-    KERNELS=APG #SL #ST SST PT SpT kBSPS APG cosine edit SL Kim
+    EXPTYPES=CV #PR XX
 
-    EXPTYPES=CV# CC CL
+- This works analogously for DS2 and DS3 with the SL kernel.
+
+- To make use of any data set and APG with cross-validation, the following lines need to be set in the file "scripts/ppi-benchmark/Makefile.config":
+
+    BENCHMARKCORPORA=DS #LLL #HPRD50 AIMed BioInfer IEPA
+
+    CORPORA=$(BENCHMARKCORPORA)
+
+    TEST_CORPORA=DS #DS2 #LLL HPRD50
+
+    KERNELS=APG #SL
+
+    EXPTYPES=CV #PR XX
+
+- This works analogously for DS2 and DS3 with the APG kernel.
+
+- If you want to run the cross-corpus mode, set EXPTYES=XX, and if you want to run the prediction mode, use EXPTYES=PR.
 
 
 PostgreSQL Configuration
@@ -212,15 +228,11 @@ PostgreSQL Configuration
 Executable Files
 ################
 
-- If the following files are not executable after cloning this repository, make them executable with the command "sudo chmod +x <file>"
+- Check whether the following files are executable after cloning this repository. If they are not marked as executable, you need to make them executable with the command "sudo chmod +x <file>"
 
-    - scripts/APG_pipeline_DS1.sh
+    - scripts/APG_pipeline_DS.sh
 
-    - scripts/APG_pipeline_DS2.sh
-
-    - scripts/SL_pipeline_DS1.sh
-
-    - scripts/SL_pipeline_DS1.sh
+    - scripts/SL_pipeline.sh
 
     - scripts/CPI-corpora-preparing/bllip-parser/first-stage/PARSE/parseIt
 
@@ -235,38 +247,49 @@ Executable Files
     - results/summary/APG/get_csv_results.sh
 
 
-Run the Kernel Pipelines
-************************
+How to run the Kernel Pipelines
+*******************************
 
-- This section describes how to use the APG and SL kernel with DS1, DS2, and the combined data set 3 (DS3). 
+- This section describes how to use run the APG and SL kernel with DS1, DS2, and the combined data set 3 (DS3) in different modes (cross-validation, prediction, cross-corpus). 
 
 - Furthermore, it contains a short paragraph about how to use these models.
-
 
 APG Kernel pipeline
 ###################
 
-- It is recommended that the folders CPI-corpora-preparing, generate_XML_files, and ppi-benchmark are copied with the shell scripts APG_pipeline_DS1.sh and APG_pipeline_DS2.sh to another directory to store these empty versions as a backup.
+- It is recommended that the folders CPI-corpora-preparing, generate_XML_files, and ppi-benchmark are copied (including the shell script APG_pipeline.sh) to another directory to store the empty GitHub versions as a backup.
 
     - The path to the folder from which the pipeline should be executed needs to be set in the file "scripts/ppi-benchmark/Makefile.config" in line 7, e.g. like this:
 
     - baseDir=/home/<user>/Desktop/ppi-benchmark
 
-- If the pipeline for DS2 should be run, the configuration needs to be updated as previously described in the subsection "Makefile Configuration".
-
 - You can use the test data set with 40 sentences to check whether your pipeline works. 
 
 - While the complete DS1 and DS2 runtime is about several hours, the test case takes around 6 min on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
 
-    - To use this test data set, go to your (new) working directory and change into the folder scripts/generate_XML_files/DS1_test_case_40_sentences to copy the file DS1.xml into the directory scripts/generate_XML_files/DS1.
+    - To use this test data set, go to your (new) working directory, where APG_pipeline.sh is located.
 
-- Start the pipeline by executing the shell script in the command-line:
+    - You can move your input file to "generate_XML_files/DS.xml" or directly call it, but it needs to be located in "generate_XML_files/DS
 
-    - ./APG_pipeline_DS1.sh
+- Start the pipeline in cross-validation mode by executing the shell script in the command-line (use -p 4, if you want to use 4 processors - default is -p 2):
+
+    - ./APG_pipeline.sh -f DS1-40.xml -t CV
 
     - The script contains more comments on the different preprocessing and make experiment steps.
 
-    - The runtime can be checked considering the time written to the command-line before the script terminates.
+- Use the cross-corpus mode with your own training and prediction file. Generate "CPI-corpora-preparing/step5_copied_from_3/train0.txt.gz" with the first run and do the prediction on the other data set with the second command. It is important that you move (rename) your training file to "generate_XML_files/DS/train.xml" and your prediction file to "generate_XML_files/DS/test.xml":
+
+    - ./APG_pipeline.sh -t XX -f DS1-40.xml -x train
+
+    - ./APG_pipeline.sh -t XX -f DS_50sent.xml -x test
+
+- Use the following command for prediction mode - the training will be based on the combined data set DS3 "scripts/training/train0.txt.gz":
+
+    - ./APG_pipeline.sh -f DS1-40.xml -t PR
+
+- You can use any data set which you received in a previous XX run "CPI-corpora-preparing/step5_copied_from_3/train0.txt.gz" and copy it to scripts/training for the next PR run.
+
+- The runtime can be checked considering the time written to the command-line before the script terminates.
 
 - This script also uploads the results to the PostgreSQL database. 
 
@@ -296,6 +319,8 @@ APG Kernel pipeline
 
 - Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.
 
+- Ammar Qaseem updated and refined this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.
+
 
 SL Kernel pipeline
 ##################
@@ -306,19 +331,17 @@ SL Kernel pipeline
 
     - KERNELS= SL #APG #ST SST PT SpT kBSPS APG cosine edit SL Kim
 
-- With the current implementation, the scripts SL_pipeline_DS1.sh and SL_pipeline_DS2.sh make use of the files generated in the first preprocessing steps of the APG pipeline.
+- With the current implementation, the script SL_pipeline.sh and makes use of the files generated in the first preprocessing steps of the APG pipeline. As every file to be used can be called DS.xml, please take care, that you first the APG pipeline with any file renamed to DS.xml and then use the SL kernel pipeline.
 
 - Copy them to the directory, in which you started your APG kernel calculation.
 
-- If you did not yet run the APG kernel pipeline, open the scripts APG_pipeline_DS1.sh and APG_pipeline_DS2.sh, comment out the make experiment steps, and execute them as described in the previous section.
+- If you did not yet run the APG kernel pipeline, use the script APG_pipeline.sh first, comment out the make experiment steps, and execute it as described in the previous section.
 
 - The SL kernel pipeline does not need the dependency tree format and it makes use of the ppi-benchmark integrated Charniak-Lease package, but it needs the same cross-validation files to be directly comparable to the APG kernel approach.
 
 - You can use the same directory to execute the SL kernel scripts as you did in case of the APG kernel approach, because the two kernels use different directories:
 
-    - ./SL_pipeline_DS1.sh
-
-    - ./SL_pipeline_DS2.sh
+    - ./SL_pipeline.sh
 
 - The evaluation steps are very similar to the ones used for the APG kernel pipeline.
 
@@ -352,35 +375,17 @@ Results of the Combined Model Representing PubMed
 
 - Therefore, DS1 and DS2 can be summarised to a combined data set 3 (DS3).
 
-- A concatenation of all DS1 and DS2 cross-validation files is needed to compare the single APG and SL results on DS1 and DS2. This was achieved with the following steps.
+- Considering the baseline calculation based on co-occurrences in the introduction, the combined data set shows an accuracy (equal to precision in this case) of 58.2 % and an F1 score of 73.6 %.
 
-    - Change into directory CPI-Pipeline/scripts and use the splitted files to generate the cross-validation files for DS3.
+- APG and SL kernel both perform better than the concept of co-occurrences as shown in the two tables with results for DS3.
 
-    - Merge the files training_dataset_sorted.csv in the directories DS1 and DS2, too.
+- Run the APG pipeline (do not forget to set your baseDir path in ppi-benchmark/Makefile.config in line 7):
 
-    - The script annotatedsen_to_xml.py was slightly modified to work with the identifier DS3.
-
-    - cd CPI-Pipeline/scripts
-
-    - chmod +x merge.sh
-
-    - ./merge.sh 
-
-    - cd generate_XML_files/DS3/
-
-    - python annotatedsen_to_xml.py 
-
-    - Create the folders CPI-Pipeline/scripts/CPI-corpora-preparing/export_step6/CV/DS3, CPI-corpora-preparing/export_step6/splits-test-train/DS3, CPI-Pipeline/scripts/CPI-corpora-preparing/splitting/DS3, CPI-Pipeline/scripts/ppi-benchmark/Corpora/APG/CV/corpus/DS3, CPI-Pipeline/scripts/ppi-benchmark/Corpora/Splits/DS3, and CPI-Pipeline/scripts/ppi-benchmark/Corpora/splits-test-train/DS3.
-
-    - Within the updated pipeline for DS3, all cross-validation splits are automatically merged with the order from DS1 and DS2 and all new DS3 document identifiers.
-
-    - After copying your scripts folder to the desired starting directory on your system, run the APG pipeline (do not forget to set your baseDir path in ppi-benchmark/Makefile.config in line 7):
-
-        - ./APG_pipeline_DS3.sh 
+    - ./APG_pipeline.sh -f DS3.xml -t CV
 
         - The preprocessing (actually only step 2 (bllip-parser)) took around 30 min (mainly single core calculations) and the rest of the pipeline with all parameter selections took around 5 h.
 
-        - ./SL_pipeline_DS3.sh
+    - ./SL_pipeline.sh
 
         - The runtime is around 29 min on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
 
@@ -418,11 +423,36 @@ Results of the Combined Model Representing PubMed
 
     .. image:: figures/SL_DS3.png
 
+How to reproduce the benchmark results for the combined data set
+################################################################
+
+- Technically, a concatenation of all DS1 and DS2 cross-validation files is needed to compare the single APG and SL results on DS1 and DS2. This was achieved with the following steps.
+
+    - Change into directory CPI-Pipeline/scripts and use the splitted files to generate the cross-validation files for DS3.
+
+    - Merge the files training_dataset_sorted.csv in the directories DS1 and DS2, too.
+
+    - The script annotatedsen_to_xml.py was slightly modified to work with the identifier DS3.
+
+    - cd CPI-Pipeline/scripts
+
+    - chmod +x merge.sh
+
+    - ./merge.sh 
+
+    - cd generate_XML_files/DS3/
+
+    - python annotatedsen_to_xml.py 
+
+    - All cross-validation splits are automatically merged with the order from DS1 and DS2 and all new DS3 document identifiers.
+
+- You can reproduce any cross-validation run by commenting out lines 180, 184, 185, and 191 in APG_pipeline.sh and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
+
 
 Usage of Created Models
 #######################
 
-- If you want to use the models created with DS1 or DS2, go to the folders scripts/ppi-benchmark/Experiments/APG/CV or scripts/ppi-benchmark/Experiments/SL/CV and comment out the training process step in run.py.
+- If you want to use the models created with any data set, use the XX mode. If you want to use our representative model of PubMed, run the PR mode.
 
 - You can use PubMedPortable with its named entity recognition interfaces to prepare sentences with highlighted compounds and proteins.
 

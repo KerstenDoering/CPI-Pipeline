@@ -1,4 +1,4 @@
-Processors=2 # defaulf
+Processors=2 # default
 
 help:
 	$(info use 'make experiment \

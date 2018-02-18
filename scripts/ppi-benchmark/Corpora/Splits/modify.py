@@ -12,7 +12,7 @@ import os
 # get current directory
 mypath = os.getcwd()
 # change into data set directory and get file names
-os.chdir("DS1")
+os.chdir("DS")
 files = os.listdir(os.getcwd())
 # start iteration and get all document IDs (space-separated format)
 for infile in files:

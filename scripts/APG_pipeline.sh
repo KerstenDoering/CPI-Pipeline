@@ -1,18 +1,18 @@
 #! /bin/bash
 
-#    Copyright (c) 2015, Kersten Doering <kersten.doering@gmail.com>, Elham Abbasian <e_abbasian@yahoo.com>
+#    Copyright (c) 2015, Kersten Doering, Ammar Qaseem, Elham Abbasian
 
 #    This script executes the steps from the protein-protein-interaction pipeline of Tikk et al. (scripts/ppi-benchmark/Documentation/kernels-howto.pdf, (Tikk et al., 2010. A comprehensive benchmark of kernel methods to extract protein-protein interactions from literature. PLoS Comput. Biol).
 
 VERSION=0.1
 
-usage="$(basename "$0") [-h] [-f] [-x] [-p n] -- This script to identify the functional Compound-Protein relationships
+usage="$(basename "$0") [-h] [-f] [-x] [-p n] -- This script identifies functional compound-protein relationships.
 
 where:
     -h  help.
     -f  Input file (default: DS.xml).
     -t  Type of experiment (CV, PR, XX).
-    -x  Type of process(Train or test). This parameter just used with XX.
+    -x  Type of process(train or test). This parameter just used with XX.
     -p  Number of processors (default: 2)."
 
 
