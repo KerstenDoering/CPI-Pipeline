@@ -21,6 +21,58 @@ ${SLdata}/CV/corpus/%: ${stlfDir}/%.xml
 
 #			--skip-train \
 
+.PRECIOUS: ${SLdata}/PR/corpus/%
+${SLdata}/PR/corpus/%: ${stlfDir}/%.xml
+	$(MAKE) "${LF_JAR}"
+	mkdir -p "${SLdata}/PR/corpus"
+	$(JAVA) ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" \
+		org.learningformat.api.JSRE_Tranformer \
+			-s "${splitDir}" \
+			-o "${SLdata}/PR/corpus" \
+			-t '${SL_TOKENIZER}' \
+			--porter \
+			--skip-train \
+			-i "$<" \
+			> "$@.log" 2>&1
+
+#			--skip-train \
+
+.PRECIOUS: ${SLdata}/XX/corpus/%
+${SLdata}/XX/corpus/%: ${stlfDir}/%.xml
+	$(MAKE) "${LF_JAR}"
+	mkdir -p "${SLdata}/XX/corpus"
+	$(JAVA) ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" \
+		org.learningformat.api.JSRE_Tranformer \
+			-s "${splitDir}" \
+			-o "${SLdata}/XX/corpus" \
+			-t '${SL_TOKENIZER}' \
+			--porter \
+			--skip-train \
+			-i "$<" \
+			> "$@.log" 2>&1
+	
+#			--skip-train \
+
+.PRECIOUS: ${SLdata}/XXX/corpus/%
+${SLdata}/XXX/corpus/%: ${stlfDir}/%.xml
+	@echo "PRRRRRRRRRR"
+	$(MAKE) "${LF_JAR}"
+	mkdir -p "${SLdata}/XXX/corpus"
+	$(JAVA) ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" \
+		org.learningformat.api.JSRE_Tranformer \
+			-s "${splitDir}" \
+			-o "${SLdata}/XXX/corpus" \
+			-t '${SL_TOKENIZER}' \
+			--porter \
+			--skip-train \
+			-i "$<" \
+			> "$@.log" 2>&1
+	ifeq ($(EXPTYPES), XXX )
+		exit 1 ;
+	endif	
+#			--skip-train \
+
+
 .PRECIOUS: ${SLdata}/CC/corpus/%
 ${SLdata}/CC/corpus/%: ${SL_CV_LF}
 	for cc in $(CORPORA) ; do \

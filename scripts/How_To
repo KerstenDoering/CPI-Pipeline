@@ -1,0 +1,12 @@
+SL kernel:
+
+    CV: 
+        make experiment Kernel=SL expTyp=CV InputFile=DS.xml Processors=4
+    PR: 
+        make experiment Kernel=SL expTyp=PR InputFile=DS.xml Processors=4
+    XX: 
+        make experiment Kernel=SL expTyp=XX TrainFile=train.xml TestFile=test.xml Processors=4
+
+
+Same for APG just change the Kernel=apg        
+

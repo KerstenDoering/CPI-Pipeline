@@ -1,882 +1,525 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <corpus source="DS">
-    <document id="DS.d0" origId="10024085">
-        <sentence id="DS.d0.s0" origId="10024085-4" text="In patients with eating disorder, logarithmic values for Leptin were significantly correlated with the body fat mass (r = .828, P &lt; .001), eating behavior score (r = .777, P &lt; .001), and LH (r = .465, P &lt; .001), FSH (r = .440, P &lt; .001), T3 (r = .572, P &lt; .001), insulin (r = .410, P &lt; .001), and cortisol (r = -.389, P &lt; .001) levels.">
-            <entity id="DS.d0.s0.e0" origId="P41159,A4D0Y8" charOffset="57-63" type="protein" text="Leptin"/>
-            <entity id="DS.d0.s0.e1" origId="P01308,I3WAC9" charOffset="263-270" type="protein" text="insulin"/>
-            <entity id="DS.d0.s0.e2" origId="5754" charOffset="297-305" type="compound" text="cortisol"/>
-            <pair e1="DS.d0.s0.e2" e2="DS.d0.s0.e0" id="DS.d0.s0.i0" interaction="False" />
-            <pair e1="DS.d0.s0.e2" e2="DS.d0.s0.e1" id="DS.d0.s0.i1" interaction="False" />
+    <document id="DS.d0" origId="17590240">
+        <sentence id="DS.d0.s0" origId="17590240-0" text="Epigallocatechin gallate (EGCG) suppresses beta-amyloid-induced neurotoxicity through inhibiting c-Abl/FE65 nuclear translocation and GSK3 beta activation.">
+            <entity id="DS.d0.s0.e0" origId="C045651" charOffset="0-24" type="compound" text="Epigallocatechin gallate"/>
+            <entity id="DS.d0.s0.e1" origId="CHEBI:4806" charOffset="26-30" type="compound" text="EGCG"/>
+            <entity id="DS.d0.s0.e2" origId="P00519,A0A024R8E2,Q59FK4" charOffset="97-102" type="protein" text="c-Abl"/>
+            <entity id="DS.d0.s0.e3" origId="O00213,B7Z4M9" charOffset="103-107" type="protein" text="FE65"/>
+            <entity id="DS.d0.s0.e4" origId="P49841,Q6FI27" charOffset="134-143" type="protein" text="GSK3 beta"/>
+            <pair e1="DS.d0.s0.e0" e2="DS.d0.s0.e2" id="DS.d0.s0.i0" interaction="False" />
+            <pair e1="DS.d0.s0.e0" e2="DS.d0.s0.e3" id="DS.d0.s0.i1" interaction="False" />
+            <pair e1="DS.d0.s0.e0" e2="DS.d0.s0.e4" id="DS.d0.s0.i2" interaction="False" />
+            <pair e1="DS.d0.s0.e1" e2="DS.d0.s0.e2" id="DS.d0.s0.i3" interaction="False" />
+            <pair e1="DS.d0.s0.e1" e2="DS.d0.s0.e3" id="DS.d0.s0.i4" interaction="False" />
+            <pair e1="DS.d0.s0.e1" e2="DS.d0.s0.e4" id="DS.d0.s0.i5" interaction="False" />
+        </sentence>
+        <sentence id="DS.d0.s1" origId="17590240-2" text="Evidence is increasing that green tea flavonoids can protect cells from A beta-mediated neurotoxicity.">
+            <entity id="DS.d0.s1.e0" origId="D005419" charOffset="38-48" type="compound" text="flavonoids"/>
+            <entity id="DS.d0.s1.e1" origId="P05067,A0A0A0MRG2,B4DGD0,B4DJT9,A0A140VJC8,E9PG40" charOffset="72-78" type="protein" text="A beta"/>
+            <pair e1="DS.d0.s1.e0" e2="DS.d0.s1.e1" id="DS.d0.s1.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d0.s2" origId="17590240-5" text="We demonstrated that treatment with EGCG reduced the A beta levels by enhancing endogenous APP nonamyloidogenic proteolytic processing.">
+            <entity id="DS.d0.s2.e0" origId="CHEBI:4806" charOffset="36-40" type="compound" text="EGCG"/>
+            <entity id="DS.d0.s2.e1" origId="P05067,A0A0A0MRG2,B4DGD0,B4DJT9,A0A140VJC8,E9PG40" charOffset="53-59" type="protein" text="A beta"/>
+            <pair e1="DS.d0.s2.e0" e2="DS.d0.s2.e1" id="DS.d0.s2.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d0.s3" origId="17590240-6" text="Furthermore, EGCG also decreased nuclear translocation of c-Abl and blocked APP-C99-dependent GSK3 beta activation, and these inhibitory effects occurred through the interruption of c-Abl/Fe65 interaction.">
+            <entity id="DS.d0.s3.e0" origId="CHEBI:4806" charOffset="13-17" type="compound" text="EGCG"/>
+            <entity id="DS.d0.s3.e1" origId="P00519,A0A024R8E2,Q59FK4" charOffset="58-63" type="protein" text="c-Abl"/>
+            <entity id="DS.d0.s3.e2" origId="P49841,Q6FI27" charOffset="94-103" type="protein" text="GSK3 beta"/>
+            <entity id="DS.d0.s3.e3" origId="P00519,A0A024R8E2,Q59FK4" charOffset="182-187" type="protein" text="c-Abl"/>
+            <entity id="DS.d0.s3.e4" origId="O00213,B7Z4M9" charOffset="188-192" type="protein" text="Fe65"/>
+            <pair e1="DS.d0.s3.e0" e2="DS.d0.s3.e1" id="DS.d0.s3.i0" interaction="False" />
+            <pair e1="DS.d0.s3.e0" e2="DS.d0.s3.e2" id="DS.d0.s3.i1" interaction="False" />
+            <pair e1="DS.d0.s3.e0" e2="DS.d0.s3.e4" id="DS.d0.s3.i2" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d1" origId="10048132">
-        <sentence id="DS.d1.s0" origId="10048132-4" text="Support for the TCDD-AhR-mediated increases in ACTH concentrations is provided by the following observations: (1) ANF inhibited both the 1.3- to 2-fold TCDD-induced increase in basal medium and intracellular ACTH concentrations and the 30% TCDD-induced decrease in medium ACTH levels and the 1.2-fold increase in intracellular ACTH levels in corticotropin-releasing hormone (CRH)-stimulated cells, (2) BNF increased basal medium (1.7-fold) and intracellular (1.3-fold) ACTH concentrations, (3) BNF + TCDD demonstrated additivity by increasing basal medium (2.4-fold) and intracellular (1.7-fold) ACTH concentrations, (4) PCB increased basal medium (1.8- to 2.1-fold) and intracellular (1.3- to 1.8-fold) ACTH concentrations and inhibited medium ACTH secretion in CRH stimulated cells by 24-43%, and (5) HCB did not effect basal or CRH stimulated medium and intracellular ACTH concentrations.">
-            <entity id="DS.d1.s0.e0" origId="G3V6M2" charOffset="21-24" type="protein" text="AhR"/>
-            <entity id="DS.d1.s0.e1" origId="P01143" charOffset="342-373" type="protein" text="corticotropin-releasing hormone"/>
-            <entity id="DS.d1.s0.e2" origId="P01143" charOffset="375-378" type="protein" text="CRH"/>
-            <entity id="DS.d1.s0.e3" origId="80654" charOffset="402-405" type="compound" text="BNF"/>
-            <entity id="DS.d1.s0.e4" origId="80654" charOffset="494-497" type="compound" text="BNF"/>
-            <entity id="DS.d1.s0.e5" origId="P01143" charOffset="763-766" type="protein" text="CRH"/>
-            <entity id="DS.d1.s0.e6" origId="P01143" charOffset="763-766" type="protein" text="CRH"/>
-            <pair e1="DS.d1.s0.e3" e2="DS.d1.s0.e0" id="DS.d1.s0.i0" interaction="False" />
-            <pair e1="DS.d1.s0.e3" e2="DS.d1.s0.e2" id="DS.d1.s0.i1" interaction="False" />
-            <pair e1="DS.d1.s0.e3" e2="DS.d1.s0.e1" id="DS.d1.s0.i2" interaction="False" />
+    <document id="DS.d1" origId="17629591">
+        <sentence id="DS.d1.s0" origId="17629591-2" text="Small heat shock proteins (sHsps) are molecular chaperones and association of HspB8 with CAA in HCHWA-D has been observed.">
+            <entity id="DS.d1.s0.e0" origId="Q9UJY1" charOffset="78-83" type="protein" text="HspB8"/>
+            <entity id="DS.d1.s0.e1" origId="CHEBI:27869" charOffset="89-92" type="compound" text="CAA"/>
+            <pair e1="DS.d1.s0.e1" e2="DS.d1.s0.e0" id="DS.d1.s0.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d1.s1" origId="17629591-3" text="The aims of this study were to investigate (1) if other sHsps are associated with the pathological lesions in HCHWA-D brains, (2) if the amyloid-beta protein (A beta) increases production of sHsps in cultured cerebral cells and (3) if sHsps are involved in the cerebral inflammatory processes in both Alzheimer's disease (AD) and HCHWA-D. We conclude that Hsp20, HspB8 and HspB2 are present in CAA in HCHWA-D, and that A beta did not affect cellular sHsps expression in cultured human brain pericytes and astrocytes.">
+            <entity id="DS.d1.s1.e0" origId="P05067,A0A0A0MRG2,B4DGD0,B4DJT9,A0A140VJC8,E9PG40" charOffset="159-165" type="protein" text="A beta"/>
+            <entity id="DS.d1.s1.e1" origId="O14558,V9HWB6" charOffset="356-361" type="protein" text="Hsp20"/>
+            <entity id="DS.d1.s1.e2" origId="Q9UJY1" charOffset="363-368" type="protein" text="HspB8"/>
+            <entity id="DS.d1.s1.e3" origId="Q16082,A8KAH6" charOffset="373-378" type="protein" text="HspB2"/>
+            <entity id="DS.d1.s1.e4" origId="CHEBI:27869" charOffset="394-397" type="compound" text="CAA"/>
+            <entity id="DS.d1.s1.e5" origId="P05067,A0A0A0MRG2,B4DGD0,B4DJT9,A0A140VJC8,E9PG40" charOffset="419-425" type="protein" text="A beta"/>
+            <pair e1="DS.d1.s1.e4" e2="DS.d1.s1.e0" id="DS.d1.s1.i0" interaction="False" />
+            <pair e1="DS.d1.s1.e4" e2="DS.d1.s1.e1" id="DS.d1.s1.i1" interaction="False" />
+            <pair e1="DS.d1.s1.e4" e2="DS.d1.s1.e2" id="DS.d1.s1.i2" interaction="False" />
+            <pair e1="DS.d1.s1.e4" e2="DS.d1.s1.e3" id="DS.d1.s1.i3" interaction="False" />
+        </sentence>
+        <sentence id="DS.d1.s2" origId="17629591-4" text="In addition, we demonstrated that Hsp20, HspB2 and HspB8 induced interleukin-6 production in cultured pericytes and astrocytes, which could be antagonized by dexamethasone, whereas other sHsps and A beta were inactive, suggesting that sHsps may be among the key mediators of the local inflammatory response associated with HCHWA-D and AD lesions.">
+            <entity id="DS.d1.s2.e0" origId="O14558,V9HWB6" charOffset="34-39" type="protein" text="Hsp20"/>
+            <entity id="DS.d1.s2.e1" origId="Q16082,A8KAH6" charOffset="41-46" type="protein" text="HspB2"/>
+            <entity id="DS.d1.s2.e2" origId="Q9UJY1" charOffset="51-56" type="protein" text="HspB8"/>
+            <entity id="DS.d1.s2.e3" origId="P05231,Q75MH2,B5MC21,B4DNQ5,B4DVM1" charOffset="65-78" type="protein" text="interleukin-6"/>
+            <entity id="DS.d1.s2.e4" origId="D003907" charOffset="158-171" type="compound" text="dexamethasone"/>
+            <entity id="DS.d1.s2.e5" origId="P05067,A0A0A0MRG2,B4DGD0,B4DJT9,A0A140VJC8,E9PG40" charOffset="197-203" type="protein" text="A beta"/>
+            <pair e1="DS.d1.s2.e4" e2="DS.d1.s2.e0" id="DS.d1.s2.i0" interaction="False" />
+            <pair e1="DS.d1.s2.e4" e2="DS.d1.s2.e1" id="DS.d1.s2.i1" interaction="False" />
+            <pair e1="DS.d1.s2.e4" e2="DS.d1.s2.e2" id="DS.d1.s2.i2" interaction="False" />
+            <pair e1="DS.d1.s2.e4" e2="DS.d1.s2.e3" id="DS.d1.s2.i3" interaction="False" />
+            <pair e1="DS.d1.s2.e4" e2="DS.d1.s2.e5" id="DS.d1.s2.i4" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d2" origId="10052021">
-        <sentence id="DS.d2.s0" origId="10052021-5" text="Plasma vitamin C concentrations increased significantly (p &lt; 0.005) only in the group supplemented with vitamin C. Lipid peroxidation measured by breath pentane output (BPO) (C: 7.5 +/- 1.4 vs P: 7.0 +/- 1.3 pmol.kg-1.min-1) and plasma HPLC-separated malondialdehyde (MDA) (C: 0.58 +/- 0.05 vs P: 0.47 +/- 0.05 nmol.ml-1) were not significantly different between the 2 groups at baseline and did not change after four weeks of vitamin C supplementation (BPO: C: 5.3 +/- 0.9 vs P: 5.5 +/- 0.9 pmol.kg-1.min-1; HPLC-MDA: C: 0.50 +/- 0.07 vs P: 0.42 +/- 0.07 nmol.ml-1).">
-            <entity id="DS.d2.s0.e0" origId="8003" charOffset="153-160" type="compound" text="pentane"/>
-            <entity id="DS.d2.s0.e1" origId="P13987,Q6FHM9" charOffset="218-223" type="protein" text="min-1"/>
-            <entity id="DS.d2.s0.e2" origId="10964" charOffset="251-266" type="compound" text="malondialdehyde"/>
-            <entity id="DS.d2.s0.e3" origId="P13987,Q6FHM9" charOffset="502-507" type="protein" text="min-1"/>
+    <document id="DS.d2" origId="17692997">
+        <sentence id="DS.d2.s0" origId="17692997-6" text="Furthermore, dithiothreitol was found to be capable of significantly preventing the inhibitory effect of insulin on Abeta oligomer formation.">
+            <entity id="DS.d2.s0.e0" origId="D004229" charOffset="13-27" type="compound" text="dithiothreitol"/>
+            <entity id="DS.d2.s0.e1" origId="P01308,I3WAC9" charOffset="105-112" type="protein" text="insulin"/>
+            <entity id="DS.d2.s0.e2" origId="P05067,A0A0A0MRG2,B4DGD0,B4DJT9,A0A140VJC8,E9PG40" charOffset="116-121" type="protein" text="Abeta"/>
             <pair e1="DS.d2.s0.e0" e2="DS.d2.s0.e1" id="DS.d2.s0.i0" interaction="False" />
-            <pair e1="DS.d2.s0.e2" e2="DS.d2.s0.e1" id="DS.d2.s0.i1" interaction="False" />
+            <pair e1="DS.d2.s0.e0" e2="DS.d2.s0.e2" id="DS.d2.s0.i1" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d3" origId="10067789">
-        <sentence id="DS.d3.s0" origId="10067789-4" text="Adrenomedullin significantly decreased the order parameter for 5-nitroxide stearate and peak height ratio for 16-nitroxide stearate obtained from electron paramagnetic resonance spectra of erythrocyte membranes in normotensive volunteers (mean +/- SEM order parameter value: control, 0.718 +/- 0.003, n = 16; Adrenomedullin at 10(-9) mol/l, 0.692 +/- 0.004, n = 16, P &lt; 0.05; Adrenomedullin at 10(-8) mol/l, 0.690 +/- 0.004, n = 16, P &lt; 0.05; Adrenomedullin at 10(-7) mol/l, 0.683 +/- 0.004, n = 16, P &lt; 0.05).">
-            <entity id="DS.d3.s0.e0" origId="P35318" charOffset="0-14" type="protein" text="Adrenomedullin"/>
-            <entity id="DS.d3.s0.e1" origId="787" charOffset="65-74" type="compound" text="nitroxide"/>
-            <entity id="DS.d3.s0.e2" origId="5281" charOffset="75-83" type="compound" text="stearate"/>
-            <entity id="DS.d3.s0.e3" origId="787" charOffset="113-122" type="compound" text="nitroxide"/>
-            <entity id="DS.d3.s0.e4" origId="5281" charOffset="123-131" type="compound" text="stearate"/>
-            <entity id="DS.d3.s0.e5" origId="5289348" charOffset="248-251" type="compound" text="SEM"/>
-            <entity id="DS.d3.s0.e6" origId="P35318" charOffset="309-323" type="protein" text="Adrenomedullin"/>
-            <entity id="DS.d3.s0.e7" origId="P35318" charOffset="309-323" type="protein" text="Adrenomedullin"/>
-            <entity id="DS.d3.s0.e8" origId="P35318" charOffset="309-323" type="protein" text="Adrenomedullin"/>
-            <pair e1="DS.d3.s0.e1" e2="DS.d3.s0.e0" id="DS.d3.s0.i0" interaction="False" />
-            <pair e1="DS.d3.s0.e5" e2="DS.d3.s0.e0" id="DS.d3.s0.i1" interaction="False" />
-            <pair e1="DS.d3.s0.e2" e2="DS.d3.s0.e0" id="DS.d3.s0.i2" interaction="False" />
+    <document id="DS.d3" origId="17719144">
+        <sentence id="DS.d3.s0" origId="17719144-2" text="The scavenger receptor, class B, type I (SR-BI) is critical in maintaining the homeostasis of cholesterol and alpha-tocopherol.">
+            <entity id="DS.d3.s0.e0" origId="Q61009" charOffset="4-39" type="protein" text="scavenger receptor, class B, type I"/>
+            <entity id="DS.d3.s0.e1" origId="Q61009" charOffset="41-46" type="protein" text="SR-BI"/>
+            <entity id="DS.d3.s0.e2" origId="D002784" charOffset="94-105" type="compound" text="cholesterol"/>
+            <entity id="DS.d3.s0.e3" origId="D024502" charOffset="110-126" type="compound" text="alpha-tocopherol"/>
+            <pair e1="DS.d3.s0.e2" e2="DS.d3.s0.e0" id="DS.d3.s0.i0" interaction="False" />
+            <pair e1="DS.d3.s0.e2" e2="DS.d3.s0.e1" id="DS.d3.s0.i1" interaction="False" />
+            <pair e1="DS.d3.s0.e3" e2="DS.d3.s0.e0" id="DS.d3.s0.i2" interaction="False" />
+            <pair e1="DS.d3.s0.e3" e2="DS.d3.s0.e1" id="DS.d3.s0.i3" interaction="False" />
+        </sentence>
+        <sentence id="DS.d3.s1" origId="17719144-3" text="SR-BI binds high-density lipoproteins (HDL) and mediates the selective transfer of cholesteryl esters and alpha-tocopherol from circulating HDL to cells.">
+            <entity id="DS.d3.s1.e0" origId="Q61009" charOffset="0-5" type="protein" text="SR-BI"/>
+            <entity id="DS.d3.s1.e1" origId="D002788" charOffset="83-101" type="compound" text="cholesteryl esters"/>
+            <entity id="DS.d3.s1.e2" origId="D024502" charOffset="106-122" type="compound" text="alpha-tocopherol"/>
+            <pair e1="DS.d3.s1.e1" e2="DS.d3.s1.e0" id="DS.d3.s1.i0" interaction="False" />
+            <pair e1="DS.d3.s1.e2" e2="DS.d3.s1.e0" id="DS.d3.s1.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d3.s2" origId="17719144-4" text="SR-BI is also involved in reverse cholesterol transport from peripheral tissues into the liver.">
+            <entity id="DS.d3.s2.e0" origId="Q61009" charOffset="0-5" type="protein" text="SR-BI"/>
+            <entity id="DS.d3.s2.e1" origId="D002784" charOffset="34-45" type="compound" text="cholesterol"/>
+            <pair e1="DS.d3.s2.e1" e2="DS.d3.s2.e0" id="DS.d3.s2.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d3.s3" origId="17719144-9" text="Thus, SR-BI influences neural and cognitive processes, a finding that highlights the contribution of cholesterol and alpha-tocopherol homeostasis in proper cognitive function.">
+            <entity id="DS.d3.s3.e0" origId="Q61009" charOffset="6-11" type="protein" text="SR-BI"/>
+            <entity id="DS.d3.s3.e1" origId="D002784" charOffset="101-112" type="compound" text="cholesterol"/>
+            <entity id="DS.d3.s3.e2" origId="D024502" charOffset="117-133" type="compound" text="alpha-tocopherol"/>
+            <pair e1="DS.d3.s3.e1" e2="DS.d3.s3.e0" id="DS.d3.s3.i0" interaction="False" />
+            <pair e1="DS.d3.s3.e2" e2="DS.d3.s3.e0" id="DS.d3.s3.i1" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d4" origId="10067872">
-        <sentence id="DS.d4.s0" origId="10067872-7" text="The results are summarized as follows: 1) exposing the cells to a low Ca2+ (20 nM) buffer solution suppressed LHRH release, whereas exposure to a normal Ca2+ solution (1.25 mM) maintained pulsatile LHRH release; 2) LHRH release from cultured LHRH cells was stimulated by the voltage-sensitive L-type Ca2+ channel agonist, Bay K 8644 (10 microM), whereas it was suppressed by the L-type Ca2+ channel blocker, nifedipine (1 microM), but not by the N-type channel blocker, omega-conotoxin GVIA (1 microM); 3) the intracellular Ca2+ stimulant, ryanodine (1 microM), stimulated LHRH release, whereas the intracellular Ca2+ transporting adenosine triphosphatase antagonist, thapsigargin (1 and 10 microM), did not yield consistent results; and 4) carbonyl cyanide p-trifluoromethoxyphenyl-hydrazone (1 microM), a mitochondrial Ca2+ mobilizer, stimulated LHRH release, whereas ruthenium red, a mitochondrial Ca2+ uptake inhibitor, did not induce consistent results.">
-            <entity id="DS.d4.s0.e0" origId="P55247,F6S1S9" charOffset="110-114" type="protein" text="LHRH"/>
-            <entity id="DS.d4.s0.e1" origId="P55247,F6S1S9" charOffset="198-202" type="protein" text="LHRH"/>
-            <entity id="DS.d4.s0.e2" origId="P55247,F6S1S9" charOffset="198-202" type="protein" text="LHRH"/>
-            <entity id="DS.d4.s0.e3" origId="P55247,F6S1S9" charOffset="198-202" type="protein" text="LHRH"/>
-            <entity id="DS.d4.s0.e4" origId="4485" charOffset="408-418" type="compound" text="nifedipine"/>
-            <entity id="DS.d4.s0.e5" origId="16132374" charOffset="470-490" type="compound" text="omega-conotoxin GVIA"/>
-            <entity id="DS.d4.s0.e6" origId="11317883,27439,441753,5114,6326656" charOffset="540-549" type="compound" text="ryanodine"/>
-            <entity id="DS.d4.s0.e7" origId="P55247,F6S1S9" charOffset="198-202" type="protein" text="LHRH"/>
-            <entity id="DS.d4.s0.e8" origId="57476835,60961" charOffset="631-640" type="compound" text="adenosine"/>
-            <entity id="DS.d4.s0.e9" origId="446378,49926" charOffset="668-680" type="compound" text="thapsigargin"/>
-            <entity id="DS.d4.s0.e10" origId="57248046" charOffset="741-792" type="compound" text="carbonyl cyanide p-trifluoromethoxyphenyl-hydrazone"/>
-            <entity id="DS.d4.s0.e11" origId="P55247,F6S1S9" charOffset="198-202" type="protein" text="LHRH"/>
-            <entity id="DS.d4.s0.e12" origId="23950" charOffset="870-879" type="compound" text="ruthenium"/>
-            <pair e1="DS.d4.s0.e10" e2="DS.d4.s0.e0" id="DS.d4.s0.i0" interaction="False" />
-            <pair e1="DS.d4.s0.e4" e2="DS.d4.s0.e0" id="DS.d4.s0.i1" interaction="False" />
-            <pair e1="DS.d4.s0.e9" e2="DS.d4.s0.e0" id="DS.d4.s0.i2" interaction="False" />
-            <pair e1="DS.d4.s0.e5" e2="DS.d4.s0.e0" id="DS.d4.s0.i3" interaction="False" />
-            <pair e1="DS.d4.s0.e12" e2="DS.d4.s0.e0" id="DS.d4.s0.i4" interaction="False" />
-            <pair e1="DS.d4.s0.e6" e2="DS.d4.s0.e0" id="DS.d4.s0.i5" interaction="False" />
-            <pair e1="DS.d4.s0.e8" e2="DS.d4.s0.e0" id="DS.d4.s0.i6" interaction="False" />
+    <document id="DS.d4" origId="17768029">
+        <sentence id="DS.d4.s0" origId="17768029-0" text="Hepatic glucokinase activity is the primary defect in alloxan-induced diabetes of mice.">
+            <entity id="DS.d4.s0.e0" origId="P52792,Q5SVI6,Q5SVI5" charOffset="8-19" type="protein" text="glucokinase"/>
+            <entity id="DS.d4.s0.e1" origId="D000496" charOffset="54-61" type="compound" text="alloxan"/>
+            <pair e1="DS.d4.s0.e1" e2="DS.d4.s0.e0" id="DS.d4.s0.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d4.s1" origId="17768029-5" text="Alloxan is believed to confer its diabetogenic effect by inhibiting pancreatic glucokinase activity, leading to pancreatic beta-cell death.">
+            <entity id="DS.d4.s1.e0" origId="D000496" charOffset="0-7" type="compound" text="Alloxan"/>
+            <entity id="DS.d4.s1.e1" origId="P52792,Q5SVI6,Q5SVI5" charOffset="79-90" type="protein" text="glucokinase"/>
+            <pair e1="DS.d4.s1.e0" e2="DS.d4.s1.e1" id="DS.d4.s1.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d4.s2" origId="17768029-7" text="Our results show that alloxan treatment led to an 81% reduction in glucokinase immunoreactivity and a greater than 90% reduction in glucokinase enzymatic activity in the liver, suggesting that alloxan's toxicity is not specific to the pancreas.">
+            <entity id="DS.d4.s2.e0" origId="D000496" charOffset="22-29" type="compound" text="alloxan"/>
+            <entity id="DS.d4.s2.e1" origId="P52792,Q5SVI6,Q5SVI5" charOffset="67-78" type="protein" text="glucokinase"/>
+            <entity id="DS.d4.s2.e2" origId="P52792,Q5SVI6,Q5SVI5" charOffset="132-143" type="protein" text="glucokinase"/>
+            <entity id="DS.d4.s2.e3" origId="D000496" charOffset="193-200" type="compound" text="alloxan"/>
+            <pair e1="DS.d4.s2.e0" e2="DS.d4.s2.e1" id="DS.d4.s2.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d4.s3" origId="17768029-8" text="Given the important role of glucokinase as a glucose sensor, and our findings on the effects of alloxon on liver glucokinase activity we propose that the effects on the liver are the primary contributor to pathogenesis in alloxan-induced diabetes.">
+            <entity id="DS.d4.s3.e0" origId="P52792,Q5SVI6,Q5SVI5" charOffset="28-39" type="protein" text="glucokinase"/>
+            <entity id="DS.d4.s3.e1" origId="D005947" charOffset="45-52" type="compound" text="glucose"/>
+            <entity id="DS.d4.s3.e2" origId="" charOffset="96-103" type="compound" text="alloxon"/>
+            <entity id="DS.d4.s3.e3" origId="P52792,Q5SVI6,Q5SVI5" charOffset="113-124" type="protein" text="glucokinase"/>
+            <entity id="DS.d4.s3.e4" origId="D000496" charOffset="222-229" type="compound" text="alloxan"/>
+            <pair e1="DS.d4.s3.e1" e2="DS.d4.s3.e0" id="DS.d4.s3.i0" interaction="False" />
+            <pair e1="DS.d4.s3.e2" e2="DS.d4.s3.e0" id="DS.d4.s3.i1" interaction="False" />
+            <pair e1="DS.d4.s3.e4" e2="DS.d4.s3.e0" id="DS.d4.s3.i2" interaction="False" />
+        </sentence>
+        <sentence id="DS.d4.s4" origId="17768029-9" text="Alloxan-induced diabetes is thus a multifactor-promoted diabetes model which still could be used to examine the antidiabetic effects of compounds prompting insulin secretion and increasing liver-specific glucokinase activity.">
+            <entity id="DS.d4.s4.e0" origId="D000496" charOffset="0-7" type="compound" text="Alloxan"/>
+            <entity id="DS.d4.s4.e1" origId="P52792,Q5SVI6,Q5SVI5" charOffset="204-215" type="protein" text="glucokinase"/>
+            <pair e1="DS.d4.s4.e0" e2="DS.d4.s4.e1" id="DS.d4.s4.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d4.s5" origId="17768029-10" text="Despite alloxan-induced diabetes being inconsistent with the natural pathogenesis of human diabetes, further research on the causes of decreased glucokinase activity will help us to unravel the pathogenesis of diabetes and its complications.">
+            <entity id="DS.d4.s5.e0" origId="D000496" charOffset="8-15" type="compound" text="alloxan"/>
+            <entity id="DS.d4.s5.e1" origId="P35557,Q53Y25" charOffset="145-156" type="protein" text="glucokinase"/>
+            <pair e1="DS.d4.s5.e0" e2="DS.d4.s5.e1" id="DS.d4.s5.i0" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d5" origId="10081703">
-        <sentence id="DS.d5.s0" origId="10081703-8" text="A submaximal concentration of AVP (10(-10) M) induced cAMP accumulation of 48.6 +/- 2.5 pmol (mg protein)-1 (4 min)-1 (P &lt; 0.01 compared with basal level of 34.9 +/- 2.4 pmol (mg protein)-1 (4 min)-1, n = 10), which was blocked in the presence of a vasopressin V2 receptor antagonist (10(-7) M OPC-31260) but not by the oxytocin receptor antagonist (10(-6) M (Pen1,pMePhe2, Thr4,Orn8)oxytocin) (36.3 +/- 6.1 and 45.1 +/- 1.3 pmol (mg protein)-1 (4 min)-1 respectively, P &lt; 0.05, n = 10).">
-            <entity id="DS.d5.s0.e0" origId="P01186" charOffset="30-33" type="protein" text="AVP"/>
-            <entity id="DS.d5.s0.e1" origId="119369" charOffset="294-303" type="compound" text="OPC-31260"/>
-            <entity id="DS.d5.s0.e2" origId="P70536" charOffset="320-337" type="protein" text="oxytocin receptor"/>
-            <entity id="DS.d5.s0.e3" origId="439302" charOffset="320-328" type="compound" text="oxytocin"/>
-            <pair e1="DS.d5.s0.e3" e2="DS.d5.s0.e2" id="DS.d5.s0.i0" interaction="False" />
-            <pair e1="DS.d5.s0.e3" e2="DS.d5.s0.e0" id="DS.d5.s0.i1" interaction="False" />
-            <pair e1="DS.d5.s0.e1" e2="DS.d5.s0.e2" id="DS.d5.s0.i2" interaction="False" />
-            <pair e1="DS.d5.s0.e1" e2="DS.d5.s0.e0" id="DS.d5.s0.i3" interaction="False" />
+    <document id="DS.d5" origId="17882129">
+        <sentence id="DS.d5.s0" origId="17882129-0" text="Alpha-tocopherol supplementation prevents the exercise-induced reduction of serum paraoxonase 1/arylesterase activities in healthy individuals.">
+            <entity id="DS.d5.s0.e0" origId="D024502" charOffset="0-16" type="compound" text="Alpha-tocopherol"/>
+            <entity id="DS.d5.s0.e1" origId="P27169" charOffset="82-108" type="protein" text="paraoxonase 1/arylesterase"/>
+            <pair e1="DS.d5.s0.e0" e2="DS.d5.s0.e1" id="DS.d5.s0.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d5.s1" origId="17882129-1" text="OBJECTIVE: To investigate PON 1/Aryl activities in basketball players with or without alpha-T supplementation pre- and post-training.">
+            <entity id="DS.d5.s1.e0" origId="P27169" charOffset="26-31" type="protein" text="PON 1"/>
+            <entity id="DS.d5.s1.e1" origId="" charOffset="32-36" type="compound" text="Aryl"/>
+            <pair e1="DS.d5.s1.e1" e2="DS.d5.s1.e0" id="DS.d5.s1.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d5.s2" origId="17882129-3" text="Paraoxonase 1/arylesterase (PON 1/Aryl) activities are closely related to oxidation and atherogenesis.">
+            <entity id="DS.d5.s2.e0" origId="P27169" charOffset="0-26" type="protein" text="Paraoxonase 1/arylesterase"/>
+            <entity id="DS.d5.s2.e1" origId="P27169" charOffset="28-33" type="protein" text="PON 1"/>
+            <entity id="DS.d5.s2.e2" origId="" charOffset="34-38" type="compound" text="Aryl"/>
+            <pair e1="DS.d5.s2.e2" e2="DS.d5.s2.e0" id="DS.d5.s2.i0" interaction="False" />
+            <pair e1="DS.d5.s2.e2" e2="DS.d5.s2.e1" id="DS.d5.s2.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d5.s3" origId="17882129-6" text="Catecholamines and alpha-T were determined with high-performance liquid chromatography methods and PON 1/Aryl activities spectrophotometrically.">
+            <entity id="DS.d5.s3.e0" origId="D002395" charOffset="0-14" type="compound" text="Catecholamines"/>
+            <entity id="DS.d5.s3.e1" origId="P27169" charOffset="99-104" type="protein" text="PON 1"/>
+            <entity id="DS.d5.s3.e2" origId="" charOffset="105-109" type="compound" text="Aryl"/>
+            <pair e1="DS.d5.s3.e0" e2="DS.d5.s3.e1" id="DS.d5.s3.i0" interaction="False" />
+            <pair e1="DS.d5.s3.e2" e2="DS.d5.s3.e1" id="DS.d5.s3.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d5.s4" origId="17882129-10" text="PON 1/Aryl activities were significantly decreased post-exercise (group B) (PON1: 65+/-12 U min(-1) ml(-1), Aryl: 58+/-14 KU min(-1) ml(-1)) as compared to those pre-exercise (group A) (PON1: 142+/-16 U min(-1) ml(-1), Aryl: 114+/-12 KU min(-1) ml(-1), P&lt;0.001).">
+            <entity id="DS.d5.s4.e0" origId="P27169" charOffset="0-5" type="protein" text="PON 1"/>
+            <entity id="DS.d5.s4.e1" origId="" charOffset="6-10" type="compound" text="Aryl"/>
+            <entity id="DS.d5.s4.e2" origId="P27169" charOffset="76-80" type="protein" text="PON1"/>
+            <entity id="DS.d5.s4.e3" origId="P13987,Q6FHM9" charOffset="92-98" type="protein" text="min(-1"/>
+            <entity id="DS.d5.s4.e4" origId="" charOffset="108-112" type="compound" text="Aryl"/>
+            <entity id="DS.d5.s4.e5" origId="P13987,Q6FHM9" charOffset="125-131" type="protein" text="min(-1"/>
+            <entity id="DS.d5.s4.e6" origId="P27169" charOffset="186-190" type="protein" text="PON1"/>
+            <entity id="DS.d5.s4.e7" origId="P13987,Q6FHM9" charOffset="125-131" type="protein" text="min(-1"/>
+            <entity id="DS.d5.s4.e8" origId="" charOffset="108-112" type="compound" text="Aryl"/>
+            <entity id="DS.d5.s4.e9" origId="P13987,Q6FHM9" charOffset="125-131" type="protein" text="min(-1"/>
+            <pair e1="DS.d5.s4.e1" e2="DS.d5.s4.e0" id="DS.d5.s4.i0" interaction="False" />
+            <pair e1="DS.d5.s4.e1" e2="DS.d5.s4.e2" id="DS.d5.s4.i1" interaction="False" />
+            <pair e1="DS.d5.s4.e1" e2="DS.d5.s4.e3" id="DS.d5.s4.i2" interaction="False" />
+        </sentence>
+        <sentence id="DS.d5.s5" origId="17882129-13" text="CONCLUSIONS: Alpha-T supplementation may result in protection of the enzyme PON 1/Aryl activities from free radical production.">
+            <entity id="DS.d5.s5.e0" origId="P27169" charOffset="76-81" type="protein" text="PON 1"/>
+            <entity id="DS.d5.s5.e1" origId="" charOffset="82-86" type="compound" text="Aryl"/>
+            <pair e1="DS.d5.s5.e1" e2="DS.d5.s5.e0" id="DS.d5.s5.i0" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d6" origId="10090866">
-        <sentence id="DS.d6.s0" origId="10090866-8" text="18 for female versus male siblings), triglycerides (r = 0.56 versus r = 0.05), and apolipoprotein B (r = 0.72 versus r = 0.31); they were also higher between female siblings than between mixed-sex siblings for measures of adiposity (r = 0.46 versus r = 0.19) and total cholesterol (r = 0.74 versus r = 0.27).">
-            <entity id="DS.d6.s0.e0" origId="P04114,Q7Z7Q0,Q59HB3" charOffset="83-99" type="protein" text="apolipoprotein B"/>
-            <entity id="DS.d6.s0.e1" origId="5997" charOffset="269-280" type="compound" text="cholesterol"/>
+    <document id="DS.d6" origId="17888544">
+        <sentence id="DS.d6.s0" origId="17888544-0" text="ApoE4 disrupts sterol and sphingolipid metabolism in Alzheimer's but not normal brain.">
+            <entity id="DS.d6.s0.e0" origId="P02649,A0A0S2Z3D5" charOffset="0-5" type="protein" text="ApoE4"/>
+            <entity id="DS.d6.s0.e1" origId="D013261" charOffset="15-21" type="compound" text="sterol"/>
             <pair e1="DS.d6.s0.e1" e2="DS.d6.s0.e0" id="DS.d6.s0.i0" interaction="False" />
         </sentence>
-    </document>
-    <document id="DS.d7" origId="10090936">
-        <sentence id="DS.d7.s0" origId="10090936-2" text="Further analysis of patient LE, with the highest inhibitor titer, showed that (1) plasma or polyclonal IgG antibodies prepared from LE plasma inhibited the activity of allogeneic (wild-type) but not of self FVIII; (2) the presence of von Willebrand factor (vWF) increased by over 10-fold the inhibitory activity on wild-type FVIII; (3) the kinetics of FVIII inhibition followed a type II pattern, but in contrast to previously described type II inhibitors, LE IgG was potentiated by the presence of vWF instead of being in competition with it; (4) polyclonal LE IgG recognized the FVIII light chain in enzyme-linked immunosorbent assay and the recombinant A3-C1 domains in an immunoprecipitation assay, indicating that at least part of LE antibodies reacted with the FVIII domain encompassing the mutation site; and (5) LE IgG inhibited FVIII activity by decreasing the rate of FVIIIa release from vWF, but LE IgG recognized an epitope distinct from ESH8, a murine monoclonal antibody exhibiting the same property.">
-            <entity id="DS.d7.s0.e0" origId="7009630" charOffset="28-30" type="compound" text="LE"/>
-            <entity id="DS.d7.s0.e1" origId="7009630" charOffset="132-134" type="compound" text="LE"/>
-            <entity id="DS.d7.s0.e2" origId="P04275" charOffset="234-255" type="protein" text="von Willebrand factor"/>
-            <entity id="DS.d7.s0.e3" origId="P04275" charOffset="257-260" type="protein" text="vWF"/>
-            <entity id="DS.d7.s0.e4" origId="7009630" charOffset="132-134" type="compound" text="LE"/>
-            <entity id="DS.d7.s0.e5" origId="P04275" charOffset="499-502" type="protein" text="vWF"/>
-            <entity id="DS.d7.s0.e6" origId="7009630" charOffset="132-134" type="compound" text="LE"/>
-            <entity id="DS.d7.s0.e7" origId="7009630" charOffset="132-134" type="compound" text="LE"/>
-            <entity id="DS.d7.s0.e8" origId="7009630" charOffset="132-134" type="compound" text="LE"/>
-            <entity id="DS.d7.s0.e9" origId="P04275" charOffset="499-502" type="protein" text="vWF"/>
-            <entity id="DS.d7.s0.e10" origId="7009630" charOffset="132-134" type="compound" text="LE"/>
-            <pair e1="DS.d7.s0.e0" e2="DS.d7.s0.e2" id="DS.d7.s0.i0" interaction="False" />
-            <pair e1="DS.d7.s0.e0" e2="DS.d7.s0.e3" id="DS.d7.s0.i1" interaction="False" />
+        <sentence id="DS.d6.s1" origId="17888544-2" text="Although ApoE4 has been repeatedly associated with altered sphingomyelin and cholesterol levels in tissue culture and rodent models, there has not been a direct quantification of sphingomyelin or sterol levels in the brains of patients with different forms of ApoE.">
+            <entity id="DS.d6.s1.e0" origId="P02649,A0A0S2Z3D5" charOffset="9-14" type="protein" text="ApoE4"/>
+            <entity id="DS.d6.s1.e1" origId="D002784" charOffset="77-88" type="compound" text="cholesterol"/>
+            <entity id="DS.d6.s1.e2" origId="D013261" charOffset="82-88" type="compound" text="sterol"/>
+            <entity id="DS.d6.s1.e3" origId="P02649,A0A0S2Z3D5" charOffset="9-13" type="protein" text="ApoE"/>
+            <pair e1="DS.d6.s1.e1" e2="DS.d6.s1.e0" id="DS.d6.s1.i0" interaction="False" />
+            <pair e1="DS.d6.s1.e1" e2="DS.d6.s1.e3" id="DS.d6.s1.i1" interaction="False" />
+            <pair e1="DS.d6.s1.e2" e2="DS.d6.s1.e0" id="DS.d6.s1.i2" interaction="False" />
+            <pair e1="DS.d6.s1.e2" e2="DS.d6.s1.e3" id="DS.d6.s1.i3" interaction="False" />
+        </sentence>
+        <sentence id="DS.d6.s2" origId="17888544-3" text="We measured the sphingolipid and sterol content of human brain tissues and found no evidence of perturbed sterol or sphingolipid biochemistry in the brains of individuals expressing ApoE4 who did not have a preexisting neurodegenerative condition.">
+            <entity id="DS.d6.s2.e0" origId="D013261" charOffset="33-39" type="compound" text="sterol"/>
+            <entity id="DS.d6.s2.e1" origId="D013261" charOffset="106-112" type="compound" text="sterol"/>
+            <entity id="DS.d6.s2.e2" origId="P02649,A0A0S2Z3D5" charOffset="182-187" type="protein" text="ApoE4"/>
+            <pair e1="DS.d6.s2.e0" e2="DS.d6.s2.e2" id="DS.d6.s2.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d6.s3" origId="17888544-4" text="Nevertheless, ApoE4 was associated with gross abnormalities in the sterol and sphingolipid content of numerous brain regions in patients with Alzheimer's disease.">
+            <entity id="DS.d6.s3.e0" origId="P02649,A0A0S2Z3D5" charOffset="14-19" type="protein" text="ApoE4"/>
+            <entity id="DS.d6.s3.e1" origId="D013261" charOffset="67-73" type="compound" text="sterol"/>
+            <pair e1="DS.d6.s3.e1" e2="DS.d6.s3.e0" id="DS.d6.s3.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d6.s4" origId="17888544-5" text="The findings suggest that ApoE4 may not by itself alter sterol or sphingolipid metabolism in the brain under normal conditions, but that other neuropathologic changes of Alzheimer's are required to unmask the effect of ApoE4, and to perturb sterol and sphingolipid biochemistry.">
+            <entity id="DS.d6.s4.e0" origId="P02649,A0A0S2Z3D5" charOffset="26-31" type="protein" text="ApoE4"/>
+            <entity id="DS.d6.s4.e1" origId="D013261" charOffset="56-62" type="compound" text="sterol"/>
+            <entity id="DS.d6.s4.e2" origId="P02649,A0A0S2Z3D5" charOffset="219-224" type="protein" text="ApoE4"/>
+            <entity id="DS.d6.s4.e3" origId="D013261" charOffset="241-247" type="compound" text="sterol"/>
+            <pair e1="DS.d6.s4.e1" e2="DS.d6.s4.e0" id="DS.d6.s4.i0" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d8" origId="10193650">
-        <sentence id="DS.d8.s0" origId="10193650-3" text="Furthermore, the anxiolytic-like effect was antagonized by co-administration of the potent neuropeptide Y Y1 receptor antagonist ((R)-N-((4-(aminocarbonylaminomethyl)-phenyl)methyl)-N2-(diphen ylacetyl)-argininamide trifluoroacetate) 3304, but not with the inactive enantiomer ((R)-N-((4-(aminocarbonylaminomethyl)-phenyl)methyl)-N2-(diphen ylacetyl)-argininamide trifluoroacetate) 3457.">
-            <entity id="DS.d8.s0.e0" origId="P07808,F2W8A6" charOffset="91-105" type="protein" text="neuropeptide Y"/>
-            <entity id="DS.d8.s0.e1" origId="90777035" charOffset="141-165" type="compound" text="aminocarbonylaminomethyl"/>
-            <entity id="DS.d8.s0.e2" origId="2234" charOffset="203-215" type="compound" text="argininamide"/>
-            <entity id="DS.d8.s0.e3" origId="6422" charOffset="216-232" type="compound" text="trifluoroacetate"/>
-            <entity id="DS.d8.s0.e4" origId="90777035" charOffset="289-313" type="compound" text="aminocarbonylaminomethyl"/>
-            <entity id="DS.d8.s0.e5" origId="2234" charOffset="351-363" type="compound" text="argininamide"/>
-            <entity id="DS.d8.s0.e6" origId="6422" charOffset="364-380" type="compound" text="trifluoroacetate"/>
-            <pair e1="DS.d8.s0.e1" e2="DS.d8.s0.e0" id="DS.d8.s0.i0" interaction="False" />
-            <pair e1="DS.d8.s0.e2" e2="DS.d8.s0.e0" id="DS.d8.s0.i1" interaction="False" />
-            <pair e1="DS.d8.s0.e3" e2="DS.d8.s0.e0" id="DS.d8.s0.i2" interaction="False" />
+    <document id="DS.d7" origId="17888546">
+        <sentence id="DS.d7.s0" origId="17888546-1" text="In this prospective study we examined whether total cholesterol and the oxysterols 24S- and 27-hydroxycholesterol were related to cognitive performance and rate of cognitive decline in elderly, and whether these associations were modified by ApoE epsilon 4.">
+            <entity id="DS.d7.s0.e0" origId="D002784" charOffset="52-63" type="compound" text="cholesterol"/>
+            <entity id="DS.d7.s0.e1" origId="CHEBI:53030" charOffset="72-82" type="compound" text="oxysterols"/>
+            <entity id="DS.d7.s0.e2" origId="" charOffset="83-113" type="compound" text="24S- and 27-hydroxycholesterol"/>
+            <entity id="DS.d7.s0.e3" origId="P02649,A0A0S2Z3D5" charOffset="242-246" type="protein" text="ApoE"/>
+            <pair e1="DS.d7.s0.e0" e2="DS.d7.s0.e3" id="DS.d7.s0.i0" interaction="False" />
+            <pair e1="DS.d7.s0.e1" e2="DS.d7.s0.e3" id="DS.d7.s0.i1" interaction="False" />
+            <pair e1="DS.d7.s0.e2" e2="DS.d7.s0.e3" id="DS.d7.s0.i2" interaction="False" />
+        </sentence>
+        <sentence id="DS.d7.s1" origId="17888546-5" text="ApoE modified the association between cholesterol and cognitive decline, and the association between the ratio of 27-hydroxycholesterol to cholesterol and cognitive functioning.">
+            <entity id="DS.d7.s1.e0" origId="P02649,A0A0S2Z3D5" charOffset="0-4" type="protein" text="ApoE"/>
+            <entity id="DS.d7.s1.e1" origId="D002784" charOffset="38-49" type="compound" text="cholesterol"/>
+            <entity id="DS.d7.s1.e2" origId="C076996" charOffset="114-135" type="compound" text="27-hydroxycholesterol"/>
+            <entity id="DS.d7.s1.e3" origId="D002784" charOffset="124-135" type="compound" text="cholesterol"/>
+            <pair e1="DS.d7.s1.e1" e2="DS.d7.s1.e0" id="DS.d7.s1.i0" interaction="False" />
+            <pair e1="DS.d7.s1.e2" e2="DS.d7.s1.e0" id="DS.d7.s1.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d7.s2" origId="17888546-6" text="In ApoE epsilon 4 carriers, lower cholesterol was related to a higher rate of decline on information processing speed (p=.006), and a higher ratio of 27-hydroxycholesterol to cholesterol was related to a lower level of general performance (p=.002) and memory functioning (p=.045).">
+            <entity id="DS.d7.s2.e0" origId="P02649,A0A0S2Z3D5" charOffset="3-7" type="protein" text="ApoE"/>
+            <entity id="DS.d7.s2.e1" origId="D002784" charOffset="34-45" type="compound" text="cholesterol"/>
+            <entity id="DS.d7.s2.e2" origId="C076996" charOffset="150-171" type="compound" text="27-hydroxycholesterol"/>
+            <entity id="DS.d7.s2.e3" origId="D002784" charOffset="160-171" type="compound" text="cholesterol"/>
+            <pair e1="DS.d7.s2.e1" e2="DS.d7.s2.e0" id="DS.d7.s2.i0" interaction="False" />
+            <pair e1="DS.d7.s2.e2" e2="DS.d7.s2.e0" id="DS.d7.s2.i1" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d9" origId="10198381">
-        <sentence id="DS.d9.s0" origId="10198381-2" text="Plasma cholesterol levels were higher in both apoE -/- and apoE + LDLR -/- compared with normal mice on normal and high-cholesterol diets (normal chow: normal 110 +/- 5 mg/dl, apoE -/- 680 +/- 40 mg/dl, apoE + LDLR -/- 810 +/- 40 mg/dl; high-cholesterol chow: normal 280 +/- 60 mg/dl, apoE -/- 2,490 +/- 310 mg/dl, apoE + LDLR -/- 3,660 +/- 290 mg/dl).">
-            <entity id="DS.d9.s0.e0" origId="5997" charOffset="7-18" type="compound" text="cholesterol"/>
-            <entity id="DS.d9.s0.e1" origId="P08226,Q3TXU4" charOffset="46-50" type="protein" text="apoE"/>
-            <entity id="DS.d9.s0.e2" origId="P08226,Q3TXU4" charOffset="59-63" type="protein" text="apoE"/>
-            <entity id="DS.d9.s0.e3" origId="5997" charOffset="120-131" type="compound" text="cholesterol"/>
-            <entity id="DS.d9.s0.e4" origId="P08226,Q3TXU4" charOffset="59-63" type="protein" text="apoE"/>
-            <entity id="DS.d9.s0.e5" origId="P08226,Q3TXU4" charOffset="59-63" type="protein" text="apoE"/>
-            <entity id="DS.d9.s0.e6" origId="5997" charOffset="120-131" type="compound" text="cholesterol"/>
-            <entity id="DS.d9.s0.e7" origId="P08226,Q3TXU4" charOffset="59-63" type="protein" text="apoE"/>
-            <entity id="DS.d9.s0.e8" origId="P08226,Q3TXU4" charOffset="59-63" type="protein" text="apoE"/>
-            <pair e1="DS.d9.s0.e0" e2="DS.d9.s0.e1" id="DS.d9.s0.i0" interaction="False" />
+    <document id="DS.d8" origId="17895513">
+        <sentence id="DS.d8.s0" origId="17895513-0" text="Unfractionated heparin but not enoxaparin causes delayed plasma PAI-1 depletion in hemodialysis patients: a prospective study.">
+            <entity id="DS.d8.s0.e0" origId="D017984" charOffset="31-41" type="compound" text="enoxaparin"/>
+            <entity id="DS.d8.s0.e1" origId="P05121,A0A024QYT5" charOffset="64-69" type="protein" text="PAI-1"/>
+            <pair e1="DS.d8.s0.e0" e2="DS.d8.s0.e1" id="DS.d8.s0.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d8.s1" origId="17895513-2" text="We studied the effects of unfractionated heparin (UFH) versus low-molecular-weight heparin (LMWH), enoxaparin, used as anticoagulants during hemodialysis (HD) on plasma levels of circulating endothelium-derived molecules: thrombomodulin (TM), von Willebrand factor (vWF), plasminogen activator inhibitor-1 (PAI-1), cell surface adhesion molecules (E-selectin), intercellular adhesion molecule-1 (ICAM-1), and prothrombin fragment 1+2 (PF 1+2).">
+            <entity id="DS.d8.s1.e0" origId="D017984" charOffset="99-109" type="compound" text="enoxaparin"/>
+            <entity id="DS.d8.s1.e1" origId="P04275" charOffset="243-264" type="protein" text="von Willebrand factor"/>
+            <entity id="DS.d8.s1.e2" origId="P04275" charOffset="266-269" type="protein" text="vWF"/>
+            <entity id="DS.d8.s1.e3" origId="P05121,A0A024QYT5" charOffset="272-305" type="protein" text="plasminogen activator inhibitor-1"/>
+            <entity id="DS.d8.s1.e4" origId="P05121,A0A024QYT5" charOffset="307-312" type="protein" text="PAI-1"/>
+            <entity id="DS.d8.s1.e5" origId="P16581" charOffset="348-358" type="protein" text="E-selectin"/>
+            <entity id="DS.d8.s1.e6" origId="P05362" charOffset="361-394" type="protein" text="intercellular adhesion molecule-1"/>
+            <entity id="DS.d8.s1.e7" origId="P05362" charOffset="396-402" type="protein" text="ICAM-1"/>
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e1" id="DS.d8.s1.i0" interaction="False" />
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e2" id="DS.d8.s1.i1" interaction="False" />
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e3" id="DS.d8.s1.i2" interaction="False" />
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e4" id="DS.d8.s1.i3" interaction="False" />
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e5" id="DS.d8.s1.i4" interaction="False" />
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e6" id="DS.d8.s1.i5" interaction="False" />
+            <pair e1="DS.d8.s1.e0" e2="DS.d8.s1.e7" id="DS.d8.s1.i6" interaction="False" />
+        </sentence>
+        <sentence id="DS.d8.s2" origId="17895513-8" text="During enoxaparin-anticoagulated HD, only plasma PAI-1 levels decreased by 32% after 180 minutes compared with the baseline values.">
+            <entity id="DS.d8.s2.e0" origId="D017984" charOffset="7-17" type="compound" text="enoxaparin"/>
+            <entity id="DS.d8.s2.e1" origId="P05121,A0A024QYT5" charOffset="49-54" type="protein" text="PAI-1"/>
+            <pair e1="DS.d8.s2.e0" e2="DS.d8.s2.e1" id="DS.d8.s2.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d8.s3" origId="17895513-9" text="This percentage decrease positively correlated with predialysis PAI-1 levels and marginally with PF 1+2 concentrations after 180 minutes of enoxaparin-anticoagulated HD.">
+            <entity id="DS.d8.s3.e0" origId="P05121,A0A024QYT5" charOffset="64-69" type="protein" text="PAI-1"/>
+            <entity id="DS.d8.s3.e1" origId="D017984" charOffset="140-150" type="compound" text="enoxaparin"/>
+            <pair e1="DS.d8.s3.e1" e2="DS.d8.s3.e0" id="DS.d8.s3.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d8.s4" origId="17895513-10" text="CONCLUSION: Enoxaparin-anticoagulated HD is related to transient plasma PAI-1 decrease, whereas UFH anticoagulation may be the cause of delayed PAI-1 and TM depletion, which is an untoward consequence of enhanced coagulation activity in chronic HD patients.">
+            <entity id="DS.d8.s4.e0" origId="D017984" charOffset="12-22" type="compound" text="Enoxaparin"/>
+            <entity id="DS.d8.s4.e1" origId="P05121,A0A024QYT5" charOffset="72-77" type="protein" text="PAI-1"/>
+            <entity id="DS.d8.s4.e2" origId="P05121,A0A024QYT5" charOffset="144-149" type="protein" text="PAI-1"/>
+            <pair e1="DS.d8.s4.e0" e2="DS.d8.s4.e1" id="DS.d8.s4.i0" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d10" origId="10200996">
-        <sentence id="DS.d10.s0" origId="10200996-9" text="RESULTS: Continuous IL-4 treatment (experiment 1) significantly (P = 0.001) reduced proteinuria (3 +/- 1 mg per 24 hr vs. 56 +/- 7), fibrinoid necrosis (0.06 +/- 0.04 quadrants/glomulus vs. 1.2 +/- 0.1), macrophage infiltration (6.7 +/- 2.6 cells/glom vs. 33 +/- 2.5), CD8+ cells (1.5 +/- 0.6 cells/glom vs. 6.2 +/- 1.1), inducible nitric oxide synthase positive cells (0.04 +/- 0.04 cells/glom vs. 3.7 +/- 0.6), proliferating cell nuclear antigen positive cells (3.2 +/- 1 cells/glom vs. 15 +/- 2.3), and glomerular intercellular adhesion molecule-1 expression.">
-            <entity id="DS.d10.s0.e0" origId="P20096" charOffset="20-24" type="protein" text="IL-4"/>
-            <entity id="DS.d10.s0.e1" origId="145068" charOffset="332-344" type="compound" text="nitric oxide"/>
-            <pair e1="DS.d10.s0.e1" e2="DS.d10.s0.e0" id="DS.d10.s0.i0" interaction="False" />
+    <document id="DS.d9" origId="17925795">
+        <sentence id="DS.d9.s0" origId="17925795-0" text="The mood stabilizers lithium and valproate selectively activate the promoter IV of brain-derived neurotrophic factor in neurons.">
+            <entity id="DS.d9.s0.e0" origId="D008094" charOffset="21-28" type="compound" text="lithium"/>
+            <entity id="DS.d9.s0.e1" origId="D014635" charOffset="33-42" type="compound" text="valproate"/>
+            <entity id="DS.d9.s0.e2" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="83-116" type="protein" text="brain-derived neurotrophic factor"/>
+            <pair e1="DS.d9.s0.e0" e2="DS.d9.s0.e2" id="DS.d9.s0.i0" interaction="False" />
+            <pair e1="DS.d9.s0.e1" e2="DS.d9.s0.e2" id="DS.d9.s0.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d9.s1" origId="17925795-3" text="Treatment of cultured rat cortical neurons with therapeutic concentrations of LiCl or VPA selectively increased the levels of exon IV (formerly rat exon III)-containing BDNF mRNA, and the activity of BDNF promoter IV.">
+            <entity id="DS.d9.s1.e0" origId="D018021" charOffset="78-82" type="compound" text="LiCl"/>
+            <entity id="DS.d9.s1.e1" origId="D014635" charOffset="86-89" type="compound" text="VPA"/>
+            <entity id="DS.d9.s1.e2" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="169-173" type="protein" text="BDNF"/>
+            <entity id="DS.d9.s1.e3" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="200-204" type="protein" text="BDNF"/>
+            <pair e1="DS.d9.s1.e0" e2="DS.d9.s1.e2" id="DS.d9.s1.i0" interaction="False" />
+            <pair e1="DS.d9.s1.e1" e2="DS.d9.s1.e2" id="DS.d9.s1.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d9.s2" origId="17925795-4" text="Surprisingly, lithium- or VPA-responsive element(s) in promoter IV resides in a region upstream from the calcium-responsive elements (CaREs) responsible for depolarization-induced BDNF induction.">
+            <entity id="DS.d9.s2.e0" origId="D008094" charOffset="14-21" type="compound" text="lithium"/>
+            <entity id="DS.d9.s2.e1" origId="D014635" charOffset="26-29" type="compound" text="VPA"/>
+            <entity id="DS.d9.s2.e2" origId="D002118" charOffset="105-112" type="compound" text="calcium"/>
+            <entity id="DS.d9.s2.e3" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="180-184" type="protein" text="BDNF"/>
+            <pair e1="DS.d9.s2.e0" e2="DS.d9.s2.e3" id="DS.d9.s2.i0" interaction="False" />
+            <pair e1="DS.d9.s2.e1" e2="DS.d9.s2.e3" id="DS.d9.s2.i1" interaction="False" />
+            <pair e1="DS.d9.s2.e2" e2="DS.d9.s2.e3" id="DS.d9.s2.i2" interaction="False" />
+        </sentence>
+        <sentence id="DS.d9.s3" origId="17925795-5" text="Moreover, activation of BDNF promoter IV by lithium or VPA occurred in cortical neurons depolarized with KCl, and deletion of these three CaREs did not abolish lithium- or VPA-induced activation.">
+            <entity id="DS.d9.s3.e0" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="24-28" type="protein" text="BDNF"/>
+            <entity id="DS.d9.s3.e1" origId="D008094" charOffset="44-51" type="compound" text="lithium"/>
+            <entity id="DS.d9.s3.e2" origId="D014635" charOffset="55-58" type="compound" text="VPA"/>
+            <entity id="DS.d9.s3.e3" origId="C522374" charOffset="105-108" type="compound" text="KCl"/>
+            <entity id="DS.d9.s3.e4" origId="D008094" charOffset="160-167" type="compound" text="lithium"/>
+            <entity id="DS.d9.s3.e5" origId="D014635" charOffset="172-175" type="compound" text="VPA"/>
+            <pair e1="DS.d9.s3.e1" e2="DS.d9.s3.e0" id="DS.d9.s3.i0" interaction="False" />
+            <pair e1="DS.d9.s3.e2" e2="DS.d9.s3.e0" id="DS.d9.s3.i1" interaction="False" />
+            <pair e1="DS.d9.s3.e3" e2="DS.d9.s3.e0" id="DS.d9.s3.i2" interaction="False" />
+        </sentence>
+        <sentence id="DS.d9.s4" origId="17925795-7" text="We showed that lithium-induced activation of promoter IV was mimicked by pharmacological inhibition of GSK-3 or short interfering RNA (siRNA)-mediated gene silencing of GSK-3alpha or GSK-3beta isoforms.">
+            <entity id="DS.d9.s4.e0" origId="D008094" charOffset="15-22" type="compound" text="lithium"/>
+            <entity id="DS.d9.s4.e1" origId="P18265" charOffset="169-179" type="protein" text="GSK-3alpha"/>
+            <entity id="DS.d9.s4.e2" origId="P18266,A0A0G2JSH4,A0A0G2KB98" charOffset="183-192" type="protein" text="GSK-3beta"/>
+            <pair e1="DS.d9.s4.e0" e2="DS.d9.s4.e1" id="DS.d9.s4.i0" interaction="False" />
+            <pair e1="DS.d9.s4.e0" e2="DS.d9.s4.e2" id="DS.d9.s4.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d9.s5" origId="17925795-8" text="Furthermore, treatment with other HDAC inhibitors, sodium butyrate and trichostatin A, or transfection with an HDAC1-specific siRNA also activated BDNF promoter IV.">
+            <entity id="DS.d9.s5.e0" origId="CHEBI:64103" charOffset="51-66" type="compound" text="sodium butyrate"/>
+            <entity id="DS.d9.s5.e1" origId="C012589" charOffset="71-85" type="compound" text="trichostatin A"/>
+            <entity id="DS.d9.s5.e2" origId="Q4QQW4" charOffset="111-116" type="protein" text="HDAC1"/>
+            <entity id="DS.d9.s5.e3" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="147-151" type="protein" text="BDNF"/>
+            <pair e1="DS.d9.s5.e0" e2="DS.d9.s5.e2" id="DS.d9.s5.i0" interaction="False" />
+            <pair e1="DS.d9.s5.e0" e2="DS.d9.s5.e3" id="DS.d9.s5.i1" interaction="False" />
+            <pair e1="DS.d9.s5.e1" e2="DS.d9.s5.e2" id="DS.d9.s5.i2" interaction="False" />
+            <pair e1="DS.d9.s5.e1" e2="DS.d9.s5.e3" id="DS.d9.s5.i3" interaction="False" />
+        </sentence>
+        <sentence id="DS.d9.s6" origId="17925795-9" text="Our study demonstrates for the first time that GSK-3 and HDAC are respective initial targets for lithium and VPA to activate BDNF promoter IV, and that this BDNF induction involves a novel responsive region in promoter IV of the BDNF gene.">
+            <entity id="DS.d9.s6.e0" origId="D008094" charOffset="97-104" type="compound" text="lithium"/>
+            <entity id="DS.d9.s6.e1" origId="D014635" charOffset="109-112" type="compound" text="VPA"/>
+            <entity id="DS.d9.s6.e2" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="125-129" type="protein" text="BDNF"/>
+            <entity id="DS.d9.s6.e3" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="157-161" type="protein" text="BDNF"/>
+            <entity id="DS.d9.s6.e4" origId="P23363,A0A0G2K624,A0A0H2UI28" charOffset="157-161" type="protein" text="BDNF"/>
+            <pair e1="DS.d9.s6.e0" e2="DS.d9.s6.e2" id="DS.d9.s6.i0" interaction="False" />
+            <pair e1="DS.d9.s6.e1" e2="DS.d9.s6.e2" id="DS.d9.s6.i1" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d11" origId="10208256">
-        <sentence id="DS.d11.s0" origId="10208256-2" text="In vitro -delta(HCO3-) x delta pH(-1) (nonbicarbonate buffer capacity (beta) of blood) was increased 7 days after descent (before 31.3 (SEM 0.4) mmol x kgH2O(-1), after 38.3 (SEM 3.9) mmol x kgH2O(-1); P&lt;0.05) resulting from an increased proportion of young erythrocytes; in additional experiments an augmented beta was found in young (low density cells) compared to old cells (&lt;1.097 g x ml(-1): 0.216 (SEM 0.028) mmol x gHb(-1), &gt;1.100 g x ml(-1): 0.145 (SEM 0.013) mmol x gHb(-1), where Hb is haemoglobin; P &lt; 0.02).">
-            <entity id="DS.d11.s0.e0" origId="O00548" charOffset="10-36" type="protein" text="delta(HCO3-) x delta pH(-1"/>
-            <entity id="DS.d11.s0.e1" origId="5289348" charOffset="136-139" type="compound" text="SEM"/>
-            <entity id="DS.d11.s0.e2" origId="5289348" charOffset="175-178" type="compound" text="SEM"/>
-            <entity id="DS.d11.s0.e3" origId="5289348" charOffset="175-178" type="compound" text="SEM"/>
-            <entity id="DS.d11.s0.e4" origId="5289348" charOffset="175-178" type="compound" text="SEM"/>
-            <pair e1="DS.d11.s0.e1" e2="DS.d11.s0.e4" id="DS.d11.s0.i0" interaction="False" />
+    <document id="DS.d10" origId="17943458">
+        <sentence id="DS.d10.s0" origId="17943458-4" text="Incubation of rat stomach tissue with NAA 1.5 mM, 1.5 microM and 1.5 nM induced inflammatory agents TNFalpha, p38MAPK, iNOS, PKC, COX2 and ICAM3; transcription factors phospho-NF-kBp65, cjun and cfos; contractile proteins MLCK and phospho MLC; and calcium channel alpha1C and calcium channel, voltage-dependent, beta 3 subunit compared to their respective control.">
+            <entity id="DS.d10.s0.e0" origId="CHEBI:32918" charOffset="38-41" type="compound" text="NAA"/>
+            <entity id="DS.d10.s0.e1" origId="P16599" charOffset="100-108" type="protein" text="TNFalpha"/>
+            <entity id="DS.d10.s0.e2" origId="Q06518" charOffset="119-123" type="protein" text="iNOS"/>
+            <entity id="DS.d10.s0.e3" origId="P00406,Q8SEZ5" charOffset="130-134" type="protein" text="COX2"/>
+            <entity id="DS.d10.s0.e4" origId="" charOffset="168-175" type="compound" text="phospho"/>
+            <entity id="DS.d10.s0.e5" origId="E9PT87" charOffset="222-226" type="protein" text="MLCK"/>
+            <entity id="DS.d10.s0.e6" origId="D002118" charOffset="248-255" type="compound" text="calcium"/>
+            <entity id="DS.d10.s0.e7" origId="D002118" charOffset="276-283" type="compound" text="calcium"/>
+            <pair e1="DS.d10.s0.e0" e2="DS.d10.s0.e1" id="DS.d10.s0.i0" interaction="False" />
+            <pair e1="DS.d10.s0.e0" e2="DS.d10.s0.e2" id="DS.d10.s0.i1" interaction="False" />
+            <pair e1="DS.d10.s0.e0" e2="DS.d10.s0.e3" id="DS.d10.s0.i2" interaction="False" />
+            <pair e1="DS.d10.s0.e0" e2="DS.d10.s0.e5" id="DS.d10.s0.i3" interaction="False" />
+            <pair e1="DS.d10.s0.e4" e2="DS.d10.s0.e1" id="DS.d10.s0.i4" interaction="False" />
+            <pair e1="DS.d10.s0.e4" e2="DS.d10.s0.e2" id="DS.d10.s0.i5" interaction="False" />
+            <pair e1="DS.d10.s0.e4" e2="DS.d10.s0.e3" id="DS.d10.s0.i6" interaction="False" />
+            <pair e1="DS.d10.s0.e4" e2="DS.d10.s0.e5" id="DS.d10.s0.i7" interaction="False" />
+            <pair e1="DS.d10.s0.e6" e2="DS.d10.s0.e1" id="DS.d10.s0.i8" interaction="False" />
+            <pair e1="DS.d10.s0.e6" e2="DS.d10.s0.e2" id="DS.d10.s0.i9" interaction="False" />
+            <pair e1="DS.d10.s0.e6" e2="DS.d10.s0.e3" id="DS.d10.s0.i10" interaction="False" />
+            <pair e1="DS.d10.s0.e6" e2="DS.d10.s0.e5" id="DS.d10.s0.i11" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d12" origId="10210917">
-        <sentence id="DS.d12.s0" origId="10210917-10" text="The following antigens were determined (cluster of definition (CD)): leukocyte common antigen (LCA) (B220, T 200, Ly-5), CD45; LPS-R (lipopolysaccharide receptor), CD14; found on all T cells, CD3; LFA-2 (lymphocyte function associated antigen, T 11), CD2; coreceptor for MHC class II molecules, found on helper T cells, CD4; coreceptor for MHC class I molecules, found on suppressor/cytotoxic T cells, CD8; B4, found on all human B cells, CD19; NCAM (neural cell adhesion molecule), CD56; integrin beta2 subunit, associated with CD11a (CD11a/CD18, LFA-1, alphaLbeta2) and CD11b (CD11b/CD18, Mac-1,CR3, alphaMbeta2), CD18; alphaL, alpha subunit of integrin LFA-1 (alphaLbeta2, CD11a/CD18), CD11a; alphaM, alpha subunit of integrin Mac-1 (CR3, alphaMbeta2, CD11b/CD18), CD11b; ICAM-1 (intercellular adhesion molecule), CD54; H-CAM, Hermes antigen, Pgp-1, CD44; AIM (activation inducer molecule), early activation antigen, CD69; T-cell receptor gammadelta, TCR gammadelta.">
-            <entity id="DS.d12.s0.e0" origId="P08575,A0A0A0MT22,M9MML4,X6R433" charOffset="69-93" type="protein" text="leukocyte common antigen"/>
-            <entity id="DS.d12.s0.e1" origId="P09496,C9J8P9" charOffset="95-98" type="protein" text="LCA"/>
-            <entity id="DS.d12.s0.e2" origId="P08575,A0A0A0MT22,M9MML4,X6R433" charOffset="121-125" type="protein" text="CD45"/>
-            <entity id="DS.d12.s0.e3" origId="11970143" charOffset="134-152" type="compound" text="lipopolysaccharide"/>
-            <entity id="DS.d12.s0.e4" origId="P08571" charOffset="164-168" type="protein" text="CD14"/>
-            <entity id="DS.d12.s0.e5" origId="P06729,Q53F96" charOffset="197-202" type="protein" text="LFA-2"/>
-            <entity id="DS.d12.s0.e6" origId="P06729,Q53F96" charOffset="204-248" type="protein" text="lymphocyte function associated antigen, T 11"/>
-            <entity id="DS.d12.s0.e7" origId="P06729,Q53F96" charOffset="251-254" type="protein" text="CD2"/>
-            <entity id="DS.d12.s0.e8" origId="P01730,B4DT49,B0AZV7" charOffset="121-124" type="protein" text="CD4"/>
-            <entity id="DS.d12.s0.e9" origId="P01732,Q8TAW8,Q6ZVS2" charOffset="402-405" type="protein" text="CD8"/>
-            <entity id="DS.d12.s0.e10" origId="P15391" charOffset="439-443" type="protein" text="CD19"/>
-            <entity id="DS.d12.s0.e11" origId="P13591,A0A087WWD4" charOffset="445-449" type="protein" text="NCAM"/>
-            <entity id="DS.d12.s0.e12" origId="P13591,A0A087WWD4" charOffset="483-487" type="protein" text="CD56"/>
-            <entity id="DS.d12.s0.e13" origId="P05107,B4E0R1" charOffset="489-503" type="protein" text="integrin beta2"/>
-            <entity id="DS.d12.s0.e14" origId="P20701,B2RAL6" charOffset="529-534" type="protein" text="CD11a"/>
-            <entity id="DS.d12.s0.e15" origId="P05107,B4E0R1" charOffset="536-546" type="protein" text="CD11a/CD18"/>
-            <entity id="DS.d12.s0.e16" origId="P05107,B4E0R1" charOffset="548-553" type="protein" text="LFA-1"/>
-            <entity id="DS.d12.s0.e17" origId="P11215" charOffset="572-577" type="protein" text="CD11b"/>
-            <entity id="DS.d12.s0.e18" origId="P05107,B4E0R1" charOffset="579-589" type="protein" text="CD11b/CD18"/>
-            <entity id="DS.d12.s0.e19" origId="P05107,B4E0R1" charOffset="591-596" type="protein" text="Mac-1"/>
-            <entity id="DS.d12.s0.e20" origId="P05107,B4E0R1" charOffset="542-546" type="protein" text="CD18"/>
-            <entity id="DS.d12.s0.e21" origId="P05107,B4E0R1" charOffset="656-661" type="protein" text="LFA-1"/>
-            <entity id="DS.d12.s0.e22" origId="P05107,B4E0R1" charOffset="676-686" type="protein" text="CD11a/CD18"/>
-            <entity id="DS.d12.s0.e23" origId="P20701,B2RAL6" charOffset="689-735" type="protein" text="CD11a; alphaM, alpha subunit of integrin Mac-1"/>
-            <entity id="DS.d12.s0.e24" origId="P05107,B4E0R1" charOffset="755-765" type="protein" text="CD11b/CD18"/>
-            <entity id="DS.d12.s0.e25" origId="P11215" charOffset="579-584" type="protein" text="CD11b"/>
-            <entity id="DS.d12.s0.e26" origId="P05362" charOffset="775-781" type="protein" text="ICAM-1"/>
-            <entity id="DS.d12.s0.e27" origId="P05362" charOffset="817-821" type="protein" text="CD54"/>
-            <entity id="DS.d12.s0.e28" origId="P16070" charOffset="830-844" type="protein" text="Hermes antigen"/>
-            <entity id="DS.d12.s0.e29" origId="P16070" charOffset="846-851" type="protein" text="Pgp-1"/>
-            <entity id="DS.d12.s0.e30" origId="P16070" charOffset="853-857" type="protein" text="CD44"/>
-            <entity id="DS.d12.s0.e31" origId="Q07108,Q53ZX0" charOffset="920-924" type="protein" text="CD69"/>
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e12" id="DS.d12.s0.i0" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e27" id="DS.d12.s0.i1" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e13" id="DS.d12.s0.i2" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e28" id="DS.d12.s0.i3" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e7" id="DS.d12.s0.i4" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e9" id="DS.d12.s0.i5" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e29" id="DS.d12.s0.i6" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e11" id="DS.d12.s0.i7" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e6" id="DS.d12.s0.i8" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e2" id="DS.d12.s0.i9" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e30" id="DS.d12.s0.i10" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e19" id="DS.d12.s0.i11" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e31" id="DS.d12.s0.i12" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e15" id="DS.d12.s0.i13" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e0" id="DS.d12.s0.i14" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e8" id="DS.d12.s0.i15" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e18" id="DS.d12.s0.i16" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e4" id="DS.d12.s0.i17" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e17" id="DS.d12.s0.i18" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e23" id="DS.d12.s0.i19" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e1" id="DS.d12.s0.i20" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e26" id="DS.d12.s0.i21" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e5" id="DS.d12.s0.i22" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e16" id="DS.d12.s0.i23" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e14" id="DS.d12.s0.i24" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e20" id="DS.d12.s0.i25" interaction="False" />
-            <pair e1="DS.d12.s0.e3" e2="DS.d12.s0.e10" id="DS.d12.s0.i26" interaction="False" />
+    <document id="DS.d11" origId="17950491">
+        <sentence id="DS.d11.s0" origId="17950491-0" text="Interleukin-4 mediates the neuroprotective effects of rosiglitazone in the aged brain.">
+            <entity id="DS.d11.s0.e0" origId="P20096" charOffset="0-13" type="protein" text="Interleukin-4"/>
+            <entity id="DS.d11.s0.e1" origId="C089730" charOffset="54-67" type="compound" text="rosiglitazone"/>
+            <pair e1="DS.d11.s0.e1" e2="DS.d11.s0.e0" id="DS.d11.s0.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d11.s1" origId="17950491-4" text="In this study the PPAR gamma agonist, rosiglitazone, was orally administered to young and aged rats, and we report that the age-related increases in NO and IL-1 beta production were attenuated in hippocampus of rosiglitazone-treated aged rats and that this was associated with a restoration of LTP.">
+            <entity id="DS.d11.s1.e0" origId="O88275" charOffset="18-28" type="protein" text="PPAR gamma"/>
+            <entity id="DS.d11.s1.e1" origId="C089730" charOffset="38-51" type="compound" text="rosiglitazone"/>
+            <entity id="DS.d11.s1.e2" origId="Q5BKB0" charOffset="156-165" type="protein" text="IL-1 beta"/>
+            <entity id="DS.d11.s1.e3" origId="C089730" charOffset="211-224" type="compound" text="rosiglitazone"/>
+            <pair e1="DS.d11.s1.e1" e2="DS.d11.s1.e0" id="DS.d11.s1.i0" interaction="False" />
+            <pair e1="DS.d11.s1.e1" e2="DS.d11.s1.e2" id="DS.d11.s1.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d11.s2" origId="17950491-5" text="In addition, treatment with rosiglitazone increased interleukin-4 (IL-4) mRNA and reversed the age-related decrease in hippocampal IL-4 concentration.">
+            <entity id="DS.d11.s2.e0" origId="C089730" charOffset="28-41" type="compound" text="rosiglitazone"/>
+            <entity id="DS.d11.s2.e1" origId="P20096" charOffset="52-65" type="protein" text="interleukin-4"/>
+            <entity id="DS.d11.s2.e2" origId="P20096" charOffset="67-71" type="protein" text="IL-4"/>
+            <entity id="DS.d11.s2.e3" origId="P20096" charOffset="131-135" type="protein" text="IL-4"/>
+            <pair e1="DS.d11.s2.e0" e2="DS.d11.s2.e1" id="DS.d11.s2.i0" interaction="False" />
+            <pair e1="DS.d11.s2.e0" e2="DS.d11.s2.e2" id="DS.d11.s2.i1" interaction="False" />
+        </sentence>
+        <sentence id="DS.d11.s3" origId="17950491-6" text="Significantly, while rosiglitazone attenuated the LPS-induced increase in MHCII and IL-1 beta concentration in glia prepared from wildtype mice, it failed to exert an effect in glia prepared from IL-4(-/-) mice, thereby suggesting that the anti-inflammatory actions of rosiglitazone are mediated by its ability to increase IL-4 expression.">
+            <entity id="DS.d11.s3.e0" origId="C089730" charOffset="21-34" type="compound" text="rosiglitazone"/>
+            <entity id="DS.d11.s3.e1" origId="" charOffset="74-79" type="protein" text="MHCII"/>
+            <entity id="DS.d11.s3.e2" origId="P10749" charOffset="84-93" type="protein" text="IL-1 beta"/>
+            <entity id="DS.d11.s3.e3" origId="P07750" charOffset="196-200" type="protein" text="IL-4"/>
+            <entity id="DS.d11.s3.e4" origId="C089730" charOffset="269-282" type="compound" text="rosiglitazone"/>
+            <entity id="DS.d11.s3.e5" origId="P07750" charOffset="323-327" type="protein" text="IL-4"/>
+            <pair e1="DS.d11.s3.e0" e2="DS.d11.s3.e1" id="DS.d11.s3.i0" interaction="False" />
+            <pair e1="DS.d11.s3.e0" e2="DS.d11.s3.e2" id="DS.d11.s3.i1" interaction="False" />
+            <pair e1="DS.d11.s3.e0" e2="DS.d11.s3.e3" id="DS.d11.s3.i2" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d13" origId="10341862">
-        <sentence id="DS.d13.s0" origId="10341862-7" text="Serum VEGF correlated with serum progesterone concentrations in the luteal phase (r = 0.85, P &lt; 0.001), with serum oestradiol concentrations in the early follicular (r = 0.67, P = 0.009), pre-ovulatory (r = 0.57, P = 0.03) and luteal phases (r = 0.68, P &lt; 0.005) and with serum testosterone in the early follicular phase (r = 0.63, P = 0.01).">
-            <entity id="DS.d13.s0.e0" origId="P15692,A0A024RD37,A0A024RD33,A2A2V4" charOffset="6-10" type="protein" text="VEGF"/>
-            <entity id="DS.d13.s0.e1" origId="5994" charOffset="33-45" type="compound" text="progesterone"/>
-            <entity id="DS.d13.s0.e2" origId="5757" charOffset="115-125" type="compound" text="oestradiol"/>
-            <entity id="DS.d13.s0.e3" origId="6013" charOffset="278-290" type="compound" text="testosterone"/>
+    <document id="DS.d12" origId="17965987">
+        <sentence id="DS.d12.s0" origId="17965987-0" text="Blood levels of catecholamine metabolites and brain-derived neurotrophic factor in a case of Sydenham's chorea.">
+            <entity id="DS.d12.s0.e0" origId="CHEBI:33567" charOffset="16-29" type="compound" text="catecholamine"/>
+            <entity id="DS.d12.s0.e1" origId="P23560,A0A0E3SU01" charOffset="46-79" type="protein" text="brain-derived neurotrophic factor"/>
+            <pair e1="DS.d12.s0.e0" e2="DS.d12.s0.e1" id="DS.d12.s0.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d12.s1" origId="17965987-2" text="We also longitudinally investigated serum BDNF levels and plasma levels of catecholamine metabolite in the patient.">
+            <entity id="DS.d12.s1.e0" origId="P23560,A0A0E3SU01" charOffset="42-46" type="protein" text="BDNF"/>
+            <entity id="DS.d12.s1.e1" origId="CHEBI:33567" charOffset="75-88" type="compound" text="catecholamine"/>
+            <pair e1="DS.d12.s1.e1" e2="DS.d12.s1.e0" id="DS.d12.s1.i0" interaction="False" />
+        </sentence>
+        <sentence id="DS.d12.s2" origId="17965987-3" text="Serum BDNF levels were increased and plasma levels of HVA and MHPG were decreased according to the recovery from the active phase of the disease.">
+            <entity id="DS.d12.s2.e0" origId="P23560,A0A0E3SU01" charOffset="6-10" type="protein" text="BDNF"/>
+            <entity id="DS.d12.s2.e1" origId="CHEBI:545959" charOffset="54-57" type="compound" text="HVA"/>
+            <entity id="DS.d12.s2.e2" origId="D008734" charOffset="62-66" type="compound" text="MHPG"/>
+            <pair e1="DS.d12.s2.e1" e2="DS.d12.s2.e0" id="DS.d12.s2.i0" interaction="False" />
+            <pair e1="DS.d12.s2.e2" e2="DS.d12.s2.e0" id="DS.d12.s2.i1" interaction="False" />
+        </sentence>
+    </document>
+    <document id="DS.d13" origId="17968352">
+        <sentence id="DS.d13.s0" origId="17968352-6" text="Based on these validities we identified alterations in the Wolframin gene in the CA1 and amygdala regions, specifically in exposed PTSD-like rats, which were normalized after treatment with citalopram.">
+            <entity id="DS.d13.s0.e0" origId="Q9JLT5" charOffset="59-68" type="protein" text="Wolframin"/>
+            <entity id="DS.d13.s0.e1" origId="B0BNN3" charOffset="81-84" type="protein" text="CA1"/>
+            <entity id="DS.d13.s0.e2" origId="D015283" charOffset="190-200" type="compound" text="citalopram"/>
             <pair e1="DS.d13.s0.e2" e2="DS.d13.s0.e0" id="DS.d13.s0.i0" interaction="False" />
-            <pair e1="DS.d13.s0.e3" e2="DS.d13.s0.e0" id="DS.d13.s0.i1" interaction="False" />
-            <pair e1="DS.d13.s0.e1" e2="DS.d13.s0.e0" id="DS.d13.s0.i2" interaction="False" />
+            <pair e1="DS.d13.s0.e2" e2="DS.d13.s0.e1" id="DS.d13.s0.i1" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d14" origId="10344354">
-        <sentence id="DS.d14.s0" origId="10344354-6" text="A significantly positive correlation was found among blood concentration of PAF and heart rate (r = 0.4193, P &lt; 0.017), serum creatinine (r = 0.3671, P &lt; 0.038), serum IL-6 (r = 0.5475, P &lt; 0.005) and urine excretion of IL-8 (r = 0.3984, P &lt; 0.044), whereas a negative correlation was present with the number of circulating platelets (r = -0.4285, P &lt; 0.018).">
-            <entity id="DS.d14.s0.e0" origId="588" charOffset="126-136" type="compound" text="creatinine"/>
-            <entity id="DS.d14.s0.e1" origId="P05231,Q75MH2,B5MC21,B4DNQ5,B4DVM1" charOffset="168-172" type="protein" text="IL-6"/>
-            <entity id="DS.d14.s0.e2" origId="P10145,A0A024RDA5" charOffset="220-224" type="protein" text="IL-8"/>
-            <pair e1="DS.d14.s0.e0" e2="DS.d14.s0.e1" id="DS.d14.s0.i0" interaction="False" />
-            <pair e1="DS.d14.s0.e0" e2="DS.d14.s0.e2" id="DS.d14.s0.i1" interaction="False" />
+    <document id="DS.d14" origId="17968676">
+        <sentence id="DS.d14.s0" origId="17968676-1" text="Cyclooxygenase-2 (Cox-2) is a key enzyme in the conversion of arachidonic acid to prostaglandins that has been shown to have a particular importance in the progression of several malignancies including nasopharyngeal carcinoma (NPC).">
+            <entity id="DS.d14.s0.e0" origId="P35354" charOffset="0-16" type="protein" text="Cyclooxygenase-2"/>
+            <entity id="DS.d14.s0.e1" origId="P35354" charOffset="18-23" type="protein" text="Cox-2"/>
+            <entity id="DS.d14.s0.e2" origId="D016718" charOffset="62-78" type="compound" text="arachidonic acid"/>
+            <entity id="DS.d14.s0.e3" origId="D011453" charOffset="82-96" type="compound" text="prostaglandins"/>
+            <pair e1="DS.d14.s0.e2" e2="DS.d14.s0.e0" id="DS.d14.s0.i0" interaction="False" />
+            <pair e1="DS.d14.s0.e2" e2="DS.d14.s0.e1" id="DS.d14.s0.i1" interaction="False" />
+            <pair e1="DS.d14.s0.e3" e2="DS.d14.s0.e0" id="DS.d14.s0.i2" interaction="False" />
+            <pair e1="DS.d14.s0.e3" e2="DS.d14.s0.e1" id="DS.d14.s0.i3" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d15" origId="10348797">
-        <sentence id="DS.d15.s0" origId="10348797-4" text="Evidence that human hepatic CYP3A4 and 2D6 catalyze the formation of tam catechol from 4-OH-tam and supportive data that the catechol is proximate to the reactive intermediate, was obtained: 1) There was a good correlation (r = 0.82; p &lt;/=.0004) between steroidal 6beta-hydroxylase (CYP3A activity) and ortho hydroxylation of 4-OH-tam in human liver microsomes; 2) monospecific antibodies against CYP3A4 strongly inhibited catechol formation from 4-OH-tam and its covalent binding to proteins in human liver microsomes; 3) low levels of ketoconazole inhibited catechol tam accumulation and covalent binding of 4-OH-tam to human liver proteins; 4) among human P-450s expressed in insect cells (supersomes), only CYP3A4 and 2D6 noticeably catalyzed catechol formation, and cytochrome b5 markedly stimulated the CYP3A4 catalysis; and 5) human livers with high CYP3A and low or high CYP2D6 activity exhibited high catechol formation and those with low 3A and 2D6 activities formed only little catechol.">
-            <entity id="DS.d15.s0.e0" origId="P08684,Q6GRK0" charOffset="28-34" type="protein" text="CYP3A4"/>
-            <entity id="DS.d15.s0.e1" origId="449459" charOffset="87-95" type="compound" text="4-OH-tam"/>
-            <entity id="DS.d15.s0.e2" origId="449459" charOffset="326-334" type="compound" text="4-OH-tam"/>
-            <entity id="DS.d15.s0.e3" origId="P08684,Q6GRK0" charOffset="397-403" type="protein" text="CYP3A4"/>
-            <entity id="DS.d15.s0.e4" origId="449459" charOffset="326-334" type="compound" text="4-OH-tam"/>
-            <entity id="DS.d15.s0.e5" origId="3823,456201,47576,5702077" charOffset="537-549" type="compound" text="ketoconazole"/>
-            <entity id="DS.d15.s0.e6" origId="449459" charOffset="326-334" type="compound" text="4-OH-tam"/>
-            <entity id="DS.d15.s0.e7" origId="P08684,Q6GRK0" charOffset="397-403" type="protein" text="CYP3A4"/>
-            <entity id="DS.d15.s0.e8" origId="P00167" charOffset="771-784" type="protein" text="cytochrome b5"/>
-            <entity id="DS.d15.s0.e9" origId="P08684,Q6GRK0" charOffset="397-403" type="protein" text="CYP3A4"/>
-            <entity id="DS.d15.s0.e10" origId="P10635,C1ID52,Q5Y7H2" charOffset="879-885" type="protein" text="CYP2D6"/>
-            <entity id="DS.d15.s0.e11" origId="2981881,91293124" charOffset="31-33" type="compound" text="3A"/>
-            <pair e1="DS.d15.s0.e1" e2="DS.d15.s0.e0" id="DS.d15.s0.i0" interaction="False" />
-            <pair e1="DS.d15.s0.e1" e2="DS.d15.s0.e8" id="DS.d15.s0.i1" interaction="False" />
-            <pair e1="DS.d15.s0.e1" e2="DS.d15.s0.e10" id="DS.d15.s0.i2" interaction="False" />
-            <pair e1="DS.d15.s0.e11" e2="DS.d15.s0.e0" id="DS.d15.s0.i3" interaction="False" />
-            <pair e1="DS.d15.s0.e11" e2="DS.d15.s0.e8" id="DS.d15.s0.i4" interaction="False" />
-            <pair e1="DS.d15.s0.e11" e2="DS.d15.s0.e10" id="DS.d15.s0.i5" interaction="False" />
-            <pair e1="DS.d15.s0.e5" e2="DS.d15.s0.e0" id="DS.d15.s0.i6" interaction="False" />
-            <pair e1="DS.d15.s0.e5" e2="DS.d15.s0.e8" id="DS.d15.s0.i7" interaction="False" />
-            <pair e1="DS.d15.s0.e5" e2="DS.d15.s0.e10" id="DS.d15.s0.i8" interaction="False" />
+    <document id="DS.d15" origId="18037312">
+        <sentence id="DS.d15.s0" origId="18037312-4" text="Cadmium inhalation induced: (1) a transient bronchial inflammation, dominated by neutrophils; (2) a neutrophilia of the blood that persisted for up to 4 weeks; (3) a transient increased bronchial reactivity, and (4) a significant increase in MMP-9 activity in the BALF.">
+            <entity id="DS.d15.s0.e0" origId="D002104" charOffset="0-7" type="compound" text="Cadmium"/>
+            <entity id="DS.d15.s0.e1" origId="Q71U09" charOffset="242-247" type="protein" text="MMP-9"/>
+            <pair e1="DS.d15.s0.e0" e2="DS.d15.s0.e1" id="DS.d15.s0.i0" interaction="False" />
         </sentence>
     </document>
-    <document id="DS.d16" origId="10370672">
-        <sentence id="DS.d16.s0" origId="10370672-6" text="The weight of resected liver (r = 0.821, p &lt; 0.0001), maximum diameter of tumor (r = 0.782, p &lt; 0.0001) and operation time (r = 0.748, p &lt; 0.0001) were the most highly correlated with intra-operative blood loss, followed by pre-operative total bilirubin (r = 0.605, p = 0.0038), FDP level (r = 0.576, p = 0.0068) and intra-operative blood transfusion (r = 0.561, p = 0.0089).">
-            <entity id="DS.d16.s0.e0" origId="5280352" charOffset="244-253" type="compound" text="bilirubin"/>
-            <entity id="DS.d16.s0.e1" origId="Q9NRC9" charOffset="279-282" type="protein" text="FDP"/>
-            <pair e1="DS.d16.s0.e0" e2="DS.d16.s0.e1" id="DS.d16.s0.i0" interaction="False" />
+    <document id="DS.d16" origId="18042181">
+        <sentence id="DS.d16.s0" origId="18042181-0" text="FSH and bFGF stimulate the production of glutathione in cultured rat Sertoli cells.">
+            <entity id="DS.d16.s0.e0" origId="P13109" charOffset="8-12" type="protein" text="bFGF"/>
+            <entity id="DS.d16.s0.e1" origId="D005978" charOffset="41-52" type="compound" text="glutathione"/>
+            <pair e1="DS.d16.s0.e1" e2="DS.d16.s0.e0" id="DS.d16.s0.i0" interaction="False" />
         </sentence>
-    </document>
-    <document id="DS.d17" origId="10376199">
-        <sentence id="DS.d17.s0" origId="10376199-8" text="For plaque size, univariate and multivariate analyses demonstrated that diabetes mellitus and hypercholesterolemia were independent predictors for greater plaque (13.5 +/- 5.72 versus 10.17 +/- 4.6 mm2, P = 0.015, for diabetic versus non-diabetic patients; 12.0 +/- 5.35 versus 9.03 +/- 3.76 mm2, P = 0.010, for hypercholesterolemic versus normocholesterolemic patients) and EEM CSA (17.16 +/- 5.81 versus 14.3 +/- 5.1 mm2, P = 0.033, for diabetic versus non-diabetic patients; 16.57 +/- 5.49 versus 12.25 +/- 3.8 mm2, P = 0.001, for hypercholesterolemic versus normocholesterolemic patients) at the target lesion.">
-            <entity id="DS.d17.s0.e0" origId="21313" charOffset="375-378" type="compound" text="EEM"/>
-            <entity id="DS.d17.s0.e1" origId="Q13216,B3KPW7,B4DGZ9" charOffset="379-382" type="protein" text="CSA"/>
-            <pair e1="DS.d17.s0.e0" e2="DS.d17.s0.e1" id="DS.d17.s0.i0" interaction="False" />
+        <sentence id="DS.d16.s1" origId="18042181-4" text="Intracellular GSH content is maintained by de novo synthesis, involving glutamate-cysteine ligase catalytic (GCLC) and modulatory (GCLM) subunits, and by recycling from oxidized GSH, catalysed by glutathione reductase (GR).">
+            <entity id="DS.d16.s1.e0" origId="CHEBI:16856" charOffset="14-17" type="compound" text="GSH"/>
+            <entity id="DS.d16.s1.e1" origId="CHEBI:29987" charOffset="72-81" type="compound" text="glutamate"/>
+            <entity id="DS.d16.s1.e2" origId="D003545" charOffset="82-90" type="compound" text="cysteine"/>
+            <entity id="DS.d16.s1.e3" origId="P19468" charOffset="109-113" type="protein" text="GCLC"/>
+            <entity id="DS.d16.s1.e4" origId="P48508" charOffset="131-135" type="protein" text="GCLM"/>
+            <entity id="DS.d16.s1.e5" origId="" charOffset="169-181" type="compound" text="oxidized GSH"/>
+            <entity id="DS.d16.s1.e6" origId="F1LRE1" charOffset="196-217" type="protein" text="glutathione reductase"/>
+            <entity id="DS.d16.s1.e7" origId="F1LRE1" charOffset="219-221" type="protein" text="GR"/>
+            <pair e1="DS.d16.s1.e0" e2="DS.d16.s1.e3" id="DS.d16.s1.i0" interaction="False" />
+            <pair e1="DS.d16.s1.e0" e2="DS.d16.s1.e4" id="DS.d16.s1.i1" interaction="False" />
+            <pair e1="DS.d16.s1.e0" e2="DS.d16.s1.e6" id="DS.d16.s1.i2" interaction="False" />
+            <pair e1="DS.d16.s1.e0" e2="DS.d16.s1.e7" id="DS.d16.s1.i3" interaction="False" />
+            <pair e1="DS.d16.s1.e1" e2="DS.d16.s1.e3" id="DS.d16.s1.i4" interaction="False" />
+            <pair e1="DS.d16.s1.e1" e2="DS.d16.s1.e4" id="DS.d16.s1.i5" interaction="False" />
+            <pair e1="DS.d16.s1.e1" e2="DS.d16.s1.e6" id="DS.d16.s1.i6" interaction="False" />
+            <pair e1="DS.d16.s1.e1" e2="DS.d16.s1.e7" id="DS.d16.s1.i7" interaction="False" />
+            <pair e1="DS.d16.s1.e2" e2="DS.d16.s1.e3" id="DS.d16.s1.i8" interaction="False" />
+            <pair e1="DS.d16.s1.e2" e2="DS.d16.s1.e4" id="DS.d16.s1.i9" interaction="False" />
+            <pair e1="DS.d16.s1.e2" e2="DS.d16.s1.e6" id="DS.d16.s1.i10" interaction="False" />
+            <pair e1="DS.d16.s1.e2" e2="DS.d16.s1.e7" id="DS.d16.s1.i11" interaction="False" />
+            <pair e1="DS.d16.s1.e5" e2="DS.d16.s1.e3" id="DS.d16.s1.i12" interaction="False" />
+            <pair e1="DS.d16.s1.e5" e2="DS.d16.s1.e4" id="DS.d16.s1.i13" interaction="False" />
+            <pair e1="DS.d16.s1.e5" e2="DS.d16.s1.e6" id="DS.d16.s1.i14" interaction="False" />
+            <pair e1="DS.d16.s1.e5" e2="DS.d16.s1.e7" id="DS.d16.s1.i15" interaction="False" />
         </sentence>
-    </document>
-    <document id="DS.d18" origId="10385599">
-        <sentence id="DS.d18.s0" origId="10385599-3" text="Treatment of adherent ASMC with beta-hexosaminidase A (Hex A, 50 nM), an endogenous mannosyl-rich glycoprotein, resulted in a late-onset (30-min) activation of p44/42(MAPK) that lasted for 4 h. Activation of p44/42(MAPK) induced by Hex A was inhibited by an 18-mer phosphorothioate-derivatized antisense oligonucleotide (1-5 microM) directed to human p44(MAPK); the mitogen-activated protein kinase kinase (MEK1) inhibitor PD98059 (5 microM); the p42(MAPK) inhibitor Tyrphostin AG-126 (0.2 microM); the farnesyl transferase inhibitors SCH-56582 (10 microM) and FPT III (10 miroM), which inhibit p21Ras activation; and Calphostin C (0.2 microM), an inhibitor of protein kinase C. These agents also inhibited Hex A-induced cell proliferation in bovine ASMC.">
-            <entity id="DS.d18.s0.e0" origId="Q0V8R6" charOffset="32-53" type="protein" text="beta-hexosaminidase A"/>
-            <entity id="DS.d18.s0.e1" origId="P06865" charOffset="55-60" type="protein" text="Hex A"/>
-            <entity id="DS.d18.s0.e2" origId="P62333,A0A087X2I1" charOffset="160-163" type="protein" text="p44"/>
-            <entity id="DS.d18.s0.e3" origId="P62333,A0A087X2I1" charOffset="208-211" type="protein" text="p44"/>
-            <entity id="DS.d18.s0.e4" origId="P06865" charOffset="232-237" type="protein" text="Hex A"/>
-            <entity id="DS.d18.s0.e5" origId="P62333,A0A087X2I1" charOffset="208-211" type="protein" text="p44"/>
-            <entity id="DS.d18.s0.e6" origId="Q02750,A4QPA9,B4DFY5" charOffset="407-411" type="protein" text="MEK1"/>
-            <entity id="DS.d18.s0.e7" origId="4713" charOffset="423-430" type="compound" text="PD98059"/>
-            <entity id="DS.d18.s0.e8" origId="P62333,A0A087X2I1" charOffset="447-450" type="protein" text="p42"/>
-            <entity id="DS.d18.s0.e9" origId="2046" charOffset="478-484" type="compound" text="AG-126"/>
-            <entity id="DS.d18.s0.e10" origId="3000505" charOffset="561-564" type="compound" text="FPT"/>
-            <entity id="DS.d18.s0.e11" origId="E1BMX0,P01112,X5D945" charOffset="595-601" type="protein" text="p21Ras"/>
-            <entity id="DS.d18.s0.e12" origId="2533" charOffset="618-630" type="compound" text="Calphostin C"/>
-            <entity id="DS.d18.s0.e13" origId="P06865" charOffset="232-237" type="protein" text="Hex A"/>
-            <pair e1="DS.d18.s0.e7" e2="DS.d18.s0.e1" id="DS.d18.s0.i0" interaction="False" />
-            <pair e1="DS.d18.s0.e7" e2="DS.d18.s0.e8" id="DS.d18.s0.i1" interaction="False" />
-            <pair e1="DS.d18.s0.e7" e2="DS.d18.s0.e6" id="DS.d18.s0.i2" interaction="False" />
-            <pair e1="DS.d18.s0.e7" e2="DS.d18.s0.e11" id="DS.d18.s0.i3" interaction="False" />
-            <pair e1="DS.d18.s0.e7" e2="DS.d18.s0.e2" id="DS.d18.s0.i4" interaction="False" />
-            <pair e1="DS.d18.s0.e7" e2="DS.d18.s0.e0" id="DS.d18.s0.i5" interaction="False" />
-            <pair e1="DS.d18.s0.e10" e2="DS.d18.s0.e1" id="DS.d18.s0.i6" interaction="False" />
-            <pair e1="DS.d18.s0.e10" e2="DS.d18.s0.e8" id="DS.d18.s0.i7" interaction="False" />
-            <pair e1="DS.d18.s0.e10" e2="DS.d18.s0.e6" id="DS.d18.s0.i8" interaction="False" />
-            <pair e1="DS.d18.s0.e10" e2="DS.d18.s0.e11" id="DS.d18.s0.i9" interaction="False" />
-            <pair e1="DS.d18.s0.e10" e2="DS.d18.s0.e2" id="DS.d18.s0.i10" interaction="False" />
-            <pair e1="DS.d18.s0.e10" e2="DS.d18.s0.e0" id="DS.d18.s0.i11" interaction="False" />
-            <pair e1="DS.d18.s0.e9" e2="DS.d18.s0.e1" id="DS.d18.s0.i12" interaction="False" />
-            <pair e1="DS.d18.s0.e9" e2="DS.d18.s0.e8" id="DS.d18.s0.i13" interaction="False" />
-            <pair e1="DS.d18.s0.e9" e2="DS.d18.s0.e6" id="DS.d18.s0.i14" interaction="False" />
-            <pair e1="DS.d18.s0.e9" e2="DS.d18.s0.e11" id="DS.d18.s0.i15" interaction="False" />
-            <pair e1="DS.d18.s0.e9" e2="DS.d18.s0.e2" id="DS.d18.s0.i16" interaction="False" />
-            <pair e1="DS.d18.s0.e9" e2="DS.d18.s0.e0" id="DS.d18.s0.i17" interaction="False" />
-            <pair e1="DS.d18.s0.e12" e2="DS.d18.s0.e1" id="DS.d18.s0.i18" interaction="False" />
-            <pair e1="DS.d18.s0.e12" e2="DS.d18.s0.e8" id="DS.d18.s0.i19" interaction="False" />
-            <pair e1="DS.d18.s0.e12" e2="DS.d18.s0.e6" id="DS.d18.s0.i20" interaction="False" />
-            <pair e1="DS.d18.s0.e12" e2="DS.d18.s0.e11" id="DS.d18.s0.i21" interaction="False" />
-            <pair e1="DS.d18.s0.e12" e2="DS.d18.s0.e2" id="DS.d18.s0.i22" interaction="False" />
-            <pair e1="DS.d18.s0.e12" e2="DS.d18.s0.e0" id="DS.d18.s0.i23" interaction="False" />
+        <sentence id="DS.d16.s2" origId="18042181-5" text="To assess whether follicle-stimulating hormone (FSH) and basic fibroblast growth factor (bFGF) modulate GSH production in Sertoli cells by regulating the expression of GCLC, GCLM and/or GR, we performed in vitro studies using rat Sertoli cells in primary culture.">
+            <entity id="DS.d16.s2.e0" origId="P13109" charOffset="57-87" type="protein" text="basic fibroblast growth factor"/>
+            <entity id="DS.d16.s2.e1" origId="P13109" charOffset="89-93" type="protein" text="bFGF"/>
+            <entity id="DS.d16.s2.e2" origId="CHEBI:16856" charOffset="104-107" type="compound" text="GSH"/>
+            <entity id="DS.d16.s2.e3" origId="P19468" charOffset="168-172" type="protein" text="GCLC"/>
+            <entity id="DS.d16.s2.e4" origId="P48508" charOffset="174-178" type="protein" text="GCLM"/>
+            <entity id="DS.d16.s2.e5" origId="F1LRE1" charOffset="186-188" type="protein" text="GR"/>
+            <pair e1="DS.d16.s2.e2" e2="DS.d16.s2.e0" id="DS.d16.s2.i0" interaction="False" />
+            <pair e1="DS.d16.s2.e2" e2="DS.d16.s2.e1" id="DS.d16.s2.i1" interaction="False" />
+            <pair e1="DS.d16.s2.e2" e2="DS.d16.s2.e3" id="DS.d16.s2.i2" interaction="False" />
+            <pair e1="DS.d16.s2.e2" e2="DS.d16.s2.e4" id="DS.d16.s2.i3" interaction="False" />
+            <pair e1="DS.d16.s2.e2" e2="DS.d16.s2.e5" id="DS.d16.s2.i4" interaction="False" />
         </sentence>
-    </document>
-    <document id="DS.d19" origId="10396370">
-        <sentence id="DS.d19.s0" origId="10396370-13" text="In men, E1-FA levels also correlated with systolic blood pressure (r = 0.59, P = 0.01), total triglycerides (r = 0.63, P = 0.003), VLDL-triglycerides (r = 0.62, P = 0.004) and VLDL-cholesterol (r = 0.48, P = 0.03), but not with diastolic blood pressure, serum total or LDL-cholesterol, or total and HDL2 and HDL3 subfractions of HDL cholesterol.">
-            <entity id="DS.d19.s0.e0" origId="5997" charOffset="181-192" type="compound" text="cholesterol"/>
-            <entity id="DS.d19.s0.e1" origId="5997" charOffset="273-284" type="compound" text="cholesterol"/>
-            <entity id="DS.d19.s0.e2" origId="Q8WXH2,F8W9A3,Q96HD8,B4DIC1" charOffset="299-303" type="protein" text="HDL2"/>
-            <entity id="DS.d19.s0.e3" origId="5997" charOffset="273-284" type="compound" text="cholesterol"/>
-            <pair e1="DS.d19.s0.e0" e2="DS.d19.s0.e2" id="DS.d19.s0.i0" interaction="False" />
+        <sentence id="DS.d16.s3" origId="18042181-6" text="FSH and bFGF stimulation increased Sertoli cell GSH levels after 24 h incubation.">
+            <entity id="DS.d16.s3.e0" origId="P13109" charOffset="8-12" type="protein" text="bFGF"/>
+            <entity id="DS.d16.s3.e1" origId="CHEBI:16856" charOffset="48-51" type="compound" text="GSH"/>
+            <pair e1="DS.d16.s3.e1" e2="DS.d16.s3.e0" id="DS.d16.s3.i0" interaction="False" />
         </sentence>
-        <sentence id="DS.d19.s1" origId="10396370-15" text="In women, E1-FA levels correlated with total triglycerides (r = 0.66, P = 0.001), VLDL-triglycerides (r = 0.65, P = 0.001), VLDL-cholesterol (r = 0.63, P = 0.002), LDL-cholesterol (r = 0.57, P = 0.005) and total and HDL2 and HDL3 subfractions of HDL cholesterol (r = -0.58, -0.48, -0.61, P = 0.004, 0.02 and 0.002, respectively), but not with systolic or diastolic blood pressure or total cholesterol.">
-            <entity id="DS.d19.s1.e0" origId="5997" charOffset="129-140" type="compound" text="cholesterol"/>
-            <entity id="DS.d19.s1.e1" origId="5997" charOffset="168-179" type="compound" text="cholesterol"/>
-            <entity id="DS.d19.s1.e2" origId="Q8WXH2,F8W9A3,Q96HD8,B4DIC1" charOffset="216-220" type="protein" text="HDL2"/>
-            <entity id="DS.d19.s1.e3" origId="5997" charOffset="168-179" type="compound" text="cholesterol"/>
-            <entity id="DS.d19.s1.e4" origId="5997" charOffset="168-179" type="compound" text="cholesterol"/>
-            <pair e1="DS.d19.s1.e0" e2="DS.d19.s1.e2" id="DS.d19.s1.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d20" origId="10401706">
-        <sentence id="DS.d20.s0" origId="10401706-10" text="In particular, in childhood onset GH deficient patients after 3 months osteocalcin increased from 2.5+/-1.3 to 7.9+/-2.1 mcg/l, p&lt;0.001 aminoterminal propeptide of type-III from 273+/-49 to 359+/-15 U/I p&lt;0.001; serum carboxyterminal telopeptide of type-I procollagen from 105+/-48 to 201+/-45 mcg/l, p&lt;0.001; urinary hydroxyproline/creatinine from 0.19+/-0.16 to 0.81+/-0.17 mmol/mol, p&lt;0.001; urinary deoxypyridinoline/creatinine from 21 +/-10 to 54+/-20 mcmol/mol, p&lt;0.001; while in adulthood onset GH deficient patients after 6 months osteocalcin increased from 4.2+/-3.6 to 6.5+/-1.9 mcg/l, p&lt;0.05; aminoterminal propeptide of type- III from 440+/-41 to 484+/-37 U/I, p&lt;0.05; serum carboxyterminal telopeptide of type-I procollagen from 125+/-40 to 152+/-22 mcg/l, p&lt;0.05; urinary hydroxyproline/creatinine from 0.24+/-0.12 to 0.54+/-0.06 mmol/mol, p&lt;0.001; urinary deoxypyridinoline/creatinine from 23+/-8 to 42+/-5 mcmol/mol, p&lt;0.001.">
-            <entity id="DS.d20.s0.e0" origId="P02818" charOffset="71-82" type="protein" text="osteocalcin"/>
-            <entity id="DS.d20.s0.e1" origId="P08123" charOffset="249-267" type="protein" text="type-I procollagen"/>
-            <entity id="DS.d20.s0.e2" origId="269023,5810" charOffset="318-332" type="compound" text="hydroxyproline"/>
-            <entity id="DS.d20.s0.e3" origId="588" charOffset="333-343" type="compound" text="creatinine"/>
-            <entity id="DS.d20.s0.e4" origId="3034763" charOffset="403-420" type="compound" text="deoxypyridinoline"/>
-            <entity id="DS.d20.s0.e5" origId="588" charOffset="421-431" type="compound" text="creatinine"/>
-            <entity id="DS.d20.s0.e6" origId="P02818" charOffset="539-550" type="protein" text="osteocalcin"/>
-            <entity id="DS.d20.s0.e7" origId="P08123" charOffset="718-736" type="protein" text="type-I procollagen"/>
-            <entity id="DS.d20.s0.e8" origId="269023,5810" charOffset="786-800" type="compound" text="hydroxyproline"/>
-            <entity id="DS.d20.s0.e9" origId="588" charOffset="421-431" type="compound" text="creatinine"/>
-            <entity id="DS.d20.s0.e10" origId="3034763" charOffset="871-888" type="compound" text="deoxypyridinoline"/>
-            <entity id="DS.d20.s0.e11" origId="588" charOffset="421-431" type="compound" text="creatinine"/>
-            <pair e1="DS.d20.s0.e4" e2="DS.d20.s0.e1" id="DS.d20.s0.i0" interaction="False" />
-            <pair e1="DS.d20.s0.e4" e2="DS.d20.s0.e0" id="DS.d20.s0.i1" interaction="False" />
-            <pair e1="DS.d20.s0.e3" e2="DS.d20.s0.e1" id="DS.d20.s0.i2" interaction="False" />
-            <pair e1="DS.d20.s0.e3" e2="DS.d20.s0.e0" id="DS.d20.s0.i3" interaction="False" />
-            <pair e1="DS.d20.s0.e2" e2="DS.d20.s0.e1" id="DS.d20.s0.i4" interaction="False" />
-            <pair e1="DS.d20.s0.e2" e2="DS.d20.s0.e0" id="DS.d20.s0.i5" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d21" origId="10404042">
-        <sentence id="DS.d21.s0" origId="10404042-6" text="The data demonstrated that: 1) bone marrow- and hepatic-derived stromal/adherent cells support preB cell growth and regulate apoptosis induced by DMBA or B(a)P; 2) B(a)P is more effective than DMBA when preB cells are maintained on Hepa-1c1c7 monolayers than when maintained on BMS2 monolayers; 3) DMBA is more effective than B(a)P when preB cells are cultured on BMS2 monolayers; 4) alpha-naphthoflavone, an AhR antagonist and cytochrome P-450 inhibitor, blocks preB cell apoptosis in both BU-11/Hepa-1c1c7 and BU-11/BMS2 cultures; 5) although preB cells grow well in Hepa-1c1c7 or BMS2 supernatants, addition of PAH in the absence of hepatic- or bone marrow-derived adherent cells does not result in preB cell apoptosis; 6) preB cell apoptosis is dependent on AhR activity in adherent hepatic- or bone marrow-derived stromal cells; and 7) apoptosis is induced by DMBA when preB cells are maintained on primary bone marrow stromal cell monolayers from wildtype but not from AhR-/- mice.">
-            <entity id="DS.d21.s0.e0" origId="P30561,Q3U5D9" charOffset="409-412" type="protein" text="AhR"/>
-            <entity id="DS.d21.s0.e1" origId="2148" charOffset="614-617" type="compound" text="PAH"/>
-            <entity id="DS.d21.s0.e2" origId="P30561,Q3U5D9" charOffset="762-765" type="protein" text="AhR"/>
-            <entity id="DS.d21.s0.e3" origId="P30561,Q3U5D9" charOffset="762-765" type="protein" text="AhR"/>
-            <pair e1="DS.d21.s0.e1" e2="DS.d21.s0.e0" id="DS.d21.s0.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d22" origId="10413483">
-        <sentence id="DS.d22.s0" origId="10413483-2" text="The results for neutral side chains with phi, psi angles approximately 180 degrees, approximately 180 degrees in ascending order, to an expected accuracy of +/-10 kJ mol(-)(1), are Asn 326; cystine 330; Asp 332; Gln 334; Trp 337; Arg 340; Lys 340; Met 343; His 344; Phe 344; Tyr 344; Leu 344; Ala 345; Cys 346; Ser 349; Gly 350; Ile 351; Val 352; Glu 354; Thr 357; Pro-cis 358; Pro-trans 369.">
-            <entity id="DS.d22.s0.e0" origId="P06744,B4DE36" charOffset="41-44" type="protein" text="phi"/>
-            <entity id="DS.d22.s0.e1" origId="595" charOffset="190-197" type="compound" text="cystine"/>
-            <entity id="DS.d22.s0.e2" origId="5962" charOffset="239-242" type="compound" text="Lys"/>
-            <entity id="DS.d22.s0.e3" origId="6057" charOffset="275-278" type="compound" text="Tyr"/>
-            <entity id="DS.d22.s0.e4" origId="5951" charOffset="311-314" type="compound" text="Ser"/>
-            <pair e1="DS.d22.s0.e4" e2="DS.d22.s0.e0" id="DS.d22.s0.i0" interaction="False" />
-            <pair e1="DS.d22.s0.e3" e2="DS.d22.s0.e0" id="DS.d22.s0.i1" interaction="False" />
-            <pair e1="DS.d22.s0.e1" e2="DS.d22.s0.e0" id="DS.d22.s0.i2" interaction="False" />
-            <pair e1="DS.d22.s0.e2" e2="DS.d22.s0.e0" id="DS.d22.s0.i3" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d23" origId="10417506">
-        <sentence id="DS.d23.s0" origId="10417506-6" text="RESULTS: The mean concentrations of tramadol during the postsurgery phase were 470+/-323 ng ml-1, 590+/-410 ng ml-1 and 771+/-451 ng ml-1 in the (+)-, racemate- and (-)-group, respectively ((+) vs (-), P&lt;0.05); the mean concentrations of the metabolite M1 were 57+/-18 ng ml-1, 84+/-34 ng ml-1 and 96+/-41 ng ml-1 in the (+)-, racemate- and (-)-group, respectively ((+) vs (-) and (+) vs racemate, P&lt;0.05).">
-            <entity id="DS.d23.s0.e0" origId="33741" charOffset="36-44" type="compound" text="tramadol"/>
-            <entity id="DS.d23.s0.e1" origId="Q9NTI2" charOffset="92-96" type="protein" text="ml-1"/>
-            <entity id="DS.d23.s0.e2" origId="Q9NTI2" charOffset="111-115" type="protein" text="ml-1"/>
-            <entity id="DS.d23.s0.e3" origId="Q9NTI2" charOffset="111-115" type="protein" text="ml-1"/>
-            <entity id="DS.d23.s0.e4" origId="Q9NTI2" charOffset="111-115" type="protein" text="ml-1"/>
-            <entity id="DS.d23.s0.e5" origId="Q9NTI2" charOffset="111-115" type="protein" text="ml-1"/>
-            <entity id="DS.d23.s0.e6" origId="Q9NTI2" charOffset="111-115" type="protein" text="ml-1"/>
-            <pair e1="DS.d23.s0.e0" e2="DS.d23.s0.e1" id="DS.d23.s0.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d24" origId="10431761">
-        <sentence id="DS.d24.s0" origId="10431761-7" text="Our results demonstrated that: (1) injection of LPS caused a significant fall in blood pressure and a severe vascular hyporeactivity to NA in the anaesthetised rat, (2) the relaxation induced by the K(+)channel opener cromakalim was greater in rings obtained from endotoxaemic rats and this enhanced relaxation was partially inhibited by pretreatment of these rings with 1H-(1,2,4)oxadiazolo(4,3-a)quinoxalin-1-one (ODQ), an inhibitor of the NO/cGMP pathway, (3) endotoxaemia for 4 h was also associated with a profound vascular hyporeactivity to NA ex vivo and this vascular hyporesponsiveness was partially inhibited by ODQ, tetraethylammonium (TEA, a non-selective inhibitor of K(+)-channels) and charybdotoxin (CTX, a selective inhibitor of large conductance calcium-activated K(+)- channels (BK(Ca))), but not by apamin, and (4) the combination of TEA or CTX with ODQ completely restored that vascular responsiveness to normal.">
-            <entity id="DS.d24.s0.e0" origId="71191,93504" charOffset="218-228" type="compound" text="cromakalim"/>
-            <entity id="DS.d24.s0.e1" origId="54245772" charOffset="371-408" type="compound" text="1H-(1,2,4)oxadiazolo(4,3-a)quinoxalin"/>
-            <entity id="DS.d24.s0.e2" origId="5413" charOffset="627-645" type="compound" text="tetraethylammonium"/>
-            <entity id="DS.d24.s0.e3" origId="22044544,5460341" charOffset="763-770" type="compound" text="calcium"/>
-            <entity id="DS.d24.s0.e4" origId="Q62976" charOffset="797-802" type="protein" text="BK(Ca"/>
-            <entity id="DS.d24.s0.e5" origId="16129677,16218850,56928162,57043712" charOffset="818-824" type="compound" text="apamin"/>
-            <pair e1="DS.d24.s0.e3" e2="DS.d24.s0.e4" id="DS.d24.s0.i0" interaction="False" />
-            <pair e1="DS.d24.s0.e5" e2="DS.d24.s0.e4" id="DS.d24.s0.i1" interaction="False" />
-            <pair e1="DS.d24.s0.e2" e2="DS.d24.s0.e4" id="DS.d24.s0.i2" interaction="False" />
-            <pair e1="DS.d24.s0.e0" e2="DS.d24.s0.e4" id="DS.d24.s0.i3" interaction="False" />
-            <pair e1="DS.d24.s0.e5" e2="DS.d24.s0.e4" id="DS.d24.s0.i4" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d25" origId="10436588">
-        <sentence id="DS.d25.s0" origId="10436588-8" text="Dose accumulated of fentanyl total (5732.7 +/- 5114.91 vs 624.2 +/- 591.2 mcg, p &lt; 0.005), dose daily of fentanyl (98.54 +/- 6.12 vs 36.23 +/- 23.42 mcg/Kg/dia, p &lt; 0.005), velocity of infusion of the fentayl (4.09 +/- 2.75 vs 1.5 +/- 0.95 mcg/Kg/hora, p &lt; 0.005), time of use of the fentanyl (10.2 +/- 5.1 vs 3.16 +/- 1.09 days, p &lt; 0.005), dose accumulated of midazolam total (118.8 +/- 86.97 vs 20.03 +/- 14.79 mg, p &lt; 0.005), dose daily of midazolam (2.32 +/- 0.86 vs 1.21 +/- 0.68 mg/Kg/dia, p &lt; 0.005), velocity of midazolam infusion (0.13 +/- 0.16 vs 0.05 +/- 0.02 mg/Kg/hora, p &lt; 0.005) and time of use of the midazolam (9.20 +/- 4.67 vs 2.55 +/- 1.54 days, p &lt; 0.005) they were considered significant.">
-            <entity id="DS.d25.s0.e0" origId="O60879" charOffset="156-159" type="protein" text="dia"/>
-            <entity id="DS.d25.s0.e1" origId="4192" charOffset="362-371" type="compound" text="midazolam"/>
-            <entity id="DS.d25.s0.e2" origId="4192" charOffset="444-453" type="compound" text="midazolam"/>
-            <entity id="DS.d25.s0.e3" origId="O60879" charOffset="492-495" type="protein" text="dia"/>
-            <entity id="DS.d25.s0.e4" origId="4192" charOffset="444-453" type="compound" text="midazolam"/>
-            <entity id="DS.d25.s0.e5" origId="4192" charOffset="444-453" type="compound" text="midazolam"/>
-            <pair e1="DS.d25.s0.e1" e2="DS.d25.s0.e0" id="DS.d25.s0.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d26" origId="10444633">
-        <sentence id="DS.d26.s0" origId="10444633-2" text="To determine the extent to which insulin, glucagon, and selective (alpha/beta)-adrenergic activation mediate the increment in glucose metabolic clearance rate (MCR) and glucose production (R(a)), we used five groups of normal mongrel dogs: 1) pancreatic clamp (PC; n = 7) with peripheral somatostatin (0.8 microg x kg(-1) x min(-1)) and intraportal replacement of insulin (1,482 +/- 84 pmol x kg(-1) x min(-1)) and glucagon (0.65 ng x kg(-1) x min(-1)) infusions; 2) PC plus combined alpha (phentolamine)- and beta (propranolol)-blockade (7 and 5 microg x kg(-1) x min(-1), respectively; alpha+beta; n = 5); 3) PC plus alpha-blockade (alpha; n = 6); 4) PC plus beta-blockade (beta; n = 5); and 5) a carbachol control group without PC (Con; n = 10).">
-            <entity id="DS.d26.s0.e0" origId="P01321" charOffset="33-40" type="protein" text="insulin"/>
-            <entity id="DS.d26.s0.e1" origId="P29794" charOffset="42-50" type="protein" text="glucagon"/>
-            <entity id="DS.d26.s0.e2" origId="206,5793,64689,79025" charOffset="126-133" type="compound" text="glucose"/>
-            <entity id="DS.d26.s0.e3" origId="206,5793,64689,79025" charOffset="169-176" type="compound" text="glucose"/>
-            <entity id="DS.d26.s0.e4" origId="P01321" charOffset="364-371" type="protein" text="insulin"/>
-            <entity id="DS.d26.s0.e5" origId="P29794" charOffset="415-423" type="protein" text="glucagon"/>
-            <entity id="DS.d26.s0.e6" origId="5775" charOffset="491-503" type="compound" text="phentolamine"/>
-            <entity id="DS.d26.s0.e7" origId="4946" charOffset="516-527" type="compound" text="propranolol"/>
-            <entity id="DS.d26.s0.e8" origId="2551" charOffset="699-708" type="compound" text="carbachol"/>
-            <pair e1="DS.d26.s0.e8" e2="DS.d26.s0.e1" id="DS.d26.s0.i0" interaction="False" />
-            <pair e1="DS.d26.s0.e8" e2="DS.d26.s0.e0" id="DS.d26.s0.i1" interaction="False" />
-            <pair e1="DS.d26.s0.e7" e2="DS.d26.s0.e1" id="DS.d26.s0.i2" interaction="False" />
-            <pair e1="DS.d26.s0.e7" e2="DS.d26.s0.e0" id="DS.d26.s0.i3" interaction="False" />
-            <pair e1="DS.d26.s0.e6" e2="DS.d26.s0.e1" id="DS.d26.s0.i4" interaction="False" />
-            <pair e1="DS.d26.s0.e6" e2="DS.d26.s0.e0" id="DS.d26.s0.i5" interaction="False" />
-            <pair e1="DS.d26.s0.e2" e2="DS.d26.s0.e1" id="DS.d26.s0.i6" interaction="False" />
-            <pair e1="DS.d26.s0.e2" e2="DS.d26.s0.e0" id="DS.d26.s0.i7" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d27" origId="10447673">
-        <sentence id="DS.d27.s0" origId="10447673-5" text="Several properties clearly distinguish cdkX, and its associated HMG-I kinase, from known anti-PSTAIRE cross-reactive cdks: (a) cdkX migrates, in SDS/PAGE, in a position intermediate between prophase phosphorylated cdk1 and metaphase dephosphorylated cdk1; (b) in contrast with cdk1, cdkX and associated HMG-I kinase activity do not decrease following successive depletions on p9CKShs1-sepharose; (c) cdkX and associated HMG-I kinase activity, but not cdk1, decrease following depletions on immobilized inhibitor; (d) cdkX is expressed during the early development of sea urchin embryos; in contrast with cdk1/cyclin B kinase, the p15cdk-BP-bound HMG-I kinase is active throughout the cell cycle; compared with cdk1 it is active later in development; (e) p15cdk-BP-bound HMG-I kinase is essentially insensitive to powerful inhibitors of cdk such as purvalanol, roscovitine, olomoucine, p21cip1 and p16INK4A; HD is only moderately inhibitory.">
-            <entity id="DS.d27.s0.e0" origId="P06493,A0A024QZJ8,B7Z3D6,I6L9I5" charOffset="214-218" type="protein" text="cdk1"/>
-            <entity id="DS.d27.s0.e1" origId="P06493,A0A024QZJ8,B7Z3D6,I6L9I5" charOffset="250-254" type="protein" text="cdk1"/>
-            <entity id="DS.d27.s0.e2" origId="P06493,A0A024QZJ8,B7Z3D6,I6L9I5" charOffset="250-254" type="protein" text="cdk1"/>
-            <entity id="DS.d27.s0.e3" origId="11966311" charOffset="385-394" type="compound" text="sepharose"/>
-            <entity id="DS.d27.s0.e4" origId="P06493,A0A024QZJ8,B7Z3D6,I6L9I5" charOffset="250-254" type="protein" text="cdk1"/>
-            <entity id="DS.d27.s0.e5" origId="P06493,A0A024QZJ8,B7Z3D6,I6L9I5" charOffset="250-254" type="protein" text="cdk1"/>
-            <entity id="DS.d27.s0.e6" origId="P06493,A0A024QZJ8,B7Z3D6,I6L9I5" charOffset="250-254" type="protein" text="cdk1"/>
-            <entity id="DS.d27.s0.e7" origId="448991" charOffset="848-858" type="compound" text="purvalanol"/>
-            <entity id="DS.d27.s0.e8" origId="160355" charOffset="860-871" type="compound" text="roscovitine"/>
-            <entity id="DS.d27.s0.e9" origId="4592" charOffset="873-883" type="compound" text="olomoucine"/>
-            <entity id="DS.d27.s0.e10" origId="P38936,A0A024RCX5" charOffset="885-892" type="protein" text="p21cip1"/>
-            <entity id="DS.d27.s0.e11" origId="Q8N726,P42771,K7PML8,G3XAG3" charOffset="897-905" type="protein" text="p16INK4A"/>
-            <pair e1="DS.d27.s0.e9" e2="DS.d27.s0.e0" id="DS.d27.s0.i0" interaction="False" />
-            <pair e1="DS.d27.s0.e9" e2="DS.d27.s0.e11" id="DS.d27.s0.i1" interaction="False" />
-            <pair e1="DS.d27.s0.e9" e2="DS.d27.s0.e10" id="DS.d27.s0.i2" interaction="False" />
-            <pair e1="DS.d27.s0.e8" e2="DS.d27.s0.e0" id="DS.d27.s0.i3" interaction="False" />
-            <pair e1="DS.d27.s0.e8" e2="DS.d27.s0.e11" id="DS.d27.s0.i4" interaction="False" />
-            <pair e1="DS.d27.s0.e8" e2="DS.d27.s0.e10" id="DS.d27.s0.i5" interaction="False" />
-            <pair e1="DS.d27.s0.e7" e2="DS.d27.s0.e0" id="DS.d27.s0.i6" interaction="False" />
-            <pair e1="DS.d27.s0.e7" e2="DS.d27.s0.e11" id="DS.d27.s0.i7" interaction="False" />
-            <pair e1="DS.d27.s0.e7" e2="DS.d27.s0.e10" id="DS.d27.s0.i8" interaction="False" />
-            <pair e1="DS.d27.s0.e3" e2="DS.d27.s0.e0" id="DS.d27.s0.i9" interaction="False" />
-            <pair e1="DS.d27.s0.e3" e2="DS.d27.s0.e11" id="DS.d27.s0.i10" interaction="False" />
-            <pair e1="DS.d27.s0.e3" e2="DS.d27.s0.e10" id="DS.d27.s0.i11" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d28" origId="10454466">
-        <sentence id="DS.d28.s0" origId="10454466-1" text="The 5-hydroxytryptamine(1B/1D) (5-HT(1B/1D)) antagonist 2'-methyl-4'-(5-methyl-(1,2,4)oxadiazol-3-yl)-biphenyl-4-carboxyli c acid (4-methoxy-3-(4-methyl-piperazin-1-yl)-phenyl)-amide (GR 127935) and 5-HT(1A) antagonist N-(2-(4-(2-methoxyphenyl)-1-piperazinyl)ethyl)-N-(2-pyridinyl)cyclohe xanecarboxamide (WAY 100635) were used to assess whether hyperactivity induced by 3 mg/kg (+)-3, 4-methylenedioxymethamphetamine ((+)-MDMA) is mediated by 5-HT(1B/1D) and/or 5-HT(1A) receptors.">
-            <entity id="DS.d28.s0.e0" origId="P28564" charOffset="32-39" type="protein" text="5-HT(1B"/>
-            <entity id="DS.d28.s0.e1" origId="10197612" charOffset="86-95" type="compound" text="oxadiazol"/>
-            <entity id="DS.d28.s0.e2" origId="8563" charOffset="123-129" type="compound" text="c acid"/>
-            <entity id="DS.d28.s0.e3" origId="91066389" charOffset="133-141" type="compound" text="methoxy-"/>
-            <entity id="DS.d28.s0.e4" origId="91216341" charOffset="153-167" type="compound" text="piperazin-1-yl"/>
-            <entity id="DS.d28.s0.e5" origId="2826723" charOffset="177-182" type="compound" text="amide"/>
-            <entity id="DS.d28.s0.e6" origId="P19327" charOffset="199-206" type="protein" text="5-HT(1A"/>
-            <entity id="DS.d28.s0.e7" origId="23134249" charOffset="60-65" type="compound" text="ethyl"/>
-            <entity id="DS.d28.s0.e8" origId="5684" charOffset="306-316" type="compound" text="WAY 100635"/>
-            <entity id="DS.d28.s0.e9" origId="1615" charOffset="388-417" type="compound" text="methylenedioxymethamphetamine"/>
-            <entity id="DS.d28.s0.e10" origId="P28564" charOffset="444-451" type="protein" text="5-HT(1B"/>
-            <entity id="DS.d28.s0.e11" origId="P19327" charOffset="463-470" type="protein" text="5-HT(1A"/>
-            <pair e1="DS.d28.s0.e3" e2="DS.d28.s0.e0" id="DS.d28.s0.i0" interaction="False" />
-            <pair e1="DS.d28.s0.e3" e2="DS.d28.s0.e6" id="DS.d28.s0.i1" interaction="False" />
-            <pair e1="DS.d28.s0.e4" e2="DS.d28.s0.e0" id="DS.d28.s0.i2" interaction="False" />
-            <pair e1="DS.d28.s0.e4" e2="DS.d28.s0.e6" id="DS.d28.s0.i3" interaction="False" />
-            <pair e1="DS.d28.s0.e5" e2="DS.d28.s0.e0" id="DS.d28.s0.i4" interaction="False" />
-            <pair e1="DS.d28.s0.e5" e2="DS.d28.s0.e6" id="DS.d28.s0.i5" interaction="False" />
-            <pair e1="DS.d28.s0.e2" e2="DS.d28.s0.e0" id="DS.d28.s0.i6" interaction="False" />
-            <pair e1="DS.d28.s0.e2" e2="DS.d28.s0.e6" id="DS.d28.s0.i7" interaction="False" />
-            <pair e1="DS.d28.s0.e1" e2="DS.d28.s0.e0" id="DS.d28.s0.i8" interaction="False" />
-            <pair e1="DS.d28.s0.e1" e2="DS.d28.s0.e6" id="DS.d28.s0.i9" interaction="False" />
-            <pair e1="DS.d28.s0.e8" e2="DS.d28.s0.e0" id="DS.d28.s0.i10" interaction="False" />
-            <pair e1="DS.d28.s0.e8" e2="DS.d28.s0.e6" id="DS.d28.s0.i11" interaction="False" />
-            <pair e1="DS.d28.s0.e9" e2="DS.d28.s0.e0" id="DS.d28.s0.i12" interaction="False" />
-            <pair e1="DS.d28.s0.e9" e2="DS.d28.s0.e6" id="DS.d28.s0.i13" interaction="False" />
-            <pair e1="DS.d28.s0.e7" e2="DS.d28.s0.e0" id="DS.d28.s0.i14" interaction="False" />
-            <pair e1="DS.d28.s0.e7" e2="DS.d28.s0.e6" id="DS.d28.s0.i15" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d29" origId="10463551">
-        <sentence id="DS.d29.s0" origId="10463551-8" text="Among moderate-risk patients with and without IAIs, those with IAIs were more likely to have abdominal abrasions (5/22 vs 34/459, p = 0.008), an abnormal chest examination (11/22 vs 86/457, p = 0.01), higher mean serum concentrations of aspartate aminotransferase (AST) (604 U/L vs 77 U/L, p &lt; 0.001) and alanine aminotransferase (ALT) (276 U/L vs 39 U/L, p = 0.002), higher mean white blood cell (WBC) counts (16.3 K/mm3 vs 12.8 K/mm3, p &lt; 0.001), and a higher prevalence of &gt;5 RBCs/hpf on urinalysis (7/22 vs 54/427, p = 0.02).">
-            <entity id="DS.d29.s0.e0" origId="5960" charOffset="237-246" type="compound" text="aspartate"/>
-            <entity id="DS.d29.s0.e1" origId="Q9NRA2" charOffset="265-268" type="protein" text="AST"/>
-            <entity id="DS.d29.s0.e2" origId="5950,602" charOffset="305-312" type="compound" text="alanine"/>
-            <pair e1="DS.d29.s0.e2" e2="DS.d29.s0.e1" id="DS.d29.s0.i0" interaction="False" />
-            <pair e1="DS.d29.s0.e0" e2="DS.d29.s0.e1" id="DS.d29.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d30" origId="10463859">
-        <sentence id="DS.d30.s0" origId="10463859-3" text="These studies demonstrated that (i) the quiescent state is characterized by the absence of cell-associated virus, capsids, and viral antigens; (ii) HS (43 degrees C, 3 h) efficiently activated virus from quiescently infected Nd-PC12 (QIF-PC12) cells; (iii) the rate of virus production was significantly greater following HS than forskolin treatment, and the rates of both were dependent on MOI; (iv) forskolin and HS appeared to affect pathways of viral activation from a quiescent state as they did not enhance viral growth in Nd-PC12 cells; (v) viral alpha4 gene and host HSP72 gene transcription were rapidly induced in QIF-PC12 as soon as 3 h post-HS initiation; (vi) induction of the viral alpha27 gene followed that of representative beta and gamma genes, U(L)30 and U(L)18, respectively, and (vii) HS induced asynchronous HSV-1 replication from QIF-PC12 cells with 1:400 to 1:22000 positive foci detected as rapid as 24 h post-induction when established at MOIs of 30 and 3, respectively.">
-            <entity id="DS.d30.s0.e0" origId="47936" charOffset="330-339" type="compound" text="forskolin"/>
-            <entity id="DS.d30.s0.e1" origId="47936" charOffset="401-410" type="compound" text="forskolin"/>
-            <entity id="DS.d30.s0.e2" origId="P0DMW0,P0DMW1" charOffset="575-580" type="protein" text="HSP72"/>
-            <pair e1="DS.d30.s0.e0" e2="DS.d30.s0.e2" id="DS.d30.s0.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d31" origId="10481820">
-        <sentence id="DS.d31.s0" origId="10481820-3" text="For the positional isomers t4, t5, t6-8, t9, t10, t11, t12, t13, t14, t15 and t16 contents of 0.02, 0.02, 0.21, 0.37, 0.32, 0.68, 0.23, 0.15, 0.18, 0.09 and 0.14 wt% were established, with vaccenic acid being the predominant isomer.">
-            <entity id="DS.d31.s0.e0" origId="P28907" charOffset="45-48" type="protein" text="t10"/>
-            <entity id="DS.d31.s0.e1" origId="P06729,Q53F96" charOffset="50-53" type="protein" text="t11"/>
-            <entity id="DS.d31.s0.e2" origId="Q6UB99" charOffset="60-63" type="protein" text="t13"/>
-            <entity id="DS.d31.s0.e3" origId="P26842" charOffset="65-68" type="protein" text="t14"/>
-            <entity id="DS.d31.s0.e4" origId="16740934" charOffset="78-81" type="compound" text="t16"/>
-            <entity id="DS.d31.s0.e5" origId="122325,5281127,5282761" charOffset="189-202" type="compound" text="vaccenic acid"/>
-            <pair e1="DS.d31.s0.e4" e2="DS.d31.s0.e3" id="DS.d31.s0.i0" interaction="False" />
-            <pair e1="DS.d31.s0.e4" e2="DS.d31.s0.e0" id="DS.d31.s0.i1" interaction="False" />
-            <pair e1="DS.d31.s0.e4" e2="DS.d31.s0.e1" id="DS.d31.s0.i2" interaction="False" />
-            <pair e1="DS.d31.s0.e4" e2="DS.d31.s0.e2" id="DS.d31.s0.i3" interaction="False" />
-            <pair e1="DS.d31.s0.e5" e2="DS.d31.s0.e3" id="DS.d31.s0.i4" interaction="False" />
-            <pair e1="DS.d31.s0.e5" e2="DS.d31.s0.e0" id="DS.d31.s0.i5" interaction="False" />
-            <pair e1="DS.d31.s0.e5" e2="DS.d31.s0.e1" id="DS.d31.s0.i6" interaction="False" />
-            <pair e1="DS.d31.s0.e5" e2="DS.d31.s0.e2" id="DS.d31.s0.i7" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d32" origId="10484572">
-        <sentence id="DS.d32.s0" origId="10484572-5" text="High plasma estradiol concentration lowered the P(osm) threshold for AVP release during the luteal phase and during OC E + P (x-intercepts, 282 +/- 2, 278 +/- 2, 276 +/- 2, and 280 +/- 2 mosmol/kgH(2)O, for follicular, luteal (combined means), OC E + P, and OC P, respectively; P &lt; 0.05, luteal phase and OC E + P vs. follicular phase) during exercise dehydration, and 17beta-estradiol administration lowered the P(osm) threshold for thirst stimulation (x-intercepts, 280 +/- 2, 279 +/- 2, 276 +/- 2, and 280 +/- 2 mosmol/kgH(2)O for follicular, luteal, OC E + P, and OC P, respectively; P &lt; 0.05, OC E + P vs. follicular phase), without affecting body fluid balance.">
-            <entity id="DS.d32.s0.e0" origId="P13725,B5MCX1" charOffset="50-53" type="protein" text="osm"/>
-            <entity id="DS.d32.s0.e1" origId="P01185,X5DQP6" charOffset="69-72" type="protein" text="AVP"/>
-            <entity id="DS.d32.s0.e2" origId="56981346,5757" charOffset="369-385" type="compound" text="17beta-estradiol"/>
-            <entity id="DS.d32.s0.e3" origId="P13725,B5MCX1" charOffset="188-191" type="protein" text="osm"/>
-            <pair e1="DS.d32.s0.e2" e2="DS.d32.s0.e1" id="DS.d32.s0.i0" interaction="False" />
-            <pair e1="DS.d32.s0.e2" e2="DS.d32.s0.e0" id="DS.d32.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d33" origId="10487493">
-        <sentence id="DS.d33.s0" origId="10487493-6" text="PLTP activity correlated significantly (P&lt;0.001) with body mass index (r = 0.22), serum total cholesterol (r = 0.17), the ratio of HDL-cholesterol/total cholesterol (r = -0.20), triglycerides (r = 0.20), apo A-II (r = 0.20), and gamma glutamyl transferase (r = 0.22) values.">
-            <entity id="DS.d33.s0.e0" origId="5997" charOffset="94-105" type="compound" text="cholesterol"/>
-            <entity id="DS.d33.s0.e1" origId="5997" charOffset="135-146" type="compound" text="cholesterol"/>
-            <entity id="DS.d33.s0.e2" origId="5997" charOffset="135-146" type="compound" text="cholesterol"/>
-            <entity id="DS.d33.s0.e3" origId="Q96P20" charOffset="208-212" type="protein" text="A-II"/>
-            <entity id="DS.d33.s0.e4" origId="129297" charOffset="235-243" type="compound" text="glutamyl"/>
-            <pair e1="DS.d33.s0.e4" e2="DS.d33.s0.e3" id="DS.d33.s0.i0" interaction="False" />
-            <pair e1="DS.d33.s0.e0" e2="DS.d33.s0.e3" id="DS.d33.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d34" origId="10487686">
-        <sentence id="DS.d34.s0" origId="10487686-7" text="Plasma CBG correlated positively with fasting glucose levels (r = 0.49; P = 0.002), hemoglobin A1c levels (r = 0.35; P = 0.03), and area under the curve of glucose after an oral glucose tolerance test (r = 0.45; P = 0.005) and correlated negatively with the insulin response to i.v.">
-            <entity id="DS.d34.s0.e0" origId="P08185" charOffset="7-10" type="protein" text="CBG"/>
-            <entity id="DS.d34.s0.e1" origId="206,5793,64689,79025" charOffset="46-53" type="compound" text="glucose"/>
-            <entity id="DS.d34.s0.e2" origId="206,5793,64689,79025" charOffset="156-163" type="compound" text="glucose"/>
-            <entity id="DS.d34.s0.e3" origId="206,5793,64689,79025" charOffset="156-163" type="compound" text="glucose"/>
-            <entity id="DS.d34.s0.e4" origId="P01308,I3WAC9" charOffset="258-265" type="protein" text="insulin"/>
-            <pair e1="DS.d34.s0.e1" e2="DS.d34.s0.e0" id="DS.d34.s0.i0" interaction="False" />
-            <pair e1="DS.d34.s0.e1" e2="DS.d34.s0.e4" id="DS.d34.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d35" origId="10494889">
-        <sentence id="DS.d35.s0" origId="10494889-3" text="The rank order of affinity of tachykinins to compete for (125I)-BH bufokinin binding revealed similarities with that of the mammalian NK1 receptor, being bufokinin (IC50, 1.7 nM)&gt;physalaemin (6.7 nM)&gt;substance P (SP, 10.7 nM)&gt; or =neuropeptide gamma (NPgamma, 12.4 nM)&gt; or =kassinin (17.8 nM)&gt;scyliorhinin I (35.3 nM)&gt; or =eledoisin (40.6 nM)&gt; or =carassin (43.2 nM)&gt; or =neurokinin A (NKA, 57.8 nM)&gt; or =neurokinin B (NKB, 77.5 nM)&gt;scyliorhinin II (338 nM).">
-            <entity id="DS.d35.s0.e0" origId="10486632" charOffset="67-76" type="compound" text="bufokinin"/>
-            <entity id="DS.d35.s0.e1" origId="P25103" charOffset="134-137" type="protein" text="NK1"/>
-            <entity id="DS.d35.s0.e2" origId="10486632" charOffset="154-163" type="compound" text="bufokinin"/>
-            <entity id="DS.d35.s0.e3" origId="14717795,17268" charOffset="179-190" type="compound" text="physalaemin"/>
-            <entity id="DS.d35.s0.e4" origId="P20366,Q9Y494" charOffset="200-211" type="protein" text="substance P"/>
-            <entity id="DS.d35.s0.e5" origId="P20366,Q9Y494" charOffset="231-249" type="protein" text="neuropeptide gamma"/>
-            <entity id="DS.d35.s0.e6" origId="45749" charOffset="274-282" type="compound" text="kassinin"/>
-            <entity id="DS.d35.s0.e7" origId="147048" charOffset="293-307" type="compound" text="scyliorhinin I"/>
-            <entity id="DS.d35.s0.e8" origId="10328936,6242" charOffset="323-332" type="compound" text="eledoisin"/>
-            <entity id="DS.d35.s0.e9" origId="16132440" charOffset="348-356" type="compound" text="carassin"/>
-            <entity id="DS.d35.s0.e10" origId="P20366,Q9Y494" charOffset="372-384" type="protein" text="neurokinin A"/>
-            <entity id="DS.d35.s0.e11" origId="P20366,Q9Y494" charOffset="386-389" type="protein" text="NKA"/>
-            <entity id="DS.d35.s0.e12" origId="5311312,55583" charOffset="405-417" type="compound" text="neurokinin B"/>
-            <entity id="DS.d35.s0.e13" origId="Q9UHF0,A0A024RB97,A0A024RB47" charOffset="419-422" type="protein" text="NKB"/>
-            <pair e1="DS.d35.s0.e9" e2="DS.d35.s0.e11" id="DS.d35.s0.i0" interaction="False" />
-            <pair e1="DS.d35.s0.e9" e2="DS.d35.s0.e13" id="DS.d35.s0.i1" interaction="False" />
-            <pair e1="DS.d35.s0.e9" e2="DS.d35.s0.e4" id="DS.d35.s0.i2" interaction="False" />
-            <pair e1="DS.d35.s0.e9" e2="DS.d35.s0.e1" id="DS.d35.s0.i3" interaction="False" />
-            <pair e1="DS.d35.s0.e9" e2="DS.d35.s0.e10" id="DS.d35.s0.i4" interaction="False" />
-            <pair e1="DS.d35.s0.e9" e2="DS.d35.s0.e5" id="DS.d35.s0.i5" interaction="False" />
-            <pair e1="DS.d35.s0.e3" e2="DS.d35.s0.e11" id="DS.d35.s0.i6" interaction="False" />
-            <pair e1="DS.d35.s0.e3" e2="DS.d35.s0.e13" id="DS.d35.s0.i7" interaction="False" />
-            <pair e1="DS.d35.s0.e3" e2="DS.d35.s0.e4" id="DS.d35.s0.i8" interaction="False" />
-            <pair e1="DS.d35.s0.e3" e2="DS.d35.s0.e1" id="DS.d35.s0.i9" interaction="False" />
-            <pair e1="DS.d35.s0.e3" e2="DS.d35.s0.e10" id="DS.d35.s0.i10" interaction="False" />
-            <pair e1="DS.d35.s0.e3" e2="DS.d35.s0.e5" id="DS.d35.s0.i11" interaction="False" />
-            <pair e1="DS.d35.s0.e7" e2="DS.d35.s0.e11" id="DS.d35.s0.i12" interaction="False" />
-            <pair e1="DS.d35.s0.e7" e2="DS.d35.s0.e13" id="DS.d35.s0.i13" interaction="False" />
-            <pair e1="DS.d35.s0.e7" e2="DS.d35.s0.e4" id="DS.d35.s0.i14" interaction="False" />
-            <pair e1="DS.d35.s0.e7" e2="DS.d35.s0.e1" id="DS.d35.s0.i15" interaction="False" />
-            <pair e1="DS.d35.s0.e7" e2="DS.d35.s0.e10" id="DS.d35.s0.i16" interaction="False" />
-            <pair e1="DS.d35.s0.e7" e2="DS.d35.s0.e5" id="DS.d35.s0.i17" interaction="False" />
-            <pair e1="DS.d35.s0.e0" e2="DS.d35.s0.e11" id="DS.d35.s0.i18" interaction="False" />
-            <pair e1="DS.d35.s0.e0" e2="DS.d35.s0.e13" id="DS.d35.s0.i19" interaction="False" />
-            <pair e1="DS.d35.s0.e0" e2="DS.d35.s0.e4" id="DS.d35.s0.i20" interaction="False" />
-            <pair e1="DS.d35.s0.e0" e2="DS.d35.s0.e1" id="DS.d35.s0.i21" interaction="False" />
-            <pair e1="DS.d35.s0.e0" e2="DS.d35.s0.e10" id="DS.d35.s0.i22" interaction="False" />
-            <pair e1="DS.d35.s0.e0" e2="DS.d35.s0.e5" id="DS.d35.s0.i23" interaction="False" />
-            <pair e1="DS.d35.s0.e12" e2="DS.d35.s0.e11" id="DS.d35.s0.i24" interaction="False" />
-            <pair e1="DS.d35.s0.e12" e2="DS.d35.s0.e13" id="DS.d35.s0.i25" interaction="False" />
-            <pair e1="DS.d35.s0.e12" e2="DS.d35.s0.e4" id="DS.d35.s0.i26" interaction="False" />
-            <pair e1="DS.d35.s0.e12" e2="DS.d35.s0.e1" id="DS.d35.s0.i27" interaction="False" />
-            <pair e1="DS.d35.s0.e12" e2="DS.d35.s0.e10" id="DS.d35.s0.i28" interaction="False" />
-            <pair e1="DS.d35.s0.e12" e2="DS.d35.s0.e5" id="DS.d35.s0.i29" interaction="False" />
-            <pair e1="DS.d35.s0.e8" e2="DS.d35.s0.e11" id="DS.d35.s0.i30" interaction="False" />
-            <pair e1="DS.d35.s0.e8" e2="DS.d35.s0.e13" id="DS.d35.s0.i31" interaction="False" />
-            <pair e1="DS.d35.s0.e8" e2="DS.d35.s0.e4" id="DS.d35.s0.i32" interaction="False" />
-            <pair e1="DS.d35.s0.e8" e2="DS.d35.s0.e1" id="DS.d35.s0.i33" interaction="False" />
-            <pair e1="DS.d35.s0.e8" e2="DS.d35.s0.e10" id="DS.d35.s0.i34" interaction="False" />
-            <pair e1="DS.d35.s0.e8" e2="DS.d35.s0.e5" id="DS.d35.s0.i35" interaction="False" />
-            <pair e1="DS.d35.s0.e6" e2="DS.d35.s0.e11" id="DS.d35.s0.i36" interaction="False" />
-            <pair e1="DS.d35.s0.e6" e2="DS.d35.s0.e13" id="DS.d35.s0.i37" interaction="False" />
-            <pair e1="DS.d35.s0.e6" e2="DS.d35.s0.e4" id="DS.d35.s0.i38" interaction="False" />
-            <pair e1="DS.d35.s0.e6" e2="DS.d35.s0.e1" id="DS.d35.s0.i39" interaction="False" />
-            <pair e1="DS.d35.s0.e6" e2="DS.d35.s0.e10" id="DS.d35.s0.i40" interaction="False" />
-            <pair e1="DS.d35.s0.e6" e2="DS.d35.s0.e5" id="DS.d35.s0.i41" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d36" origId="10510546">
-        <sentence id="DS.d36.s0" origId="10510546-2" text="METHODS: In 33 pregnant women where based on the glucose tolerance test (75 g glucose) GDM was revealed, repeatedly fibrinogen values were assessed (FBG 4.38 +/- 0.98 g/l), the antithrombin III activity (ATIII% 103.83 +/- 14.9), t-PA Ag(4.82 +/- 3.35 ng/ml), PAI-1 Ag (158.04 +/- 57.7 ng/ml), D-dimer (234.99 +/- 455.36 ng/ml), plasma proteins-orosomucoid (ORM 0.506 +/- 0.14 g/l), C reactive protein (1.34 +/- 0.96 g/l), transferrin (3.77 +/- 0.79 g/l), prealbumin (1.86 +/- 0.83 g/l) and alpha-2-macroglobulin (A2M 2.01 +/- 0.62 g/l) and cytadhesive molecules sICAM-1 (230.8 +/- 57.76 ng/ml) and sE-selectin (35.50 +/- 16.55 ng/ml).">
-            <entity id="DS.d36.s0.e0" origId="206,5793,64689,79025" charOffset="49-56" type="compound" text="glucose"/>
-            <entity id="DS.d36.s0.e1" origId="206,5793,64689,79025" charOffset="78-85" type="compound" text="glucose"/>
-            <entity id="DS.d36.s0.e2" origId="P02675,V9HVY1" charOffset="116-126" type="protein" text="fibrinogen"/>
-            <entity id="DS.d36.s0.e3" origId="P01008,A0A024R944" charOffset="177-193" type="protein" text="antithrombin III"/>
-            <entity id="DS.d36.s0.e4" origId="P01008,A0A024R944" charOffset="204-209" type="protein" text="ATIII"/>
-            <entity id="DS.d36.s0.e5" origId="P00750" charOffset="229-233" type="protein" text="t-PA"/>
-            <entity id="DS.d36.s0.e6" origId="P05121,A0A024QYT5" charOffset="259-264" type="protein" text="PAI-1"/>
-            <entity id="DS.d36.s0.e7" origId="P02741" charOffset="382-400" type="protein" text="C reactive protein"/>
-            <entity id="DS.d36.s0.e8" origId="P02787,Q06AH7,A0PJA6" charOffset="422-433" type="protein" text="transferrin"/>
-            <entity id="DS.d36.s0.e9" origId="P01023" charOffset="490-511" type="protein" text="alpha-2-macroglobulin"/>
-            <entity id="DS.d36.s0.e10" origId="4929" charOffset="601-609" type="compound" text="selectin"/>
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e4" id="DS.d36.s0.i0" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e9" id="DS.d36.s0.i1" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e2" id="DS.d36.s0.i2" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e5" id="DS.d36.s0.i3" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e8" id="DS.d36.s0.i4" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e3" id="DS.d36.s0.i5" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e7" id="DS.d36.s0.i6" interaction="False" />
-            <pair e1="DS.d36.s0.e10" e2="DS.d36.s0.e6" id="DS.d36.s0.i7" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e4" id="DS.d36.s0.i8" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e9" id="DS.d36.s0.i9" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e2" id="DS.d36.s0.i10" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e5" id="DS.d36.s0.i11" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e8" id="DS.d36.s0.i12" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e3" id="DS.d36.s0.i13" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e7" id="DS.d36.s0.i14" interaction="False" />
-            <pair e1="DS.d36.s0.e0" e2="DS.d36.s0.e6" id="DS.d36.s0.i15" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d37" origId="10512362">
-        <sentence id="DS.d37.s0" origId="10512362-6" text="Furthermore, GLP-1R(-/-) islets exhibited: 1) reduced cAMP accumulation in the presence of 20 mmol/l glucose (knockout islets versus control islets, 12 +/- 1 vs. 27 +/- 3 fmol x islet(-1) x 15 min(-1); P &lt; 0.001) and exaggerated acceleration of cAMP production by 10 nmol/l glucose-dependent insulinotropic peptide (GIP) (increase over 20 mmol/l glucose by GIP in knockout islets versus control islets: 66 +/- 5 vs. 14 +/- 3 fmol x islet(-1) x 15 min(-1); P &lt; 0.001); 2) increased mean cytosolic (Ca2+) ((Ca2+)c) at 7, 10, and 15 mmol/l glucose in knockout islets versus control islets; and 3) signs of asynchrony of (Ca2+)c oscillations between different islet subregions.">
-            <entity id="DS.d37.s0.e0" origId="O35659" charOffset="13-19" type="protein" text="GLP-1R"/>
-            <entity id="DS.d37.s0.e1" origId="53782688" charOffset="99-108" type="compound" text="l glucose"/>
-            <entity id="DS.d37.s0.e2" origId="P48756" charOffset="274-314" type="protein" text="glucose-dependent insulinotropic peptide"/>
-            <entity id="DS.d37.s0.e3" origId="P48756" charOffset="316-319" type="protein" text="GIP"/>
-            <entity id="DS.d37.s0.e4" origId="53782688" charOffset="272-281" type="compound" text="l glucose"/>
-            <entity id="DS.d37.s0.e5" origId="P48756" charOffset="357-360" type="protein" text="GIP"/>
-            <entity id="DS.d37.s0.e6" origId="53782688" charOffset="272-281" type="compound" text="l glucose"/>
-            <pair e1="DS.d37.s0.e1" e2="DS.d37.s0.e3" id="DS.d37.s0.i0" interaction="False" />
-            <pair e1="DS.d37.s0.e1" e2="DS.d37.s0.e0" id="DS.d37.s0.i1" interaction="False" />
-            <pair e1="DS.d37.s0.e1" e2="DS.d37.s0.e2" id="DS.d37.s0.i2" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d38" origId="10520704">
-        <sentence id="DS.d38.s0" origId="10520704-8" text="RESULTS: Good correlation was observed between the total hepatic 99mTc-GSA clearance and conventional hepatic function tests: plasma retention rate of iodocyanine green (ICG) at 15 min (ICG R15), r = -0.600, P &lt; 0.0001, n = 94; plasma disappearance rate of ICG (K ICG), r = 0.670, P &lt; 0.0001, n = 83; cholinesterase, r = 0.539, P &lt; 0.0001, n = 121; serum albumin, r = 0.421, P = 0.0001, n = 123; and hepaplastin test, r = 0.456, P &lt; 0.0001, n = 120.">
-            <entity id="DS.d38.s0.e0" origId="P84996,Q5JWF2,P63092,O95467,B0AZR9,Q5JWD1,Q14455,Q5FWY2" charOffset="71-74" type="protein" text="GSA"/>
-            <entity id="DS.d38.s0.e1" origId="6096882" charOffset="170-173" type="compound" text="ICG"/>
-            <entity id="DS.d38.s0.e2" origId="6096882" charOffset="186-189" type="compound" text="ICG"/>
-            <entity id="DS.d38.s0.e3" origId="24856345" charOffset="190-193" type="compound" text="R15"/>
-            <entity id="DS.d38.s0.e4" origId="6096882" charOffset="186-189" type="compound" text="ICG"/>
-            <entity id="DS.d38.s0.e5" origId="6096882" charOffset="186-189" type="compound" text="ICG"/>
-            <entity id="DS.d38.s0.e6" origId="P02768" charOffset="355-362" type="protein" text="albumin"/>
-            <pair e1="DS.d38.s0.e3" e2="DS.d38.s0.e0" id="DS.d38.s0.i0" interaction="False" />
-            <pair e1="DS.d38.s0.e3" e2="DS.d38.s0.e6" id="DS.d38.s0.i1" interaction="False" />
-            <pair e1="DS.d38.s0.e1" e2="DS.d38.s0.e0" id="DS.d38.s0.i2" interaction="False" />
-            <pair e1="DS.d38.s0.e1" e2="DS.d38.s0.e6" id="DS.d38.s0.i3" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d39" origId="10537142">
-        <sentence id="DS.d39.s0" origId="10537142-6" text="The rank order of displacement of (125I)Tyr11-SST binding to hsst1 was: SST (IC50, 0.5 nM) &gt;&gt; DOTALAN (IC50, 154 nM) &gt; lanreotide (LAN) approximate to Tyr3-octreotide (TOCT) approximate to DOTA-Tyr3-octreotide (DOTATOCT) approximate to DOTA-vapreotide (DOTAVAP; IC50, &gt;1000 nM); that to hsst2 was: DOTATOCT approximate to TOCT approximate to DOTALAN approximate to SST approximately LAN approximate to DOTAVAP (IC50, 1.4 nM); that to hsst3 was: SST (IC50, 1.2 nM) &gt; DOTALAN = LAN (IC50, 15 nM) approximate to TOCT (IC50, 20 nM) approximate to DOTAVAP (IC50, 28 nM) &gt; DOTATOCT (IC50, 73 nM); that to hsst4 was: SST (IC50, 1.8 nM) approximate to DOTALAN (IC50, 2.5 nM) &gt; LAN (IC50, 22 nM) &gt;&gt; DOTATOCT approximate to DOTAVAP approximate to TOCT (IC50, &gt;500 nM); and that to hsst5 was: DOTALAN (IC50, 0.45 nM) &gt; SST (IC50, 0.9 nM) &gt; TOCT (IC50, 1.5 nM) &gt; DOTAVAP (IC50, 5.4 nM) &gt;&gt; LAN (IC50, 21 nM) &gt; DOTATOCT (IC50 260 nM).">
-            <entity id="DS.d39.s0.e0" origId="P61278" charOffset="46-49" type="protein" text="SST"/>
-            <entity id="DS.d39.s0.e1" origId="P61278" charOffset="72-75" type="protein" text="SST"/>
-            <entity id="DS.d39.s0.e2" origId="71349" charOffset="119-129" type="compound" text="lanreotide"/>
-            <entity id="DS.d39.s0.e3" origId="383414,44420813,448601,57181882,6400441,86289069" charOffset="156-166" type="compound" text="octreotide"/>
-            <entity id="DS.d39.s0.e4" origId="121841" charOffset="94-98" type="compound" text="DOTA"/>
-            <entity id="DS.d39.s0.e5" origId="383414,44420813,448601,57181882,6400441,86289069" charOffset="199-209" type="compound" text="octreotide"/>
-            <entity id="DS.d39.s0.e6" origId="121841" charOffset="189-193" type="compound" text="DOTA"/>
-            <entity id="DS.d39.s0.e7" origId="45588099,5311370,57214391,70689318,71306" charOffset="241-251" type="compound" text="vapreotide"/>
-            <entity id="DS.d39.s0.e8" origId="O00204" charOffset="287-292" type="protein" text="hsst2"/>
-            <entity id="DS.d39.s0.e9" origId="P61278" charOffset="72-75" type="protein" text="SST"/>
-            <entity id="DS.d39.s0.e10" origId="O95803" charOffset="434-439" type="protein" text="hsst3"/>
-            <entity id="DS.d39.s0.e11" origId="P61278" charOffset="72-75" type="protein" text="SST"/>
-            <entity id="DS.d39.s0.e12" origId="P61278" charOffset="72-75" type="protein" text="SST"/>
-            <entity id="DS.d39.s0.e13" origId="P61278" charOffset="72-75" type="protein" text="SST"/>
-            <pair e1="DS.d39.s0.e4" e2="DS.d39.s0.e10" id="DS.d39.s0.i0" interaction="False" />
-            <pair e1="DS.d39.s0.e4" e2="DS.d39.s0.e0" id="DS.d39.s0.i1" interaction="False" />
-            <pair e1="DS.d39.s0.e4" e2="DS.d39.s0.e8" id="DS.d39.s0.i2" interaction="False" />
-            <pair e1="DS.d39.s0.e2" e2="DS.d39.s0.e10" id="DS.d39.s0.i3" interaction="False" />
-            <pair e1="DS.d39.s0.e2" e2="DS.d39.s0.e0" id="DS.d39.s0.i4" interaction="False" />
-            <pair e1="DS.d39.s0.e2" e2="DS.d39.s0.e8" id="DS.d39.s0.i5" interaction="False" />
-            <pair e1="DS.d39.s0.e7" e2="DS.d39.s0.e10" id="DS.d39.s0.i6" interaction="False" />
-            <pair e1="DS.d39.s0.e7" e2="DS.d39.s0.e0" id="DS.d39.s0.i7" interaction="False" />
-            <pair e1="DS.d39.s0.e7" e2="DS.d39.s0.e8" id="DS.d39.s0.i8" interaction="False" />
-            <pair e1="DS.d39.s0.e3" e2="DS.d39.s0.e10" id="DS.d39.s0.i9" interaction="False" />
-            <pair e1="DS.d39.s0.e3" e2="DS.d39.s0.e0" id="DS.d39.s0.i10" interaction="False" />
-            <pair e1="DS.d39.s0.e3" e2="DS.d39.s0.e8" id="DS.d39.s0.i11" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d40" origId="10549460">
-        <sentence id="DS.d40.s0" origId="10549460-2" text="Following Ethics Committee approval, patients were randomly assigned to one of the following four treatments: Group P (n = 17): propofol infusion, 1 mg kg-1 min-1 intravenous for 2 min, followed by propofol infusion, 200 micrograms kg-1 min-1, until skin incision; Group PF1 (n = 17): fentanyl bolus, 1 microgram kg-1 intravenous + propofol infusion as in Group P; Group PF2 (n = 17): fentanyl bolus, 2 micrograms kg-1 intravenous + propofol infusion as in Group P; and Group PF3 (n = 17): fentanyl bolus, 3 micrograms kg-1 intravenous + propofol infusion as in Group P. The bispectral index and 95% spectral edge frequency were monitored continuously and recorded prior to induction of anaesthesia (base-line) and at skin incision.">
-            <entity id="DS.d40.s0.e0" origId="4943" charOffset="128-136" type="compound" text="propofol"/>
-            <entity id="DS.d40.s0.e1" origId="4943" charOffset="198-206" type="compound" text="propofol"/>
-            <entity id="DS.d40.s0.e2" origId="Q96QT6,C9J9G2" charOffset="271-274" type="protein" text="PF1"/>
-            <entity id="DS.d40.s0.e3" origId="4943" charOffset="198-206" type="compound" text="propofol"/>
-            <entity id="DS.d40.s0.e4" origId="4943" charOffset="198-206" type="compound" text="propofol"/>
-            <entity id="DS.d40.s0.e5" origId="62665" charOffset="476-479" type="compound" text="PF3"/>
-            <entity id="DS.d40.s0.e6" origId="4943" charOffset="198-206" type="compound" text="propofol"/>
-            <pair e1="DS.d40.s0.e5" e2="DS.d40.s0.e2" id="DS.d40.s0.i0" interaction="False" />
-            <pair e1="DS.d40.s0.e0" e2="DS.d40.s0.e2" id="DS.d40.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d41" origId="10559845">
-        <sentence id="DS.d41.s0" origId="10559845-7" text="The administration of Asc extract increased NADPH diaphorase activity (2 days: control = 0, BCG = 7%, BCG + Asc = 13%, and Asc = 4%; 7 days: control = 4, BCG = 13%, BCG + Asc = 21%, and Asc = 4.5%) and TNF-alpha levels (mean +/- SD; 2 days: control = 0, BCG = 169 +/- 13, BCG + Asc = 202 +/- 37, and Asc = 0; 7 days: control = 0, BCG = 545 +/- 15.5, BCG + Asc = 2206 +/- 160.6, and Asc = 126 +/- 26; 14 days: control = 10 +/- 1.45, BCG = 9 +/- 1.15, BCG + Asc = 126 +/- 18, and Asc = 880 +/- 47.67 pg/ml) in the early phase of BCG infection.">
-            <entity id="DS.d41.s0.e0" origId="5884" charOffset="44-49" type="compound" text="NADPH"/>
-            <entity id="DS.d41.s0.e1" origId="P41251" charOffset="92-95" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e2" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e3" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e4" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e5" origId="P06804,Q3U593" charOffset="202-211" type="protein" text="TNF-alpha"/>
-            <entity id="DS.d41.s0.e6" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e7" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e8" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e9" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e10" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e11" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <entity id="DS.d41.s0.e12" origId="P41251" charOffset="102-105" type="protein" text="BCG"/>
-            <pair e1="DS.d41.s0.e0" e2="DS.d41.s0.e5" id="DS.d41.s0.i0" interaction="False" />
-            <pair e1="DS.d41.s0.e0" e2="DS.d41.s0.e1" id="DS.d41.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d42" origId="10565441">
-        <sentence id="DS.d42.s0" origId="10565441-6" text="Mean concentrations (X(g) x DF) were as follows: E2beta (bpl) 31.1 (1.16), (spl) 24.2 (1.42) pg ml(-1); E1 (bpl) 143.3 (1.21), (spl) 117.7 (1.53) pg ml(-1); E1S (bpl) 157.3 (1.44), (spl) 2.92 (1.42) ng ml(-1); T (bpl) 570.6 (1.43), (spl) 23.1 (1.68) pg ml(-1); A (spl) 17.9 (1.39) pg ml(-1); DHEH (spl) 12.4 (1.51) pg ml(-1); 5alpha-DHT (spl) 9.7 (1.29) pg ml(-1).">
-            <entity id="DS.d42.s0.e0" origId="P11182" charOffset="49-55" type="protein" text="E2beta"/>
-            <entity id="DS.d42.s0.e1" origId="57336492" charOffset="157-160" type="compound" text="E1S"/>
-            <pair e1="DS.d42.s0.e1" e2="DS.d42.s0.e0" id="DS.d42.s0.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d43" origId="10566601">
-        <sentence id="DS.d43.s0" origId="10566601-5" text="A significant increase in DRB1*0402-DQA1*0301-DQB1*0302 (RR = 16.18, p &lt; 0.05), DRB1*0405-DQA1*0301-DQB1*0302 (RR = 16.12, p &lt; 0.05), DRB1*0301-DQA1*0501-DQB1*0201 (RR = 4.58, p &lt; 0.00005) and DRB1*0401-DQA1*0301-DQB1*0302 (RR = 4.36, p &lt; 0.005) was apparent in the diabetic group, while the DRB1*1501-DQA1*0102-DQB1*0602 and DRB1*1401-DQA *0104-DQB1*05031 protective haplotypes (RR = 0.17 and 0.09, p &lt; 0.0005 and 0.05, respectively) were significantly lower in patients.">
-            <entity id="DS.d43.s0.e0" origId="P01909,Q5Y7H0,L8E864,Q5Y7D2,Q30063,Q08AS3,Q8MH44" charOffset="36-40" type="protein" text="DQA1"/>
-            <entity id="DS.d43.s0.e1" origId="P01920,Q5Y7A9,Q5SU54,Q5Y7D6,Q5Y7D3" charOffset="46-50" type="protein" text="DQB1"/>
-            <entity id="DS.d43.s0.e2" origId="P01909,Q5Y7H0,L8E864,Q5Y7D2,Q30063,Q08AS3,Q8MH44" charOffset="90-94" type="protein" text="DQA1"/>
-            <entity id="DS.d43.s0.e3" origId="P01920,Q5Y7A9,Q5SU54,Q5Y7D6,Q5Y7D3" charOffset="100-104" type="protein" text="DQB1"/>
-            <entity id="DS.d43.s0.e4" origId="P01909,Q5Y7H0,L8E864,Q5Y7D2,Q30063,Q08AS3,Q8MH44" charOffset="90-94" type="protein" text="DQA1"/>
-            <entity id="DS.d43.s0.e5" origId="P01920,Q5Y7A9,Q5SU54,Q5Y7D6,Q5Y7D3" charOffset="100-104" type="protein" text="DQB1"/>
-            <entity id="DS.d43.s0.e6" origId="P01909,Q5Y7H0,L8E864,Q5Y7D2,Q30063,Q08AS3,Q8MH44" charOffset="90-94" type="protein" text="DQA1"/>
-            <entity id="DS.d43.s0.e7" origId="P01920,Q5Y7A9,Q5SU54,Q5Y7D6,Q5Y7D3" charOffset="100-104" type="protein" text="DQB1"/>
-            <entity id="DS.d43.s0.e8" origId="P01909,Q5Y7H0,L8E864,Q5Y7D2,Q30063,Q08AS3,Q8MH44" charOffset="90-94" type="protein" text="DQA1"/>
-            <entity id="DS.d43.s0.e9" origId="P01920,Q5Y7A9,Q5SU54,Q5Y7D6,Q5Y7D3" charOffset="100-104" type="protein" text="DQB1"/>
-            <entity id="DS.d43.s0.e10" origId="439351" charOffset="36-39" type="compound" text="DQA"/>
-            <entity id="DS.d43.s0.e11" origId="P01920,Q5Y7A9,Q5SU54,Q5Y7D6,Q5Y7D3" charOffset="100-104" type="protein" text="DQB1"/>
-            <pair e1="DS.d43.s0.e10" e2="DS.d43.s0.e1" id="DS.d43.s0.i0" interaction="False" />
-            <pair e1="DS.d43.s0.e10" e2="DS.d43.s0.e0" id="DS.d43.s0.i1" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d44" origId="10570049">
-        <sentence id="DS.d44.s0" origId="10570049-4" text="The multidrug resistance-reversing agents cyclosporin A (CsA) and 2-(4-(diphenylmethyl)-1-piperazinyl)-5-(trans-4,6-dimethyl-1,3, 2-dioxaphosphorinan-2-yl)-2, 6-dimethyl-4-(3-nitrophenyl)-3-pyridinecarboxylate P-oxide (PAK-104P) almost completely reversed the resistance to VCR, 7-ethyl-10-hydroxy-camptothecin, and cisplatin of LLC/cMOAT-1 cells; and DL-buthionine-(S,R)-sulfoximine, (3'-oxo-4-butenyl-4-methyl-threonine(1), (valine(2)) cyclosporin (PSC833), and 3-(((3-(2-(7-chloro-2-quinolinyl)ethenyl)phenyl)-((3-dimethylamino-3- oxopropyl)-thio)-methyl)thio)propanoic acid (MK571) partially reversed the resistance to these drugs.">
-            <entity id="DS.d44.s0.e0" origId="7580" charOffset="72-86" type="compound" text="diphenylmethyl"/>
-            <entity id="DS.d44.s0.e1" origId="57183225" charOffset="132-149" type="compound" text="dioxaphosphorinan"/>
-            <entity id="DS.d44.s0.e2" origId="938" charOffset="188-209" type="compound" text="3-pyridinecarboxylate"/>
-            <entity id="DS.d44.s0.e3" origId="190217" charOffset="212-217" type="compound" text="oxide"/>
-            <entity id="DS.d44.s0.e4" origId="131368" charOffset="219-227" type="compound" text="PAK-104P"/>
-            <entity id="DS.d44.s0.e5" origId="104842" charOffset="279-310" type="compound" text="7-ethyl-10-hydroxy-camptothecin"/>
-            <entity id="DS.d44.s0.e6" origId="Q92887" charOffset="333-338" type="protein" text="cMOAT"/>
-            <entity id="DS.d44.s0.e7" origId="2724716" charOffset="352-365" type="compound" text="DL-buthionine"/>
-            <entity id="DS.d44.s0.e8" origId="139610" charOffset="372-383" type="compound" text="sulfoximine"/>
-            <entity id="DS.d44.s0.e9" origId="7010355" charOffset="405-421" type="compound" text="methyl-threonine"/>
-            <entity id="DS.d44.s0.e10" origId="6287" charOffset="427-433" type="compound" text="valine"/>
-            <entity id="DS.d44.s0.e11" origId="5281884" charOffset="451-457" type="compound" text="PSC833"/>
-            <entity id="DS.d44.s0.e12" origId="521963" charOffset="475-496" type="compound" text="7-chloro-2-quinolinyl"/>
-            <entity id="DS.d44.s0.e13" origId="123166" charOffset="497-504" type="compound" text="ethenyl"/>
-            <entity id="DS.d44.s0.e14" origId="1032" charOffset="563-577" type="compound" text="propanoic acid"/>
-            <pair e1="DS.d44.s0.e12" e2="DS.d44.s0.e6" id="DS.d44.s0.i0" interaction="False" />
-            <pair e1="DS.d44.s0.e2" e2="DS.d44.s0.e6" id="DS.d44.s0.i1" interaction="False" />
-            <pair e1="DS.d44.s0.e11" e2="DS.d44.s0.e6" id="DS.d44.s0.i2" interaction="False" />
-            <pair e1="DS.d44.s0.e4" e2="DS.d44.s0.e6" id="DS.d44.s0.i3" interaction="False" />
-            <pair e1="DS.d44.s0.e9" e2="DS.d44.s0.e6" id="DS.d44.s0.i4" interaction="False" />
-            <pair e1="DS.d44.s0.e14" e2="DS.d44.s0.e6" id="DS.d44.s0.i5" interaction="False" />
-            <pair e1="DS.d44.s0.e3" e2="DS.d44.s0.e6" id="DS.d44.s0.i6" interaction="False" />
-            <pair e1="DS.d44.s0.e13" e2="DS.d44.s0.e6" id="DS.d44.s0.i7" interaction="False" />
-            <pair e1="DS.d44.s0.e8" e2="DS.d44.s0.e6" id="DS.d44.s0.i8" interaction="False" />
-            <pair e1="DS.d44.s0.e10" e2="DS.d44.s0.e6" id="DS.d44.s0.i9" interaction="False" />
-            <pair e1="DS.d44.s0.e1" e2="DS.d44.s0.e6" id="DS.d44.s0.i10" interaction="False" />
-            <pair e1="DS.d44.s0.e7" e2="DS.d44.s0.e6" id="DS.d44.s0.i11" interaction="False" />
-            <pair e1="DS.d44.s0.e0" e2="DS.d44.s0.e6" id="DS.d44.s0.i12" interaction="False" />
-            <pair e1="DS.d44.s0.e5" e2="DS.d44.s0.e6" id="DS.d44.s0.i13" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d45" origId="10585175">
-        <sentence id="DS.d45.s0" origId="10585175-11" text="Although serum albumin levels did not change throughout life, CSF albumin levels and CSF/serum albumin ratios increased gradually with age (r = 0.28, P = 0.052; r = 0.23, P = 0.114, respectively), but there was no significance.">
-            <entity id="DS.d45.s0.e0" origId="P02768" charOffset="15-22" type="protein" text="albumin"/>
-            <entity id="DS.d45.s0.e1" origId="16122568,16750043,4369303,448383" charOffset="62-65" type="compound" text="CSF"/>
-            <entity id="DS.d45.s0.e2" origId="P02768" charOffset="66-73" type="protein" text="albumin"/>
-            <entity id="DS.d45.s0.e3" origId="16122568,16750043,4369303,448383" charOffset="85-88" type="compound" text="CSF"/>
-            <entity id="DS.d45.s0.e4" origId="P02768" charOffset="66-73" type="protein" text="albumin"/>
-            <pair e1="DS.d45.s0.e1" e2="DS.d45.s0.e0" id="DS.d45.s0.i0" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d46" origId="10585525">
-        <sentence id="DS.d46.s0" origId="10585525-1" text="The role of dopamine D(1) and D(2) receptors in the control of acetylcholine release in the dorsal striatum by endogenous dopamine was investigated by monitoring with microdialysis the effect of the separate or combined administration of the Dopamine D(1) receptor antagonist, SCH 39166 ¿(-)-trans-6,7,7a,8,9, 13b-exahydro-3-chloro-2-hydroxy-N-methyl-5H-benzo-(d)-nap hto-(2, 1b)-azepine hydrochloride¿ (50 microg/kg subcutaneous (s.c.)), of the dopamine D(2)/D(3) receptor agonist, quinpirole (trans-(-)-4aR, 4a,5,6,7,8,8a,9-octahydro-5-propyl-1H-pyrazolo-(3,4-g)-quinoline hydrochloride) (5 and 10 microg/kg s.c.), and of the D(3) receptor selective agonist, PD 128,907 (S(+)-(4aR,10bR)-3,4,4a, 10b-tetrahydro-4-propyl-2H,5H-(1)benzopyrano-(4,3-b)-1,4-oxazin -9-ol hydrochloride) (50 microg/kg s.c.), on in vivo dopamine and acetylcholine release.">
-            <entity id="DS.d46.s0.e0" origId="681" charOffset="12-20" type="compound" text="dopamine"/>
-            <entity id="DS.d46.s0.e1" origId="187" charOffset="63-76" type="compound" text="acetylcholine"/>
-            <entity id="DS.d46.s0.e2" origId="681" charOffset="122-130" type="compound" text="dopamine"/>
-            <entity id="DS.d46.s0.e3" origId="P21728" charOffset="242-264" type="protein" text="Dopamine D(1) receptor"/>
-            <entity id="DS.d46.s0.e4" origId="107930" charOffset="277-286" type="compound" text="SCH 39166"/>
-            <entity id="DS.d46.s0.e5" origId="97257" charOffset="332-342" type="compound" text="2-hydroxy-"/>
-            <entity id="DS.d46.s0.e6" origId="444397" charOffset="368-371" type="compound" text="hto"/>
-            <entity id="DS.d46.s0.e7" origId="6451476" charOffset="380-387" type="compound" text="azepine"/>
-            <entity id="DS.d46.s0.e8" origId="681" charOffset="122-130" type="compound" text="dopamine"/>
-            <entity id="DS.d46.s0.e9" origId="69255155" charOffset="505-507" type="compound" text="4a"/>
-            <entity id="DS.d46.s0.e10" origId="7047" charOffset="565-588" type="compound" text="quinoline hydrochloride"/>
-            <entity id="DS.d46.s0.e11" origId="69255155" charOffset="510-512" type="compound" text="4a"/>
-            <entity id="DS.d46.s0.e12" origId="22361982" charOffset="724-741" type="compound" text="5H-(1)benzopyrano"/>
-            <entity id="DS.d46.s0.e13" origId="12313776" charOffset="754-760" type="compound" text="oxazin"/>
-            <entity id="DS.d46.s0.e14" origId="681" charOffset="122-130" type="compound" text="dopamine"/>
-            <entity id="DS.d46.s0.e15" origId="187" charOffset="827-840" type="compound" text="acetylcholine"/>
-            <pair e1="DS.d46.s0.e1" e2="DS.d46.s0.e3" id="DS.d46.s0.i0" interaction="False" />
-            <pair e1="DS.d46.s0.e15" e2="DS.d46.s0.e3" id="DS.d46.s0.i1" interaction="False" />
-            <pair e1="DS.d46.s0.e6" e2="DS.d46.s0.e3" id="DS.d46.s0.i2" interaction="False" />
-            <pair e1="DS.d46.s0.e13" e2="DS.d46.s0.e3" id="DS.d46.s0.i3" interaction="False" />
-            <pair e1="DS.d46.s0.e4" e2="DS.d46.s0.e3" id="DS.d46.s0.i4" interaction="False" />
-            <pair e1="DS.d46.s0.e7" e2="DS.d46.s0.e3" id="DS.d46.s0.i5" interaction="False" />
-            <pair e1="DS.d46.s0.e0" e2="DS.d46.s0.e3" id="DS.d46.s0.i6" interaction="False" />
-            <pair e1="DS.d46.s0.e5" e2="DS.d46.s0.e3" id="DS.d46.s0.i7" interaction="False" />
-            <pair e1="DS.d46.s0.e10" e2="DS.d46.s0.e3" id="DS.d46.s0.i8" interaction="False" />
-            <pair e1="DS.d46.s0.e9" e2="DS.d46.s0.e3" id="DS.d46.s0.i9" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d47" origId="10587312">
-        <sentence id="DS.d47.s0" origId="10587312-1" text="We report the solid phase synthesis and vasodepressor potencies of the novel hypotensive peptide (1(-beta-mercapto-beta,beta-pentamethylene propionic acid)-2-O-ethyl-D-tyrosine, 3-arginine, 4-valine) arginine vasopressin, d(CH2)5(D-Tyr(Et)2, Arg3, Val4)AVP (A), its related Lys3 (B), Tyr-NH(9)2 (C), (Lys3, Tyr-NH(9)2 (D) analogs and in a preliminary structure-activity study of positions 2-4 and 7-9, 24 analogs (1-24) of A-C. Peptides 1-6, 9-14 have the following single substituents at positions 2, 3, 4, 8 and 9 in (A): 1, D-Tyr(Me)2; 2, L-Tyr(Et)2; 3, Orn3; 4, N-Me-Arg3; 5, Glu3; 6, Arg4; 9, D-Arg8; 10, Eda9; 11, Arg-NH(9)2; 12, Ala-NH(9)2; 13, desGly9; 14, desGly-NH(9)2.">
-            <entity id="DS.d47.s0.e0" origId="9253" charOffset="125-139" type="compound" text="pentamethylene"/>
-            <entity id="DS.d47.s0.e1" origId="1032" charOffset="140-154" type="compound" text="propionic acid"/>
-            <entity id="DS.d47.s0.e2" origId="57020015" charOffset="158-176" type="compound" text="O-ethyl-D-tyrosine"/>
-            <entity id="DS.d47.s0.e3" origId="6322,90867653" charOffset="180-188" type="compound" text="arginine"/>
-            <entity id="DS.d47.s0.e4" origId="22796635" charOffset="190-198" type="compound" text="4-valine"/>
-            <entity id="DS.d47.s0.e5" origId="6322,90867653" charOffset="200-208" type="compound" text="arginine"/>
-            <entity id="DS.d47.s0.e6" origId="6057" charOffset="232-235" type="compound" text="Tyr"/>
-            <entity id="DS.d47.s0.e7" origId="P01186" charOffset="253-256" type="protein" text="AVP"/>
-            <entity id="DS.d47.s0.e8" origId="6057" charOffset="284-287" type="compound" text="Tyr"/>
-            <entity id="DS.d47.s0.e9" origId="6057" charOffset="284-287" type="compound" text="Tyr"/>
-            <entity id="DS.d47.s0.e10" origId="6057" charOffset="284-287" type="compound" text="Tyr"/>
-            <entity id="DS.d47.s0.e11" origId="6057" charOffset="284-287" type="compound" text="Tyr"/>
-            <pair e1="DS.d47.s0.e0" e2="DS.d47.s0.e7" id="DS.d47.s0.i0" interaction="False" />
-            <pair e1="DS.d47.s0.e1" e2="DS.d47.s0.e7" id="DS.d47.s0.i1" interaction="False" />
-            <pair e1="DS.d47.s0.e2" e2="DS.d47.s0.e7" id="DS.d47.s0.i2" interaction="False" />
-            <pair e1="DS.d47.s0.e3" e2="DS.d47.s0.e7" id="DS.d47.s0.i3" interaction="False" />
-            <pair e1="DS.d47.s0.e4" e2="DS.d47.s0.e7" id="DS.d47.s0.i4" interaction="False" />
-            <pair e1="DS.d47.s0.e6" e2="DS.d47.s0.e7" id="DS.d47.s0.i5" interaction="False" />
-        </sentence>
-    </document>
-    <document id="DS.d48" origId="10587445">
-        <sentence id="DS.d48.s0" origId="10587445-2" text="It reveals that (i) D1-D2-Cyt b(559) complexes either in solubilized form or incorporated into liposomes contain only one type of Cyt b(559) with E(m) values of 60 +/- 5 and 100 +/- 10 mV, respectively, at pH 6.8; (ii) in oxygen-evolving solubilized PS II core complexes Cyt b(559) exists predominantly (&gt;85%) as an LP form with an E(m,7) of 125 +/- 10 mV and a minor fraction with an E(m,7) of -150 +/- 15 mV; (iii) in oxygen-evolving PS II membrane fragments three different redox forms are discernible with E(m) values of 390 +/- 15 mV (HP form), 230 +/- 20 mV (IP form), and 105 +/- 25 mV (LP form) and relative amplitudes of 58, 24, and 18%, respectively, at pH 7.3; (iv) the E(m) values are almost pH-independent between pH 6 and 9.5 in all sample types except D1-D2-Cyt b(559) complexes incorporated into liposomes with a slope of -29 mV/pH unit, when the pH increases from 6 to 9.5 (IP and LP form in PS II membrane fragments possibly within a restricted range from pH 6.5 to 8); (v) at pH &gt;8 the HP Cyt b(559) progressively converts to the IP form with increasing pH; (vi) the reduced-minus-oxidized optical difference spectra of Cyt b(559) are very similar in the lambda range of 360-700 nm for all types except for the HP form which exhibits pronounced differences in the Soret band; and (vii) PS II membrane fragments and core complexes are inferred to contain about two Cyt b(559) hemes per PS II.">
-            <entity id="DS.d48.s0.e0" origId="977" charOffset="222-228" type="compound" text="oxygen"/>
-            <entity id="DS.d48.s0.e1" origId="P49810,E5RG63" charOffset="250-255" type="protein" text="PS II"/>
-            <entity id="DS.d48.s0.e2" origId="977" charOffset="420-426" type="compound" text="oxygen"/>
-            <entity id="DS.d48.s0.e3" origId="P49810,E5RG63" charOffset="436-441" type="protein" text="PS II"/>
-            <entity id="DS.d48.s0.e4" origId="P49810,E5RG63" charOffset="436-441" type="protein" text="PS II"/>
-            <entity id="DS.d48.s0.e5" origId="P49810,E5RG63" charOffset="436-441" type="protein" text="PS II"/>
-            <entity id="DS.d48.s0.e6" origId="P49810,E5RG63" charOffset="436-441" type="protein" text="PS II"/>
-            <pair e1="DS.d48.s0.e0" e2="DS.d48.s0.e1" id="DS.d48.s0.i0" interaction="False" />
+        <sentence id="DS.d16.s4" origId="18042181-10" text="In conclusion, our results show that FSH and bFGF increase GSH levels in Sertoli cells through stimulation of the de novo synthesis and recycling by upregulating GCLM and GR expression respectively.">
+            <entity id="DS.d16.s4.e0" origId="P13109" charOffset="45-49" type="protein" text="bFGF"/>
+            <entity id="DS.d16.s4.e1" origId="CHEBI:16856" charOffset="59-62" type="compound" text="GSH"/>
+            <entity id="DS.d16.s4.e2" origId="P48508" charOffset="162-166" type="protein" text="GCLM"/>
+            <entity id="DS.d16.s4.e3" origId="F1LRE1" charOffset="171-173" type="protein" text="GR"/>
+            <pair e1="DS.d16.s4.e1" e2="DS.d16.s4.e0" id="DS.d16.s4.i0" interaction="False" />
+            <pair e1="DS.d16.s4.e1" e2="DS.d16.s4.e2" id="DS.d16.s4.i1" interaction="False" />
+            <pair e1="DS.d16.s4.e1" e2="DS.d16.s4.e3" id="DS.d16.s4.i2" interaction="False" />
         </sentence>
 </document>
 </corpus>

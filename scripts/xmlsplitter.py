@@ -17,7 +17,7 @@ def splitting(corpus):
     context = ET.iterparse(gzip.open(test_file), events=('end', ))
     index = -1
     j = 0
-    max_lim = 10000
+    max_lim = 500
     f = gzip.GzipFile("corpus/"+ corpus + os.sep + corpus + os.sep +"test" + str(j) + ".txt.gz", 'wb')
     #gzip.GzipFile(options.output,'w') 
     for event, elem in context:

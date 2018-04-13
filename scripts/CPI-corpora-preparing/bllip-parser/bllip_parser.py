@@ -9,7 +9,7 @@ import time
 from multiprocessing import Pool
 from functools import partial
 from optparse import OptionParser
-
+import os.path
 
 # This function to perform the parsing process to build a syntactic tree
 def _parseIt(corpus, _file):
@@ -40,18 +40,13 @@ def run(_in_file, corpus, PROCESSES):
     cmd = "split -d -l "+ str(num)+ " " + _in_file + " "+ corpus +"/segment"
     process = subprocess.call(cmd, shell=True)
 
-
-    # since the last seg. is almost very small, we can concatente it with the one before the last (e.g. segment08 to segment07) 
-    cmd = "cat "+corpus +"/segment"+ PROCESSES +" >> "+ corpus+"/segment" + str(int(PROCESSES)-1).zfill(2)
-    process = subprocess.call(cmd, shell=True)
-    
-    # remove the last segement
-    fileToRemove = corpus +"/segment"+ PROCESSES
-    try:
-        os.remove(fileToRemove)
-    except OSError:
-        pass
-
+    #'''
+    # since the last seg. is almost very small, we can concatente it with the one before the last (e.g. segment08 to segment07)
+    fileLastToRemove =  corpus +"/segment"+ PROCESSES
+    if os.path.exists(fileLastToRemove):
+        cmd = "cat " + fileLastToRemove +" >> "+ corpus+"/segment" + str(int(PROCESSES)-1).zfill(2)
+        process = subprocess.call(cmd, shell=True)
+        os.remove(fileLastToRemove)
     
 
     paths = []

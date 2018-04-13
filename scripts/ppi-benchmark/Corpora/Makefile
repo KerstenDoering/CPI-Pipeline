@@ -1,4 +1,3 @@
-
 # Creation of learning format for syntax tree based kernels
 
 include ../Makefile.config
@@ -71,7 +70,7 @@ echo-corpora:
 	@echo 'Current corpora:'
 	@echo "CORPORA='$(CORPORA)'"
 
-#{EnrichedXML}: ${CorporaXML} SynTree-step1 SynTree-step2 SynTree-step3 SynTree-step4 SynTree-step5
+{EnrichedXML}: ${CorporaXML} SynTree-step1 SynTree-step2 SynTree-step3 SynTree-step4 SynTree-step5
 
 download-benchmark: ${BenchmarkXML}
 
@@ -127,9 +126,9 @@ ${workDir}/%.xml-ptb-s.txt: ${origDir}/%.xml
 	&& mv "$@.tmp" "$@" \
 	) || ( cat "$@.log" ; exit 1 )
 
-#SynTree-step1: ${LF_JAR}
-#	echo -n $(CorporaXML) | \
-#	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.PtbRawSentenceTransformer -f '{}'
+SynTree-step1: ${LF_JAR}
+	echo -n $(CorporaXML) | \
+	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.PtbRawSentenceTransformer -f '{}'
 	
 # Step 2 - Parsing
 # Results in two files -parsed.txt and -parsed.err
@@ -141,10 +140,10 @@ ${workDir}/%-ptb-s.txt-parsed.txt: ${workDir}/%-ptb-s.txt ${parseIt} ${bestparse
 		> "$@.tmp" 2>"$@.bestparses.err" \
 	&& mv "$@.tmp" "$@"
 
-# SynTree-step2: ${parseIt} ${bestparses} ${parser} ${featuresgz} ${weightsgz}
-# 	echo -n $(CorporaXML) | \
-# 	$(XARGSd) -I'{}' \
-# 		$(MAKE) '{}-ptb-s.txt-parsed.txt'
+SynTree-step2: ${parseIt} ${bestparses} ${parser} ${featuresgz} ${weightsgz}
+	echo -n $(CorporaXML) | \
+	$(XARGSd) -I'{}' \
+		$(MAKE) '{}-ptb-s.txt-parsed.txt'
 
 # Step 3 - Injects parse result into XML
 # requires original .xml file and the .ptb-s.txt-parsed.txt file
@@ -158,9 +157,9 @@ ${workDir}/%.inj1: ${workDir}/%-ptb-s.txt-parsed.txt ${LF_JAR}
 	&& mv "$@.tmp" "$@" \
 	) || ( cat "$@.log" ; exit 1 )
 
-# SynTree-step3: ${LF_JAR}
-# 	echo -n $(CorporaXML) | \
-# 	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.PtbTreeInjector -f '{}' -p '{}'-ptb-s.txt-parsed.txt -o '{}'.inj1 -i
+SynTree-step3: ${LF_JAR}
+	echo -n $(CorporaXML) | \
+	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.PtbTreeInjector -f '{}' -p '{}'-ptb-s.txt-parsed.txt -o '{}'.inj1 -i
 
 # Step 4 - Mapping between POS and text
 # requires .inj1 file and creates .inj1-bracketing-tokens.txt
@@ -175,9 +174,9 @@ ${workDir}/%.inj1-bracketing-tokens.txt: ${workDir}/%.inj1
 	&& mv "$@.tmp" "$@" \
 	) || ( cat "$@.log" ; exit 1 )
 
-# SynTree-step4: ${LF_JAR}
-# 	echo -n $(CorporaXML) | \
-# 	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.BracketingTokenMapper '{}.inj1'
+SynTree-step4: ${LF_JAR}
+ 	echo -n $(CorporaXML) | \
+ 	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.BracketingTokenMapper '{}.inj1'
 
 # Step 5 - Injects the bracketing into the xml file
 .PRECIOUS: ${workDir}/%.inj1.inj2
@@ -195,15 +194,19 @@ ${workDir}/%.inj1.inj2: ${workDir}/%.inj1-bracketing-tokens.txt
 ${stlfDir}/%.xml: ${workDir}/%.xml.inj1.inj2
 	mkdir -p "${stlfDir}"
 	cp "$<" "$@"
-
-# SynTree-step5: ${LF_JAR}
-# 	echo -n $(CorporaXML) | \
-# 	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.PtbTreeInjector -f '{}.inj1' -t '{}.inj1-bracketing-tokens.txt' -o '{}.inj1.inj2'
-# 	rm -rf ${stlfDir}
-# 	mkdir -p ${stlfDir}
-# 	echo -n $(CorporaXML) | \
-# 	$(XARGSd) -I'{}' bash -c 'cp "{}.inj1.inj2" ${stlfDir}/`basename "{}"`'
-
+	perl ${stlfDir}/randomSplit.pl ${stlfDir}/$(CORPORA).xml ##
+	rsync -a $(CORPORA) Splits/ ##
+	rm -rf $(CORPORA)
+	
+SynTree-step5: ${LF_JAR}
+	echo -n $(CorporaXML) | \
+	$(XARGSd) -I'{}' java ${MEM1} -cp "${LF_JAR}${SEP}${LF_CLASSPATH}" org.learningformat.transform.PtbTreeInjector -f '{}.inj1' -t '{}.inj1-bracketing-tokens.txt' -o '{}.inj1.inj2'
+	rm -rf ${stlfDir}
+	mkdir -p ${stlfDir}
+	echo -n $(CorporaXML) | \
+	$(XARGSd) -I'{}' bash -c 'cp "{}.inj1.inj2" ${stlfDir}/`basename "{}"`'
+	#perl ${stlfDir}/randomSplit.pl ${stlfDir}/$(CORPORA).xml ##
+	#mv -f $(CORPORA) Splits/ ##
 # Step 6 - Creates the splits
 
 SynTree-step6: ${LF_JAR}
