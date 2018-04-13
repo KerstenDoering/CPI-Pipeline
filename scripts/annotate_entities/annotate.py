@@ -10,6 +10,7 @@ import os, sys
 import datetime, time
 import nltk.data
 import gzip
+import os.path
 import cPickle as pickle
 import re # regular expressions
 
@@ -327,6 +328,10 @@ if __name__ == "__main__":
     #print os.getcwd()
     #UniProt_mapping('protmine/idmapping.dat.gz')
     print "Upload UniProt ..."
+    
+    if not os.path.exists('uniprot.p'):
+        os.system('gunzip uniprot.p.gz')
+    
     dict = pickle.load( open( "uniprot.p", "rb" ) )
 
     print "Done." 
