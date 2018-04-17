@@ -343,12 +343,13 @@ def Evaluating():
             for foretell in glob.glob(split +os.sep +"predict*.out"):  #Iterate over the different lambda params
     #            print foretell, "##"
                 lamd=lambdaRegex.search(os.path.basename(foretell)).group(2) #Extract the lambda-setting
-                resultFile.write("insert into ppiCV  (corpus, parsertype, parser, kernel, fold, normalized, c, kernel_script) values ('"+corpus +"', 'dependency', 'Charniak-Lease+Stanford converter', 'APG', " +splitname +", 't', " +lamd +", 'allgraph:" +lamd +" " +tokenizer +" " +"normalized" +"');\n")
-
                 estimateFile= split +os.sep +"threshold" +lamd +".out" #File needed to estimate the threshold; (selfprediction!)
     #            print corpus +" " +str(splitname) +"/" +str(9) +" lambda=" +lamd           
 
                 threshold= getThreshold(estimateFile) #Get the optimal threshold setting
+
+                resultFile.write("insert into ppiCV  (corpus, parsertype, parser, kernel, fold, normalized, c, kernel_script, forced_threshold) values ('"+corpus +"', 'dependency', 'Charniak-Lease+Stanford converter', 'APG', " +splitname +", 't', " +lamd +", 'allgraph:" +lamd +" " +tokenizer +" " +"normalized', " + str(threshold) + ");\n")
+
                 f= open(foretell)
                 for line in f:
                     array=line.split()

@@ -204,8 +204,8 @@ def Evaluating():
 
                 # write experiment parameters
 
-                resultFile.write("INSERT INTO ppiCV (parsertype, parser, corpus, fold, kernel, kernel_script) " + 
-		     "VALUES ('POS tagger', 'TextPRO (Version06?)', '" + corpus + "', " + fold + ", 'SL', 'jsre; n=" + n + " (n-gram), w=" + w + " (window)');\n")
+                resultFile.write("INSERT INTO ppiCV (parsertype, parser, corpus, fold, kernel, kernel_script, forced_threshold) " + 
+		     "VALUES ('POS tagger', 'TextPRO (Version06?)', '" + corpus + "', " + fold + ", 'SL', 'jsre; n=" + n + " (n-gram), w=" + w + " (window)', 0.0);\n")
                 
                 # write experiment evaluation data
                 resultFile.write("UPDATE ppiCV SET tp = " +str(TP) +", fn = " +str(FN) +", tn = " +str(TN) +", fp = " +str(FP) +", total = " +str(TP+TN+FP+FN) +", auc = " + str(auc) + " , precision_ = " + str(prec) + " , recall = " + str(rec) + ", f_measure = " + str(F) + " WHERE ppiCVid = currval('ppiCV_ppiCVid_seq');\n")

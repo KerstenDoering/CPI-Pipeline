@@ -1,5 +1,6 @@
 
-#    Copyright (c) 2015-2018, Kersten Doering <kersten.doering@gmail.com>, Ammar Qaseem <ammar.qaseem@pharmazie.uni-freiburg.de>
+#    Copyright (c) 2015-2017, Kersten Doering <kersten.doering@gmail.com>, Ammar Qaseem <ammar.qaseem@pharmazie.uni-freiburg.de>
+#    Copyright (c) 2018, Ammar Qaseem <ammar.qaseem@pharmazie.uni-freiburg.de>, Kersten Doering <kersten.doering@gmail.com>
 
 #    This script executes the steps from the protein-protein-interaction pipeline of Tikk et al. (scripts/ppi-benchmark/Documentation/kernels-howto.pdf, (Tikk et al., 2010. A comprehensive benchmark of kernel methods to extract protein-protein interactions from literature. PLoS Comput. Biol).
 

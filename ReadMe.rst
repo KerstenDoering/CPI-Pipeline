@@ -9,43 +9,71 @@ Introduction
 
 - The selection of considered kernels and software components was reduced to the all-paths graph (APG) kernel and the shallow linguistic (SL) kernel, because they performed best on the protein-protein interaction (PPI) data sets.
 
-- The two kernels were applied to two compound-protein interaction (CPI) data sets. 
+- In this project, the two kernels were applied to two compound-protein interaction (CPI) in PubMed sentences.
 
-    - Data set 1 (DS1) consists of sentences in which an interaction verb is enclosed by a protein and a chemical compound.
+- The complete data set consists of 2753 sentences. Within these sentences, 3724 compound-protein pairs were annotated to show a functional relationship and 2672 compound-protein pairs were marked as no-interaction pairs.
 
-    - In the case of data set 2 (DS2), two biomolecules do not enclose such an interaction verb.
+- We consider co-occurences as an approach to predict every appearance of a compound and a protein in a sentence as a functional relationship (recall 100%, specificity 0%) and call it the baseline calculation, taking into account the number of true functional relationships.
 
-    - These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics).
+- From the given numbers, the data set shows an precision (equal to accuracy in this case) of 58.2 % and an F1 score of 73.6 %.
 
-- The data sets were created by selecting the first 40,000 PubMed abstracts from 2009 with PubMedPortable (https://github.com/KerstenDoering/PubMedPortable).
+- APG and SL kernel both perform better than the concept of co-occurrences as shown in the following tables.
 
-    - The chemical compounds were identified with the backend of prolific using the Hettne rules (Hettne et al., 2009. A dictionary to identify small molecules and drugs in free text. Bioinformatics).
+- SL kernel results:
 
-    -  The web service Whatizit was used for gene and protein synonyms (Rebholz-Schuhmann,D. et al., 2008. Text processing through Web services: calling Whatizit. Bioinformatics).
+    .. image:: figures/APG_DS.png
 
-- After automated extraction of all sentences with an interaction verb (first 20,000 abstracts for DS1) and without an interaction enclosed by two biomolecues (second 20,000 abstracts for DS2), they were displayed in HTML pages with Javascript buttons to select a status for each sentence.
+- APG kernel results:
 
-    - If a sentence contained at least one interacting pair of biomolecules, the status "Interaction" was selected for this sentence. The alternative was "No Interaction".
+    .. image:: figures/SL_DS.png
 
-    - If the named entity recognition tools tagged false positive synonyms, they were annotated in the separate file RM_comments.csv.
+Functional relationships with and without an enclosed interaction verb
+######################################################################
 
-    - If there were non-interacting molecules in a sentence with the status "Interaction", they were also annotated in the separate CSV table.
+- The whole prediction can be further divided into considering only pairs of compounds and proteins which enclose an interaction verb (data set 1 - DS1) and pairs of compounds and proteins that do show this sentence structure (data set 2 - DS2).
 
-    - If every molecule in the sentence was a false positive named entity, the status of the sentence was set to "False positive example".
+- These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics).
 
-    - The data set curation was done by Michael Becer, supervised by Kersten Döring.
-
-    - All potentially functional interaction pairs marked as false positives were not considered in the evaluation process of the two kernel approaches.
-
-- The number of compounds and proteins co-occurring in sentences compared to the number of true functional relationships can be considered as the baseline, stating how many positive interactions can be expected by using the concept of co-occurrences on PubMed sentences in general. 
-
-    - The following table shows the evaluation of the co-occurrences approach (DS - Data set, Sent. - Sentences, Sens. - Sensitivity, Spec. - Specificity, Prec. - Precision, Acc. - Accuracy, F1 - F1 score, evaluation parameters shown in percent):
+- The following table shows the evaluation of the co-occurrences approach (DS - Data set, Sent. - Sentences, Sens. - Sensitivity, Spec. - Specificity, Prec. - Precision, Acc. - Accuracy, F1 - F1 score, evaluation parameters shown in percent):
 
     .. image:: figures/co-occurrences.png
 
-    - If each relationship is predicted to be positive, the sensitivity is 100 % and the specificity is 0 %, because there are no true negative predictions. 
+- The next table shows the results of the APG kernel pipeline for DS1 and DS2:
 
-    - For this reason, the precision is equal to the accuracy value in this special case.
+    .. image:: figures/APG.png
+
+- The last table shows the results of the SL kernel pipeline for DS1 and DS2:
+
+    .. image:: figures/SL.png
+
+- The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % DS1 and 60 % DS2, based on an analysis with PubMedPortable.
+
+- In the case of DS1 and DS2, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).
+
+- Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
+
+The benchmark data set creation
+###############################
+
+- The data sets were created by selecting the first 40,000 PubMed abstracts from 2009 with PubMedPortable (https://github.com/KerstenDoering/PubMedPortable).
+
+- The chemical compounds were identified with the backend of prolific using the Hettne rules (Hettne et al., 2009. A dictionary to identify small molecules and drugs in free text. Bioinformatics).
+
+- The web service Whatizit was used for gene and protein synonyms (Rebholz-Schuhmann,D. et al., 2008. Text processing through Web services: calling Whatizit. Bioinformatics).
+
+- After automated extraction of all sentences with an interaction verb (first 20,000 abstracts for DS1) and without an interaction enclosed by two biomolecues (second 20,000 abstracts for DS2), they were displayed in HTML pages with Javascript buttons to select a status for each sentence.
+
+- If a sentence contained at least one interacting pair of biomolecules, the status "Interaction" was selected for this sentence. The alternative was "No Interaction".
+
+- If the named entity recognition tools tagged false positive synonyms, they were annotated in the separate file RM_comments.csv.
+
+- If there were non-interacting molecules in a sentence with the status "Interaction", they were also annotated in the separate CSV table.
+
+- If every molecule in the sentence was a false positive named entity, the status of the sentence was set to "False positive example".
+
+- The data set curation was done by Michael Becer, supervised by Kersten Döring.
+
+- All potentially functional interaction pairs marked as false positives were not considered in the evaluation process of the two kernel approaches.
 
 - More information about the theoretical background of the kernels, the data sets, and other related information can be found in Kersten Döring's Dissertation (https://www.freidok.uni-freiburg.de/data/10565).
 
@@ -53,9 +81,8 @@ Introduction
 
     - The PubMedPortable project is referred to as PubMed2Go in this thesis.
 
-
-XML Evaluation Data Set
-***********************
+Technical background of the XML data set
+########################################
 
 - The script parser.py in the directories scripts/generate_XML_files/DS1/ und scripts/generate_XML_files/DS2 creates the files interactions.txt and no_interactions.txt from the HTML files in the folder data_sets. 
 
@@ -112,8 +139,8 @@ XML Evaluation Data Set
         Sentences seen: 40
 
 
-Requirements for APG and SL Kernel Pipeline
-*******************************************
+Technical Requirements for running APG and SL Kernel Pipeline
+*************************************************************
 
 - Many of the following steps are described similarly in the original ppi-benchmark documentation (scripts/ppi-benchmark/documentationkernels-howto.pdf).
 
@@ -121,7 +148,7 @@ Requirements for APG and SL Kernel Pipeline
 Required Installation Packages
 ##############################
 
-- The operating system for the CPI-pipeline was Ubuntu 14.04 LTS.
+- The operating system for the CPI-pipeline was Ubuntu 14.04 LTS and the whole pipeline was tested with Ubuntu 16.04 LTS.
 
 - All packages can be installed with "apt-get install", Synaptic Package Manager, or the new Ubuntu Software Center.
 
@@ -133,54 +160,15 @@ Required Installation Packages
 
     - python-numpy (here: using Python 2.7, used within the make experiment steps)
 
-    - default-jdk (here: Java 7, used for the execution of JAR files)
+    - default-jdk (Java 7 or 8, used for the execution of JAR files)
+
+    - python-nltk
 
 
 Makefile Configuration
 ######################
 
-- The pipeline needs to be configured for the usage of DS1 or DS2 and the application of the APG or SL kernel.
-
-- To run the pipeline with APG and DS1 a few changes were made in comparision to the original configuration of the ppi-benchmark package (the "#" character comments out lines of code).
-
-- The file "scripts/ppi-benchmark/Experiments/APG/Makefile" has got the following configuration, now:
-
-    # Produced by the pipeline
-
-    TOKENIZER=Charniak-Lease
-
-    PARSER=Charniak-Johnson-McClosky
-
-- To make use of DS1 and SL with cross-validation, the following lines need to be set in the file "scripts/ppi-benchmark/Makefile.config":
-
-    BENCHMARKCORPORA=DS1 #DS2 #LLL #HPRD50 AIMed BioInfer IEPA
-
-    CORPORA=$(BENCHMARKCORPORA)
-
-    TEST_CORPORA=DS1 #DS2 #LLL HPRD50
-
-    KERNELS=SL #APG
-
-    EXPTYPES=CV #PR XX
-
-- This works analogously for DS2 and DS3 with the SL kernel.
-
-- To make use of any data set and APG with cross-validation, the following lines need to be set in the file "scripts/ppi-benchmark/Makefile.config":
-
-    BENCHMARKCORPORA=DS #LLL #HPRD50 AIMed BioInfer IEPA
-
-    CORPORA=$(BENCHMARKCORPORA)
-
-    TEST_CORPORA=DS #DS2 #LLL HPRD50
-
-    KERNELS=APG #SL
-
-    EXPTYPES=CV #PR XX
-
-- This works analogously for DS2 and DS3 with the APG kernel.
-
-- If you want to run the cross-corpus mode, set EXPTYES=XX, and if you want to run the prediction mode, use EXPTYES=PR.
-
+- There are many Makefile parameters which are automatically set by using the correct make commands, as described in the section "How to run the Kernel Pipelines".
 
 PostgreSQL Configuration
 ########################
@@ -209,7 +197,7 @@ PostgreSQL Configuration
 
         - \\q
 
-- If you do not want to insert your password everytime to connect to a PostgreSQL database, use these commands:
+- If you do not want to insert your password everytime to connect to a PostgreSQL database, use these commands (recommended):
 
     - touch ~/.pgpass
 
@@ -225,75 +213,107 @@ PostgreSQL Configuration
 
     - psql -h localhost -d ppi -U ppi -f init-ppiCV.sql 
 
-Executable Files
-################
-
-- Check whether the following files are executable after cloning this repository. If they are not marked as executable, you need to make them executable with the command "sudo chmod +x <file>"
-
-    - scripts/APG_pipeline_DS.sh
-
-    - scripts/SL_pipeline.sh
-
-    - scripts/CPI-corpora-preparing/bllip-parser/first-stage/PARSE/parseIt
-
-    - scripts/CPI-corpora-preparing/bllip-parser/second-stage/programs/features/best-parses
-
-    - scripts/ppi-benchmark/Parsing/Charniak-Lease-2006Aug-reranking-parser/reranking-parser/first-stage/PARSE/parseIt
-
-    - scripts/ppi-benchmark/Parsing/Charniak-Lease-2006Aug-reranking-parser/reranking-parser/second-stage/programs/features/best-parses
-
-    - results/summary/jSRE/get_csv_results.sh
-
-    - results/summary/APG/get_csv_results.sh
-
 
 How to run the Kernel Pipelines
 *******************************
 
-- This section describes how to use run the APG and SL kernel with DS1, DS2, and the combined data set 3 (DS3) in different modes (cross-validation, prediction, cross-corpus). 
+- This section describes how to use run the APG and SL kernel with the combined data set (DS), DS1, and DS2 in different modes:
+
+    - CV: 10x-cross-validation
+
+    - PR: prediction, based on the trained model of the combined data set (DS) 
+
+    - XX: cross-corpus training and prediction on user-specific data sets
 
 - Furthermore, it contains a short paragraph about how to use these models.
 
 APG Kernel pipeline
 ###################
 
-- It is recommended that the folders CPI-corpora-preparing, generate_XML_files, and ppi-benchmark are copied (including the shell script APG_pipeline.sh) to another directory to store the empty GitHub versions as a backup.
+- These are the 3 main commands:
+ 
+    - CV: make experiment Kernel=APG expTyp=CV InputFile=DS.xml Processors=4
+ 
+    - PR: make experiment Kernel=APG expTyp=PR InputFile=DS.xml Processors=4
+ 
+    - XX: make experiment Kernel=APG expTyp=XX TrainFile=train.xml TestFile=test.xml Processors=4
 
-    - The path to the folder from which the pipeline should be executed needs to be set in the file "scripts/ppi-benchmark/Makefile.config" in line 7, e.g. like this:
+- You can use the test data set DS-40.xml with 40 sentences to check whether your pipeline works. 
 
-    - baseDir=/home/<user>/Desktop/ppi-benchmark
+- While the complete DS1 pipeline runs around 3:15 h the test case takes only a few minutes on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
 
-- You can use the test data set with 40 sentences to check whether your pipeline works. 
+- To use this test data set, go to your (new) working directory into "scripts" and run one of the given make commands with a data set from the folder "scripts/generate_XML_files/DS", e.g.:
 
-- While the complete DS1 and DS2 runtime is about several hours, the test case takes around 6 min on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
+    - make experiment Kernel=APG expTyp=PR InputFile=annotate_res.xml Processors=4
 
-    - To use this test data set, go to your (new) working directory, where APG_pipeline.sh is located.
+- The make command also uploads the results to the PostgreSQL database. 
 
-    - You can move your input file to "generate_XML_files/DS.xml" or directly call it, but it needs to be located in "generate_XML_files/DS
+- You can clean your APG workspace after a calculation is finished:
 
-- Start the pipeline in cross-validation mode by executing the shell script in the command-line (use -p 4, if you want to use 4 processors - default is -p 2):
+    - make clean-APG
 
-    - ./APG_pipeline.sh -f DS1-40.xml -t CV
+- Or you can clean the whole workspace:
 
-    - The script contains more comments on the different preprocessing and make experiment steps.
+    - make clean-all
 
-- Use the cross-corpus mode with your own training and prediction file. Generate "CPI-corpora-preparing/step5_copied_from_3/train0.txt.gz" with the first run and do the prediction on the other data set with the second command. It is important that you move (rename) your training file to "generate_XML_files/DS/train.xml" and your prediction file to "generate_XML_files/DS/test.xml":
+- Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.
 
-    - ./APG_pipeline.sh -t XX -f DS1-40.xml -x train
+- Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.
 
-    - ./APG_pipeline.sh -t XX -f DS_50sent.xml -x test
+- The threshold for a positive or negative prediction is optimized for the highest F1 score and stored in the SQL database.
 
-- Use the following command for prediction mode - the training will be based on the combined data set DS3 "scripts/training/train0.txt.gz":
+- In "scripts/ppi-benchmark/Experiments/APG/PR/predict/DS/train0000/predict1.out", you will find the test predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
 
-    - ./APG_pipeline.sh -f DS1-40.xml -t PR
+- In "scripts/ppi-benchmark/Experiments/APG/PR/predict/DS/train0000/threshold1.out", you will find the train predictions (self-prediction) for the F1 score optimization with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
 
-- You can use any data set which you received in a previous XX run "CPI-corpora-preparing/step5_copied_from_3/train0.txt.gz" and copy it to scripts/training for the next PR run.
+- The file scripts/ppi-benchmark/Experiments/APG/PR/DS.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).
 
-- The runtime can be checked considering the time written to the command-line before the script terminates.
+SL Kernel pipeline
+##################
 
-- This script also uploads the results to the PostgreSQL database. 
+- These are the 3 main commands:
+ 
+    - CV: make experiment Kernel=SL expTyp=CV InputFile=DS.xml Processors=4
+ 
+    - PR: make experiment Kernel=SL expTyp=PR InputFile=DS.xml Processors=4
+ 
+    - XX: make experiment Kernel=SL expTyp=XX TrainFile=train.xml TestFile=test.xml Processors=4
 
-- The folder results/summary/APG/output/ contains scripts to evaluate the results.
+- You can clean your APG workspace after a calculation is finished:
+
+    - make clean-SL
+
+- Or you can clean the whole workspace:
+
+    - make clean-all
+
+- Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.
+
+- Michael Becer was involved in developing a previous version of an independently customized pipeline using the SL kernel as part of his Bachelor Thesis, supervised by Kersten Döring.
+
+- Kevin Selm wrote a bugfix for the jSRE software, because it was not possible to use different parameter selections of n and w. 
+
+    - Original software link: 
+
+        - https://hlt-nlp.fbk.eu/technologies/jsre
+
+- The ppi-benchmark pipeline was changed to make use of the JAR file scripts/ppi-benchmark/Kernels/jsre/source/dist/runTrain.jar, which was exported from a newly created Eclipse project with the source code of the original software and the debugged code of Kevin Selm.
+
+    - You can find these files in the folder scripts/jSRE_debug.
+
+- The complete DS1 pipeline runs in around 0:12 h with an Intel Core i7-6700HQ (4x 2,6 GHz).
+
+- The threshold for a positive or negative prediction is zero and stored in the SQL database.
+
+
+- In "scripts/ppi-benchmark/Experiments/SL/PR/predict/DS/train0000/predictn=3w=1.out", you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
+
+- The file scripts/ppi-benchmark/Experiments/SL/PR/output.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).
+
+Data set evaluation
+###################
+
+- The folder results/summary/APG/output/ contains scripts to evaluate the results (numbers shown in the tables in the section "Introduction").
 
 - If you want to repeat the evaluation procedure, execute the following steps:
 
@@ -313,83 +333,7 @@ APG Kernel pipeline
 
     - Check the files DS1_average_header.csv and DS2_average_header.csv. They exist as a backup in the folder results/summary/APG/final/ and the selected SQL results are stored as a backup in the folder results/summary/APG/backup_original.
 
-- The following table shows the results of the APG kernel pipeline for DS1 and DS2 (DS - Data set, Sent. - Sentences, Sens. - Sensitivity, Spec. - Specificity, Prec. - Precision, Acc. - Accuracy, F1 - F1 score, AUC - Area under the curve, evaluation parameters shown in percent):
-
-    .. image:: figures/APG.png
-
-- Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.
-
-- Ammar Qaseem updated and refined this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.
-
-
-SL Kernel pipeline
-##################
-
-- The SL kernel pipeline can be started as described previously for the APG kernel pipeline.
-
-- The Makefile line defining to use the APG kernel needs to be changed to make use of the SL kernel ("scripts/ppi-benchmark/Makefile.config"):
-
-    - KERNELS= SL #APG #ST SST PT SpT kBSPS APG cosine edit SL Kim
-
-- With the current implementation, the script SL_pipeline.sh and makes use of the files generated in the first preprocessing steps of the APG pipeline. As every file to be used can be called DS.xml, please take care, that you first the APG pipeline with any file renamed to DS.xml and then use the SL kernel pipeline.
-
-- Copy them to the directory, in which you started your APG kernel calculation.
-
-- If you did not yet run the APG kernel pipeline, use the script APG_pipeline.sh first, comment out the make experiment steps, and execute it as described in the previous section.
-
-- The SL kernel pipeline does not need the dependency tree format and it makes use of the ppi-benchmark integrated Charniak-Lease package, but it needs the same cross-validation files to be directly comparable to the APG kernel approach.
-
-- You can use the same directory to execute the SL kernel scripts as you did in case of the APG kernel approach, because the two kernels use different directories:
-
-    - ./SL_pipeline.sh
-
-- The evaluation steps are very similar to the ones used for the APG kernel pipeline.
-
-    - Execute the scripts in results/summary/jSRE as described in the previous section.
-
-- These are the SL kernel pipeline results for DS1 and DS2 (DS - Data set, Sent. - Sentences, Sens. - Sensitivity, Spec. - Specificity, Prec. - Precision, Acc. - Accuracy, F1 - F1 score, AUC - Area under the curve, evaluation parameters shown in percent):
-
-    .. image:: figures/SL.png
-
-- Michael Becer was involved in developing a previous version of an independently customized pipeline using the SL kernel as part of his Bachelor Thesis, supervised by Kersten Döring.
-
-- Kevin Selm wrote a bugfix for the jSRE software, because it was not possible to use different parameter selections of n and w. 
-
-    - Original software link: 
-
-        - https://hlt-nlp.fbk.eu/technologies/jsre
-
-- The ppi-benchmark pipeline was changed to make use of the JAR file scripts/ppi-benchmark/Kernels/jsre/source/dist/runTrain.jar, which was exported from a newly created Eclipse project with the source code of the original software and the debugged code of Kevin Selm.
-
-    - You can find these files in the folder scripts/jSRE_debug.
-
-
-Results of the Combined Model Representing PubMed
-#################################################
-
-- The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % DS1 and 60 % DS2, based on an analysis with PubMedPortable.
-
-- In the case of DS1 and DS2, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).
-
-- Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
-
-- Therefore, DS1 and DS2 can be summarised to a combined data set 3 (DS3).
-
-- Considering the baseline calculation based on co-occurrences in the introduction, the combined data set shows an accuracy (equal to precision in this case) of 58.2 % and an F1 score of 73.6 %.
-
-- APG and SL kernel both perform better than the concept of co-occurrences as shown in the two tables with results for DS3.
-
-- Run the APG pipeline (do not forget to set your baseDir path in ppi-benchmark/Makefile.config in line 7):
-
-    - ./APG_pipeline.sh -f DS3.xml -t CV
-
-        - The preprocessing (actually only step 2 (bllip-parser)) took around 30 min (mainly single core calculations) and the rest of the pipeline with all parameter selections took around 5 h.
-
-    - ./SL_pipeline.sh
-
-        - The runtime is around 29 min on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
-
-- These are the results for the APG and SL kernel pipeline:
+- These are the steps to get the originally combined data set evaluation result tables:
 
     - APG results:
 
@@ -402,8 +346,6 @@ Results of the Combined Model Representing PubMed
         - cat DS3*average.csv > DS3_average.csv
 
         - python header.py
-
-    .. image:: figures/APG_DS3.png
 
     - SL results:
 
@@ -421,33 +363,10 @@ Results of the Combined Model Representing PubMed
 
         - python header.py 
 
-    .. image:: figures/SL_DS3.png
 
-How to reproduce the benchmark results for the combined data set
-################################################################
+- You can reproduce any APG cross-validation run by commenting out lines 187, 191, 192, and 198 and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
 
-- Technically, a concatenation of all DS1 and DS2 cross-validation files is needed to compare the single APG and SL results on DS1 and DS2. This was achieved with the following steps.
-
-    - Change into directory CPI-Pipeline/scripts and use the splitted files to generate the cross-validation files for DS3.
-
-    - Merge the files training_dataset_sorted.csv in the directories DS1 and DS2, too.
-
-    - The script annotatedsen_to_xml.py was slightly modified to work with the identifier DS3.
-
-    - cd CPI-Pipeline/scripts
-
-    - chmod +x merge.sh
-
-    - ./merge.sh 
-
-    - cd generate_XML_files/DS3/
-
-    - python annotatedsen_to_xml.py 
-
-    - All cross-validation splits are automatically merged with the order from DS1 and DS2 and all new DS3 document identifiers.
-
-- You can reproduce any cross-validation run by commenting out lines 180, 184, 185, and 191 in APG_pipeline.sh and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
-
+- You can reproduce any SL cross-validation run by commenting out lines 197-199 in scripts/ppi-benchmark/Corpora/Makefile and line 90 in scripts/SL_Pipeline.sh (and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS).
 
 Usage of Created Models
 #######################
@@ -466,7 +385,47 @@ Usage of Created Models
 
         - Format of each pair: <entity>__<entity>__<interaction>
 
+- This format will automatically generated with the following example command in the folder "scripts/annotate_entities":
+
+    - make annotate InputFile=inp/pmid_example OutputFile=annotate_res.txt Processors=2
+
+- You will need to configure python-nltk to download the punkt tokenizer before:
+
+    - cd ~
+
+    - mkdir nltk_data
+
+    - ipython
+
+    - import nltk
+
+    - nltk.download_shell()
+
+    - d
+
+    - punkt
+
+    - q
+
+- The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section "Technical background of the XML data set") is "scripts/generate_XML_files/DS/annoate_res.xml".
+
 - Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.
+
+- If you want to run your own models in the PR mode, you need to copy files from your XX run to specific directories.
+
+- In the case of the SL kernel, you need to copy the .model file from "scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0" to "scripts/training_model/SL_PR_training/trained_model/DS/train0".
+
+- In the case of the APG kernel, there are more steps:
+
+    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/DS/train0" to "/home/kersten/Desktop/CPI-Pipeline/scripts/training_model/APG_PR_training/trained_model/DS/train0".
+
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Corpus_train0.txt.gz".
+
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Dict_train0.txt.gz".
+
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Linearized_train0.txt.gz".
+
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Norm_train0.txt.gz".
 
 
 Contact
@@ -475,6 +434,8 @@ Contact
 - Please, write an e-mail, if you have questions, feedback, improvements, or new ideas:
 
     - kersten.doering@gmail.com
+
+    - ammar.qaseem@pharmazie.uni-freiburg.de
 
 - If you are interested in related projects, visit our working group's homepage:
 
