@@ -257,7 +257,7 @@
 </ul>
 </blockquote></li>
 <li>Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.</li>
-<li>Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.</li>
+<li>Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_Pipeline.sh.</li>
 <li>The threshold for a positive or negative prediction is optimized for the highest F1 score and stored in the SQL database.</li>
 <li>In “scripts/ppi-benchmark/Experiments/APG/PR/predict/DS/train0000/predict1.out”, you will find the test predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).</li>
 <li>In “scripts/ppi-benchmark/Experiments/APG/PR/predict/DS/train0000/threshold1.out”, you will find the train predictions (self-prediction) for the F1 score optimization with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).</li>
@@ -285,7 +285,7 @@
 <li>make clean-all</li>
 </ul>
 </blockquote></li>
-<li>Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.</li>
+<li>Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script SL_Pipeline.sh.</li>
 <li>Michael Becer was involved in developing a previous version of an independently customized pipeline using the SL kernel as part of his Bachelor Thesis, supervised by Kersten Döring.</li>
 <li><p>Kevin Selm wrote a bugfix for the jSRE software, because it was not possible to use different parameter selections of n and w.</p>
 <blockquote>
@@ -306,7 +306,7 @@
 </blockquote></li>
 <li>The complete DS1 pipeline runs in around 0:12 h with an Intel Core i7-6700HQ (4x 2,6 GHz).</li>
 <li>The threshold for a positive or negative prediction is zero and stored in the SQL database.</li>
-<li>In “scripts/ppi-benchmark/Experiments/SL/PR/predict/DS/train0000/predictn=3w=1.out”, you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).</li>
+<li>In “scripts/ppi-benchmark/Experiments/SL/PR/predict/DS/train0000/predictn=3w=1.out”, you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for n=3 and w=1).</li>
 <li>The file scripts/ppi-benchmark/Experiments/SL/PR/output.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).</li>
 </ul>
 <h2 id="data-set-evaluation"><span class="header-section-number">3.3</span> Data set evaluation</h2>
@@ -341,7 +341,7 @@
 <li><p>SL results:</p>
 <blockquote>
 <ul>
-<li>change into directory /home/kersten/Desktop/CPI-Pipeline/results/summary/DS3/jSRE</li>
+<li>change into directory /CPI-Pipeline/results/summary/DS3/jSRE</li>
 <li>python generate_selects_psql.py</li>
 <li>./get_csv_results.sh</li>
 <li>change into directory output</li>
@@ -375,7 +375,7 @@
 <li><p>This format will automatically generated with the following example command in the folder “scripts/annotate_entities”:</p>
 <blockquote>
 <ul>
-<li>make annotate InputFile=inp/pmid_example OutputFile=annotate_res.txt Processors=2</li>
+<li>make annotate InputFile=pmid_example/pmid_example OutputFile=annotate_res.txt Processors=2</li>
 </ul>
 </blockquote></li>
 <li><p>You will need to configure python-nltk to download the punkt tokenizer before:</p>
@@ -398,7 +398,7 @@
 <li><p>In the case of the APG kernel, there are more steps:</p>
 <blockquote>
 <ul>
-<li>Copy your .model file from “scripts/ppi-benchmark/Experiments/APG/PR/trained/DS/train0” to “/home/kersten/Desktop/CPI-Pipeline/scripts/training_model/APG_PR_training/trained_model/DS/train0”.</li>
+<li>Copy your .model file from “scripts/ppi-benchmark/Experiments/APG/PR/trained/DS/train0” to “scripts/training_model/APG_PR_training/trained_model/DS/train0”.</li>
 <li>Copy “scripts/ppi-benchmark/Experiments/APG/XX/corpus/DS/train0.txt.gz” to “scripts/training_model/APG_PR_training/Corpus_train0.txt.gz”.</li>
 <li>Copy “scripts/ppi-benchmark/Experiments/APG/XX/dictionary/DS/train0.txt.gz” to “scripts/training_model/APG_PR_training/Dict_train0.txt.gz”.</li>
 <li>Copy “scripts/ppi-benchmark/Experiments/APG/XX/linearized/DS/train0.txt.gz” to “scripts/training_model/APG_PR_training/Linearized_train0.txt.gz”.</li>

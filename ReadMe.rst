@@ -258,7 +258,7 @@ APG Kernel pipeline
 
 - Elham Abbasian was involved in creating the shell script for this pipeline as part of her Master Thesis, supervised by Kersten Döring.
 
-- Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.
+- Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_Pipeline.sh.
 
 - The threshold for a positive or negative prediction is optimized for the highest F1 score and stored in the SQL database.
 
@@ -287,7 +287,7 @@ SL Kernel pipeline
 
     - make clean-all
 
-- Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script APG_pipeline.sh.
+- Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script SL_Pipeline.sh.
 
 - Michael Becer was involved in developing a previous version of an independently customized pipeline using the SL kernel as part of his Bachelor Thesis, supervised by Kersten Döring.
 
@@ -306,7 +306,7 @@ SL Kernel pipeline
 - The threshold for a positive or negative prediction is zero and stored in the SQL database.
 
 
-- In "scripts/ppi-benchmark/Experiments/SL/PR/predict/DS/train0000/predictn=3w=1.out", you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
+- In "scripts/ppi-benchmark/Experiments/SL/PR/predict/DS/train0000/predictn=3w=1.out", you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for n=3 and w=1).
 
 - The file scripts/ppi-benchmark/Experiments/SL/PR/output.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).
 
@@ -349,7 +349,7 @@ Data set evaluation
 
     - SL results:
 
-        - change into directory /home/kersten/Desktop/CPI-Pipeline/results/summary/DS3/jSRE
+        - change into directory /CPI-Pipeline/results/summary/DS3/jSRE
 
         - python generate_selects_psql.py
 
@@ -417,7 +417,7 @@ Usage of Created Models
 
 - In the case of the APG kernel, there are more steps:
 
-    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/DS/train0" to "/home/kersten/Desktop/CPI-Pipeline/scripts/training_model/APG_PR_training/trained_model/DS/train0".
+    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/DS/train0" to "scripts/training_model/APG_PR_training/trained_model/DS/train0".
 
     - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Corpus_train0.txt.gz".
 

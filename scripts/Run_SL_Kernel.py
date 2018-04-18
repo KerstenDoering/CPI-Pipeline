@@ -68,10 +68,10 @@ def Splitting():
 #Train a Model
 def Training(w0,w1,n0,n1):
     
-    if expTyp == 'CV':
-        #w0=1 w1=4 n0=1 n1=4
-        w0,w1,n0,n1 = 1,4,1,4
-    elif expTyp == 'PR':
+    #if expTyp == 'CV':
+        #w0,w1,n0,n1 = 1,4,1,4
+    
+    if expTyp == 'PR':
         # copy the training model (w=1 &  n=3), this experiment(PR) will use the already built model.
         scr="../../../../training_model/SL_PR_training/trained_model"
         dest=trained
@@ -80,18 +80,12 @@ def Training(w0,w1,n0,n1):
     
     elif expTyp == 'XX':
     
-        # copy the training dataset
-        #cmd = "mv ../../../Corpora/train0.txt "+ splits +os.sep +corpus +os.sep
-        #print cmd
-        #os.system(cmd)
         scr="../../../Corpora/train0.txt"
         dest=splits +os.sep +corpus +os.sep
         print dest
         shutil.move(scr, dest)  
-        #shutil.move("../../../Corpora/train0.txt", )
-        w0,w1,n0,n1 = 1,2,3,4
-    
-    
+        #w0,w1,n0,n1 = 1,2,3,4
+
     
     cmd = []
     regex = re.compile('\D+\d+')
@@ -247,51 +241,4 @@ if __name__ == "__main__":
     Predicting()
     
     Evaluating()
-    '''
-    if expTyp == 'CV':
-    
-        print "Step1-Training"
-        Training(1,4,1,4)
-        #shutil.copytree("trained0", "trained")
-        #if os.path.exists("corpus"):
-        #    shutil.rmtree("corpus")
-        #shutil.copytree("corpus0", "corpus")
-        print "Step 2 predict!"
-        Predicting()
-        
-        Evaluating()
-            
-    elif expTyp == 'PR':
-    
-        # copy the training model (w=1 &  n=3)
-        shutil.copytree("trained-model", "trained")
-        
-        Splitting()
-        
-        print "Step 2 predict!"
-        Predicting()
-        
-        Evaluating()
-    
-    elif expTyp == 'XX':
-    
-        # copy the training dataset
-        cmd = "mv ../../../Corpora/train0.txt "+ splits +os.sep +corpus +os.sep
-        print cmd
-        os.system(cmd)
-        
-        print "Step1-Training"
-        # The best model is when w=1 &  n=3
-        Training(1,2,3,4)
-        
-        Splitting()
-        
-        print "Step 2 predict!"
-        Predicting()
-        
-        Evaluating()
-    
-    else:
-    
-        print "Wrong expTyp :", expTyp , " !"
-    '''    
+

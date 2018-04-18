@@ -231,7 +231,7 @@ def Normalization():
 
 
 #Step4: Train a  model for each trainingset
-def Training():
+def Training(c0, c1):
     print "\nStep4: Train a model for each Trainingset"
     print "-------------------------------------------\n"
 
@@ -256,7 +256,7 @@ def Training():
             dir= base +trained +os.sep +corpus +os.sep +trainName +os.sep
             os.makedirs(dir)
 
-            for l in range(-2,2): #Gridsearch
+            for l in range(c0, c1): #Gridsearch
                 lamda= pow(2,l) 
 
                 cmd.append("python " +source +os.sep +"TrainLinearized.py -b 2000 -r " +str(lamda) +" -i " +train +" -o "  +dir + "train" +str(lamda) +".model")
@@ -391,7 +391,7 @@ if __name__ == "__main__":
         GenerateDict()
         Linearization()
         Normalization()
-        Training()
+        Training(-2,2)
         if expTyp in  ['PR', 'XX']:
             SplitNormDataSet()
         Predicting()

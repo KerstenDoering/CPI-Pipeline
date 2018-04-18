@@ -1,1 +1,1 @@
-make annotate InputFile=inp/pmid_example OutputFile=annotate_res.txt Processors=2
+make annotate InputFile=pmid_example/pmid_example OutputFile=annotate_res.txt Processors=2
