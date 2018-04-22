@@ -387,7 +387,7 @@ Usage of Created Models
 
 - This format will automatically generated with the following example command in the folder "scripts/annotate_entities":
 
-    - make annotate InputFile=inp/pmid_example OutputFile=annotate_res.txt Processors=2
+    - make annotate InputFile=pmid_example/pmid_example OutputFile=annotate_res.txt Processors=2
 
 - You will need to configure python-nltk to download the punkt tokenizer before:
 
@@ -426,6 +426,14 @@ Usage of Created Models
     - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Linearized_train0.txt.gz".
 
     - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Norm_train0.txt.gz".
+
+- Running both kernels in PR mode, one after the other, will generate the files "scripts/ppi-benchmark/Experiments/SL/PR/output.sl.xml" and "scripts/ppi-benchmark/Experiments/APG/PR/output.apg.xml".
+
+- These files will have the same content as the input xml file, e.g. annotate_res.xml, except that each positively predicted compound-protein pair will be annotated with 'interaction="True"'.
+
+- All compound-protein pairs which were predicted as non-functional relationships will keep their default annotation 'interaction="False"'.
+
+- The comparison of the predictions of both kernels (output.sl.xml and output.apg.xml) can be used to make a jury decision, resulting in a high confidence for identical outputs.
 
 
 Contact
