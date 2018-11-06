@@ -30,7 +30,7 @@ Introduction
 Functional relationships with and without an enclosed interaction verb
 ######################################################################
 
-- The whole prediction can be further divided into considering only pairs of compounds and proteins which enclose an interaction verb (data set 1 - DS1) and pairs of compounds and proteins that do show this sentence structure (data set 2 - DS2).
+- The whole prediction can be further divided into considering only pairs of compounds and proteins which enclose an interaction verb (data set 1 - DS1) and pairs of compounds and proteins that don't show this sentence structure (data set 2 - DS2).
 
 - These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics).
 
