@@ -19,11 +19,11 @@ Introduction
 
 - APG and SL kernel both perform better than the concept of co-occurrences as shown in the following tables.
 
-- SL kernel results:
+- APG kernel results:
 
     .. image:: figures/APG_DS.png
 
-- APG kernel results:
+- SL kernel results:
 
     .. image:: figures/SL_DS.png
 
