@@ -7,6 +7,9 @@ TMPDIR=/tmp/
 
 # Parsing
 
+PROCESSES=${numberofcores}
+#PROCESSES=4
+PYTHON=python2
 PARSEBASEDIR=${baseDir}/Parsing
 RERANKINGPARSER=${PARSEBASEDIR}/Charniak-Lease-2006Aug-reranking-parser
 BIOPARSINGMODEL=${PARSEBASEDIR}/Models/McClosky-2009
@@ -25,8 +28,8 @@ RERANKINGPARSER_BASE=${RERANKINGPARSER}/reranking-parser
 BIOPARSINGMODEL_BASE=${BIOPARSINGMODEL}/biomodel
 GENIATAGGER_BASE=${GENIATAGGER_DIR}/geniatagger-3.0.1
 
-
-parseIt=${RERANKINGPARSER_BASE}/first-stage/PARSE/parseIt
+parseIt=${PARSEBASEDIR}/bllip_parser.py
+#parseIt=${RERANKINGPARSER_BASE}/bllip_parser.py
 bestparses=${RERANKINGPARSER_BASE}/second-stage/programs/features/best-parses
 parser=${BIOPARSINGMODEL_BASE}/parser
 featuresgz=${BIOPARSINGMODEL_BASE}/reranker/features.gz
@@ -134,13 +137,18 @@ SynTree-step1: ${LF_JAR}
 # Results in two files -parsed.txt and -parsed.err
 # ${parseIt} ${bestparses} ${parser} ${featuresgz} ${weightsgz}
 .PRECIOUS: ${workDir}/%-ptb-s.txt-parsed.txt
-${workDir}/%-ptb-s.txt-parsed.txt: ${workDir}/%-ptb-s.txt ${parseIt} ${bestparses} ${parser} ${featuresgz} ${weightsgz}
-	"${parseIt}" -t4 -l399 -N50 "${parser}/" "$<" 2>"$@.parseIt.err" \
-	| ${bestparses} -ls "${featuresgz}" "${weightsgz}" \
-		> "$@.tmp" 2>"$@.bestparses.err" \
-	&& mv "$@.tmp" "$@"
+${workDir}/%-ptb-s.txt-parsed.txt: ${workDir}/%-ptb-s.txt ${parseIt}
+#	"${parseIt}" -t4 -l399 -N50 "${parser}/" "$<" 2>"$@.parseIt.err" \
+#	| ${bestparses} -ls "${featuresgz}" "${weightsgz}" \
+#		> "$@.tmp" 2>"$@.bestparses.err" \
+#	&& mv "$@.tmp" "$@"
+	${PYTHON} ${parseIt} -i "$<" -p ${PROCESSES}
+#	echo "$<.temp"
+	tail -n+3 "$<.log" | cut -d' ' -f1 > "$<.log.tmp"
+	paste "$<.log.tmp" "$<-parsed.txt" > "$<-parsed.txt.tmp"
+	mv "$<-parsed.txt.tmp" "$<-parsed.txt"
 
-SynTree-step2: ${parseIt} ${bestparses} ${parser} ${featuresgz} ${weightsgz}
+SynTree-step2: ${parseIt}
 	echo -n $(CorporaXML) | \
 	$(XARGSd) -I'{}' \
 		$(MAKE) '{}-ptb-s.txt-parsed.txt'
@@ -339,29 +347,6 @@ init-error-analysis-db: ${corpusDir}/tokenization2postgres.pl ${SCHEMA_EA} ${gen
 
 parseIt: ${parseIt}
 
-${bestparses} ${parseIt}: download-RerankingParser compile-RerankingParser
-	@test -f "$@" || $(MAKE) err MSG="Reranking parser seems to be available, but $@ is missing"
 
-download-RerankingParser:
-	@$(MAKE) download-extract DIRECTORY="$(RERANKINGPARSER)" URL="$(RERANKINGPARSER_URL)"
-
-compile-RerankingParser:
-	@test -f "$(parseIt)" || \
-	( cd "$(RERANKINGPARSER_BASE)" \
-		&& patch -p1 --forward --force --input "$(RERANKINGPARSER_PATCH)" \
-		&& $(MAKE) clean \
-		&& $(MAKE) PARSE reranker-runtime )
-
-${weightsgz} ${featuresgz}: download-McCloskyModel09
-	@test -f "$@" ||	$(MAKE) err MSG="BioModel seems to be available, but $@ is missing"
-
-${parser}: download-McCloskyModel09
-	@test -d "$@" ||	$(MAKE) err MSG="BioModel seems to be available, but $@ is missing"
-
-download-McCloskyModel09:
-	@$(MAKE) download-extract DIRECTORY="$(BIOPARSINGMODEL)" URL="$(BIOPARSINGMODEL_URL)"
-
-dummy:
-	@echo '<s ID123> Double quote: " Single quote: '"'"' Joined double quote" Two single quotes '"''"' Two joined single quotes'"''"'</s>' | "${parseIt}" -l399 -N50 "${parser}/" | ${bestparses} -s -l "${featuresgz}" "${weightsgz}"
 
 .PHONY: update

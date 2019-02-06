@@ -47,7 +47,7 @@ kernel-APG-CV:
 
 kernel-APG-PR:
 	bash APG_Pipeline.sh -t PR -f $(InputFile) -p $(Processors)
-	python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(InputFile) -r DS.sql -o output.apg.xml
+	python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(InputFile) -r output.sql -o output.apg.xml
 
 kernel-APG-XX:
 	$(MAKE) kernel-APG-XX-train
@@ -71,6 +71,7 @@ kernel-SL-PR:
 
 kernel-SL-XX:
 	$(MAKE) kernel-SL-XX-train
+	$(MAKE) clean-SL
 	$(MAKE) kernel-SL-XX-test
 	#python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(TestFile) -r output.sql -o output.sl.xml
 
@@ -105,10 +106,11 @@ clean-APG-kernel-steps:
 clean-SL: clean-SL-pre-steps clean-SL-kernel-steps
 
 clean-SL-pre-steps:
-	@cd ppi-benchmark/Corpora/ && \
-		rm -rf Work/ SL/ Splits/*/ Original/ Original-Modified/ splits-test-train/ && \
-		rm -rf Syntax-Tree-Learning-Format/DS* && \
-		cd ../..
+	@cd ppi-benchmark/ && \
+		rm -rf Parsing/DS/ && \
+		rm -rf Corpora/Work/ Corpora/SL/ Corpora/Splits/*/ Corpora/Original/ Corpora/Original-Modified/ Corpora/splits-test-train/ && \
+		rm -rf Corpora/Syntax-Tree-Learning-Format/DS* && \
+		cd ..
 
 clean-SL-kernel-steps:
 	@cd ppi-benchmark && \

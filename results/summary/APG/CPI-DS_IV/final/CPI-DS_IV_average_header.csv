@@ -1,0 +1,5 @@
+Parameter	Sensitivity	Specificity	Precision	Accuracy	F1-score	AUC
+0.25	85.4	59.6	78.4	76.3	81.7	81.7
+0.50	85.0	59.8	78.4	76.1	81.5	81.6
+1.00	84.4	60.9	79.0	76.3	81.6	81.4
+2.00	84.6	60.1	78.5	76.0	81.4	81.0

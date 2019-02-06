@@ -28,7 +28,7 @@ apg-CV-core: ${APGdata}/CV
 		rm -rf dictionary/ linearized/ normalized/ trained/ predict/  && \
 		mkdir corpus && \
 		ln -sfT "${APGdata}/CV/corpus/${CORPUS}" "./corpus/${CORPUS}" && \
-		nice bash -c "TOKENIZER='${TOKENIZER}' PARSER='${PARSER}' $(PYTHON) run.py CV" && \
+		nice bash -c "TOKENIZER='${TOKENIZER}' PARSER='${PARSER}' $(PYTHON) run.py CV ${RealName_CORPORA}" && \
 		rm -rf test*.txt train*.txt
 
 apg-PR:
@@ -45,7 +45,7 @@ apg-PR-core: ${APGdata}/PR
 		rm -rf dictionary/ linearized/ normalized/ trained/ predict/  && \
 		mkdir corpus && \
 		ln -sfT "${APGdata}/PR/corpus/${CORPUS}" "./corpus/${CORPUS}" && \
-		nice bash -c "TOKENIZER='${TOKENIZER}' PARSER='${PARSER}' $(PYTHON) run.py PR" && \
+		nice bash -c "TOKENIZER='${TOKENIZER}' PARSER='${PARSER}' $(PYTHON) run.py PR ${RealName_CORPORA}" && \
 		rm -rf test*.txt train*.txt
 
 apg-XX:
@@ -62,7 +62,7 @@ apg-XX-core: ${APGdata}/XX
 		rm -rf dictionary/ linearized/ normalized/ trained/ predict/  && \
 		mkdir corpus && \
 		ln -sfT "${APGdata}/XX/corpus/${CORPUS}" "./corpus/${CORPUS}" && \
-		nice bash -c "TOKENIZER='${TOKENIZER}' PARSER='${PARSER}' $(PYTHON) run.py XX" && \
+		nice bash -c "TOKENIZER='${TOKENIZER}' PARSER='${PARSER}' $(PYTHON) run.py XX ${RealName_CORPORA}" && \
 		rm -rf test*.txt train*.txt
 
 

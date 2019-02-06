@@ -64,16 +64,18 @@ then
 
 fi
 
+RealName_DS="${filename%.*}"
 
 echo "filename : " $filename
 echo "PROCESSES : " $PROCESSES
+echo "RealName_DS : " $RealName_DS
 
 baseDir=$(pwd)"/ppi-benchmark"
 
 sed -i 's|^baseDir=.*|baseDir='"$baseDir"'|g' ppi-benchmark/Makefile.config
 sed -i 's|^KERNELS=.*|KERNELS=SL|g' ppi-benchmark/Makefile.config
 sed -i 's|^EXPTYPES=.*|EXPTYPES='"$ExpTyp"'|g' ppi-benchmark/Makefile.config
-
+sed -i 's|^RealName_CORPORA=.*|RealName_CORPORA='"$RealName_DS"'|g' ppi-benchmark/Makefile.config
 
 mkdir -p ppi-benchmark/Corpora/Original
 mkdir -p ppi-benchmark/Corpora/Original-Modified

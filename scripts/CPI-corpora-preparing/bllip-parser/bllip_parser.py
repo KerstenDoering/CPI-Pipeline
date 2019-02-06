@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# Ammar
-
 import subprocess
 import os
 import time
@@ -17,7 +15,8 @@ def _parseIt(corpus, _file):
     print _file, '\tpid:', os.getpid()
 
     # perfom the parsing process to build a syntactic tree   
-    cmd = "./parse.sh " + corpus +"/"+ _file + " > "+ corpus + "/"+ _file + "-parsed.txt 2>"+ corpus + "/"+ _file +"-parsed.err"
+    ##cmd = "./parse.sh " + corpus +"/"+ _file + " > "+ corpus + "/"+ _file + "-parsed.txt 2>"+ corpus + "/"+ _file +"-parsed.err"
+    cmd = "python parse.py -i " + corpus +"/"+ _file + " -o "+ corpus + "/"+ _file + "-parsed.txt"
     #print "cmd:", cmd
     process = subprocess.call(cmd, shell=True)
     
@@ -62,7 +61,7 @@ def run(_in_file, corpus, PROCESSES):
 
     pool = Pool(processes=int(PROCESSES))
 
-    print "Initialized with ", PROCESSES, "processes"
+    #print "Initialized with ", PROCESSES, "processes"
         
 
     result = pool.map_async(partial(_parseIt, corpus), paths[0:])

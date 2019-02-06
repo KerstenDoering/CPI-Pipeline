@@ -11,44 +11,495 @@ Introduction
 
 - In this project, the two kernels were applied to two compound-protein interaction (CPI) in PubMed sentences.
 
-- The complete data set consists of 2753 sentences. Within these sentences, 3724 compound-protein pairs were annotated to show a functional relationship and 2672 compound-protein pairs were marked as no-interaction pairs.
+- The complete data set consists of 2753 sentences. Within these sentences, 3496 compound-protein pairs were annotated to show a functional relationship and 2467 compound-protein pairs were marked as no-interaction pairs.
 
 - We consider co-occurences as an approach to predict every appearance of a compound and a protein in a sentence as a functional relationship (recall 100%, specificity 0%) and call it the baseline calculation, taking into account the number of true functional relationships.
 
-- From the given numbers, the data set shows an precision (equal to accuracy in this case) of 58.2 % and an F1 score of 73.6 %.
+- From the given numbers, the data set shows an precision (equal to accuracy in this case) of 58.6 % and an F1 score of 73.9 %.
 
 - APG and SL kernel both perform better than the concept of co-occurrences as shown in the following tables.
 
-- APG kernel results:
+- APG kernel results for CPI-DS dataset:
 
-    .. image:: figures/APG_DS.png
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
 
-- SL kernel results:
+        * - Param.
+          - Sens.
+          - Spec.
+          - Prec.
+          - Acc.
+          - F1
+          - AUC
 
-    .. image:: figures/SL_DS.png
+        * - 0.25
+          - 85.0
+          - 65.3
+          - 77.8
+          - 77.0
+          - 81.2
+          - 84.1
+
+        * - 0.50
+          - 84.6
+          - 65.8
+          - 77.9
+          - 77.0
+          - 81.1
+          - 84.1
+
+        * - 1.00
+          - 84.0
+          - 67.0
+          - 78.4
+          - 77.2
+          - 81.1
+          - 83.8
+
+        * - 2.00
+          - 84.2
+          - 66.4
+          - 78.1
+          - 77.0
+          - 81.0
+          - 83.4
+
+
+- SL kernel results for CPI-DS dataset:
+
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
+
+        * - n
+          - w
+          - Sens.
+          - Spec.
+          - Prec.
+          - Acc.
+          - F1
+          - AUC
+
+        * - 1
+          - 1
+          - 77.1
+          - 68.6
+          - 77.9
+          - 73.6
+          - 77.4
+          - 79.1
+
+        * - 1
+          - 2
+          - 83.0
+          - 61.1
+          - 75.4
+          - 74.0
+          - 78.9
+          - 78.6
+
+        * - 1
+          - 3
+          - 87.1
+          - 53.0
+          - 72.5
+          - 73.0
+          - 79.1
+          - 78.1
+
+        * - 2
+          - 1
+          - 79.0
+          - 68.8
+          - 78.3
+          - 74.8
+          - 78.6
+          - 80.9
+
+        * - 2
+          - 2
+          - 84.5
+          - 60.8
+          - 75.5
+          - 74.7
+          - 79.7
+          - 80.3
+
+        * - 2
+          - 3
+          - 87.9
+          - 54.8
+          - 73.7
+          - 74.3
+          - 80.1
+          - 79.9
+
+        * - 3
+          - 1
+          - 80.3
+          - 68.7
+          - 78.5
+          - 75.5
+          - 79.3
+          - 81.4
+
+        * - 3
+          - 2
+          - 84.4
+          - 62.0
+          - 76.1
+          - 75.2
+          - 80.0
+          - 80.8
+
+        * - 3
+          - 3
+          - 88.2
+          - 56.3
+          - 74.3
+          - 75.1
+          - 80.6
+          - 80.6
 
 Functional relationships with and without an enclosed interaction verb
 ######################################################################
 
-- The whole prediction can be further divided into considering only pairs of compounds and proteins which enclose an interaction verb (data set 1 - DS1) and pairs of compounds and proteins that don't show this sentence structure (data set 2 - DS2).
+- The whole prediction can be further divided into considering only pairs of compounds and proteins which enclose an interaction verb (CPI-DS_IV) and pairs of compounds and proteins that don't show this sentence structure (CPI-DS_NIV).
 
 - These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics).
 
 - The following table shows the evaluation of the co-occurrences approach (DS - Data set, Sent. - Sentences, Sens. - Sensitivity, Spec. - Specificity, Prec. - Precision, Acc. - Accuracy, F1 - F1 score, evaluation parameters shown in percent):
 
-    .. image:: figures/co-occurrences.png
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
 
-- The next table shows the results of the APG kernel pipeline for DS1 and DS2:
+        * - DS
+          - #Sent.
+          - #CPIs
+          - #No-CPIs
+          - Total
+          - Sens.
+          - Spec.
+          - Prec.
+          - F1
 
-    .. image:: figures/APG.png
+        * - CPI-DS_IV
+          - 1259
+          - 1884
+          - 1166
+          - 3050
+          - 100.0
+          - 0.0
+          - 61.8
+          - 76.4
 
-- The last table shows the results of the SL kernel pipeline for DS1 and DS2:
+        * - CPI-DS_NIV
+          - 1494
+          - 1612
+          - 1301
+          - 2913
+          - 100.0
+          - 0.0
+          - 55.3
+          - 71.2
 
-    .. image:: figures/SL.png
 
-- The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % DS1 and 60 % DS2, based on an analysis with PubMedPortable.
+- The next table shows the results of the APG kernel pipeline for CPI-DS_IV dataset:
 
-- In the case of DS1 and DS2, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
+
+        * - Param.
+          - Sens.
+          - Spec.
+          - Prec.
+          - Acc.
+          - F1
+          - AUC
+
+        * - 0.25
+          - 85.4
+          - 59.6
+          - 78.4
+          - 76.3
+          - 81.7
+          - 81.7
+
+        * - 0.50
+          - 85.0
+          - 59.8
+          - 78.4
+          - 76.1
+          - 81.5
+          - 81.6
+
+        * - 1.00
+          - 84.4
+          - 60.9
+          - 79.0
+          - 76.3
+          - 81.6
+          - 81.4
+
+        * - 2.00
+          - 84.6
+          - 60.1
+          - 78.5
+          - 76.0
+          - 81.4
+          - 81.0
+
+- Results of the APG kernel pipeline for CPI-DS_NIV dataset:
+
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
+
+        * - Param.
+          - Sens.
+          - Spec.
+          - Prec.
+          - Acc.
+          - F1
+          - AUC
+
+        * - 0.25
+          - 84.3
+          - 69.0
+          - 77.3
+          - 77.5
+          - 80.5
+          - 85.6
+
+        * - 0.50
+          - 84.1
+          - 69.9
+          - 77.7
+          - 77.8
+          - 80.6
+          - 85.5
+
+        * - 1.00
+          - 83.5
+          - 70.9
+          - 78.1
+          - 77.8
+          - 80.6
+          - 85.4
+
+        * - 2.00
+          - 83.7
+          - 70.2
+          - 77.8
+          - 77.7
+          - 80.6
+          - 85.0
+
+
+- This table shows the results of the SL kernel for CPI-DS_IV dataset:
+
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
+
+        * - n
+          - w
+          - Sens.
+          - Spec.
+          - Prec.
+          - Acc.
+          - F1
+          - AUC
+
+        * - 1
+          - 1
+          - 78.8
+          - 60.4
+          - 76.5
+          - 71.9
+          - 77.5
+          - 75.5
+
+        * - 1
+          - 2
+          - 82.2
+          - 55.2
+          - 75.1
+          - 72.1
+          - 78.3
+          - 74.8
+
+        * - 1
+          - 3
+          - 86.7
+          - 46.7
+          - 72.6
+          - 71.6
+          - 78.9
+          - 74.6
+
+        * - 2
+          - 1
+          - 79.9
+          - 61.1
+          - 77.1
+          - 72.9
+          - 78.3
+          - 77.3
+
+        * - 2
+          - 2
+          - 84.0
+          - 54.2
+          - 74.9
+          - 72.7
+          - 79.0
+          - 76.7
+
+        * - 2
+          - 3
+          - 88.3
+          - 47.6
+          - 73.2
+          - 72.8
+          - 79.9
+          - 76.4
+
+        * - 3
+          - 1
+          - 81.1
+          - 61.7
+          - 77.8
+          - 74.0
+          - 79.3
+          - 78.3
+
+        * - 3
+          - 2
+          - 83.5
+          - 56.8
+          - 76.2
+          - 73.7
+          - 79.6
+          - 77.5
+
+        * - 3
+          - 3
+          - 88.5
+          - 50.7
+          - 74.7
+          - 74.3
+          - 80.9
+          - 77.4
+
+
+
+
+- Results of the SL kernel for CPI-DS_NIV dataset:
+
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
+
+        * - n
+          - w
+          - Sens.
+          - Spec.
+          - Prec.
+          - Acc.
+          - F1
+          - AUC
+
+        * - 1
+          - 1
+          - 75.5
+          - 74.8
+          - 78.9
+          - 75.3
+          - 77.1
+          - 81.9
+
+        * - 1
+          - 2
+          - 82.7
+          - 67.3
+          - 76.0
+          - 75.9
+          - 79.1
+          - 81.4
+
+        * - 1
+          - 3
+          - 87.4
+          - 58.3
+          - 72.3
+          - 74.4
+          - 79.0
+          - 80.9
+
+        * - 2
+          - 1
+          - 78.3
+          - 75.0
+          - 79.6
+          - 76.8
+          - 78.8
+          - 83.6
+
+        * - 2
+          - 2
+          - 84.2
+          - 69.0
+          - 77.4
+          - 77.4
+          - 80.5
+          - 83.1
+
+        * - 2
+          - 3
+          - 87.6
+          - 62.5
+          - 74.5
+          - 76.4
+          - 80.4
+          - 82.9
+
+        * - 3
+          - 1
+          - 79.7
+          - 74.5
+          - 79.6
+          - 77.4
+          - 79.5
+          - 84.0
+
+        * - 3
+          - 2
+          - 84.2
+          - 68.6
+          - 77.1
+          - 77.2
+          - 80.4
+          - 83.5
+
+        * - 3
+          - 3
+          - 88.6
+          - 62.4
+          - 74.7
+          - 76.9
+          - 80.9
+          - 83.3
+
+
+
+
+- The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % CPI-DS_IV and 60 % CPI-DS_NIV, based on an analysis with PubMedPortable.
+
+- In the case of CPI-DS_IV and CPI-DS_NIV, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).
 
 - Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
 
@@ -61,7 +512,7 @@ The benchmark data set creation
 
 - The web service Whatizit was used for gene and protein synonyms (Rebholz-Schuhmann,D. et al., 2008. Text processing through Web services: calling Whatizit. Bioinformatics).
 
-- After automated extraction of all sentences with an interaction verb (first 20,000 abstracts for DS1) and without an interaction enclosed by two biomolecues (second 20,000 abstracts for DS2), they were displayed in HTML pages with Javascript buttons to select a status for each sentence.
+- After automated extraction of all sentences with an interaction verb (first 20,000 abstracts for CPI-DS_IV) and without an interaction enclosed by two biomolecues (second 20,000 abstracts for CPI-DS_NIV), they were displayed in HTML pages with Javascript buttons to select a status for each sentence.
 
 - If a sentence contained at least one interacting pair of biomolecules, the status "Interaction" was selected for this sentence. The alternative was "No Interaction".
 
@@ -84,19 +535,19 @@ The benchmark data set creation
 Technical background of the XML data set
 ########################################
 
-- The script parser.py in the directories scripts/generate_XML_files/DS1/ und scripts/generate_XML_files/DS2 creates the files interactions.txt and no_interactions.txt from the HTML files in the folder data_sets. 
+- The script parser.py in the directories scripts/generate_XML_files/CPI-DS_IV/ und scripts/generate_XML_files/CPI-DS_NIV creates the files interactions.txt and no_interactions.txt from the HTML files in the folder data_sets. 
 
     - The names of these files refer to the basic status of all sentences inside the text file.
 
-    - Relationship_Mining_10000.html and Relationship_Mining_20000.html were concatenated to the file Relationship_Mining.html resulting in DS1. The other two HTML files represent DS2.
+    - Relationship_Mining_10000.html and Relationship_Mining_20000.html were concatenated to the file Relationship_Mining.html resulting in CPI-DS_IV. The other two HTML files represent CPI-DS_NIV.
 
-- The script get_relations.py in the directories scripts/generate_XML_files/DS1/ und scripts/generate_XML_files/DS2 processes the files interaction.txt and no_interaction.txt using the (concatenated) file RM_comments.csv with annotations of false positive compounds (FP-C), false positive proteins (FP-P), non-interacting compounds (NI-C), and non-interacting proteins (NI-P).
+- The script get_relations.py in the directories scripts/generate_XML_files/CPI-DS_IV/ und scripts/generate_XML_files/CPI-DS_NIV processes the files interaction.txt and no_interaction.txt using the (concatenated) file RM_comments.csv with annotations of false positive compounds (FP-C), false positive proteins (FP-P), non-interacting compounds (NI-C), and non-interacting proteins (NI-P).
 
     - The ouptut of get_relations.py is the file training_dataset.txt.
 
-    - This file can be sorted by PubMed IDs with the command "sort -u training_dataset.txt > training_dataset_sorted.csv", individually done with DS1 and DS2.
+    - This file can be sorted by PubMed IDs with the command "sort -u training_dataset.txt > training_dataset_sorted.csv", individually done with CPI-DS_IV and CPI-DS_NIV.
 
-- The script annotatedsen_to_xml.py generates the files DS1.xml and DS2.xml, building a unified XML format described by Tikk et al.
+- The script annotatedsen_to_xml.py generates the files CPI-DS_IV.xml and CPI-DS_NIV.xml, building a unified XML format described by Tikk et al.
 
     - This script was developed by Elham Abbasian in her Master Thesis, supervised by Kersten Döring.
 
@@ -104,22 +555,22 @@ Technical background of the XML data set
 
 - The XML files can be checked for consistency. Furthermore, it can be seen how many documents (PubMed IDs) and sentences there are:
 
-    java -jar ConsistencyChecker.jar DS1/DS1.xml 
+    java -jar ConsistencyChecker.jar CPI-DS_IV/CPI-DS_IV.xml 
 
-        INFO: Processing 'DS1/DS1.xml'...
+        INFO: Processing 'CPI-DS_IV/CPI-DS_IV.xml'...
 
-        Processing corpus 'DS1' ...
+        Processing corpus 'CPI-DS_IV' ...
 
         Documents seen: 830
 
         Sentences seen: 1259
 
 
-    java -jar ConsistencyChecker.jar DS2/DS2.xml 
+    java -jar ConsistencyChecker.jar CPI-DS_NIV/CPI-DS_NIV.xml 
 
-        INFO: Processing 'DS2/DS2.xml'...
+        INFO: Processing 'CPI-DS_NIV/CPI-DS_NIV.xml'...
 
-        Processing corpus 'DS1' ...
+        Processing corpus 'CPI-DS_NIV' ...
 
         processed 1000 docs (2155.1724 docs/sec)
 
@@ -128,11 +579,11 @@ Technical background of the XML data set
         Sentences seen: 1494
 
 
-    java -jar ConsistencyChecker.jar DS1_40/DS1.xml 
+    java -jar ConsistencyChecker.jar DS_40/DS-40.xml 
 
-        INFO: Processing 'DS1_test_case_40_sentences/DS1.xml'...
+        INFO: Processing 'DS_test_case_40_sentences/DS-40.xml'...
 
-        Processing corpus 'DS1' ...
+        Processing corpus 'DS-40' ...
 
         Documents seen: 26
 
@@ -148,7 +599,7 @@ Technical Requirements for running APG and SL Kernel Pipeline
 Required Installation Packages
 ##############################
 
-- The operating system for the CPI-pipeline was Ubuntu 14.04 LTS and the whole pipeline was tested with Ubuntu 16.04 LTS.
+- The operating system for the CPI-pipeline was Ubuntu 14.04 LTS and the whole pipeline was tested with Ubuntu 16.04 LTS & Ubuntu 18.04 LTS.
 
 - All packages can be installed with "apt-get install", Synaptic Package Manager, or the new Ubuntu Software Center.
 
@@ -163,6 +614,9 @@ Required Installation Packages
     - default-jdk (Java 7 or 8, used for the execution of JAR files)
 
     - python-nltk
+
+    - pip install bllipparser (python bindings for the BLLIP natural language parser)
+
 
 
 Makefile Configuration
@@ -205,7 +659,7 @@ PostgreSQL Configuration
 
     - cat >> ~/.pgpass <<EOF
 
-        - localhost:*:ppi:ppi:ppi
+        - localhost:\*:ppi:ppi:ppi
 
         - EOF
 
@@ -217,11 +671,11 @@ PostgreSQL Configuration
 How to run the Kernel Pipelines
 *******************************
 
-- This section describes how to use run the APG and SL kernel with the combined data set (DS), DS1, and DS2 in different modes:
+- This section describes how to use run the APG and SL kernel with the combined data set (CPI-DS), CPI-DS_IV, and CPI-DS_NIV in different modes:
 
     - CV: 10x-cross-validation
 
-    - PR: prediction, based on the trained model of the combined data set (DS) 
+    - PR: prediction, based on the trained model of the combined data set (CPI-DS) 
 
     - XX: cross-corpus training and prediction on user-specific data sets
 
@@ -232,17 +686,17 @@ APG Kernel pipeline
 
 - These are the 3 main commands:
  
-    - CV: make experiment Kernel=APG expTyp=CV InputFile=DS.xml Processors=4
+    - CV: make experiment Kernel=APG expTyp=CV InputFile=CPI-DS.xml Processors=4
  
-    - PR: make experiment Kernel=APG expTyp=PR InputFile=DS.xml Processors=4
+    - PR: make experiment Kernel=APG expTyp=PR InputFile=CPI-DS.xml Processors=4
  
     - XX: make experiment Kernel=APG expTyp=XX TrainFile=train.xml TestFile=test.xml Processors=4
 
 - You can use the test data set DS-40.xml with 40 sentences to check whether your pipeline works. 
 
-- While the complete DS1 pipeline runs around 3:15 h the test case takes only a few minutes on a notebook with an Intel Core i7-6700HQ (4x 2,6 GHz).
+- While the complete CPI-DS_IV pipeline runs around 3:15 h, the test case takes only a few minutes on a notebook with an Intel Core i5-3570 (4x 3.40GHz).
 
-- To use this test data set, go to your (new) working directory into "scripts" and run one of the given make commands with a data set from the folder "scripts/generate_XML_files/DS", e.g.:
+- To use this test data set, go to your (new) working directory into "scripts" and run one of the given make commands with a data set from the folder "scripts/generate_XML_files/CPI-DS", e.g.:
 
     - make experiment Kernel=APG expTyp=PR InputFile=annotate_res.xml Processors=4
 
@@ -262,20 +716,20 @@ APG Kernel pipeline
 
 - The threshold for a positive or negative prediction is optimized for the highest F1 score and stored in the SQL database.
 
-- In "scripts/ppi-benchmark/Experiments/APG/PR/predict/DS/train0000/predict1.out", you will find the test predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
+- In "scripts/ppi-benchmark/Experiments/APG/PR/predict/CPI-DS/train0000/predict1.out", you will find the test predictions with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
 
-- In "scripts/ppi-benchmark/Experiments/APG/PR/predict/DS/train0000/threshold1.out", you will find the train predictions (self-prediction) for the F1 score optimization with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
+- In "scripts/ppi-benchmark/Experiments/APG/PR/predict/CPI-DS/train0000/threshold1.out", you will find the train predictions (self-prediction) for the F1 score optimization with the original class in the second column and the complete sentence identifier in the first column (for the lambda value 1).
 
-- The file scripts/ppi-benchmark/Experiments/APG/PR/DS.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).
+- The file scripts/ppi-benchmark/Experiments/APG/PR/output.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).
 
 SL Kernel pipeline
 ##################
 
 - These are the 3 main commands:
  
-    - CV: make experiment Kernel=SL expTyp=CV InputFile=DS.xml Processors=4
+    - CV: make experiment Kernel=SL expTyp=CV InputFile=CPI-DS.xml Processors=4
  
-    - PR: make experiment Kernel=SL expTyp=PR InputFile=DS.xml Processors=4
+    - PR: make experiment Kernel=SL expTyp=PR InputFile=CPI-DS.xml Processors=4
  
     - XX: make experiment Kernel=SL expTyp=XX TrainFile=train.xml TestFile=test.xml Processors=4
 
@@ -301,72 +755,32 @@ SL Kernel pipeline
 
     - You can find these files in the folder scripts/jSRE_debug.
 
-- The complete DS1 pipeline runs in around 0:12 h with an Intel Core i7-6700HQ (4x 2,6 GHz).
+- The complete CPI-DS_IV pipeline runs in around 0:14 h with an Intel Core i5-3570 (4x 3.40GHz).
 
 - The threshold for a positive or negative prediction is zero and stored in the SQL database.
 
 
-- In "scripts/ppi-benchmark/Experiments/SL/PR/predict/DS/train0000/predictn=3w=1.out", you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for n=3 and w=1).
+- In "scripts/ppi-benchmark/Experiments/SL/PR/predict/CPI-DS/train0000/predictn=3w=1.out", you will find the predictions with the original class in the second column and the complete sentence identifier in the first column (for n=3 and w=1).
 
 - The file scripts/ppi-benchmark/Experiments/SL/PR/output.sql contains all prediction values (0 for false, and 1 for true, and the prediction value itself).
 
 Data set evaluation
 ###################
 
-- The folder results/summary/APG/output/ contains scripts to evaluate the results (numbers shown in the tables in the section "Introduction").
+- The folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/output/ contains scripts to evaluate the results (numbers shown in the tables in the section "Introduction").
 
 - If you want to repeat the evaluation procedure, execute the following steps:
 
-    - Remove all files in the folder output, except average.py and header.py.
+    - Remove all files in the folder output, except average.py and header.py and then run:
 
-    - ./get_csv_results.sh
-
-    - Change into the directory output.
-
-    - python average.py
-
-    - cat DS1*average.csv > DS1_average.csv
-
-    - cat DS2*average.csv > DS2_average.csv
-
-    - python header.py
-
-    - Check the files DS1_average_header.csv and DS2_average_header.csv. They exist as a backup in the folder results/summary/APG/final/ and the selected SQL results are stored as a backup in the folder results/summary/APG/backup_original.
-
-- These are the steps to get the originally combined data set evaluation result tables:
-
-    - APG results:
-
-        - ./get_csv_results.sh
-
-        - change into directory output
-
-        - python average.py
-
-        - cat DS3*average.csv > DS3_average.csv
-
-        - python header.py
-
-    - SL results:
-
-        - change into directory /CPI-Pipeline/results/summary/DS3/jSRE
-
-        - python generate_selects_psql.py
-
-        - ./get_csv_results.sh 
-
-        - change into directory output
-
-        - python average.py 
-
-        - cat DS3*average.csv > DS3_average.csv
-
-        - python header.py 
+    - ./get_results.sh
 
 
-- You can reproduce any APG cross-validation run by commenting out lines 187, 191, 192, and 198 and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
+- Where *nameOfKernel* is the name of the kernel (SL or APG), and *nameOfDataset* is the name of the dataset(CPI-DS, CPI-DS_IV or CPI-DS_NIV) .
 
-- You can reproduce any SL cross-validation run by commenting out lines 197-199 in scripts/ppi-benchmark/Corpora/Makefile and line 90 in scripts/SL_Pipeline.sh (and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS).
+
+- Check the files CPI-DS_IV_average_header.csv and CPI-DS_NIV_average_header.csv. They exist as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/final/ and the selected SQL results are stored as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/backup_original.
+
 
 Usage of Created Models
 #######################
@@ -407,25 +821,25 @@ Usage of Created Models
 
     - q
 
-- The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section "Technical background of the XML data set") is "scripts/generate_XML_files/DS/annoate_res.xml".
+- The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section "Technical background of the XML data set") is "scripts/generate_XML_files/CPI-DS/annoate_res.xml".
 
 - Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.
 
 - If you want to run your own models in the PR mode, you need to copy files from your XX run to specific directories.
 
-- In the case of the SL kernel, you need to copy the .model file from "scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0" to "scripts/training_model/SL_PR_training/trained_model/DS/train0".
+- In the case of the SL kernel, you need to copy the .model file from "scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0" to "scripts/training_model/SL_PR_training/trained_model/CPI-DS/train0".
 
 - In the case of the APG kernel, there are more steps:
 
-    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/DS/train0" to "scripts/training_model/APG_PR_training/trained_model/DS/train0".
+    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/CPI-DS/train0" to "scripts/training_model/APG_PR_training/trained_model/CPI-DS/train0".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Corpus_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Corpus_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Dict_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Dict_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Linearized_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Linearized_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Norm_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Norm_train0.txt.gz".
 
 - Running both kernels in PR mode, one after the other, will generate the files "scripts/ppi-benchmark/Experiments/SL/PR/output.sl.xml" and "scripts/ppi-benchmark/Experiments/APG/PR/output.apg.xml".
 
@@ -447,7 +861,7 @@ Contact
 
 - If you are interested in related projects, visit our working group's homepage:
 
-    - http://www.pharmaceutical-bioinformatics.de
+    - http://www.pharmbioinf.uni-freiburg.de/
 
 
 License

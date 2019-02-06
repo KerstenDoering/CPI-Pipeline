@@ -43,14 +43,14 @@ if __name__=="__main__":
     #example for the output format
     """
     <?xml version="1.0" encoding="UTF-8">
-    <corpus source="DS1">
-      <document id="DS1.d0" origId="18227838">
-        <sentence id="DS1.d0.s0" origId="18227838-359" text="The mood stabilizers lithium and valproate activate the ERK pathway in prefrontal cortex and hippocampus and potentiate ERK pathway-mediated neurite growth, neuronal survival and hippocampal neurogenesis."/>
-            <entity id="DS1.d0.s0.e0" origId="28486,3028194" charOffset="x1-y1" type="compound" text="lithium"/>
-            <entity id="DS1.d0.s0.e1" origId="3121" charOffset="x2-y2" type="compound" text="valproate"/>
-            <entity id="DS1.d0.s0.e2" origId="P29323" charOffset="x3-y3" type="protein" text="ERK"/>
-            <interaction id="DS1.d0.s0.i0" e1="DS1.do.s0.e0" e2="DS1.do.s0.e2" type="no_interaction" directed="False" />
-            <interaction id="DS1.d0.s0.i1" e1="DS1.do.s0.e1" e2="DS1.do.s0.e2" type="interaction" directed="False" />
+    <corpus source="DS">
+      <document id="DS.d0" origId="18227838">
+        <sentence id="DS.d0.s0" origId="18227838-359" text="The mood stabilizers lithium and valproate activate the ERK pathway in prefrontal cortex and hippocampus and potentiate ERK pathway-mediated neurite growth, neuronal survival and hippocampal neurogenesis."/>
+            <entity id="DS.d0.s0.e0" origId="28486,3028194" charOffset="x1-y1" type="compound" text="lithium"/>
+            <entity id="DS.d0.s0.e1" origId="3121" charOffset="x2-y2" type="compound" text="valproate"/>
+            <entity id="DS.d0.s0.e2" origId="P29323" charOffset="x3-y3" type="protein" text="ERK"/>
+            <interaction id="DS.d0.s0.i0" e1="DS.do.s0.e0" e2="DS.do.s0.e2" type="no_interaction" directed="False" />
+            <interaction id="DS.d0.s0.i1" e1="DS.do.s0.e1" e2="DS.do.s0.e2" type="interaction" directed="False" />
         </sentence>
         [...]
       </document>

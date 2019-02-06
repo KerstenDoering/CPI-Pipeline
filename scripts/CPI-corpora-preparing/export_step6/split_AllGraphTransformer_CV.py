@@ -13,25 +13,13 @@ from optparse import OptionParser
 
 def split_AllGraphTrans(corpus, filename):
 
-
-
-    #filename = f
-    #testIDsFile = open('splits-test-train/DS1/'+filename,'r')
     file_indx=filename.split("-")[3]
 
-
-
     d = {}
-    #with open('splits-test-train/DS1/'+filename) as f:
     with open(filename) as f:
         for line in f:
            (val, key) = line.split()
-           #print key.strip(), ":", val
            d[key] = int(val)
-
-
-    #sys.exit(0)
-    #file_number_obj=re.match('DS1(\d+).txt',filename)
 
     testFile_name = "CV/" + corpus + "/test" + str(int(file_indx)-1)+".txt"
     testFile = open(testFile_name,'w') ##
@@ -44,8 +32,6 @@ def split_AllGraphTrans(corpus, filename):
     testFile.close()
     trainFile.close()
 
-
-
     _in_file= corpus + '.xml'
     context = ET.iterparse(_in_file, events=('end', ))
     index = -1
@@ -53,7 +39,6 @@ def split_AllGraphTrans(corpus, filename):
         if elem.tag == 'document':
         
             DocumentID = elem.attrib.get('id')
-
 
             index += 1
             sys.stdout.write("Documents progressed: %d\r" % index )
@@ -64,7 +49,6 @@ def split_AllGraphTrans(corpus, filename):
                 testFile = open(testFile_name,'a')
 
                 testFile.write(ET.tostring(elem))
-                ##testFile.close()
                 
                 del d[DocumentID]
                 
@@ -74,10 +58,7 @@ def split_AllGraphTrans(corpus, filename):
                 trainFile = open(trainFile_name,'a')
                 
                 trainFile.write(ET.tostring(elem))
-                   
-                ##trainFile.close()
-                            
-                            
+                         
             elem.clear()
 
     trainFile.write("</corpus>")
@@ -85,7 +66,6 @@ def split_AllGraphTrans(corpus, filename):
     trainFile.close()
     testFile.close()
     sys.stdout.write("\n")
-
 
 
 def run(corpus, folds):
@@ -101,21 +81,16 @@ def run(corpus, folds):
 
     paths.sort()
 
-    print paths
-
     pool = Pool(processes=folds)    # start with processors
     print "Initialized with ", folds, "processes"
 
-    #result = pool.map_async(split_AllGraphTrans, paths[0:PROCESSES])
     result = pool.map_async(partial(split_AllGraphTrans, corpus), paths[0:folds])
     
     res = result.get()
 
-
     print "\n \n"
 
-
-            
+           
 
 if __name__ == '__main__':
 

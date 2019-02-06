@@ -17,7 +17,7 @@ jsre-core: ${jsreJar}
 	rm -rf ${expType}/corpus ${expType}/predict ${expType}/trained ${expType}/output.sql
 	$(MAKE) $(foreach c,$(CORPORA),${expType}/corpus/${c})
 	cd ${expType} \
-		&& bash -c "baseDir='$(baseDir)' CORPORA='$(CORPORA)' python run.py '${expType}'"
+		&& bash -c "baseDir='$(baseDir)' CORPORA='$(CORPORA)' python run.py '${expType}' ${RealName_CORPORA}"
 
 jsre-split: JSRE_CLASSPATH="${jsreJar}${SEP}${jsreBase}/lib/*
 jsre-split: expType=split
@@ -32,7 +32,7 @@ endif
 	rm -rf ${expType}/corpus ${expType}/predict ${expType}/trained ${expType}/output.sql
 	@echo Running experiment...
 	cd ${expType} \
-		&& time bash -c "baseDir='$(baseDir)' JAVA='$(JAVA) $(MEM2)' NUM_PROCS='$(numberofprocs)' TRAIN_FILES='$(foreach f,${TRAIN_FILES},$(shell readlink -f $f))'  TEST_FILES='$(foreach f,${TEST_FILES},$(shell readlink -f $f))' python run.py '${expType}'" > "$@.log" 2>&1
+		&& time bash -c "baseDir='$(baseDir)' JAVA='$(JAVA) $(MEM2)' NUM_PROCS='$(numberofprocs)' TRAIN_FILES='$(foreach f,${TRAIN_FILES},$(shell readlink -f $f))'  TEST_FILES='$(foreach f,${TEST_FILES},$(shell readlink -f $f))' python run.py '${expType}' ${RealName_CORPORA}" > "$@.log" 2>&1
 
 dummy:
 	$(foreach f,${TRAIN_FILES},$f)

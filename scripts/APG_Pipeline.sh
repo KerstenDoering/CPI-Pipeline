@@ -64,18 +64,21 @@ then
 
 fi
 
-
+RealName_DS="${filename%.*}"
 
 echo "filename : " $filename
 echo "PROCESSES : " $PROCESSES
+echo "RealName_DS : " $RealName_DS
 
 baseDir=$(pwd)"/ppi-benchmark"
 
 sed -i 's|^baseDir=.*|baseDir='"$baseDir"'|g' ppi-benchmark/Makefile.config
 sed -i 's|^KERNELS=.*|KERNELS=APG|g' ppi-benchmark/Makefile.config
 sed -i 's|^EXPTYPES=.*|EXPTYPES='"$ExpTyp"'|g' ppi-benchmark/Makefile.config
+sed -i 's|^RealName_CORPORA=.*|RealName_CORPORA='"$RealName_DS"'|g' ppi-benchmark/Makefile.config
 
 
+#exit
 
 # copy input files with the general XML format to the folder export_step1
 cp generate_XML_files/DS/DS.xml CPI-corpora-preparing/export_step1/
@@ -99,12 +102,6 @@ rm -rf DS
 mkdir DS/
 
 python bllip_parser.py -i DS.xml-ptb-s.txt -c DS -p $PROCESSES
-
-#echo "step 2 ..."
-#cd ..
-#cp export_step1/DS.xml-ptb-s.txt bllip-parser/
-#cd bllip-parser/
-#./parse.sh DS.xml-ptb-s.txt > DS.xml-ptb-s.txt-parsed.txt 2>DS.xml-ptb-s.txt-parsed.err
 
         
 # add the identifiers from the input file in each line of the current output file
@@ -131,31 +128,28 @@ java -jar step_3_and_5_injection_lib.jar -f DS.xml -p DS.xml-ptb-s.txt-parsed_mo
 echo "step 4 : Alignment character offsets  ..."
 cd ..
 
-    
 cp export_step3/DS.xml.inj1 export_step4/
 cd export_step4/
 
-
-
-# ---- This part added to solve the problem of insufficient memory(##)
+# ---- This part added to avoid the problem of insufficient memory(##)
 rm -rf DS
 rm -f DS.xml.inj1-bracketing-tokens.txt
 mkdir DS/
 # splitting DS.xml.inj1 into small chunk, each one contains one document
 python xmlsplitter.py -c DS
 
+docNum=$(ls DS -1 | wc -l)
+
+python BracketingTokenMapper.py -c DS -p $PROCESSES
 
 # process each document individually, this process have to run sequentially to avoid the problem of insufficient memory 
-for i in `seq 1  $( ls DS -1 | wc -l ) `; 
+for i in `seq 1 $docNum `; 
 do
     let "j = $i -1 "
-    java -jar step_4_BracketingTokenMapper.jar DS/$j.xml
-
     cat DS/$j.xml-bracketing-tokens.txt >> DS.xml.inj1-bracketing-tokens.txt
     
 done        
 
-#cd CPI-corpora-preparing
 # Step 5: injection of the aligned character offsets to the XML file DS.xml.inj1 (<bracketings>...</bracketings>)e
 # Output: DS.xml.inj1.inj2
 echo "step 5 : Injection of the aligned character offsets to the XML file..."
@@ -241,7 +235,7 @@ elif [ $ExpTyp = "PR" ]
 then
 
     cp -f CPI-corpora-preparing/step5_copied_from_3/test0.txt.gz ppi-benchmark/Corpora/APG/$ExpTyp/corpus/DS/test0.txt.gz
-    cp -f training_model/APG_PR_training/Corpus_train0.txt.gz ppi-benchmark/Corpora/APG/$ExpTyp/corpus/DS/train0.txt.gz
+    cp -f training_model/APG_PR_training/corpus_train0.txt.gz ppi-benchmark/Corpora/APG/$ExpTyp/corpus/DS/train0.txt.gz
 
 elif [ $ExpTyp = "XX" ]
 then
@@ -250,7 +244,6 @@ then
     mv -f CPI-corpora-preparing/step5_copied_from_3/train0.txt.gz ppi-benchmark/Corpora/APG/$ExpTyp/corpus/DS/train0.txt.gz
 
 fi
-
 
 # start the experiment
 echo "run APG pipeline ..."

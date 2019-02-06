@@ -17,6 +17,7 @@ import multiprocessing
 #source='/vol/home-vol3/wbi/thomas/workspace/Kernels/airola/source' #Now defined in ../apgconfig.py
 #base="/vol/home-vol3/wbi/thomas/workspace/ppi-benchmark/Experiments/apg/CV/" 
 expTyp = str(sys.argv[1])
+realnameDS = str(sys.argv[2])
 base= path +os.sep +expTyp+'/'
 print "base:",base
 sys.path.append(source +'/measures/')
@@ -65,8 +66,11 @@ def SplitNormDataSet():
         
         pathN = base + normalized +os.sep +corpus +os.sep
         os.chdir(pathN)
-        
+
+        print '\n\nNumber of pairs to test : '
+        print '------------------'
         os.system('zcat test0.txt.gz | wc -l')
+
         cmd = "zcat test0.txt.gz | split -d -a 4 -l "+ str(limitToSplit) + " - temp --filter='gzip > $FILE.txt.gz'"
         os.system(cmd)
 
@@ -116,7 +120,7 @@ def GenerateDict():
     if expTyp == 'PR':
         corpus = 'DS'
         os.makedirs(base + dictionary+os.sep+corpus)
-        cmd = "cp ../../../../training_model/APG_PR_training/Dict_train0.txt.gz "+ dictionary + os.sep + corpus + os.sep + "train0.txt.gz"
+        cmd = "cp ../../../../training_model/APG_PR_training/dict_train0.txt.gz "+ dictionary + os.sep + corpus + os.sep + "train0.txt.gz"
         os.system(cmd)
         print "Done..."
         return
@@ -187,7 +191,7 @@ def Linearization():
 
     
     if expTyp == 'PR':
-        cmd = "cp ../../../../training_model/APG_PR_training/Linearized_train0.txt.gz "+ linearized + os.sep + corpus + os.sep + "train0.txt.gz"
+        cmd = "cp ../../../../training_model/APG_PR_training/linearized_train0.txt.gz "+ linearized + os.sep + corpus + os.sep + "train0.txt.gz"
         os.system(cmd)
 
         
@@ -222,7 +226,7 @@ def Normalization():
     endNorm = time.asctime()
 
     if expTyp == 'PR':
-        scr="../../../../training_model/APG_PR_training/Norm_train0.txt.gz"
+        scr="../../../../training_model/APG_PR_training/normalized_train0.txt.gz"
         dest=normalized + os.sep + corpus + os.sep + "train0.txt.gz"
         shutil.copy(scr, dest)
         
@@ -315,7 +319,7 @@ def Predicting():
     print 
     
 
-
+# This function to get the best threshod for classifier
 def getThreshold(estimateFile):
     f= open(estimateFile)
     p = [] #predict
@@ -328,7 +332,6 @@ def getThreshold(estimateFile):
     return threshold
 
 
-
 # This fuction to evaluate the prediction
 def Evaluating():
     regex = re.compile('(train)(\d+)')
@@ -336,19 +339,18 @@ def Evaluating():
 
 
     for corpus in corpora: #Iterate corpora
-        resultFile = open(corpus+'.sql','w')
+        resultFile = open('output.sql','w')
         for split in glob.glob(base +predict +os.sep +corpus +os.sep +"*"): #Iterate the CV-splits
             splitname=regex.search(os.path.basename(split)).group(2) #current split
 
             for foretell in glob.glob(split +os.sep +"predict*.out"):  #Iterate over the different lambda params
-    #            print foretell, "##"
+
                 lamd=lambdaRegex.search(os.path.basename(foretell)).group(2) #Extract the lambda-setting
                 estimateFile= split +os.sep +"threshold" +lamd +".out" #File needed to estimate the threshold; (selfprediction!)
-    #            print corpus +" " +str(splitname) +"/" +str(9) +" lambda=" +lamd           
 
                 threshold= getThreshold(estimateFile) #Get the optimal threshold setting
 
-                resultFile.write("insert into ppiCV  (corpus, parsertype, parser, kernel, fold, normalized, c, kernel_script, forced_threshold) values ('"+corpus +"', 'dependency', 'Charniak-Lease+Stanford converter', 'APG', " +splitname +", 't', " +lamd +", 'allgraph:" +lamd +" " +tokenizer +" " +"normalized', " + str(threshold) + ");\n")
+                resultFile.write("insert into ppiCV  (corpus, parsertype, parser, kernel, fold, normalized, c, kernel_script, forced_threshold) values ('"+realnameDS +"', 'dependency', 'Charniak-Lease+Stanford converter', 'APG', " +splitname +", 't', " +lamd +", 'allgraph:" +lamd +" " +tokenizer +" " +"normalized', " + str(threshold) + ");\n")
 
                 f= open(foretell)
                 for line in f:
@@ -361,12 +363,12 @@ def Evaluating():
 
                 f= open(foretell)
                 F, prec, rec = readResults(f,threshold)
-    #            print "F-score:", F, ", recall:", rec, ", precision:", prec, "###"
+
                 f.close()
 
                 f= open(foretell)
                 TP, FP, FN, TN = getAbsoluteNumbers(f,threshold)
-    #            print "TP:", TP, ", TN:", TN, ", FP:", FP, ", FN:", FN, "####"
+
                 f.close()            
                 
                 f= open(foretell)
@@ -374,7 +376,7 @@ def Evaluating():
                     auc= readAUC(f)
                 except:
                     auc = "Null"
-    #                print "no auc, division by zero", "#####"
+
                 f.close()
 
 
