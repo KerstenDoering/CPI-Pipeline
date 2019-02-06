@@ -833,13 +833,13 @@ Usage of Created Models
 
     - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/CPI-DS/train0" to "scripts/training_model/APG_PR_training/trained_model/CPI-DS/train0".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Corpus_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/corpus_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Dict_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/dict_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Linearized_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/linearized_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/Norm_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/normalized_train0.txt.gz".
 
 - Running both kernels in PR mode, one after the other, will generate the files "scripts/ppi-benchmark/Experiments/SL/PR/output.sl.xml" and "scripts/ppi-benchmark/Experiments/APG/PR/output.apg.xml".
 
