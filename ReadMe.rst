@@ -618,12 +618,6 @@ Required Installation Packages
     - pip install bllipparser (python bindings for the BLLIP natural language parser)
 
 
-
-Makefile Configuration
-######################
-
-- There are many Makefile parameters which are automatically set by using the correct make commands, as described in the section "How to run the Kernel Pipelines".
-
 PostgreSQL Configuration
 ########################
 
@@ -696,7 +690,7 @@ APG Kernel pipeline
 
 - While the complete CPI-DS_IV pipeline runs around 3:15 h, the test case takes only a few minutes on a notebook with an Intel Core i5-3570 (4x 3.40GHz).
 
-- To use this test data set, go to your (new) working directory into "scripts" and run one of the given make commands with a data set from the folder "scripts/generate_XML_files/CPI-DS", e.g.:
+- To use this test data set, go to your (new) working directory into "scripts" and run one of the given make commands with a data set from the folder "scripts/generate_XML_files/DS", e.g.:
 
     - make experiment Kernel=APG expTyp=PR InputFile=annotate_res.xml Processors=4
 
@@ -733,13 +727,15 @@ SL Kernel pipeline
  
     - XX: make experiment Kernel=SL expTyp=XX TrainFile=train.xml TestFile=test.xml Processors=4
 
-- You can clean your APG workspace after a calculation is finished:
+- You can clean your SL workspace after a calculation is finished:
 
     - make clean-SL
 
 - Or you can clean the whole workspace:
 
     - make clean-all
+
+- The input files need to be located in "scripts/generate_XML_files/DS".
 
 - Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script SL_Pipeline.sh.
 
@@ -776,10 +772,10 @@ Data set evaluation
     - ./get_results.sh
 
 
-- Where *nameOfKernel* is the name of the kernel (SL or APG), and *nameOfDataset* is the name of the dataset(CPI-DS, CPI-DS_IV or CPI-DS_NIV) .
+- *nameOfKernel* is the name of the kernel (SL or APG) and *nameOfDataset* is the name of the dataset(CPI-DS, CPI-DS_IV, or CPI-DS_NIV) .
 
 
-- Check the files CPI-DS_IV_average_header.csv and CPI-DS_NIV_average_header.csv. They exist as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/final/ and the selected SQL results are stored as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/backup_original.
+- Check the files CPI-DS_average_header.csv, CPI-DS_IV_average_header.csv, and CPI-DS_NIV_average_header.csv. They exist as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/final/ and the selected SQL results are stored as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/backup_original.
 
 
 Usage of Created Models
@@ -799,7 +795,7 @@ Usage of Created Models
 
         - Format of each pair: <entity>__<entity>__<interaction>
 
-- This format will automatically generated with the following example command in the folder "scripts/annotate_entities":
+- This format will automatically be generated with the following example command in the folder "scripts/annotate_entities" (further explanations in the "scripts/annotate_entities/how_to" file):
 
     - make annotate InputFile=pmid_example/pmid_example OutputFile=annotate_res.txt Processors=2
 
@@ -821,7 +817,7 @@ Usage of Created Models
 
     - q
 
-- The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section "Technical background of the XML data set") is "scripts/generate_XML_files/CPI-DS/annoate_res.xml".
+- The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section "Technical background of the XML data set"), is "scripts/generate_XML_files/DS/annotate_res.xml".
 
 - Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.
 
