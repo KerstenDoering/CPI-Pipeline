@@ -823,19 +823,19 @@ Usage of Created Models
 
 - If you want to run your own models in the PR mode, you need to copy files from your XX run to specific directories.
 
-- In the case of the SL kernel, you need to copy the .model file from "scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0" to "scripts/training_model/SL_PR_training/trained_model/CPI-DS/train0".
+- In the case of the SL kernel, you need to copy the .model file from "scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0" to "scripts/training_model/SL_PR_training/trained_model/DS/train0".
 
 - In the case of the APG kernel, there are more steps:
 
-    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/PR/trained/CPI-DS/train0" to "scripts/training_model/APG_PR_training/trained_model/CPI-DS/train0".
+    - Copy your .model file from "scripts/ppi-benchmark/Experiments/APG/XX/trained/DS/train0" to "scripts/training_model/APG_PR_training/trained_model/DS/train0".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/corpus_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/corpus/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/corpus_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/dict_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/dictionary/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/dict_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/linearized_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/linearized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/linearized_train0.txt.gz".
 
-    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/CPI-DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/normalized_train0.txt.gz".
+    - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/normalized_train0.txt.gz".
 
 - Running both kernels in PR mode, one after the other, will generate the files "scripts/ppi-benchmark/Experiments/SL/PR/output.sl.xml" and "scripts/ppi-benchmark/Experiments/APG/PR/output.apg.xml".
 

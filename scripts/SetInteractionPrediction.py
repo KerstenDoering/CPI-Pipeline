@@ -7,7 +7,8 @@
 """
 
 import sys, os
-import xml.etree.cElementTree as ElementTree
+#import xml.etree.cElementTree as ElementTree
+from lxml import etree as ElementTree
 
 DictPrediction = {}
 

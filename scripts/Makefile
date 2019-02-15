@@ -52,7 +52,7 @@ kernel-APG-PR:
 kernel-APG-XX:
 	$(MAKE) kernel-APG-XX-train
 	$(MAKE) kernel-APG-XX-test
-	#python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(TestFile) -r DS.sql -o output.apg..xml
+	python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(TestFile) -r output.sql -o output.apg..xml
 
 kernel-APG-XX-train:
 	bash APG_Pipeline.sh -t XX -f $(TrainFile) -x train -p $(Processors)
@@ -73,7 +73,7 @@ kernel-SL-XX:
 	$(MAKE) kernel-SL-XX-train
 	$(MAKE) clean-SL
 	$(MAKE) kernel-SL-XX-test
-	#python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(TestFile) -r output.sql -o output.sl.xml
+	python SetInteractionPrediction.py -k $(Kernel_Upper) -t $(expTyp_Upper) -i $(TestFile) -r output.sql -o output.sl.xml
 
 kernel-SL-XX-train:
 	bash SL_Pipeline.sh -t XX -f $(TrainFile) -x train -p $(Processors)

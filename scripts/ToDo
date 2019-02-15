@@ -1,9 +1,0 @@
-- bllip python for APG is done.
-- bllip python for SL in Github_0 is done need to refelcts this to CPI-pipeline_2019
-- remove processor parameter from makefile of SL and add a new parameter to makefiel.config for both APG & SL (change *.sh ).
-- change readme for :
-  a. pip install bllipparser.
-  b. how to get the results from DB.
-
-
-

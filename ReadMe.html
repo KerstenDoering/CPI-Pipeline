@@ -1002,12 +1002,6 @@ ul.auto-toc {
 </li>
 </ul>
 </div>
-<div class="section" id="makefile-configuration">
-<h2>Makefile Configuration</h2>
-<ul class="simple">
-<li>There are many Makefile parameters which are automatically set by using the correct make commands, as described in the section &quot;How to run the Kernel Pipelines&quot;.</li>
-</ul>
-</div>
 <div class="section" id="postgresql-configuration">
 <h2>PostgreSQL Configuration</h2>
 <ul>
@@ -1102,7 +1096,7 @@ ul.auto-toc {
 </li>
 <li><p class="first">While the complete CPI-DS_IV pipeline runs around 3:15 h, the test case takes only a few minutes on a notebook with an Intel Core i5-3570 (4x 3.40GHz).</p>
 </li>
-<li><p class="first">To use this test data set, go to your (new) working directory into &quot;scripts&quot; and run one of the given make commands with a data set from the folder &quot;scripts/generate_XML_files/CPI-DS&quot;, e.g.:</p>
+<li><p class="first">To use this test data set, go to your (new) working directory into &quot;scripts&quot; and run one of the given make commands with a data set from the folder &quot;scripts/generate_XML_files/DS&quot;, e.g.:</p>
 <blockquote>
 <ul class="simple">
 <li>make experiment Kernel=APG expTyp=PR InputFile=annotate_res.xml Processors=4</li>
@@ -1151,7 +1145,7 @@ ul.auto-toc {
 </ul>
 </blockquote>
 </li>
-<li><p class="first">You can clean your APG workspace after a calculation is finished:</p>
+<li><p class="first">You can clean your SL workspace after a calculation is finished:</p>
 <blockquote>
 <ul class="simple">
 <li>make clean-SL</li>
@@ -1164,6 +1158,8 @@ ul.auto-toc {
 <li>make clean-all</li>
 </ul>
 </blockquote>
+</li>
+<li><p class="first">The input files need to be located in &quot;scripts/generate_XML_files/DS&quot;.</p>
 </li>
 <li><p class="first">Ammar Qaseem updated and completely refined the first version of this pipeline to be used in three modes (cross-validation, prediction, cross-corpus) with only one script SL_Pipeline.sh.</p>
 </li>
@@ -1212,9 +1208,9 @@ ul.auto-toc {
 </ul>
 </blockquote>
 </li>
-<li><p class="first">Where <em>nameOfKernel</em> is the name of the kernel (SL or APG), and <em>nameOfDataset</em> is the name of the dataset(CPI-DS, CPI-DS_IV or CPI-DS_NIV) .</p>
+<li><p class="first"><em>nameOfKernel</em> is the name of the kernel (SL or APG) and <em>nameOfDataset</em> is the name of the dataset(CPI-DS, CPI-DS_IV, or CPI-DS_NIV) .</p>
 </li>
-<li><p class="first">Check the files CPI-DS_IV_average_header.csv and CPI-DS_NIV_average_header.csv. They exist as a backup in the folder results/summary/<em>&lt;nameOfKernel&gt;</em>/<em>&lt;nameOfDataset&gt;</em>/final/ and the selected SQL results are stored as a backup in the folder results/summary/<em>&lt;nameOfKernel&gt;</em>/<em>&lt;nameOfDataset&gt;</em>/backup_original.</p>
+<li><p class="first">Check the files CPI-DS_average_header.csv, CPI-DS_IV_average_header.csv, and CPI-DS_NIV_average_header.csv. They exist as a backup in the folder results/summary/<em>&lt;nameOfKernel&gt;</em>/<em>&lt;nameOfDataset&gt;</em>/final/ and the selected SQL results are stored as a backup in the folder results/summary/<em>&lt;nameOfKernel&gt;</em>/<em>&lt;nameOfDataset&gt;</em>/backup_original.</p>
 </li>
 </ul>
 </div>
@@ -1242,7 +1238,7 @@ ul.auto-toc {
 </ul>
 </blockquote>
 </li>
-<li><p class="first">This format will automatically generated with the following example command in the folder &quot;scripts/annotate_entities&quot;:</p>
+<li><p class="first">This format will automatically be generated with the following example command in the folder &quot;scripts/annotate_entities&quot; (further explanations in the &quot;scripts/annotate_entities/how_to&quot; file):</p>
 <blockquote>
 <ul class="simple">
 <li>make annotate InputFile=pmid_example/pmid_example OutputFile=annotate_res.txt Processors=2</li>
@@ -1263,22 +1259,22 @@ ul.auto-toc {
 </ul>
 </blockquote>
 </li>
-<li><p class="first">The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section &quot;Technical background of the XML data set&quot;) is &quot;scripts/generate_XML_files/CPI-DS/annoate_res.xml&quot;.</p>
+<li><p class="first">The example output of this file, converted to an XML file (with the script annotatedsen_to_xml.py as described in the section &quot;Technical background of the XML data set&quot;), is &quot;scripts/generate_XML_files/DS/annotate_res.xml&quot;.</p>
 </li>
 <li><p class="first">Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.</p>
 </li>
 <li><p class="first">If you want to run your own models in the PR mode, you need to copy files from your XX run to specific directories.</p>
 </li>
-<li><p class="first">In the case of the SL kernel, you need to copy the .model file from &quot;scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0&quot; to &quot;scripts/training_model/SL_PR_training/trained_model/CPI-DS/train0&quot;.</p>
+<li><p class="first">In the case of the SL kernel, you need to copy the .model file from &quot;scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0&quot; to &quot;scripts/training_model/SL_PR_training/trained_model/DS/train0&quot;.</p>
 </li>
 <li><p class="first">In the case of the APG kernel, there are more steps:</p>
 <blockquote>
 <ul class="simple">
-<li>Copy your .model file from &quot;scripts/ppi-benchmark/Experiments/APG/PR/trained/CPI-DS/train0&quot; to &quot;scripts/training_model/APG_PR_training/trained_model/CPI-DS/train0&quot;.</li>
-<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/corpus/CPI-DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/corpus_train0.txt.gz&quot;.</li>
-<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/dictionary/CPI-DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/dict_train0.txt.gz&quot;.</li>
-<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/linearized/CPI-DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/linearized_train0.txt.gz&quot;.</li>
-<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/normalized/CPI-DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/normalized_train0.txt.gz&quot;.</li>
+<li>Copy your .model file from &quot;scripts/ppi-benchmark/Experiments/APG/XX/trained/DS/train0&quot; to &quot;scripts/training_model/APG_PR_training/trained_model/DS/train0&quot;.</li>
+<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/corpus/DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/corpus_train0.txt.gz&quot;.</li>
+<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/dictionary/DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/dict_train0.txt.gz&quot;.</li>
+<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/linearized/DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/linearized_train0.txt.gz&quot;.</li>
+<li>Copy &quot;scripts/ppi-benchmark/Experiments/APG/XX/normalized/DS/train0.txt.gz&quot; to &quot;scripts/training_model/APG_PR_training/normalized_train0.txt.gz&quot;.</li>
 </ul>
 </blockquote>
 </li>
