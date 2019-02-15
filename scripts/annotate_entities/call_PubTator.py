@@ -7,6 +7,8 @@
     curl -H "content-type:application/json" http://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/RESTful/tmTool.cgi/Disease/1000475,1006519,1010707/BioC/ > text_PubTator.xml
     The the type of annotation (here: Disease) can be easily exchanged for a given list of PubMed-IDs (as well as the BioC XML output format). The maximum number of PubMed-IDs to send to PubTator (tested) is 21. Unfortunately, articles without abstract are not processed, but there is the possibility to submit raw text.
     Parameters: http://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/tmTools/#curl
+
+    See https://github.com/KerstenDoering/PubMedPortable/tree/master/BioC_export and the PubMedPortable wiki for further information.
 """
 import urllib2
 import sys

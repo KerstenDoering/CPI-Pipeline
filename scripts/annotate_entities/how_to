@@ -1,1 +1,4 @@
 make annotate InputFile=pmid_example/pmid_example OutputFile=annotate_res.txt Processors=2
+
+- the file "annotate_output/out_without_candidate.txt" contains all sentences
+- the file "annotate_output/annotate_res.txt" contains only sentences with at least one compound-protein pair
