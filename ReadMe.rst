@@ -605,15 +605,21 @@ Required Installation Packages
 
 - List of packages:
 
+    - Python 2.7
+
     - postgresql (here: version 9.3, used to store evaluation results)
 
     - libxml-perl (here: version 0.08, used for the generation of cross-validation splits)
 
-    - python-numpy (here: using Python 2.7, used within the make experiment steps)
+    - python-lxml
+
+    - python-numpy
 
     - default-jdk (Java 7 or 8, used for the execution of JAR files)
 
     - python-nltk
+
+    - python-pip
 
     - pip install bllipparser (python bindings for the BLLIP natural language parser)
 
@@ -838,6 +844,8 @@ Usage of Created Models
     - Copy "scripts/ppi-benchmark/Experiments/APG/XX/normalized/DS/train0.txt.gz" to "scripts/training_model/APG_PR_training/normalized_train0.txt.gz".
 
 - Running both kernels in PR mode, one after the other, will generate the files "scripts/ppi-benchmark/Experiments/SL/PR/output.sl.xml" and "scripts/ppi-benchmark/Experiments/APG/PR/output.apg.xml".
+
+- Analogously, the same happens in the XX mode.
 
 - These files will have the same content as the input xml file, e.g. annotate_res.xml, except that each positively predicted compound-protein pair will be annotated with 'interaction="True"'.
 

@@ -991,11 +991,14 @@ ul.auto-toc {
 <li><p class="first">List of packages:</p>
 <blockquote>
 <ul class="simple">
+<li>Python 2.7</li>
 <li>postgresql (here: version 9.3, used to store evaluation results)</li>
 <li>libxml-perl (here: version 0.08, used for the generation of cross-validation splits)</li>
-<li>python-numpy (here: using Python 2.7, used within the make experiment steps)</li>
+<li>python-lxml</li>
+<li>python-numpy</li>
 <li>default-jdk (Java 7 or 8, used for the execution of JAR files)</li>
 <li>python-nltk</li>
+<li>python-pip</li>
 <li>pip install bllipparser (python bindings for the BLLIP natural language parser)</li>
 </ul>
 </blockquote>
@@ -1279,6 +1282,8 @@ ul.auto-toc {
 </blockquote>
 </li>
 <li><p class="first">Running both kernels in PR mode, one after the other, will generate the files &quot;scripts/ppi-benchmark/Experiments/SL/PR/output.sl.xml&quot; and &quot;scripts/ppi-benchmark/Experiments/APG/PR/output.apg.xml&quot;.</p>
+</li>
+<li><p class="first">Analogously, the same happens in the XX mode.</p>
 </li>
 <li><p class="first">These files will have the same content as the input xml file, e.g. annotate_res.xml, except that each positively predicted compound-protein pair will be annotated with 'interaction=&quot;True&quot;'.</p>
 </li>
