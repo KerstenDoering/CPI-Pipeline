@@ -248,6 +248,10 @@ def Training(c0, c1):
         print "Done..."
         return
 
+    if expTyp == 'XX':
+        c0 = 0
+        c1 = 1
+
     # else For expTyp in [CV, XX]
     regex = re.compile('\D+\d+')
     cmd=[] #Put all commands in a 

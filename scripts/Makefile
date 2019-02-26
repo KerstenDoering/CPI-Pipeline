@@ -90,7 +90,7 @@ clean-APG-pre-steps:
 	@cd CPI-corpora-preparing && \
 		rm -rf bllip-parser/DS/ bllip-parser/DS*.txt && \
 		rm -rf export_step1/DS* && \
-		rm -rf export_step3/DS* && \
+		rm -rf export_step3/DS* export_step3/charniak-johnson/DS* && \
 		rm -rf export_step4/DS/ export_step4/DS* && \
 		rm -rf export_step6/CV/ export_step6/splits-test-train/ export_step6/DS* && \
 		rm -rf step5_copied_from_3/DS* step5_copied_from_3/test* && \
