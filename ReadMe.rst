@@ -854,6 +854,13 @@ Usage of Created Models
 - The comparison of the predictions of both kernels (output.sl.xml and output.apg.xml) can be used to make a jury decision, resulting in a high confidence for identical outputs.
 
 
+
+Large-scale dataset application
+********************************
+
+The kernels have been successfully applied to all PubMed titles and abstracts that were published before 2018. The full output (in xml format) of applying the two kernels (SL and APG) and the output of combine them by applying the jury decision rule: only those relations were classified as functional when both kernels predicted a functional relation, all these output documents can be found `here <ftp://132.230.56.164/CPI/>`_.
+
+
 Contact
 *******
 
