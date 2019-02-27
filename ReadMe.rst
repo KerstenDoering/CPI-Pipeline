@@ -784,6 +784,10 @@ Data set evaluation
 - Check the files CPI-DS_average_header.csv, CPI-DS_IV_average_header.csv, and CPI-DS_NIV_average_header.csv. They exist as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/final/ and the selected SQL results are stored as a backup in the folder results/summary/*<nameOfKernel>*/*<nameOfDataset>*/backup_original.
 
 
+- You can reproduce any APG cross-validation run by commenting out lines 188 and 189 in scripts/APG_Pipeline.sh and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
+
+- You can reproduce any SL cross-validation run by commenting out lines 205-207 in scripts/ppi-benchmark/Corpora/Makefile and line 93 in scripts/SL_Pipeline.sh (and copying your selected cross-validation splits to ppi-benchmark/Corpora/Splits/DS).
+
 Usage of Created Models
 #######################
 

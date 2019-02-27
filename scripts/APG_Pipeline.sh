@@ -183,7 +183,9 @@ then
     cp step5_copied_from_3/DS.xml.inj1.inj2 splitting
     cd splitting
     mv DS.xml.inj1.inj2 DS.xml
-    rm -rf DS ##
+
+	# Reproducing any APG cross-validation run can be by commenting out the next two steps and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.     
+	rm -rf DS ##
     ./randomSplit.pl DS.xml 
 
     # the cross-validation files need to be renamed and the folders that need to be copied to the directory ppi-benchmark as input files for the make-experiment steps will be prepared
