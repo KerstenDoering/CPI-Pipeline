@@ -90,7 +90,7 @@ cd ..
 
 rm -rf SL
 # if there are files from a previous shallow linguistic kernel run, they will be removed 
-###rm -rf Splits/DS/
+rm -rf Splits/DS/
 
 
 if [ $ExpTyp = "XX" ] && [ $ProcessTyp = "train" ]

@@ -202,9 +202,9 @@ ${workDir}/%.inj1.inj2: ${workDir}/%.inj1-bracketing-tokens.txt
 ${stlfDir}/%.xml: ${workDir}/%.xml.inj1.inj2
 	mkdir -p "${stlfDir}"
 	cp "$<" "$@"
-	###perl ${stlfDir}/randomSplit.pl ${stlfDir}/$(CORPORA).xml ##
-	###rsync -a $(CORPORA) Splits/ ##
-	###rm -rf $(CORPORA)
+	perl ${stlfDir}/randomSplit.pl ${stlfDir}/$(CORPORA).xml ##
+	rsync -a $(CORPORA) Splits/ ##
+	rm -rf $(CORPORA)
 	
 SynTree-step5: ${LF_JAR}
 	echo -n $(CorporaXML) | \
