@@ -248,9 +248,14 @@ def Training(c0, c1):
         print "Done..."
         return
 
+    # choose single value c0 for XX mode
+    # c0 = -2 equals c=0.25
+    # c0 = -1 equals c=0.5
+    # c0 = 0 equals c=1
+    # c0 = 1 equals c=2
     if expTyp == 'XX':
         c0 = 0
-        c1 = 1
+        c1 = c0 + 1
 
     # else For expTyp in [CV, XX]
     regex = re.compile('\D+\d+')

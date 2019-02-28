@@ -85,7 +85,10 @@ def Training(w0,w1,n0,n1):
         dest=splits +os.sep +corpus +os.sep
         print dest
         shutil.move(scr, dest)  
-        #w0,w1,n0,n1 = 1,2,3,4
+        w0 = 1
+        w1 = w0 + 1
+        n0 = 3
+        n1 = n0 + 1
 
     cmd = []
     regex = re.compile('\D+\d+')

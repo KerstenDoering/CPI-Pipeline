@@ -786,7 +786,7 @@ Data set evaluation
 
 - You can reproduce any APG cross-validation run by commenting out lines 188 and 189 in scripts/APG_Pipeline.sh and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
 
-- You can reproduce any SL cross-validation run by commenting out lines 205-207 in scripts/ppi-benchmark/Corpora/Makefile and line 93 in scripts/SL_Pipeline.sh (and copying your selected cross-validation splits to ppi-benchmark/Corpora/Splits/DS).
+- You can reproduce any SL cross-validation run by commenting out lines 205-207 in scripts/ppi-benchmark/Corpora/Makefile and line 93 in scripts/SL_Pipeline.sh. You also need to copy your selected cross-validation splits to ppi-benchmark/Corpora/Splits/DS.
 
 Usage of Created Models
 #######################
@@ -831,7 +831,7 @@ Usage of Created Models
 
 - Considering the output of such an experiment, all positively predicted pairs of entities can be used for an ongoing analysis, e.g. in the process of filtering out interaction partners from large-scale corpora.
 
-- If you want to run your own models in the PR mode, you need to copy files from your XX run to specific directories.
+- If you want to run your own model in the PR mode, you need to copy files from your XX run to specific directories.
 
 - In the case of the SL kernel, you need to copy the .model file from "scripts/ppi-benchmark/Experiments/SL/XX/trained/DS/train0" to "scripts/training_model/SL_PR_training/trained_model/DS/train0".
 
@@ -851,6 +851,10 @@ Usage of Created Models
 
 - Analogously, the same happens in the XX mode.
 
+- Regarding the XX mode, the default parameter for the APG kernel is c=1. You can change it by entering your desired value to "scripts/Run_APG_Kernel.py" in line 257, where c0 = 1 will be used as 2^0 = 1. If you want your model to take e.g. c=2, you have to set c0 = 1, because 2^1 = 2.
+
+- You can do the same for the XX mode with the SL kernel by changing "scripts/Run_SL_Kernel.py" lines 88 and 90. The parameters w0 and n0 will be taken as you set them. The default is n=3 and w=1.
+
 - These files will have the same content as the input xml file, e.g. annotate_res.xml, except that each positively predicted compound-protein pair will be annotated with 'interaction="True"'.
 
 - All compound-protein pairs which were predicted as non-functional relationships will keep their default annotation 'interaction="False"'.
@@ -862,10 +866,11 @@ Usage of Created Models
 Large-scale dataset application
 ********************************
 
-The kernels have been successfully applied to all PubMed titles and abstracts that were published before 2018. The full output (in xml format) of applying the two kernels (SL and APG) and the output of combine them by applying the jury decision rule: only those relations were classified as functional when both kernels predicted a functional relation, all these output documents can be found here: 
+The kernels have been successfully applied to all PubMed titles and abstracts that were published before 2018. The full output (in xml format) can be found here: 
 
 	- ftp://132.230.56.164/CPI/
 
+It contains one zip file for the predictions of each of the two kernels (SL and APG) as well as one zip file with the combination of both kernels based on a jury decision, i.e. only those relations that were predicted as a functional relation by both kernels were classified to be positive.
 
 Contact
 *******

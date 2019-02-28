@@ -184,7 +184,7 @@ then
     cd splitting
     mv DS.xml.inj1.inj2 DS.xml
 
-	# Reproducing any APG cross-validation run can be by commenting out the next two steps and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.     
+	# Reproducing any APG cross-validation run can be achieved by commenting out the next two lines and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.     
 	rm -rf DS ##
     ./randomSplit.pl DS.xml 
 
