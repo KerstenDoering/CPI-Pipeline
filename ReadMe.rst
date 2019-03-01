@@ -851,7 +851,7 @@ Usage of Created Models
 
 - Analogously, the same happens in the XX mode.
 
-- Regarding the XX mode, the default parameter for the APG kernel is c=1. You can change it by entering your desired value to "scripts/Run_APG_Kernel.py" in line 257, where c0 = 1 will be used as 2^0 = 1. If you want your model to take e.g. c=2, you have to set c0 = 1, because 2^1 = 2.
+- Regarding the XX mode, the default parameter for the APG kernel is c=1. You can change it by entering your desired value to "scripts/Run_APG_Kernel.py" in line 257, where c0 = 0 will be used as 2^0 = 1. If you want your model to take e.g. c=2, you have to set c0 = 1, because 2^1 = 2.
 
 - You can do the same for the XX mode with the SL kernel by changing "scripts/Run_SL_Kernel.py" lines 88 and 90. The parameters w0 and n0 will be taken as you set them. The default is n=3 and w=1.
 
