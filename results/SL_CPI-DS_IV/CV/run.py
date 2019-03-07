@@ -26,6 +26,7 @@ limitToSplit =10000
 
 expTyp = str(sys.argv[1])
 realnameDS = str(sys.argv[2])
+realnameDS='CPI-DS_IV'
 corpus = "DS"
 
 base = basepath + os.sep + expTyp + os.sep
@@ -41,12 +42,14 @@ def readAUC(source):
     correct = []
     for line in source:
         line = line.strip().split()
+        if(int(line[0].split('.')[1][1:])>=830):
+            continue	
         predictions.append(float(line[2]))
         correct.append(float(line[1]))
     auc = computeAUC(predictions, correct)
     return auc
 
-
+# This function to split the dataset into small chuncks to avoid the problem of insufficient memory
 def Splitting():
 
 
@@ -184,6 +187,11 @@ def Evaluating():
                 print "###", prediction
                 convert(prediction) #Convert into expected data format
 
+
+                # write single predictions
+                test = splits + os.sep + corpus_t + os.sep + 'test' + fold + '.txt' # same as in Step 2 predict
+                addids(prediction, test) # Replace sequence number with original pair IDs from			
+
                 f = open(prediction)
                 # change:
                 try:
@@ -205,12 +213,13 @@ def Evaluating():
                 # write experiment evaluation data
                 resultFile.write("UPDATE ppiCV SET tp = " +str(TP) +", fn = " +str(FN) +", tn = " +str(TN) +", fp = " +str(FP) +", total = " +str(TP+TN+FP+FN) +", auc = " + str(auc) + " , precision_ = " + str(prec) + " , recall = " + str(rec) + ", f_measure = " + str(F) + " WHERE ppiCVid = currval('ppiCV_ppiCVid_seq');\n")
 
-                # write single predictions
-                test = splits + os.sep + corpus_t + os.sep + 'test' + fold + '.txt' # same as in Step 2 predict
-                addids(prediction, test) # Replace sequence number with original pair IDs from
+               
                 f = open(prediction)
                 for line in f:
                     line = line.split()
+                    if(int(line[0].split('.')[1][1:])>=830):
+                        continue	
+                   
                     # example line: "9 1.0 0.586770226173"
                     if float(line[2]) >= threshold:
                         insertString = '1'
@@ -232,6 +241,7 @@ if __name__ == "__main__":
 
     corpora = os.environ["CORPORA"].split() #Contains the corpora
 
+    #print "AAAAAAAAAAAAAAAAA:", corpora
     print "Step1-Training"
     Training(1,4,1,4)
     
