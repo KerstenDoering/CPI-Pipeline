@@ -503,7 +503,7 @@ Functional relationships with and without an enclosed interaction verb
 
 - Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
 
-- The predictions for CPI-DS_IV and CPI-DS_NIV are based on training the whole model of CPI-DS, using the same splits. Therefore, evaluation is separated by the two different sentence structures, but the overall model stays the same for CPI-DS, CPI-DS_IV, and CPI-DS_NIV, regarding each cross-validation run.
+- The predictions for CPI-DS_IV and CPI-DS_NIV are based on training the whole model of CPI-DS, using the same splits. Therefore, the evaluation is separated by the two different sentence structures, but the overall model stays the same for CPI-DS, CPI-DS_IV, and CPI-DS_NIV, regarding each cross-validation run.
 
 The benchmark data set creation
 ###############################
