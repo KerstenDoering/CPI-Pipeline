@@ -503,6 +503,8 @@ Functional relationships with and without an enclosed interaction verb
 
 - Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
 
+- The predictions for CPI-DS_IV and CPI-DS_NIV are based on training the whole model of CPI-DS, using the same splits. Therefore, evaluation is separated by the two different sentence structures, but the overall model stays the same for CPI-DS, CPI-DS_IV, and CPI-DS_NIV, regarding each cross-validation run.
+
 The benchmark data set creation
 ###############################
 
@@ -787,6 +789,8 @@ Data set evaluation
 - You can reproduce any APG cross-validation run by commenting out lines 188 and 189 in scripts/APG_Pipeline.sh and copying your selected cross-validation splits to CPI-corpora-preparing/splitting/DS.
 
 - You can reproduce any SL cross-validation run by commenting out lines 205-207 in scripts/ppi-benchmark/Corpora/Makefile and line 93 in scripts/SL_Pipeline.sh. You also need to copy your selected cross-validation splits to ppi-benchmark/Corpora/Splits/DS.
+
+- If you want to reproduce the cross-validation results of CPI-DS_IV and CPI-DS_NIV, please, have a look at the readme files in "scripts/splitting/scripts_for_use_same_splits".
 
 Usage of Created Models
 #######################
