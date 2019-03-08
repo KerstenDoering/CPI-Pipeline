@@ -18,6 +18,7 @@ import multiprocessing
 #base="/vol/home-vol3/wbi/thomas/workspace/ppi-benchmark/Experiments/apg/CV/" 
 expTyp = str(sys.argv[1])
 realnameDS = str(sys.argv[2])
+realnameDS='CPI-DS_IV'
 base= path +os.sep +expTyp+'/'
 print "base:",base
 sys.path.append(source +'/measures/')
@@ -53,6 +54,8 @@ def readAUC(source):
     correct = []
     for line in source:
         line = line.strip().split()
+        if(int(line[0].split('.')[1][1:])>=830):
+            continue	
         predictions.append(float(line[2]))
         correct.append(float(line[1]))
     auc = computeAUC(predictions, correct)
@@ -66,8 +69,11 @@ def SplitNormDataSet():
         
         pathN = base + normalized +os.sep +corpus +os.sep
         os.chdir(pathN)
-        
+
+        print '\n\nNumber of pairs to test : '
+        print '------------------'
         os.system('zcat test0.txt.gz | wc -l')
+
         cmd = "zcat test0.txt.gz | split -d -a 4 -l "+ str(limitToSplit) + " - temp --filter='gzip > $FILE.txt.gz'"
         os.system(cmd)
 
@@ -117,7 +123,7 @@ def GenerateDict():
     if expTyp == 'PR':
         corpus = 'DS'
         os.makedirs(base + dictionary+os.sep+corpus)
-        cmd = "cp ../../../../training_model/APG_PR_training/Dict_train0.txt.gz "+ dictionary + os.sep + corpus + os.sep + "train0.txt.gz"
+        cmd = "cp ../../../../training_model/APG_PR_training/dict_train0.txt.gz "+ dictionary + os.sep + corpus + os.sep + "train0.txt.gz"
         os.system(cmd)
         print "Done..."
         return
@@ -188,7 +194,7 @@ def Linearization():
 
     
     if expTyp == 'PR':
-        cmd = "cp ../../../../training_model/APG_PR_training/Linearized_train0.txt.gz "+ linearized + os.sep + corpus + os.sep + "train0.txt.gz"
+        cmd = "cp ../../../../training_model/APG_PR_training/linearized_train0.txt.gz "+ linearized + os.sep + corpus + os.sep + "train0.txt.gz"
         os.system(cmd)
 
         
@@ -223,7 +229,7 @@ def Normalization():
     endNorm = time.asctime()
 
     if expTyp == 'PR':
-        scr="../../../../training_model/APG_PR_training/Norm_train0.txt.gz"
+        scr="../../../../training_model/APG_PR_training/normalized_train0.txt.gz"
         dest=normalized + os.sep + corpus + os.sep + "train0.txt.gz"
         shutil.copy(scr, dest)
         
@@ -244,6 +250,15 @@ def Training(c0, c1):
         shutil.copytree(scr, dest)
         print "Done..."
         return
+
+    # choose single value c0 for XX mode
+    # c0 = -2 equals c=0.25
+    # c0 = -1 equals c=0.5
+    # c0 = 0 equals c=1
+    # c0 = 1 equals c=2
+    if expTyp == 'XX':
+        c0 = 0
+        c1 = c0 + 1
 
     # else For expTyp in [CV, XX]
     regex = re.compile('\D+\d+')
@@ -316,7 +331,7 @@ def Predicting():
     print 
     
 
-
+# This function to get the best threshod for classifier
 def getThreshold(estimateFile):
     f= open(estimateFile)
     p = [] #predict
@@ -329,7 +344,6 @@ def getThreshold(estimateFile):
     return threshold
 
 
-
 # This fuction to evaluate the prediction
 def Evaluating():
     regex = re.compile('(train)(\d+)')
@@ -337,15 +351,14 @@ def Evaluating():
 
 
     for corpus in corpora: #Iterate corpora
-        resultFile = open(realnameDS+'.sql','w')
+        resultFile = open('output.sql','w')
         for split in glob.glob(base +predict +os.sep +corpus +os.sep +"*"): #Iterate the CV-splits
             splitname=regex.search(os.path.basename(split)).group(2) #current split
 
             for foretell in glob.glob(split +os.sep +"predict*.out"):  #Iterate over the different lambda params
-    #            print foretell, "##"
+
                 lamd=lambdaRegex.search(os.path.basename(foretell)).group(2) #Extract the lambda-setting
                 estimateFile= split +os.sep +"threshold" +lamd +".out" #File needed to estimate the threshold; (selfprediction!)
-    #            print corpus +" " +str(splitname) +"/" +str(9) +" lambda=" +lamd           
 
                 threshold= getThreshold(estimateFile) #Get the optimal threshold setting
 
@@ -353,6 +366,10 @@ def Evaluating():
 
                 f= open(foretell)
                 for line in f:
+                    array = line.split()
+                    if(int(array[0].split('.')[1][1:])>=830):
+                        continue	
+
                     array=line.split()
                     if float(array[2]) >= threshold:
                         insertString = '1'
@@ -362,12 +379,12 @@ def Evaluating():
 
                 f= open(foretell)
                 F, prec, rec = readResults(f,threshold)
-    #            print "F-score:", F, ", recall:", rec, ", precision:", prec, "###"
+
                 f.close()
 
                 f= open(foretell)
                 TP, FP, FN, TN = getAbsoluteNumbers(f,threshold)
-    #            print "TP:", TP, ", TN:", TN, ", FP:", FP, ", FN:", FN, "####"
+
                 f.close()            
                 
                 f= open(foretell)
@@ -375,7 +392,7 @@ def Evaluating():
                     auc= readAUC(f)
                 except:
                     auc = "Null"
-    #                print "no auc, division by zero", "#####"
+
                 f.close()
 
 
@@ -396,6 +413,7 @@ if __name__ == "__main__":
         if expTyp in  ['PR', 'XX']:
             SplitNormDataSet()
         Predicting()
+        print 'Ammar'
         Evaluating()
         
     else:
