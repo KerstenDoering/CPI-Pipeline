@@ -11,11 +11,11 @@ Introduction
 
 - In this project, the two kernels were applied to two compound-protein interaction (CPI) in PubMed sentences.
 
-- The complete data set consists of 2753 sentences. Within these sentences, 3496 compound-protein pairs were annotated to show a functional relationship and 2467 compound-protein pairs were marked as no-interaction pairs.
+- The complete data set consists of 2613 sentences. Within these sentences, 2931 compound-protein pairs were annotated to show a functional relationship and 2631 compound-protein pairs were marked as no-interaction pairs.
 
 - We consider co-occurences as an approach to predict every appearance of a compound and a protein in a sentence as a functional relationship (recall 100%, specificity 0%) and call it the baseline calculation, taking into account the number of true functional relationships.
 
-- From the given numbers, the data set shows an precision (equal to accuracy in this case) of 58.6 % and an F1 score of 73.9 %.
+- From the given numbers, the data set shows an precision (equal to accuracy in this case) of 52.7 % and an F1 score of 69.0 %.
 
 - APG and SL kernel both perform better than the concept of co-occurrences as shown in the following tables.
 
@@ -34,36 +34,36 @@ Introduction
           - AUC
 
         * - 0.25
-          - 84.8
-          - 68.1
-          - 79.3
-          - 78.0
-          - 81.8
-          - 84.2
+          - 81.7
+          - 71.8
+          - 76.6
+          - 77.1
+          - 79.0
+          - 84.6
 
         * - 0.50
-          - 85.3
-          - 66.5
-          - 78.7
-          - 77.7
-          - 81.8
-          - 84.2
+          - 82.7
+          - 70.2
+          - 75.8
+          - 76.9
+          - 79.0
+          - 84.6
 
         * - 1.00
-          - 84.6
-          - 66.7
-          - 78.5
-          - 77.2
-          - 81.3
-          - 83.9
+          - 81.4
+          - 72.0
+          - 76.6
+          - 77.0
+          - 78.8
+          - 84.4
 
         * - 2.00
-          - 85.6
-          - 64.9
-          - 77.9
-          - 77.2
-          - 81.5
-          - 83.5
+          - 79.7
+          - 73.2
+          - 77.0
+          - 76.7
+          - 78.2
+          - 84.1
 
 
 - SL kernel results for CPI-DS dataset:
@@ -83,84 +83,84 @@ Introduction
 
         * - 1
           - 1
-          - 77.3
-          - 69.0
-          - 78.1
+          - 76.6
+          - 69.8
           - 74.0
-          - 77.7
-          - 79.2
+          - 73.4
+          - 75.2
+          - 80.7
 
         * - 1
           - 2
-          - 83.1
-          - 62.0
-          - 75.7
-          - 74.5
-          - 79.2
-          - 78.6
+          - 85.1
+          - 61.0
+          - 71.1
+          - 73.8
+          - 77.4
+          - 80.5
 
         * - 1
           - 3
-          - 87.6
-          - 52.8
+          - 87.2
+          - 56.3
+          - 69.1
           - 72.6
-          - 73.2
-          - 79.2
-          - 78.0
-
-        * - 2
-          - 1
-          - 79.2
-          - 69.9
-          - 79.1
-          - 75.5
-          - 79.1
-          - 80.9
-
-        * - 2
-          - 2
-          - 84.1
-          - 62.4
-          - 76.2
-          - 75.3
-          - 79.9
-          - 80.2
-
-        * - 2
-          - 3
-          - 87.9
-          - 55.0
-          - 73.6
-          - 74.4
-          - 80.0
-          - 79.9
-
-        * - 3
-          - 1
+          - 77.0
           - 80.3
-          - 69.7
-          - 79.2
-          - 76.0
-          - 79.7
-          - 81.6
+
+        * - 2
+          - 1
+          - 78.5
+          - 70.8
+          - 75.1
+          - 74.9
+          - 76.7
+          - 81.8
+
+        * - 2
+          - 2
+          - 85.6
+          - 62.7
+          - 72.1
+          - 74.8
+          - 78.2
+          - 81.5
+
+        * - 2
+          - 3
+          - 87.0
+          - 59.8
+          - 70.9
+          - 74.2
+          - 78.1
+          - 81.3
+
+        * - 3
+          - 1
+          - 79.5
+          - 70.2
+          - 75.0
+          - 75.2
+          - 77.2
+          - 82.5
 
         * - 3
           - 2
-          - 84.0
-          - 63.5
-          - 76.7
-          - 75.7
-          - 80.1
-          - 81.0
+          - 86.6
+          - 62.8
+          - 72.4
+          - 75.5
+          - 78.8
+          - 82.2
 
         * - 3
           - 3
-          - 87.8
-          - 56.0
-          - 74.0
-          - 74.7
-          - 80.2
-          - 80.8
+          - 87.3
+          - 60.0
+          - 71.1
+          - 74.5
+          - 78.3
+          - 82.1
 
 Functional relationships with and without an enclosed interaction verb
 ######################################################################
@@ -186,24 +186,24 @@ Functional relationships with and without an enclosed interaction verb
           - F1
 
         * - CPI-DS_IV
-          - 1259
-          - 1884
-          - 1166
-          - 3050
+          - 1209
+          - 1598
+          - 1269
+          - 2867
           - 100.0
           - 0.0
-          - 61.8
-          - 76.4
+          - 55.7
+          - 71.6
 
         * - CPI-DS_NIV
-          - 1494
-          - 1612
-          - 1301
-          - 2913
+          - 1404
+          - 1333
+          - 1362
+          - 2695
           - 100.0
           - 0.0
-          - 55.3
-          - 71.2
+          - 49.5
+          - 66.2
 
 
 - The next table shows the results of the APG kernel pipeline for CPI-DS_IV dataset:
@@ -221,36 +221,36 @@ Functional relationships with and without an enclosed interaction verb
           - AUC
 
         * - 0.25
-          - 85.5
-          - 63.5
-          - 79.9
-          - 77.7
-          - 82.5
-          - 82.6
+          - 82.8
+          - 70.0
+          - 77.9
+          - 77.2
+          - 80.1
+          - 84.4
 
         * - 0.50
-          - 85.7
-          - 61.3
-          - 79.2
-          - 77.3
-          - 82.3
-          - 82.6
+          - 82.0
+          - 70.0
+          - 78.0
+          - 76.9
+          - 79.8
+          - 84.5
 
         * - 1.00
-          - 85.2
-          - 61.0
+          - 81.2
+          - 72.0
           - 78.9
-          - 76.3
-          - 81.8
-          - 82.3
+          - 77.1
+          - 79.8
+          - 84.3
 
         * - 2.00
-          - 86.0
-          - 59.4
-          - 78.5
-          - 76.4
-          - 81.9
-          - 81.8
+          - 80.5
+          - 71.3
+          - 78.7
+          - 76.7
+          - 79.4
+          - 83.8
 
 - Results of the APG kernel pipeline for CPI-DS_NIV dataset:
 
@@ -267,36 +267,36 @@ Functional relationships with and without an enclosed interaction verb
           - AUC
 
         * - 0.25
-          - 84.0
-          - 71.7
-          - 78.8
-          - 78.3
-          - 81.0
-          - 85.7
+          - 80.4
+          - 69.4
+          - 73.4
+          - 75.4
+          - 76.4
+          - 82.2
 
         * - 0.50
-          - 84.8
+          - 77.9
           - 70.6
-          - 78.3
-          - 78.2
-          - 81.2
-          - 85.6
+          - 73.4
+          - 74.6
+          - 75.1
+          - 82.4
 
         * - 1.00
-          - 83.9
-          - 71.1
-          - 78.4
-          - 77.9
-          - 80.7
-          - 85.3
+          - 75.1
+          - 74.3
+          - 75.1
+          - 75.1
+          - 74.9
+          - 82.6
 
         * - 2.00
-          - 85.2
-          - 69.2
-          - 77.6
-          - 77.9
-          - 81.0
-          - 85.0
+          - 74.9
+          - 74.2
+          - 74.7
+          - 74.8
+          - 74.6
+          - 82.8
 
 
 - This table shows the results of the SL kernel for CPI-DS_IV dataset:
@@ -316,84 +316,84 @@ Functional relationships with and without an enclosed interaction verb
 
         * - 1
           - 1
-          - 79.0
-          - 63.2
-          - 78.1
-          - 73.3
-          - 78.4
-          - 76.7
-
-        * - 1
-          - 2
-          - 84.2
-          - 57.7
-          - 76.9
-          - 74.6
-          - 80.2
-          - 76.2
-
-        * - 1
-          - 3
-          - 87.6
-          - 48.4
-          - 73.7
-          - 72.8
-          - 79.8
-          - 75.8
-
-        * - 2
-          - 1
-          - 79.9
-          - 63.8
-          - 78.6
-          - 74.1
-          - 79.1
-          - 78.3
-
-        * - 2
-          - 2
-          - 83.9
-          - 57.0
-          - 76.4
-          - 74.0
-          - 79.8
           - 77.5
+          - 67.4
+          - 75.7
+          - 73.6
+          - 76.5
+          - 79.4
+
+        * - 1
+          - 2
+          - 81.3
+          - 65.0
+          - 75.3
+          - 74.7
+          - 78.1
+          - 79.9
+
+        * - 1
+          - 3
+          - 80.6
+          - 64.3
+          - 74.6
+          - 74.0
+          - 77.4
+          - 79.6
+
+        * - 2
+          - 1
+          - 78.1
+          - 70.0
+          - 77.3
+          - 75.0
+          - 77.6
+          - 80.8
+
+        * - 2
+          - 2
+          - 80.5
+          - 66.3
+          - 75.6
+          - 74.6
+          - 77.9
+          - 80.8
 
         * - 2
           - 3
-          - 87.7
-          - 49.7
-          - 74.2
-          - 73.4
           - 80.2
-          - 77.1
+          - 65.8
+          - 75.1
+          - 74.2
+          - 77.5
+          - 80.2
 
         * - 3
           - 1
-          - 80.7
-          - 64.1
-          - 78.9
-          - 74.7
-          - 79.7
-          - 78.8
+          - 77.9
+          - 71.1
+          - 78.0
+          - 75.3
+          - 77.8
+          - 81.3
 
         * - 3
           - 2
-          - 83.8
-          - 58.0
-          - 76.8
-          - 74.3
-          - 80.0
-          - 78.1
+          - 81.2
+          - 66.5
+          - 76.0
+          - 75.1
+          - 78.4
+          - 81.1
 
         * - 3
           - 3
-          - 87.7
-          - 50.0
-          - 74.4
-          - 73.6
-          - 80.3
-          - 78.0
+          - 80.1
+          - 66.9
+          - 75.9
+          - 74.6
+          - 77.8
+          - 80.8
 
 
 
@@ -415,91 +415,91 @@ Functional relationships with and without an enclosed interaction verb
 
         * - 1
           - 1
-          - 75.4
-          - 73.9
-          - 78.3
-          - 74.6
-          - 76.6
-          - 81.4
-
-        * - 1
-          - 2
-          - 81.8
-          - 65.5
-          - 74.7
-          - 74.4
-          - 77.9
+          - 78.7
+          - 70.7
+          - 73.1
+          - 74.9
+          - 75.6
           - 80.6
 
         * - 1
-          - 3
-          - 87.4
-          - 56.4
-          - 71.5
+          - 2
+          - 82.2
+          - 64.7
+          - 70.2
           - 73.7
-          - 78.5
-          - 79.9
+          - 75.6
+          - 79.7
+
+        * - 1
+          - 3
+          - 84.0
+          - 63.0
+          - 69.5
+          - 73.6
+          - 75.9
+          - 79.2
 
         * - 2
           - 1
           - 78.4
+          - 71.7
+          - 73.9
           - 75.3
-          - 79.9
-          - 76.9
-          - 79.0
-          - 83.3
+          - 75.9
+          - 81.7
 
         * - 2
           - 2
-          - 84.5
-          - 67.0
-          - 76.3
-          - 76.7
-          - 80.1
-          - 82.7
+          - 84.0
+          - 63.9
+          - 70.3
+          - 74.2
+          - 76.4
+          - 80.9
 
         * - 2
           - 3
-          - 88.2
-          - 59.4
-          - 73.1
-          - 75.4
-          - 79.8
-          - 82.3
+          - 85.0
+          - 63.7
+          - 70.3
+          - 74.5
+          - 76.8
+          - 80.4
 
         * - 3
           - 1
-          - 79.9
-          - 74.6
-          - 79.8
-          - 77.5
-          - 79.7
-          - 84.3
+          - 80.3
+          - 70.5
+          - 73.4
+          - 75.7
+          - 76.6
+          - 82.5
 
         * - 3
           - 2
-          - 84.2
-          - 68.3
-          - 76.8
-          - 77.0
-          - 80.2
-          - 83.7
+          - 85.7
+          - 63.4
+          - 70.4
+          - 74.8
+          - 77.2
+          - 81.8
 
         * - 3
           - 3
-          - 87.9
-          - 60.8
-          - 73.6
-          - 75.8
-          - 80.0
-          - 83.2
+          - 86.7
+          - 62.0
+          - 69.7
+          - 74.5
+          - 77.2
+          - 81.4
 
 
 
 
 - The ratio of sentences with and without interaction verbs for the complete PubMed data set is around 40 % CPI-DS_IV and 60 % CPI-DS_NIV, based on an analysis with PubMedPortable.
 
-- In the case of CPI-DS_IV and CPI-DS_NIV, the percentages are 45.7 % (1259/(1259+1494)) and 54.3 % (1494/(1259+1494)).
+- In the case of CPI-DS_IV and CPI-DS_NIV, the percentages are 46.3 % (1209/(1209+1404)) and 53.7 % (1404/(1209+1404)).
 
 - Considering the manual curation of false positives resulting from the automatic named entity recognition process, the empirical ratios can be considered as similar.
 
@@ -870,11 +870,18 @@ Usage of Created Models
 Large-scale dataset application
 ********************************
 
-The kernels have been successfully applied to all PubMed titles and abstracts that were published before 2018. The full output (in xml format) can be found here: 
+The kernels have been successfully applied to all PubMed titles and abstracts that were published before July 2019. The full output (in xml format) can be found here: 
 
 	- ftp://132.230.56.164/CPI/
 
 It contains one zip file for the predictions of each of the two kernels (SL and APG) as well as one zip file with the combination of both kernels based on a jury decision, i.e. only those relations that were predicted as a functional relation by both kernels were classified to be positive.
+
+Interaction verbs
+******************
+The list of the interaction verbs that used in our work can be found here : 
+
+	- ftp://132.230.56.164/CPI/
+
 
 Contact
 *******

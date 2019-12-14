@@ -26,7 +26,6 @@ limitToSplit =10000
 
 expTyp = str(sys.argv[1])
 realnameDS = str(sys.argv[2])
-realnameDS='CPI-DS_IV'
 corpus = "DS"
 
 base = basepath + os.sep + expTyp + os.sep
@@ -36,18 +35,17 @@ predict = base + 'predict'
 result = base + 'output.sql'
 
 
-
+# This function to call the function that calculate the AUC value
 def readAUC(source):
     predictions = []
     correct = []
     for line in source:
         line = line.strip().split()
-        if(int(line[0].split('.')[1][1:])>=830):
-            continue	
         predictions.append(float(line[2]))
         correct.append(float(line[1]))
     auc = computeAUC(predictions, correct)
     return auc
+
 
 # This function to split the dataset into small chuncks to avoid the problem of insufficient memory
 def Splitting():
@@ -62,7 +60,6 @@ def Splitting():
 
     cmd = "split -d -a 4 -l "+ str(limitToSplit) + " --additional-suffix=.txt " + splits +os.sep +corpus +os.sep + "temp.txt " + splits +os.sep +corpus +os.sep + "test"
     os.system(cmd)
-
 
     cmd = "rm "+ splits +os.sep +corpus +os.sep +"temp.txt"
     os.system(cmd)
@@ -88,9 +85,11 @@ def Training(w0,w1,n0,n1):
         dest=splits +os.sep +corpus +os.sep
         print dest
         shutil.move(scr, dest)  
-        #w0,w1,n0,n1 = 1,2,3,4
+        w0 = 1
+        w1 = w0 + 1
+        n0 = 3
+        n1 = n0 + 1
 
-    
     cmd = []
     regex = re.compile('\D+\d+')
 
@@ -147,19 +146,15 @@ def Predicting():
             else:
                 trainDir = "train0"
 
-
             for model in glob.glob(trained + os.sep + corpus_t + os.sep + trainDir + os.sep + "*.model"):
                 n = regex.search(os.path.basename(model)).group(2)
                 w = regex.search(os.path.basename(model)).group(4)
 
-    #            print("java -classpath /vol/home-vol3/wbi/thomas/backup/svm/otherMethods/jsre-Phil/source/bin/:/vol/home-vol3/wbi/thomas/backup/svm/otherMethods/jsre-Phil/source/lib/* -mx1024M org.itc.irst.tcc.sre.Predict " +test+split[5:]+".txt"   +" "  +model +" " + outdir +"predictn="+n+"w="+w+".out")
-
-                cmd.append("java -classpath '" + jsre_classpath + "' -mx2024M org.itc.irst.tcc.sre.Predict " +test   +" "  +model +" " + outdir +"predictn="+n+"w="+w+".out")
+                #cmd.append("java -classpath '" + jsre_classpath + "' -mx2024M org.itc.irst.tcc.sre.Predict " +test   +" "  +model +" " + outdir +"predictn="+n+"w="+w+".out")
 
                 os.chdir(jsre)
                 job=subprocess.Popen("java -classpath '" + jsre_classpath + "' -mx8024M org.itc.irst.tcc.sre.Predict " +test   +" "  +model +" " + outdir +"predictn="+n+"w="+w+".out",shell=True)
                 job.wait()
-
 
     #os.chdir(jsre)
     #runDistributed(4, cmd)
@@ -187,11 +182,6 @@ def Evaluating():
                 print "###", prediction
                 convert(prediction) #Convert into expected data format
 
-
-                # write single predictions
-                test = splits + os.sep + corpus_t + os.sep + 'test' + fold + '.txt' # same as in Step 2 predict
-                addids(prediction, test) # Replace sequence number with original pair IDs from			
-
                 f = open(prediction)
                 # change:
                 try:
@@ -213,13 +203,12 @@ def Evaluating():
                 # write experiment evaluation data
                 resultFile.write("UPDATE ppiCV SET tp = " +str(TP) +", fn = " +str(FN) +", tn = " +str(TN) +", fp = " +str(FP) +", total = " +str(TP+TN+FP+FN) +", auc = " + str(auc) + " , precision_ = " + str(prec) + " , recall = " + str(rec) + ", f_measure = " + str(F) + " WHERE ppiCVid = currval('ppiCV_ppiCVid_seq');\n")
 
-               
+                # write single predictions
+                test = splits + os.sep + corpus_t + os.sep + 'test' + fold + '.txt' # same as in Step 2 predict
+                addids(prediction, test) # Replace sequence number with original pair IDs from
                 f = open(prediction)
                 for line in f:
                     line = line.split()
-                    if(int(line[0].split('.')[1][1:])>=830):
-                        continue	
-                   
                     # example line: "9 1.0 0.586770226173"
                     if float(line[2]) >= threshold:
                         insertString = '1'
@@ -241,7 +230,6 @@ if __name__ == "__main__":
 
     corpora = os.environ["CORPORA"].split() #Contains the corpora
 
-    #print "AAAAAAAAAAAAAAAAA:", corpora
     print "Step1-Training"
     Training(1,4,1,4)
     
