@@ -876,6 +876,13 @@ The kernels have been successfully applied to all PubMed titles and abstracts th
 
 It contains one zip file for the predictions of each of the two kernels (SL and APG) as well as one zip file with the combination of both kernels based on a jury decision, i.e. only those relations that were predicted as a functional relation by both kernels were classified to be positive.
 
+Benchmark dataset
+******************
+The full benchmark dataset as an XML file can also be found here : 
+
+	- ftp://132.230.56.164/CPI/
+
+
 Interaction verbs
 ******************
 The list of the interaction verbs that used in our work can be found here : 
