@@ -563,9 +563,9 @@ Technical background of the XML data set
 
         Processing corpus 'CPI-DS_IV' ...
 
-        Documents seen: 830
+        Documents seen: 802
 
-        Sentences seen: 1259
+        Sentences seen: 1209
 
 
     java -jar ConsistencyChecker.jar CPI-DS_NIV/CPI-DS_NIV.xml 
@@ -576,9 +576,9 @@ Technical background of the XML data set
 
         processed 1000 docs (2155.1724 docs/sec)
 
-        Documents seen: 1066
+        Documents seen: 1006
 
-        Sentences seen: 1494
+        Sentences seen: 1404
 
 
     java -jar ConsistencyChecker.jar DS_40/DS-40.xml 
@@ -696,7 +696,7 @@ APG Kernel pipeline
 
 - You can use the test data set DS-40.xml with 40 sentences to check whether your pipeline works. 
 
-- While the complete CPI-DS_IV pipeline runs around 3:15 h, the test case takes only a few minutes on a notebook with an Intel Core i5-3570 (4x 3.40GHz).
+- While the complete CPI-DS_IV pipeline runs around 3:40 h, the test case takes only a few minutes on a notebook with an Intel Core i5-6500 (4x 3.20GHz).
 
 - To use this test data set, go to your (new) working directory into "scripts" and run one of the given make commands with a data set from the folder "scripts/generate_XML_files/DS", e.g.:
 
@@ -759,7 +759,7 @@ SL Kernel pipeline
 
     - You can find these files in the folder scripts/jSRE_debug.
 
-- The complete CPI-DS_IV pipeline runs in around 0:14 h with an Intel Core i5-3570 (4x 3.40GHz).
+- The complete CPI-DS_IV pipeline runs in around 0:18 h with an Intel Core i5-6500 (4x 3.20GHz).
 
 - The threshold for a positive or negative prediction is zero and stored in the SQL database.
 
@@ -885,7 +885,7 @@ The full benchmark dataset as an XML file can also be found here :
 
 Interaction verbs
 ******************
-The list of the interaction verbs that used in our work can be found here : 
+These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics). This list can be found here : 
 
 	- ftp://132.230.56.164/CPI/
 
