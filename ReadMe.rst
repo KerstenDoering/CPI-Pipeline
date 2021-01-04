@@ -880,14 +880,14 @@ Benchmark dataset
 ******************
 The full benchmark dataset as an XML file can also be found here : 
 
-	- ftp://132.230.56.164/CPI/
+	- http://histone.pharmazie.uni-freiburg.de/ftp/CPI/
 
 
 Interaction verbs
 ******************
 These verbs have been defined in the publication of the web service prolific (Senger and Grüning et al., 2012. Mining and evaluation of molecular relationships in literature. Bioinformatics). This list can be found here : 
 
-	- ftp://132.230.56.164/CPI/
+	- http://histone.pharmazie.uni-freiburg.de/ftp/CPI/
 
 
 Contact
