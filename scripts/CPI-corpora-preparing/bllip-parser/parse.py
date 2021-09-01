@@ -49,13 +49,15 @@ def parseIt(_infile, _outfile):
 		##s = rrp.simple_parse(sentence)
 		nbest_list = rrp.parse(sentence)
 		#print 'nbest_list', len(nbest_list)
-		s = str(nbest_list[0].ptb_parse)
-		##s = str(nbest_list)
-		#print(s)
-		OUTFile.write(s)
-		#print('oufile', _outfile)
-		OUTFile.write('\n')
-		#print("Ent:", entities)		
+		#print 'nbest_list', nbest_list
+		try:
+			s = str(nbest_list[0].ptb_parse)
+			OUTFile.write(s)
+			OUTFile.write('\n')
+		except:
+			print 'Error : ', line
+			OUTFile.write('\n')
+			continue		
 
 	INFile.close()
 	OUTFile.close()
