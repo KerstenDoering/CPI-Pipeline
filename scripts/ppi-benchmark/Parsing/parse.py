@@ -28,7 +28,7 @@ def parseIt(_infile, _outfile):
 	OUTFile = open(_outfile, 'w')
    
 	for line in INFile:
-
+		
 		obj = re.findall(r'<s.*?>(.*?)</s>',line)
 
 		sentence = obj[0].strip()
@@ -47,10 +47,14 @@ def parseIt(_infile, _outfile):
 		#print(rrp.simple_parse(sentence))
 		##s = rrp.simple_parse(sentence)
 		nbest_list = rrp.parse(sentence)
-		s = str(nbest_list[0].ptb_parse)
-
-		OUTFile.write(s)
-		OUTFile.write('\n')
+		try:
+			s = str(nbest_list[0].ptb_parse)
+			OUTFile.write(s)
+			OUTFile.write('\n')
+		except:
+			print 'Error : ', line
+			OUTFile.write('\n')
+			continue
 
 
 	INFile.close()
