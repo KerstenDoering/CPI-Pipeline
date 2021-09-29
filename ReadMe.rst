@@ -872,7 +872,7 @@ Large-scale dataset application
 
 The kernels have been successfully applied to all PubMed titles and abstracts that were published before July 2019. The full output (in xml format) can be found here: 
 
-	- ftp://132.230.56.164/CPI/
+	- http://histone.pharmazie.uni-freiburg.de/ftp/CPI/
 
 It contains one zip file for the predictions of each of the two kernels (SL and APG) as well as one zip file with the combination of both kernels based on a jury decision, i.e. only those relations that were predicted as a functional relation by both kernels were classified to be positive.
 
