@@ -46,8 +46,8 @@ def parseIt(_infile, _outfile):
 		#        print(entities.Text())
 		#print(rrp.simple_parse(sentence))
 		##s = rrp.simple_parse(sentence)
-		nbest_list = rrp.parse(sentence)
 		try:
+			nbest_list = rrp.parse(sentence)
 			s = str(nbest_list[0].ptb_parse)
 			OUTFile.write(s)
 			OUTFile.write('\n')
